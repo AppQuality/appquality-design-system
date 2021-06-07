@@ -1,5 +1,5 @@
 {
-  "name": "appquality-design-system",
+  "name": "@appquality/appquality-design-system",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,10 +12,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "cross-env BABEL_ENV=production babel src -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +31,32 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "auto": "^10.29.2",
+    "cross-env": "^7.0.3"
+  },
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
+  "description": "The Storybook design system tutorial is a subset of the full [Storybook design system](https://github.com/storybookjs/design-system/), created as a learning resource for those interested in learning how to write and publish a design system using best in practice techniques.",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AppQuality/appquality-design-system.git"
+  },
+  "author": "appquality <it@app-quality.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AppQuality/appquality-design-system/issues"
+  },
+  "homepage": "https://github.com/AppQuality/appquality-design-system#readme"
 }
