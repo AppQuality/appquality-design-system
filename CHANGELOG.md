@@ -1,3 +1,15 @@
+# v0.1.4 (Tue Jun 08 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- ci: Add typescript babel config (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.3 (Tue Jun 08 2021)
 
 #### ⚠️ Pushed to `develop`
