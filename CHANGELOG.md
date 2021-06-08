@@ -1,3 +1,16 @@
+# v0.1.8 (Tue Jun 08 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- wip: Add declarations to copyfile (davide.bizzi@app-quality.com)
+- wip: Add scss declaration (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.7 (Tue Jun 08 2021)
 
 #### ⚠️ Pushed to `develop`
