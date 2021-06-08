@@ -1,3 +1,15 @@
+# v0.1.3 (Tue Jun 08 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- test: Import then export tabletype (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.2 (Tue Jun 08 2021)
 
 #### ⚠️ Pushed to `develop`
