@@ -6,8 +6,15 @@ import * as icons from "react-bootstrap-icons";
 //
 export { COLORS, global, icons };
 
-// export * from './Avatar';
-// export * from './Badge';
-// export * from './Button';
-// export * from './Icon';
-// export * from './Link';
+export * from "./stories/button/Button";
+export * from "./stories/card/Card";
+export * from "./stories/form/Form";
+export * from "./stories/header/Header";
+export * from "./stories/layout/Layout";
+export * from "./stories/pagination/Pagination";
+export * from "./stories/select/Select";
+export * from "./stories/sidebar/Sidebar";
+export * from "./stories/skeleton/Skeleton";
+export * from "./stories/spinner/Spinner";
+export * from "./stories/table/Table";
+export * from "./stories/typography/Typography";
