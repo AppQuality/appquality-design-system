@@ -1,6 +1,6 @@
 // import original module declarations
 import "styled-components";
-import { Colors } from "./theme/defaultTheme";
+import { Colors } from "./stories/theme/defaultTheme";
 
 declare module "styled-components" {
   export interface DefaultTheme {
