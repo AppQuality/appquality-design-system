@@ -21,6 +21,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "prepare": "npx husky install",
     "build": "cross-env BABEL_ENV=production babel src -d dist",
     "release": "npx auto shipit --base-branch=main",
     "storybook": "start-storybook -p 6006 -s public",
@@ -66,7 +67,8 @@
     "@types/react-select": "^4.0.15",
     "@types/styled-components": "^5.1.9",
     "auto": "^10.29.2",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "husky": "^6.0.0"
   },
   "babel": {
     "presets": [
