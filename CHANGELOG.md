@@ -1,3 +1,15 @@
+# v0.1.6 (Tue Jun 08 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- wip: Try building with tsc (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.5 (Tue Jun 08 2021)
 
 #### ⚠️ Pushed to `develop`
