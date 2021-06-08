@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 import { Table } from "./Table";
 import { dataSource, columns } from "./_data";
 import React from "react";

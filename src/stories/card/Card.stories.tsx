@@ -2,7 +2,7 @@ import { Card } from "./Card";
 import { CardProps } from "./CardProps";
 import { Story, Meta } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 
 export default {
   title: "Card",

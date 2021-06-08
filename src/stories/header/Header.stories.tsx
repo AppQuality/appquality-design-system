@@ -3,7 +3,7 @@ import { Header } from "./Header";
 import { HeaderProps } from "./_types";
 import { testUser } from "./_data";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 
 export default {
   title: "Header",

@@ -3,7 +3,7 @@ import { Pagination } from "./Pagination";
 import { PaginationProps } from "./PaginationProps";
 import { BasicPaginationArgs } from "./Pagination.stories.args";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 
 export default {
   title: "Pagination",

@@ -1,7 +1,6 @@
-import { DefaultTheme } from "styled-components";
 import COLORS from "../../shared/colors.module.scss";
 
-const aqBootstrapTheme: DefaultTheme = {
+const aqBootstrapTheme = {
   general: {
     borderRadius: 4,
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
@@ -54,4 +53,4 @@ const aqBootstrapTheme: DefaultTheme = {
   },
 };
 
-export { aqBootstrapTheme };
+export default aqBootstrapTheme;

@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import { Select } from "./Select";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 import { basicOptions } from "./_data";
 
 describe("Basic Select should render options correctly", () => {

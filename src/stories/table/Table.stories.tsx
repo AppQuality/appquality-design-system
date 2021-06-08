@@ -3,7 +3,7 @@ import { Card } from "../card/Card";
 import { TableProps } from "./_types";
 import { Table } from "./Table";
 import { Story, Meta } from "@storybook/react";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 import { ThemeProvider } from "styled-components";
 import { dataSource, columns } from "./_data";
 

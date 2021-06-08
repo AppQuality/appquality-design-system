@@ -4,7 +4,7 @@ import { Select } from "./Select";
 import { SelectProps } from "./_types";
 import { basicOptions, getAsyncOptions, groupedOptions } from "./_data";
 import { Story, Meta } from "@storybook/react";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 import { ThemeProvider } from "styled-components";
 
 export default {

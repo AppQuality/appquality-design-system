@@ -3,7 +3,7 @@ import { ButtonProps } from "./ButtonProps";
 import { Story, Meta } from "@storybook/react";
 import { Search } from "react-bootstrap-icons";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 import { ChevronRight, ChevronLeft } from "react-bootstrap-icons";
 
 export default {

@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { BasicPaginationArgs } from "./Pagination.stories.args";
 import { Pagination } from "./Pagination";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 
 const firstPagePagination = { ...BasicPaginationArgs };
 firstPagePagination.current = 1;

@@ -3,10 +3,12 @@ import COLORS from "./shared/colors.module.scss";
 import * as global from "./shared/globalStyle";
 // import * as animation from './shared/animation';
 import * as icons from "react-bootstrap-icons";
+import aqBootstrapTheme from "./stories/theme/defaultTheme";
 
 import * as TableType from "./stories/table/_types";
+import * as SelectType from "./stories/select/_types";
 //
-export { TableType };
+export { TableType, SelectType, aqBootstrapTheme };
 export { COLORS, global, icons };
 
 export * from "./stories/button/Button";

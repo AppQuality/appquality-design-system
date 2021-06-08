@@ -2,7 +2,7 @@ import { Sidebar } from "./Sidebar";
 import { SidebarProps } from "./SidebarProps";
 import { Story, Meta } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import aqBootstrapTheme from "../theme/defaultTheme";
 import { BasicSidebarArgs } from "./Sidebar.stories.args";
 
 export default {
