@@ -17,4 +17,5 @@ export * from "./stories/sidebar/Sidebar";
 export * from "./stories/skeleton/Skeleton";
 export * from "./stories/spinner/Spinner";
 export * from "./stories/table/Table";
+export * as TableType from "./stories/table/_types";
 export * from "./stories/typography/Typography";
