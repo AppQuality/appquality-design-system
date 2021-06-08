@@ -1,6 +1,6 @@
 // import original module declarations
 import "styled-components";
-import { Colors } from "./theme/defaultTheme";
+import { ColorsInterface } from "../shared/colors";
 
 declare module "styled-components" {
   export interface DefaultTheme {
@@ -25,7 +25,7 @@ declare module "styled-components" {
         bold: number;
       };
     };
-    colors: Colors;
+    colors: ColorsInterface;
     palette: {
       primary: string;
       secondary: string;

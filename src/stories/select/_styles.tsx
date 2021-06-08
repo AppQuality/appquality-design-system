@@ -51,7 +51,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   dropdownIndicator: (provided, state) => {
-    const color = `${aqBootstrapTheme.colors.primary}`;
+    const color = `${aqBootstrapTheme.palette.primary}`;
     const fontSize = "1.25rem";
     const transform = state.selectProps.menuIsOpen ? "rotate(180deg)" : "";
 

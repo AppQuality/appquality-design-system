@@ -1,5 +1,5 @@
 import { DefaultTheme } from "styled-components";
-import COLORS from "../../shared/colors.module.scss";
+import * as COLORS from "../../shared/colors.module.scss";
 
 const aqBootstrapTheme: DefaultTheme = {
   general: {
