@@ -1,0 +1,185 @@
+@import "../styles/aq-bootstrap";
+
+$input-border-color: $grey-100;
+$input-disabled-bg: $grey-100;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$info}'/></svg>");
+$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$info}'/></svg>") !default;
+$input-color: $primary;
+$form-check-input-checked-bg-color: $info;
+
+$input-padding-y: 0.5rem;
+$input-padding-x: 0.75rem;
+
+$dropzone-padding: 8px;
+$dropzone-preview-size: 100px;
+$dropzone-remove-btn-size: 32px;
+
+@import "~bootstrap/scss/forms";
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  .form-label {
+    order: -1;
+
+    .form-icon {
+      font-size: $font-size-parent;
+      line-height: 1;
+      float: right;
+    }
+  }
+}
+.form-check {
+  margin-bottom: 1rem;
+}
+.form-control {
+  box-shadow: none;
+  &::placeholder {
+    font-weight: $font-weight-light;
+    color: $grey;
+  }
+
+  &:disabled,
+  &[readonly] {
+    @include disabled-hover-behaviour();
+    &:focus {
+      border-color: $input-disabled-bg;
+      box-shadow: none;
+    }
+    & + .form-label {
+      color: $grey-700;
+    }
+  }
+}
+.form-switch {
+  .form-check-input {
+    background-size: auto;
+
+    &:disabled,
+    &[readonly] {
+      background-image: url(escape-svg(
+        "data:image/svg+xml,%3csvg fill='" + $cyan-300 +
+          "' xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3'/%3e%3c/svg%3e"
+      ));
+    }
+  }
+}
+.form-feedback {
+  margin-top: $form-feedback-margin-top;
+  @include font-size($form-feedback-font-size);
+  font-style: $form-feedback-font-style;
+}
+.dropzone-container {
+  .dropzone.form-control {
+    cursor: pointer;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: $dropzone-preview-size + (4 * $dropzone-padding);
+    padding: $dropzone-padding;
+
+    + .dropzone-status {
+      margin-top: $form-label-margin-bottom;
+    }
+  }
+  .dropzone-preview {
+    position: relative;
+    box-sizing: content-box;
+    width: $dropzone-preview-size;
+    height: $dropzone-preview-size;
+    padding: $dropzone-padding;
+  }
+  .dropzone-image {
+    cursor: default;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $grey-300;
+    border-radius: $input-border-radius;
+    overflow: hidden;
+  }
+  .file-details {
+    cursor: text;
+    position: absolute;
+    top: $dropzone-padding * 2;
+    font-size: $font-size-sm;
+    width: $dropzone-preview-size - $dropzone-padding;
+    margin-left: $dropzone-padding/2;
+    text-align: center;
+  }
+  .dz-image-preview .file-details {
+    display: none;
+  }
+  [data-file-name] {
+    @include overflow-ellipsis();
+  }
+  .dropzone-controls {
+    position: absolute;
+    bottom: 0;
+    width: $dropzone-preview-size;
+    height: auto;
+    margin-bottom: $dropzone-padding;
+    padding-bottom: $dropzone-padding;
+    text-align: center;
+  }
+  .dropzone-remove-media {
+    display: none;
+  }
+  .dropzone-cancel-upload {
+    font-size: $font-size-sm;
+  }
+  .dropzone-progress {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: $dropzone-padding;
+  }
+  .progress {
+    position: absolute;
+    width: $dropzone-preview-size - $dropzone-padding;
+    top: 50%;
+    margin-top: -($progress-height/2);
+    margin-left: $dropzone-padding/2;
+  }
+  .dz-default.dz-message {
+    display: none;
+    visibility: hidden;
+  }
+  .dropzone-preview.dz-complete {
+    .progress,
+    .dropzone-cancel-upload {
+      display: none;
+    }
+    .dropzone-remove-media {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $dropzone-remove-btn-size;
+      height: $dropzone-remove-btn-size;
+      margin: 0 auto;
+      background-color: $white;
+      border-radius: 50%;
+      padding: 0;
+      color: $primary;
+      svg {
+        width: $dropzone-remove-btn-size/2;
+        height: $dropzone-remove-btn-size/2;
+      }
+    }
+  }
+  [data-file-counter]:after {
+    content: attr(data-file-counter);
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    color: black;
+  }
+}

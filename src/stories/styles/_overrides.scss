@@ -1,0 +1,11 @@
+// stylelint-enable value-keyword-case
+$font-family-base: var(--#{$variable-prefix}font-sans-serif);
+$font-family-code: var(--#{$variable-prefix}font-monospace);
+$font-family-srf: var(--#{$variable-prefix}font-serif);
+
+// scss-docs-start box-shadow-variables
+$box-shadow: 0 0 1rem rgba($black, 0.25);
+$box-shadow-sm: 0 0 0.25rem rgba($black, 0.075);
+$box-shadow-lg: 0 0 3rem rgba($black, 0.275);
+$box-shadow-inset: inset 0 0 2px rgba($black, 0.075);
+// scss-docs-end box-shadow-variables

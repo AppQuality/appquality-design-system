@@ -1,9 +1,10 @@
 // import * as styles from './shared/styles';
-// import * as global from './shared/global';
+import COLORS from './shared/colors.module.scss';
+import * as global from './shared/globalStyle';
 // import * as animation from './shared/animation';
-// import * as icons from './shared/icons';
+import * as icons from 'react-bootstrap-icons';
 // 
-// export { styles, global, animation, icons };
+export { COLORS, global, icons };
 
 // export * from './Avatar';
 // export * from './Badge';

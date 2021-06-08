@@ -1,0 +1,264 @@
+// scss-docs-start gray-color-variables
+$white: #fff;
+$black: #000;
+// scss-docs-end gray-color-variables
+
+$gray: #b2cbd9;
+
+$gray-100: mix(white, $gray, 80%);
+$gray-200: mix(white, $gray, 60%);
+$gray-300: mix(white, $gray, 40%);
+$gray-400: mix(white, $gray, 20%);
+$gray-500: $gray;
+$gray-600: mix(black, $gray, 20%);
+$gray-700: mix(black, $gray, 40%);
+$gray-800: mix(black, $gray, 60%);
+$gray-900: mix(black, $gray, 80%);
+
+// fusv-disable
+// scss-docs-start gray-colors-map
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+);
+// scss-docs-end gray-colors-map
+// fusv-enable
+
+// scss-docs-start color-variables
+$blue: #266a9a;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #d71116;
+$orange: #ff9900;
+$yellow: #ffc107;
+$green: #3ead52;
+$teal: #20c997;
+$cyan: #55a0be;
+// scss-docs-end color-variables
+
+// fusv-disable
+$blue-100: mix(white, $blue, 80%);
+$blue-200: mix(white, $blue, 60%);
+$blue-300: mix(white, $blue, 40%);
+$blue-400: mix(white, $blue, 20%);
+$blue-500: $blue;
+$blue-600: mix(black, $blue, 20%);
+$blue-700: mix(black, $blue, 40%);
+$blue-800: mix(black, $blue, 60%);
+$blue-900: mix(black, $blue, 80%);
+
+$indigo-100: mix(white, $indigo, 80%);
+$indigo-200: mix(white, $indigo, 60%);
+$indigo-300: mix(white, $indigo, 40%);
+$indigo-400: mix(white, $indigo, 20%);
+$indigo-500: $indigo;
+$indigo-600: mix(black, $indigo, 20%);
+$indigo-700: mix(black, $indigo, 40%);
+$indigo-800: mix(black, $indigo, 60%);
+$indigo-900: mix(black, $indigo, 80%);
+
+$purple-100: mix(white, $purple, 80%);
+$purple-200: mix(white, $purple, 60%);
+$purple-300: mix(white, $purple, 40%);
+$purple-400: mix(white, $purple, 20%);
+$purple-500: $purple;
+$purple-600: mix(black, $purple, 20%);
+$purple-700: mix(black, $purple, 40%);
+$purple-800: mix(black, $purple, 60%);
+$purple-900: mix(black, $purple, 80%);
+
+$pink-100: mix(white, $pink, 80%);
+$pink-200: mix(white, $pink, 60%);
+$pink-300: mix(white, $pink, 40%);
+$pink-400: mix(white, $pink, 20%);
+$pink-500: $pink;
+$pink-600: mix(black, $pink, 20%);
+$pink-700: mix(black, $pink, 40%);
+$pink-800: mix(black, $pink, 60%);
+$pink-900: mix(black, $pink, 80%);
+
+$red-100: mix(white, $red, 80%);
+$red-200: mix(white, $red, 60%);
+$red-300: mix(white, $red, 40%);
+$red-400: mix(white, $red, 20%);
+$red-500: $red;
+$red-600: mix(black, $red, 20%);
+$red-700: mix(black, $red, 40%);
+$red-800: mix(black, $red, 60%);
+$red-900: mix(black, $red, 80%);
+
+$orange-100: mix(white, $orange, 80%);
+$orange-200: mix(white, $orange, 60%);
+$orange-300: mix(white, $orange, 40%);
+$orange-400: mix(white, $orange, 20%);
+$orange-500: $orange;
+$orange-600: mix(black, $orange, 20%);
+$orange-700: mix(black, $orange, 40%);
+$orange-800: mix(black, $orange, 60%);
+$orange-900: mix(black, $orange, 80%);
+
+$yellow-100: mix(white, $yellow, 80%);
+$yellow-200: mix(white, $yellow, 60%);
+$yellow-300: mix(white, $yellow, 40%);
+$yellow-400: mix(white, $yellow, 20%);
+$yellow-500: $yellow;
+$yellow-600: mix(black, $yellow, 20%);
+$yellow-700: mix(black, $yellow, 40%);
+$yellow-800: mix(black, $yellow, 60%);
+$yellow-900: mix(black, $yellow, 80%);
+
+$green-100: mix(white, $green, 80%);
+$green-200: mix(white, $green, 60%);
+$green-300: mix(white, $green, 40%);
+$green-400: mix(white, $green, 20%);
+$green-500: $green;
+$green-600: mix(black, $green, 20%);
+$green-700: mix(black, $green, 40%);
+$green-800: mix(black, $green, 60%);
+$green-900: mix(black, $green, 80%);
+
+$teal-100: mix(white, $teal, 80%);
+$teal-200: mix(white, $teal, 60%);
+$teal-300: mix(white, $teal, 40%);
+$teal-400: mix(white, $teal, 20%);
+$teal-500: $teal;
+$teal-600: mix(black, $teal, 20%);
+$teal-700: mix(black, $teal, 40%);
+$teal-800: mix(black, $teal, 60%);
+$teal-900: mix(black, $teal, 80%);
+
+$cyan-100: mix(white, $cyan, 80%);
+$cyan-200: mix(white, $cyan, 60%);
+$cyan-300: mix(white, $cyan, 40%);
+$cyan-400: mix(white, $cyan, 20%);
+$cyan-500: $cyan;
+$cyan-600: mix(black, $cyan, 20%);
+$cyan-700: mix(black, $cyan, 40%);
+$cyan-800: mix(black, $cyan, 60%);
+$cyan-900: mix(black, $cyan, 80%);
+
+:export {
+  // fusv-disable
+  blue100: $blue-100;
+  blue200: $blue-200;
+  blue300: $blue-300;
+  blue400: $blue-400;
+  blue500: $blue;
+  blue600: $blue-600;
+  blue700: $blue-700;
+  blue800: $blue-800;
+  blue900: $blue-900;
+
+  indigo100: $indigo-100;
+  indigo200: $indigo-200;
+  indigo300: $indigo-300;
+  indigo400: $indigo-400;
+  indigo500: $indigo;
+  indigo600: $indigo-600;
+  indigo700: $indigo-700;
+  indigo800: $indigo-800;
+  indigo900: $indigo-900;
+
+  purple100: $purple-100;
+  purple200: $purple-200;
+  purple300: $purple-300;
+  purple400: $purple-400;
+  purple500: $purple;
+  purple600: $purple-600;
+  purple700: $purple-700;
+  purple800: $purple-800;
+  purple900: $purple-900;
+
+  pink100: $pink-100;
+  pink200: $pink-200;
+  pink300: $pink-300;
+  pink400: $pink-400;
+  pink500: $pink;
+  pink600: $pink-600;
+  pink700: $pink-700;
+  pink800: $pink-800;
+  pink900: $pink-900;
+
+  red100: $red-100;
+  red200: $red-200;
+  red300: $red-300;
+  red400: $red-400;
+  red500: $red;
+  red600: $red-600;
+  red700: $red-700;
+  red800: $red-800;
+  red900: $red-900;
+
+  orange100: $orange-100;
+  orange200: $orange-200;
+  orange300: $orange-300;
+  orange400: $orange-400;
+  orange500: $orange;
+  orange600: $orange-600;
+  orange700: $orange-700;
+  orange800: $orange-800;
+  orange900: $orange-900;
+
+  yellow100: $yellow-100;
+  yellow200: $yellow-200;
+  yellow300: $yellow-300;
+  yellow400: $yellow-400;
+  yellow500: $yellow;
+  yellow600: $yellow-600;
+  yellow700: $yellow-700;
+  yellow800: $yellow-800;
+  yellow900: $yellow-900;
+
+  green100: $green-100;
+  green200: $green-200;
+  green300: $green-300;
+  green400: $green-400;
+  green500: $green;
+  green600: $green-600;
+  green700: $green-700;
+  green800: $green-800;
+  green900: $green-900;
+
+  teal100: $teal-100;
+  teal200: $teal-200;
+  teal300: $teal-300;
+  teal400: $teal-400;
+  teal500: $teal;
+  teal600: $teal-600;
+  teal700: $teal-700;
+  teal800: $teal-800;
+  teal900: $teal-900;
+
+  cyan100: $cyan-100;
+  cyan200: $cyan-200;
+  cyan300: $cyan-300;
+  cyan400: $cyan-400;
+  cyan500: $cyan;
+  cyan600: $cyan-600;
+  cyan700: $cyan-700;
+  cyan800: $cyan-800;
+  cyan900: $cyan-900;
+
+  white: $white;
+  gray100: $gray-100;
+  gray200: $gray-200;
+  gray300: $gray-300;
+  gray400: $gray-400;
+  gray500: $gray-500;
+  gray600: $gray-600;
+  gray700: $gray-700;
+  gray800: $gray-800;
+  gray900: $gray-900;
+  black: $black;
+
+  disabled: $gray-300;
+  disabledDark: $gray-600;
+}
