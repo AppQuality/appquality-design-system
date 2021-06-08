@@ -1,4 +1,3 @@
-
 export interface UserData {
   id: number;
   wp_user_id: number;
