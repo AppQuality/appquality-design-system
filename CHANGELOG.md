@@ -1,5 +1,17 @@
 # v0.1.7 (Tue Jun 08 2021)
 
+#### ⚠️ Pushed to `develop`
+
+- wip: Copy html/css/scss to dist (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.7 (Tue Jun 08 2021)
+
 
 
 ---
