@@ -1,3 +1,15 @@
+# v0.1.9 (Tue Jun 08 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- wip: Try generating scss declaration (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.8 (Tue Jun 08 2021)
 
 #### ⚠️ Pushed to `develop`
