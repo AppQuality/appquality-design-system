@@ -1,3 +1,15 @@
+# v0.1.11 (Tue Jun 08 2021)
+
+#### ⚠️ Pushed to `test`
+
+- wip: Test change structure theme (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.10 (Tue Jun 08 2021)
 
 
