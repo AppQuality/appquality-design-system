@@ -22,6 +22,7 @@ declare module "styled-components" {
         thin: number;
         light: number;
         normal: number;
+        medium: number;
         bold: number;
       };
     };

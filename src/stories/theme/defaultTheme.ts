@@ -20,7 +20,8 @@ const aqBootstrapTheme: DefaultTheme = {
     fontWeight: {
       thin: 100,
       light: 300,
-      normal: 500,
+      normal: 400,
+      medium: 500,
       bold: 700,
     },
   },
