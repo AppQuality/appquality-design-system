@@ -10,6 +10,18 @@ import { containers } from "./utils/containers";
 const GlobalStyle = createGlobalStyle`${(props) => {
   let style = "";
   const base = `
+    body {
+      font-family: ${props.theme.typography.fontFamily.base};
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: ${props.theme.typography.fontSize.base};
+      font-weight: ${props.theme.typography.fontWeight.normal};
+      line-height: 1.5;
+      color:  ${props.theme.palette.primary};
+      background-color: ${props.theme.colors.gray100};
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
     img {
       max-width: 100%;
     }
