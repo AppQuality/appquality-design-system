@@ -28,7 +28,8 @@
     "build": "npm run clean && tsc && npm run copy-files",
     "release": "npx auto shipit --base-branch=main",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [

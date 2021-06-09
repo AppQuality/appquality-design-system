@@ -4,8 +4,7 @@ import { Formik, Form, FormikProps } from "formik";
 import { validationSchema, initialValues } from "./_data";
 import * as yup from "yup";
 import { Paragraph, SmallTitle } from "../typography/Typography";
-import { BSCol, BSGrid, Container, CSSGrid } from "../layout/Layout";
-import { Button } from "../button/Button";
+import { BSCol, BSGrid, Container } from "../layout/Layout";
 import { Card } from "../card/Card";
 
 export default {
