@@ -1,24 +1,15 @@
-import React, { ChangeEventHandler } from "react";
+import { ChangeEventHandler } from "react";
 import { Field as FormikField, FieldProps } from "formik";
-import "./form.scss";
 import { Search } from "react-bootstrap-icons";
-
-export interface GenericFieldInterface {
-  name: string;
-  label?: string;
-  onChange?: ChangeEventHandler;
-}
-
-export interface FieldInterface extends GenericFieldInterface {
-  type?: "text" | "email" | "password" | "number" | "url" | "tel" | "search";
-  placeholder?: string;
-}
+import { FormCheck, FormGroup } from "./_style";
+import { FieldInterface, GenericFieldInterface } from "./_types";
 
 export const Field = ({
   type = "text",
   placeholder,
   name,
   onChange,
+  disabled,
   label,
 }: FieldInterface) => {
   return (
@@ -30,12 +21,12 @@ export const Field = ({
       }: FieldProps) => {
         let fieldId = name;
         if (status && status.id) fieldId = `${status.id}-${name}`;
-        let inputClassName = "form-control";
+        let className = "mb-3";
         if (meta.touched && meta.error) {
-          inputClassName += " is-invalid";
+          className += " is-invalid";
         }
         return (
-          <div className="form-group">
+          <FormGroup className={className}>
             {label && (
               <label htmlFor={fieldId} className="form-label">
                 {label}
@@ -46,7 +37,8 @@ export const Field = ({
                 id={fieldId}
                 type={type}
                 placeholder={placeholder}
-                className={inputClassName}
+                className="form-control"
+                disabled={disabled}
                 {...field}
               />
               {type === "search" && (
@@ -58,14 +50,19 @@ export const Field = ({
             {meta.touched && meta.error && (
               <div className="invalid-feedback">{meta.error}</div>
             )}
-          </div>
+          </FormGroup>
         );
       }}
     </FormikField>
   );
 };
 
-export const Checkbox = ({ name, onChange, label }: GenericFieldInterface) => {
+export const Checkbox = ({
+  name,
+  onChange,
+  label,
+  disabled,
+}: GenericFieldInterface) => {
   return (
     <FormikField name={name}>
       {({
@@ -75,12 +72,12 @@ export const Checkbox = ({ name, onChange, label }: GenericFieldInterface) => {
       }: FieldProps) => {
         let fieldId = name;
         if (status && status.id) fieldId = `${status.id}-${name}`;
-        let inputClassName = "form-check-input";
+        let className = "mb-3";
         if (meta.touched && meta.error) {
-          inputClassName += " is-invalid";
+          className += " is-invalid";
         }
         return (
-          <div className="form-check">
+          <FormCheck className={className}>
             {label && (
               <label htmlFor={fieldId} className="form-check-label">
                 {label}
@@ -89,13 +86,14 @@ export const Checkbox = ({ name, onChange, label }: GenericFieldInterface) => {
             <input
               id={fieldId}
               type="checkbox"
-              className={inputClassName}
+              disabled={disabled}
+              className="form-check-input"
               {...field}
             />
             {meta.touched && meta.error && (
               <div className="invalid-feedback">{meta.error}</div>
             )}
-          </div>
+          </FormCheck>
         );
       }}
     </FormikField>
