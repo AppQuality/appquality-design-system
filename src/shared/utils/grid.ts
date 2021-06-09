@@ -8,9 +8,8 @@ export const grid = (theme: DefaultTheme) => {
   const gutters = { ...theme.grid.sizes, 0: "0px" };
   style += `
 	.row {
-		
-	  --gutter-x: 24px;
-	  --gutter-y: 0;
+		--gutter-x: ${theme.grid.gutter.x};
+		--gutter-y: ${theme.grid.gutter.y};
 	  display: flex;
 	  flex-wrap: wrap;
 	  margin-top: calc(var(--gutter-y) * -1); 

@@ -67,6 +67,10 @@ declare module "styled-components" {
         3: string;
         4: string;
       };
+      gutter: {
+        x: string;
+        y: string;
+      };
     };
   }
 }

@@ -51,6 +51,10 @@ const aqBootstrapTheme: DefaultTheme = {
       3: "16px",
       4: "20px",
     },
+    gutter: {
+      x: "24px",
+      y: "0",
+    },
   },
 };
 

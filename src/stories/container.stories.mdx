@@ -1,0 +1,25 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import GlobalStyle from "../shared/globalStyle";
+import { ThemeProvider } from "styled-components";
+import { aqBootstrapTheme } from "./theme/defaultTheme";
+
+<Meta
+  title="Example/Containers"
+  parameters={{
+    docs: {
+      container: ({ children, context }) => (
+        <DocsContainer context={context}>
+          <ThemeProvider theme={aqBootstrapTheme}>
+            <GlobalStyle />
+            {children}
+          </ThemeProvider>
+        </DocsContainer>
+      ),
+    },
+  }}
+/>
+
+<div className="container" style={{"background":"red"}}>
+
+  <div style={{color:"#fff",textAlign:"center","background":"blue", "min-height": "100px"}}>container</div>
+</div>
