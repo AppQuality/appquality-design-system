@@ -9,7 +9,7 @@ export const SpinnerWrapper = styled.div`
   min-height: 60vh;
 `;
 
-const SpinnerComponent = ({ className }: { className: string }) => {
+const SpinnerComponent = ({ className }: { className?: string }) => {
   return (
     <div className={className}>
       <div></div>
