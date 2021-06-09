@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BasicSidebar } from "./Sidebar.stories";
 import { BasicSidebarArgs } from "./Sidebar.stories.args";
-import "../../i18n";
 
 const closedSidebarArgs = { ...BasicSidebarArgs };
 const openSidebarArgs = { ...closedSidebarArgs };
