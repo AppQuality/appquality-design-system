@@ -2,6 +2,7 @@ import * as yup from "yup";
 
 export const initialValues = {
   name: "",
+  withvalue: "With value",
   surname: "",
   email: "",
   password: "",

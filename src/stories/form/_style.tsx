@@ -94,7 +94,8 @@ export const FormGroup = styled(GeneralStyledInput)`
     &:disabled,
     &[readonly] {
       background-color: ${(props) => props.theme.colors.gray100};
-      border-color: ${(props) => props.theme.colors.disabled};
+      border-color: transparent;
+      cursor: not-allowed;
       opacity: 1;
     }
   }

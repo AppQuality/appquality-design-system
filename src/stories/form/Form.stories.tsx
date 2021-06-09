@@ -27,10 +27,21 @@ export const Template: Story = () => (
             {(props: FormikProps<any>) => (
               <Form id="testForm">
                 <SmallTitle as="h5">Create an account</SmallTitle>
-                <Field type="text" name="name" label="Name" />
+                <Field
+                  type="text"
+                  name="name"
+                  label="Name"
+                  placeholder="Name"
+                />
                 <Field
                   type="text"
                   name="surname"
+                  label="Surname"
+                  disabled={true}
+                />
+                <Field
+                  type="text"
+                  name="withvalue"
                   label="Surname"
                   disabled={true}
                 />
