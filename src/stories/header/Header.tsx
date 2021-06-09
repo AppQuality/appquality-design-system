@@ -1,11 +1,57 @@
-import "./header.scss";
 import { UserInfo } from "./UserInfo";
 import { HeaderProps } from "./_types";
 import { useWindowSize } from "../../shared/effects";
 import { Hamburger } from "../button/HamburgerButton";
 import styled from "styled-components";
 
+const headerHeight = 54;
+const ContentHeight = 30;
 const StyledHeader = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: ${headerHeight}px;
+  padding: ${(headerHeight - ContentHeight) / 2}px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  background: #fff;
+  .brand-logo {
+    flex: 0 1 150px;
+    max-height: $ContentHeight;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .user-name {
+    margin-right: 10px;
+  }
+  .user-id {
+    color: ${(props) => props.theme.colors.disabledDark};
+  }
+  .user-avatar {
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      max-height: ${ContentHeight}px;
+      max-width: ${ContentHeight}px;
+    }
+    &.verified:after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 15px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: ${(props) => props.theme.colors.green500};
+    }
+  }
   ${Hamburger} {
     position: absolute;
   }
@@ -19,6 +65,7 @@ export const Header = ({
   isMenuOpen,
   toggleMenu,
   user,
+  className,
 }: HeaderProps) => {
   useWindowSize();
   const handleLoginClick = () => {
@@ -40,7 +87,7 @@ export const Header = ({
     .matches;
 
   return (
-    <StyledHeader className="site-header">
+    <StyledHeader className={className}>
       <div className="brand-logo">
         {logo ? (
           { logo }

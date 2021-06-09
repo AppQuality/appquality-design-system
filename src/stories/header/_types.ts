@@ -27,4 +27,5 @@ export interface HeaderProps {
   showLogin?: boolean;
   isMenuOpen?: boolean;
   toggleMenu?: () => void;
+  className: string;
 }
