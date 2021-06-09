@@ -21,7 +21,7 @@ export const Field = ({
       }: FieldProps) => {
         let fieldId = name;
         if (status && status.id) fieldId = `${status.id}-${name}`;
-        let className = "mb-3";
+        let className = "aq-mb-3";
         if (meta.touched && meta.error) {
           className += " is-invalid";
         }
@@ -72,7 +72,7 @@ export const Checkbox = ({
       }: FieldProps) => {
         let fieldId = name;
         if (status && status.id) fieldId = `${status.id}-${name}`;
-        let className = "mb-3";
+        let className = "aq-mb-3";
         if (meta.touched && meta.error) {
           className += " is-invalid";
         }
