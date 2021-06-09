@@ -5,14 +5,14 @@ import { Hamburger } from "../button/HamburgerButton";
 import styled from "styled-components";
 
 const headerHeight = 54;
-const ContentHeight = 30;
+const contentHeight = 30;
 const StyledHeader = styled.div`
   position: sticky;
   top: 0;
   z-index: 2;
   width: 100%;
   height: ${headerHeight}px;
-  padding: ${(headerHeight - ContentHeight) / 2}px;
+  padding: ${(headerHeight - contentHeight) / 2}px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +20,7 @@ const StyledHeader = styled.div`
   background: #fff;
   .brand-logo {
     flex: 0 1 150px;
-    max-height: $ContentHeight;
+    max-height: ${contentHeight};
   }
   .user-info {
     display: flex;
@@ -38,8 +38,8 @@ const StyledHeader = styled.div`
     border-radius: 50%;
     overflow: hidden;
     img {
-      max-height: ${ContentHeight}px;
-      max-width: ${ContentHeight}px;
+      max-height: ${contentHeight}px;
+      max-width: ${contentHeight}px;
     }
     &.verified:after {
       content: "";
