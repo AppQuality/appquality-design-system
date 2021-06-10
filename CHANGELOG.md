@@ -1,3 +1,33 @@
+# v0.1.12 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- fix: Add border box to everything (davide.bizzi@app-quality.com)
+- fix: Add margin to card shadow story (davide.bizzi@app-quality.com)
+- fix: Add polyfill on storybook (davide.bizzi@app-quality.com)
+- fix: Typing on breakpoint list for container (davide.bizzi@app-quality.com)
+- fix: Remove border from disabled input (davide.bizzi@app-quality.com)
+- fix: utils integration (iacopo.leardini@app-quality.com)
+- fix: Use correct fontweight names (davide.bizzi@app-quality.com)
+- feat: Add body styles (davide.bizzi@app-quality.com)
+- fix: var name (iacopo.leardini@app-quality.com)
+- fix: remove i18n (iacopo.leardini@app-quality.com)
+- feat: reintroduce test (iacopo.leardini@app-quality.com)
+- feat: form with styled components (iacopo.leardini@app-quality.com)
+- feat: Convert container to styled component (davide.bizzi@app-quality.com)
+- fix: Make classnames optional in header/spinner (davide.bizzi@app-quality.com)
+- rework: Convert bootstrap grid to styled component (davide.bizzi@app-quality.com)
+- rework: Conver header to styled component (davide.bizzi@app-quality.com)
+- rework: Convert spinner to styled component (davide.bizzi@app-quality.com)
+- wip: make styled components work (iacopo.leardini@app-quality.com)
+
+#### Authors: 2
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.10 (Tue Jun 08 2021)
 
 
