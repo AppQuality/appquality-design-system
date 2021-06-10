@@ -81,6 +81,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     
     svg {
       vertical-align: middle;
+      margin-top: -15%;
     }
     &.aq-btn-squared {
       min-width: 2.4375rem
