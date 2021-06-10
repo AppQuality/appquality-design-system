@@ -16,6 +16,12 @@ const aqBootstrapTheme: DefaultTheme = {
     fontSize: {
       base: ".875rem",
       small: ".75rem",
+      h1: "2.5rem", // 35
+      h2: "2rem", // 28
+      h3: "1.5rem", // 21
+      h4: "1rem", // ?
+      h5: ".875rem", // 14
+      h6: ".875rem", // ?
     },
     fontWeight: {
       thin: 100,
