@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { Paragraph, SmallTitle } from "../typography/Typography";
 import { BSCol, BSGrid, Container } from "../layout/Layout";
 import { Card } from "../card/Card";
+import { Datepicker, DatepickerStyle } from "./datepicker/Datepicker";
 
 export default {
   title: "Forms",
@@ -55,6 +56,8 @@ export const Template: Story = () => (
                   name="subscribe"
                   label="I agree to receive earning opportunity emails from AppQuality"
                 />
+                <DatepickerStyle />
+                <Datepicker select="date" />
               </Form>
             )}
           </Formik>
