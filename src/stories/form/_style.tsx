@@ -107,6 +107,9 @@ export const FormCheck = styled(GeneralStyledInput)`
   min-height: 1.3125rem;
   padding-left: 1.5em;
 
+  .form-check-label {
+    display: inline-block;
+  }
   .form-check-input {
     float: left;
     margin-left: -1.5em;
@@ -119,7 +122,7 @@ export const FormCheck = styled(GeneralStyledInput)`
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: contain;
-    border: 1px solid ${(props) => props.theme.colors.gray100};
+    border: 1px solid rgba(0, 0, 0, 0.25);
     appearance: none;
     color-adjust: exact;
     &:checked[type="checkbox"] {
