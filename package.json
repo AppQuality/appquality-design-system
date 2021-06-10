@@ -25,7 +25,7 @@
     "prepare": "npx husky install",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss src/**/*.d.ts src/*.d.ts  dist/",
-    "build": "npm run clean && tsc && npm run copy-files",
+    "build": "npm run clean && tsc --noEmit false && npm run copy-files",
     "release": "npx auto shipit --base-branch=main",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
