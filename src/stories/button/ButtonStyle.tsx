@@ -79,6 +79,9 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     transition: filter 0.15s ease-in-out 0s, background-color  0.15s ease-in-out 0s;
     color: ${theme.palette.primary};
     
+    svg {
+      vertical-align: middle;
+    }
     &.aq-btn-squared {
       min-width: 2.4375rem
     }
