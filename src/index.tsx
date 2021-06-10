@@ -8,14 +8,15 @@ import * as TableType from "./stories/table/_types";
 import * as SelectType from "./stories/select/_types";
 import * as SidebarType from "./stories/sidebar/SidebarProps";
 import { ThemeProvider } from "styled-components";
-
-//
-export { TableType, SelectType, SidebarType, ThemeProvider };
-export { COLORS, GlobalStyle, icons };
+import { Formik, Form } from "formik";
 
 // import original module declarations
 import "styled-components";
 import { ColorsInterface } from "./shared/colors";
+
+//
+export { TableType, SelectType, SidebarType, ThemeProvider, Formik, Form };
+export { COLORS, GlobalStyle, icons };
 
 declare module "styled-components" {
   export interface DefaultTheme {
