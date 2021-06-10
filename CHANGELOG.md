@@ -1,3 +1,15 @@
+# v0.1.23 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- fix: Correct header user info image (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.22 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
