@@ -1,3 +1,15 @@
+# v0.1.22 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- fix: Export field props type (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.21 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
