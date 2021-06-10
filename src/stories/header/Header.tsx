@@ -20,7 +20,7 @@ const StyledHeader = styled.div`
   background: #fff;
   .brand-logo {
     flex: 0 1 150px;
-    max-height: ${contentHeight};
+    max-height: ${contentHeight}px;
   }
   .user-info {
     display: flex;

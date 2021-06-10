@@ -10,6 +10,9 @@ import { containers } from "./utils/containers";
 const GlobalStyle = createGlobalStyle`${(props) => {
   let style = "";
   const base = `
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
       font-family: ${props.theme.typography.fontFamily.base};
       -webkit-font-smoothing: antialiased;
