@@ -1,6 +1,6 @@
 // import * as styles from './shared/styles';
 import * as COLORS from "./shared/colors.module.scss";
-import * as global from "./shared/globalStyle";
+import GlobalStyle from "./shared/globalStyle";
 // import * as animation from './shared/animation';
 import * as icons from "react-bootstrap-icons";
 
@@ -11,7 +11,7 @@ import { ThemeProvider } from "styled-components";
 
 //
 export { TableType, SelectType, SidebarType, ThemeProvider };
-export { COLORS, global, icons };
+export { COLORS, GlobalStyle, icons };
 
 // import original module declarations
 import "styled-components";
