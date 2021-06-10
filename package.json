@@ -71,6 +71,7 @@
     "@types/react-select": "^4.0.15",
     "@types/styled-components": "^5.1.9",
     "auto": "^10.29.2",
+    "chromatic": "^5.9.0",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "husky": "^6.0.0",
