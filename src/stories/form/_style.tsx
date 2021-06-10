@@ -41,6 +41,7 @@ export const FormGroup = styled(GeneralStyledInput)`
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 1rem;
 
   .form-label {
     order: -1;
