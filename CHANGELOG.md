@@ -1,3 +1,15 @@
+# v0.1.14 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- rework: Change globalstyle name (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.13 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
