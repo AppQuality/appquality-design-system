@@ -1,11 +1,27 @@
 // import * as styles from './shared/styles';
-import COLORS from "./shared/colors.module.scss";
-import * as global from "./shared/globalStyle";
+import * as COLORS from "./shared/colors.module.scss";
+import GlobalStyle from "./shared/globalStyle";
 // import * as animation from './shared/animation';
 import * as icons from "react-bootstrap-icons";
-//
-export { COLORS, global, icons };
 
+import * as TableType from "./stories/table/_types";
+import * as SelectType from "./stories/select/_types";
+import * as SidebarType from "./stories/sidebar/SidebarProps";
+import { ThemeProvider } from "styled-components";
+import { Formik, Form } from "formik";
+import { aqBootstrapTheme } from "./stories/theme/defaultTheme";
+
+// import original module declarations
+import "styled-components";
+
+//
+export { TableType, SelectType, SidebarType, ThemeProvider, Formik, Form };
+export { COLORS, GlobalStyle, icons, aqBootstrapTheme };
+
+declare module "styled-components" {
+  type Theme = typeof aqBootstrapTheme;
+  export interface DefaultTheme extends Theme {}
+}
 export * from "./stories/button/Button";
 export * from "./stories/card/Card";
 export * from "./stories/form/Form";

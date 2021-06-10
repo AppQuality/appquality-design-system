@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import { testUser } from "./_data";
-import "../../i18n";
 import {
   LoadingHeader,
   LoggedInHeader,

@@ -1,6 +1,5 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import styled from "styled-components";
-import "./layout.scss";
 
 export interface LayoutProps {
   /**
@@ -54,5 +53,5 @@ export const CSSGrid = styled.div(
 );
 
 export const Container = ({ children }: LayoutProps) => {
-  return <div className="container pt-3">{children}</div>;
+  return <div className="container aq-pt-3">{children}</div>;
 };

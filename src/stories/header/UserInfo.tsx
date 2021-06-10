@@ -1,9 +1,8 @@
 import { BoxArrowRight } from "react-bootstrap-icons";
 import { Button } from "../button/Button";
-import "./header.scss";
-import React from "react";
 import { UserInfoProps } from "./_types";
 import Skeleton from "../skeleton/Skeleton";
+import { Paragraph } from "../typography/Typography";
 
 export const UserInfo = ({
   showLogin,
@@ -20,10 +19,12 @@ export const UserInfo = ({
           <div className={`user-avatar ${user.verified ? "verified" : ""}`}>
             <img alt={user.name + " " + user.surname} src={user.image} />
           </div>
-          <div className="user-name">
+          <Paragraph as="div" className="user-name">
             {user.name} {user.surname}{" "}
-            <span className="user-id">(T{user.id})</span>
-          </div>
+            <Paragraph as="span" small={true} className="user-id">
+              (T{user.id})
+            </Paragraph>
+          </Paragraph>
           <Button size="medium" type="link" onClick={onLogout}>
             <span className="text-danger">
               <BoxArrowRight />

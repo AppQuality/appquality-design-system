@@ -1,7 +1,6 @@
-import { DefaultTheme } from "styled-components";
-import COLORS from "../../shared/colors.module.scss";
+import * as COLORS from "../../shared/colors.module.scss";
 
-const aqBootstrapTheme: DefaultTheme = {
+const aqBootstrapTheme = {
   general: {
     borderRadius: 4,
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
@@ -9,18 +8,25 @@ const aqBootstrapTheme: DefaultTheme = {
   typography: {
     fontFamily: {
       base:
-        'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
+        'Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
       serif: "IBM Plex Serif",
       mono: "'IBM Plex Mono', monospace;",
     },
     fontSize: {
       base: ".875rem",
       small: ".75rem",
+      h1: "2.5rem", // 35
+      h2: "2rem", // 28
+      h3: "1.5rem", // 21
+      h4: "1rem", // ?
+      h5: ".875rem", // 14
+      h6: ".875rem", // ?
     },
     fontWeight: {
       thin: 100,
       light: 300,
-      normal: 500,
+      normal: 400,
+      medium: 500,
       bold: 700,
     },
   },
@@ -50,6 +56,10 @@ const aqBootstrapTheme: DefaultTheme = {
       2: "14px",
       3: "16px",
       4: "20px",
+    },
+    gutter: {
+      x: "24px",
+      y: "0",
     },
   },
 };

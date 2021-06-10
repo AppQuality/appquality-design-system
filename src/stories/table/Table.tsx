@@ -4,7 +4,7 @@ import { Inboxes } from "react-bootstrap-icons";
 import { TableProps } from "./_types";
 import { ColumnSorter } from "./ColumnSorter";
 
-const cellPadding = "11px 5px";
+const cellPadding = "10px 5px";
 
 const BasicTable = ({
   dataSource,

@@ -21,7 +21,8 @@ BasicCard.args = {
 };
 
 export const CardWithShadow = Template.bind({});
-BasicCard.args = {
+CardWithShadow.args = {
+  className: "aq-m-2",
   children: "Lorem ipsum dolor sit amet numquam concupescendit elit",
   shadow: true,
 };

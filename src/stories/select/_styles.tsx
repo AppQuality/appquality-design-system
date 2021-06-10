@@ -51,7 +51,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   dropdownIndicator: (provided, state) => {
-    const color = `${aqBootstrapTheme.colors.primary}`;
+    const color = `${aqBootstrapTheme.palette.primary}`;
     const fontSize = "1.25rem";
     const transform = state.selectProps.menuIsOpen ? "rotate(180deg)" : "";
 
@@ -81,7 +81,7 @@ const customStyle: Styles<any, any> = {
   groupHeading: (provided, state) => {
     const fontFamily = `${aqBootstrapTheme.typography.fontFamily.mono}`;
     const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
-    const fontSize = `${aqBootstrapTheme.typography.fontSize.base}`;
+    const fontSize = `${aqBootstrapTheme.typography.fontSize.small}`;
     const color = `${aqBootstrapTheme.colors.disabledDark}`;
 
     return {
