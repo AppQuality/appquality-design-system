@@ -1,3 +1,15 @@
+# v0.1.24 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- feat: Add text-colors utils (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.23 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
