@@ -81,7 +81,7 @@ const customStyle: Styles<any, any> = {
   groupHeading: (provided, state) => {
     const fontFamily = `${aqBootstrapTheme.typography.fontFamily.mono}`;
     const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
-    const fontSize = `${aqBootstrapTheme.typography.fontSize.base}`;
+    const fontSize = `${aqBootstrapTheme.typography.fontSize.small}`;
     const color = `${aqBootstrapTheme.colors.disabledDark}`;
 
     return {
