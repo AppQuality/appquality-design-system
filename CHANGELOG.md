@@ -1,3 +1,16 @@
+# v0.1.19 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- fix: Use new class for container padding (davide.bizzi@app-quality.com)
+- fix: Restore margin-bottom to form group (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.18 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
