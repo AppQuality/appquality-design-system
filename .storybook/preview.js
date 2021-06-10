@@ -8,7 +8,9 @@ import { aqBootstrapTheme } from "../src/stories/theme/defaultTheme";
 export const decorators = [
   (Story) => (
     <div style={{ padding: "10px" }}>
-      <div style={{ overflow: "hidden", background: "#fff" }}>
+      <div
+        style={{ overflow: "hidden", background: "#fff", minHeight: "100vh" }}
+      >
         <ThemeProvider theme={aqBootstrapTheme}>
           <GlobalStyle />
           <Story />
