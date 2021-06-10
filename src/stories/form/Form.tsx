@@ -1,4 +1,3 @@
-import { ChangeEventHandler } from "react";
 import { Field as FormikField, FieldProps } from "formik";
 import { Search } from "react-bootstrap-icons";
 import { FormCheck, FormGroup } from "./_style";

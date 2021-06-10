@@ -27,9 +27,6 @@ const StyledHeader = styled.div`
     align-items: center;
     position: relative;
   }
-  .user-name {
-    margin-right: 10px;
-  }
   .user-id {
     color: ${(props) => props.theme.colors.disabledDark};
   }
