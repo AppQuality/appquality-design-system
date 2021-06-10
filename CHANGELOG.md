@@ -1,3 +1,15 @@
+# v0.1.17 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- fix: Export formik (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.16 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
