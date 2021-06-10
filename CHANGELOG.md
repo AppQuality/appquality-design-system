@@ -1,3 +1,24 @@
+# v0.1.21 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
+- fix: Export formikfield (davide.bizzi@app-quality.com)
+- Merge remote-tracking branch 'origin/develop' into develop (iacopo.leardini@app-quality.com)
+- fix: set cellPadding (iacopo.leardini@app-quality.com)
+- fix: Correct table padding (davide.bizzi@app-quality.com)
+- fix: Realign icon button (davide.bizzi@app-quality.com)
+- feat: Override user choices with roboto as main font (davide.bizzi@app-quality.com)
+- fix: set fontsize small to select separator (iacopo.leardini@app-quality.com)
+- fix: remove extra margin in header and unused vars (iacopo.leardini@app-quality.com)
+- fix: align top form checkbox input (iacopo.leardini@app-quality.com)
+
+#### Authors: 2
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.20 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
