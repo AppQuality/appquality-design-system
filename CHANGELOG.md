@@ -2,6 +2,22 @@
 
 #### ⚠️ Pushed to `develop`
 
+- rework: Use aqboostraptheme as defaultheme type origin (davide.bizzi@app-quality.com)
+- ci: Remove useless build step (davide.bizzi@app-quality.com)
+- ci: Add storybook publish action (davide.bizzi@app-quality.com)
+- ci: Add minheight to storybook (davide.bizzi@app-quality.com)
+- fix: Align vertically button svg (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.20 (Thu Jun 10 2021)
+
+#### ⚠️ Pushed to `develop`
+
 - ci: Remove useless build step (davide.bizzi@app-quality.com)
 - ci: Add storybook publish action (davide.bizzi@app-quality.com)
 - ci: Add minheight to storybook (davide.bizzi@app-quality.com)
