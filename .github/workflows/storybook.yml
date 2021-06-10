@@ -38,7 +38,6 @@ jobs:
         id: storybook
         run: |
           npm ci
-          npm run build
           npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci > /tmp/cires
           echo ::set-output name=build_url::"$(cat /tmp/cires | grep "ℹ View build details")"
       - name: Slack Post
