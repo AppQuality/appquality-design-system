@@ -1,4 +1,3 @@
-import "./sidebar.scss";
 import styled, { DefaultTheme } from "styled-components";
 import {
   itemsSpacing,
