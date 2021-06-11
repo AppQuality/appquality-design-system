@@ -34,10 +34,9 @@ const StyledHeader = styled.div`
     margin-right: 10px;
     border-radius: 50%;
     overflow: hidden;
-    img {
-      max-height: ${contentHeight}px;
-      max-width: ${contentHeight}px;
-    }
+    height: ${contentHeight}px;
+    width: ${contentHeight}px;
+
     &.verified:after {
       content: "";
       position: absolute;

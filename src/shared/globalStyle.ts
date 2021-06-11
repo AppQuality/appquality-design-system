@@ -6,6 +6,7 @@ import { margins } from "./utils/margins";
 import { orders } from "./utils/orders";
 import { grid } from "./utils/grid";
 import { containers } from "./utils/containers";
+import { textColors } from "./utils/textColors";
 
 const GlobalStyle = createGlobalStyle`${(props) => {
   let style = "";
@@ -61,6 +62,7 @@ const GlobalStyle = createGlobalStyle`${(props) => {
   style += orders(props.theme);
   style += grid(props.theme);
   style += containers(props.theme);
+  style += textColors(props.theme);
 
   return style;
 }}  
