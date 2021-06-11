@@ -6,6 +6,8 @@ import * as yup from "yup";
 import { Paragraph, SmallTitle } from "../typography/Typography";
 import { BSCol, BSGrid, Container } from "../layout/Layout";
 import { Card } from "../card/Card";
+import { Datepicker } from "./datepicker/Datepicker";
+import { GeneralStyledInput } from "./_style";
 
 export default {
   title: "Forms",
@@ -55,6 +57,21 @@ export const Template: Story = () => (
                   name="subscribe"
                   label="I agree to receive earning opportunity emails from AppQuality"
                 />
+                <GeneralStyledInput className="aq-mb-3">
+                  <div className="form-label">Date</div>
+                  <Datepicker select="date" />
+                </GeneralStyledInput>
+                <GeneralStyledInput className="aq-mb-3">
+                  <div className="form-label">Date Range</div>
+                  <Datepicker select="range" control="calendar" />
+                </GeneralStyledInput>
+                <GeneralStyledInput className="aq-mb-3 is-invalid">
+                  <div className="form-label">Invalid input example</div>
+                  <Datepicker select="date" placeholder="select a date" />
+                  <div className="invalid-feedback">
+                    This is a required field
+                  </div>
+                </GeneralStyledInput>
               </Form>
             )}
           </Formik>
