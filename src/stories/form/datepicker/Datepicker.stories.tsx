@@ -6,7 +6,12 @@ export default {
   component: Datepicker,
 } as Meta;
 
-const DatepickerTemplate: Story = (args) => <Datepicker {...args} />;
+const DatepickerTemplate: Story = (args) => (
+  <>
+    <h2>Seleziona una data</h2>
+    <Datepicker {...args} />
+  </>
+);
 export const DatepickerWithScrollbar = DatepickerTemplate.bind({});
 export const DatepickerWithoutScrollbar = DatepickerTemplate.bind({});
 DatepickerWithoutScrollbar.args = {
