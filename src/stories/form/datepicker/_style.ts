@@ -1,4 +1,15 @@
 import { createGlobalStyle } from "styled-components";
+function hexToRGB(hex, alpha) {
+  var r = parseInt(hex.slice(1, 3), 16),
+    g = parseInt(hex.slice(3, 5), 16),
+    b = parseInt(hex.slice(5, 7), 16);
+
+  if (alpha) {
+    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
+  } else {
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+  }
+}
 
 export const DatepickerStyle = createGlobalStyle`
   @font-face {
@@ -4302,7 +4313,7 @@ export const DatepickerStyle = createGlobalStyle`
   }
 
   .mbsc-appquality.mbsc-hover .mbsc-calendar-cell-text {
-    background: ${(props) => props.theme.colors.gray200};
+    background: ${(props) => hexToRGB(props.theme.palette.info, "0.2")};
   }
 
   .mbsc-appquality.mbsc-range-hover:before {
@@ -4716,7 +4727,7 @@ export const DatepickerStyle = createGlobalStyle`
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-active,
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-focus,
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-hover {
-    background: ${(props) => props.theme.colors.gray200};
+    background: ${(props) => hexToRGB(props.theme.palette.info, "0.2")};
   }
 
   .mbsc-appquality.mbsc-wheel-checkmark:after {
