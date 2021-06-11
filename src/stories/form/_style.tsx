@@ -68,6 +68,7 @@ export const FormGroup = styled(GeneralStyledInput)`
     background-clip: padding-box;
     border: 1px solid ${(props) => props.theme.colors.gray100};
     border-radius: 5px;
+    line-height: 1.5;
     box-shadow: none;
 
     // Customize the \`:focus\` state to imitate native WebKit styles.

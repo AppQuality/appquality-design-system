@@ -26,7 +26,7 @@ export const UserInfo = ({
             </Paragraph>
           </Paragraph>
           <Button size="medium" type="link" onClick={onLogout}>
-            <span className="text-danger">
+            <span className="aq-text-danger">
               <BoxArrowRight />
             </span>
           </Button>
