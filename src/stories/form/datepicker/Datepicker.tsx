@@ -7,12 +7,14 @@ export const Datepicker = ({
   value,
   onChange,
   selectMultiple,
+  placeholder,
 }: DatepickerProps) => {
   return (
     <>
       <DatepickerStyle />
       <MobiScrollDatePicker
         select={select}
+        placeholder={placeholder}
         theme="appquality"
         controls={["date"]}
         themeVariant="light"

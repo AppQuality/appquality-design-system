@@ -3,4 +3,5 @@ export interface DatepickerProps {
   selectMultiple?: boolean;
   value?: any;
   onChange?: () => void;
+  placeholder?: string;
 }
