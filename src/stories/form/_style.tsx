@@ -10,7 +10,15 @@ import { FormCheckProps, FormGroupProps } from "./_types";
 // $dropzone-preview-size: 100px;
 // $dropzone-remove-btn-size: 32px;
 
-const GeneralStyledInput = styled.div`
+export const GeneralStyledInput = styled.div`
+  .form-label {
+    order: -1;
+    margin-bottom: 0.5rem;
+    .form-icon {
+      line-height: 1;
+      float: right;
+    }
+  }
   .invalid-feedback {
     color: ${(props) => props.theme.palette.danger};
     width: 100%;
@@ -43,14 +51,6 @@ export const FormGroup = styled(GeneralStyledInput)`
   width: 100%;
   margin-bottom: 1rem;
 
-  .form-label {
-    order: -1;
-    margin-bottom: 0.5rem;
-    .form-icon {
-      line-height: 1;
-      float: right;
-    }
-  }
   .input-group {
     position: relative;
     display: flex;
