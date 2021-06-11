@@ -5,6 +5,8 @@ import { DatepickerStyle } from "./_style";
 export const Datepicker = ({
   select,
   value,
+  minDate,
+  maxDate,
   onChange,
   control = "date",
   placeholder,
@@ -14,6 +16,9 @@ export const Datepicker = ({
       <DatepickerStyle />
       <MobiScrollDatePicker
         select={select}
+        min={minDate}
+        max={maxDate}
+        onChange={onChange}
         placeholder={placeholder}
         theme="appquality"
         controls={[control]}
