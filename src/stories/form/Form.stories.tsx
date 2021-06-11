@@ -62,7 +62,7 @@ export const Template: Story = () => (
                   <Datepicker select="date" />
                 </GeneralStyledInput>
                 <GeneralStyledInput className="aq-mb-3 is-invalid">
-                  <div className="form-label">Date with placeholder</div>
+                  <div className="form-label">Invalid input example</div>
                   <Datepicker select="date" placeholder="select a date" />
                   <div className="invalid-feedback">
                     This is a required field
