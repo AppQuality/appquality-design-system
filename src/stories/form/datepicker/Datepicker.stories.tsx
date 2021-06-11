@@ -12,8 +12,25 @@ const DatepickerTemplate: Story = (args) => (
     <Datepicker {...args} />
   </>
 );
-export const DatepickerWithScrollbar = DatepickerTemplate.bind({});
-export const DatepickerWithoutScrollbar = DatepickerTemplate.bind({});
-DatepickerWithoutScrollbar.args = {
-  showScrollbar: false,
+export const DatepickerInput = DatepickerTemplate.bind({});
+DatepickerInput.args = {
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+};
+export const DatepickerInputWithMinimum = DatepickerTemplate.bind({});
+DatepickerInputWithMinimum.args = {
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+  minDate: new Date("01-01-2020"),
+};
+
+const now = new Date();
+export const DatepickerInputWithMaximum = DatepickerTemplate.bind({});
+DatepickerInputWithMaximum.args = {
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+  maxDate: new Date(now.getFullYear() - 18, now.getMonth(), now.getDate()),
 };
