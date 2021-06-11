@@ -39,7 +39,7 @@ jobs:
         run: |
           npm ci
           npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci > /tmp/cires
-          echo ::set-output name=visual_changes::"$(cat /tmp/cires | grep "✖ Found")"
+          echo ::set-output name=visual_changes::"$(cat /tmp/cires | grep "✖ Found")$(cat /tmp/cires | grep "No visual changes")%0A"
           echo ::set-output name=build_url::"$(cat /tmp/cires | grep "ℹ View build details")"
       - name: Slack Post
         # You may pin to the exact commit or the version.
