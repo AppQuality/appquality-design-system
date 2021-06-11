@@ -6,7 +6,7 @@ export const Datepicker = ({
   select,
   value,
   onChange,
-  selectMultiple,
+  control = "date",
   placeholder,
 }: DatepickerProps) => {
   return (
@@ -16,7 +16,7 @@ export const Datepicker = ({
         select={select}
         placeholder={placeholder}
         theme="appquality"
-        controls={["date"]}
+        controls={[control]}
         themeVariant="light"
       />
     </>
