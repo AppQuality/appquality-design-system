@@ -61,6 +61,10 @@ export const Template: Story = () => (
                   <div className="form-label">Date</div>
                   <Datepicker select="date" />
                 </GeneralStyledInput>
+                <GeneralStyledInput className="aq-mb-3">
+                  <div className="form-label">Date Range</div>
+                  <Datepicker select="range" control="calendar" />
+                </GeneralStyledInput>
                 <GeneralStyledInput className="aq-mb-3 is-invalid">
                   <div className="form-label">Invalid input example</div>
                   <Datepicker select="date" placeholder="select a date" />
