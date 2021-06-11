@@ -57,9 +57,16 @@ export const Template: Story = () => (
                   name="subscribe"
                   label="I agree to receive earning opportunity emails from AppQuality"
                 />
-                <GeneralStyledInput>
+                <GeneralStyledInput className="aq-mb-3">
                   <div className="form-label">Date</div>
                   <Datepicker select="date" />
+                </GeneralStyledInput>
+                <GeneralStyledInput className="aq-mb-3 is-invalid">
+                  <div className="form-label">Date with placeholder</div>
+                  <Datepicker select="date" placeholder="select a date" />
+                  <div className="invalid-feedback">
+                    This is a required field
+                  </div>
                 </GeneralStyledInput>
               </Form>
             )}

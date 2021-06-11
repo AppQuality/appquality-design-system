@@ -99,7 +99,7 @@ export const DatepickerStyle = createGlobalStyle`
   }
 
   .mbsc-material.mbsc-textfield-wrapper {
-    margin-bottom: ${(props) => props.theme.grid.spacing.default};
+    margin-bottom: 0;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
@@ -775,13 +775,13 @@ export const DatepickerStyle = createGlobalStyle`
   }
 
   .mbsc-textfield::-moz-placeholder {
-    opacity: 0.5;
-    color: inherit;
+    color: ${(props) => props.theme.colors.disabled};
+    opacity: 1;
   }
 
   .mbsc-textfield::-webkit-input-placeholder {
-    opacity: 0.5;
-    color: inherit;
+    color: ${(props) => props.theme.colors.disabled};
+    opacity: 1;
   }
 
   .mbsc-textfield-floating:-ms-input-placeholder {

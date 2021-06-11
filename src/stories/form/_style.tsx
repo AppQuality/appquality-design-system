@@ -26,7 +26,8 @@ export const GeneralStyledInput = styled.div`
     font-size: 0.875em;
   }
   &.is-invalid {
-    .form-control {
+    .form-control,
+    .mbsc-material.mbsc-textfield-box {
       border-color: ${(props) => props.theme.palette.danger};
       padding-right: calc(1.5em + 0.75rem);
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23d71116'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23d71116' stroke='none'/%3E%3C/svg%3E");
@@ -35,7 +36,8 @@ export const GeneralStyledInput = styled.div`
       background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
     }
     .form-control:focus,
-    .form-check-input:focus {
+    .form-check-input:focus,
+    .mbsc-material.mbsc-textfield-box:focus {
       border-color: ${(props) => props.theme.palette.danger};
       box-shadow: 0 0 0 0.25rem ${(props) => props.theme.colors.red100};
     }
