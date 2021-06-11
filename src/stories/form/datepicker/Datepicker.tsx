@@ -1,9 +1,11 @@
 import { Datepicker as MobiScrollDatePicker } from "@mobiscroll/react";
 import { DatepickerProps } from "./_types";
 import { DatepickerStyle } from "./_style";
+import { DatepickerStyleNoScrollbar } from "./_style_no_scrollbar";
 
 export const Datepicker = ({
   select,
+  showScrollbar = true,
   value,
   onChange,
   control = "date",
@@ -11,7 +13,7 @@ export const Datepicker = ({
 }: DatepickerProps) => {
   return (
     <>
-      <DatepickerStyle />
+      {showScrollbar ? <DatepickerStyle /> : <DatepickerStyleNoScrollbar />}
       <MobiScrollDatePicker
         select={select}
         placeholder={placeholder}
