@@ -1,0 +1,23 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+
+# Prettify all selected files
+npx prettier --ignore-unknown --write $FILES 
+LIST="puts\|debugger\|binding.pry\|console.log("
+
+for FILE in $FILES ; do
+    # Check if the file contains one of the words in LIST
+    if grep -w $LIST $FILE; then
+      echo $FILE." has one of the word you don't want to commit. Please remove it"
+      exit 1
+    fi
+      done
+
+# Add back the modified/prettified files to staging
+echo "$FILES" | xargs git add
+
+
+exit 0

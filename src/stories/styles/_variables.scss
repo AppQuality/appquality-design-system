@@ -1,0 +1,54 @@
+@import "globals";
+@import "palette";
+$border-radius: 5px;
+$card-cap-bg: transparent;
+
+$font-family-sans-serif: Roboto, "Helvetica Neue", Arial, "Noto Sans",
+  "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif: "IBM Plex Serif", serif;
+$font-family-monospace: "IBM Plex Mono", Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+
+$font-size-parent: 1rem;
+$font-size-base: $font-size-parent * 0.875;
+$font-size-sm: $font-size-parent * 0.75;
+$font-size-lg: $font-size-parent * 1.25;
+
+$font-weight-lightest: 100;
+$font-weight-lighter: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-regular: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+$font-weight-black: 900;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-lg: 2.3;
+
+$h1-font-size: $font-size-parent * 2.5; // 35
+$h2-font-size: $font-size-parent * 2; // 28
+$h3-font-size: $font-size-parent * 1.5; // 21
+$h4-font-size: $font-size-parent * 1; // ?
+$h5-font-size: $font-size-parent * 0.875; // 14
+$h6-font-size: $font-size-parent * 0.875; // ?
+// scss-docs-end font-variables
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+);
+// scss-docs-end font-sizes
+
+$body-bg: $grey-100;
+$body-color: $primary;

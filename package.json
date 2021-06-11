@@ -1,23 +1,50 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "0.1.0",
+  "version": "0.1.26",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react-dom": "^17.0.0",
+    "bootstrap": "^5.0.1",
+    "formik": "^2.2.9",
+    "node-sass": "^6.0.0",
     "react": "^17.0.2",
+    "react-bootstrap-icons": "^1.5.0",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "react-select": "^4.3.1",
+    "styled-components": "^5.3.0",
+    "typescript": "4.2.2",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
   },
   "scripts": {
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
-    "release": "npx auto shipit --base-branch=main"
+    "prepare": "npx husky install",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss src/**/*.d.ts src/*.d.ts  dist/",
+    "build": "npm run clean && tsc --noEmit false && npm run copy-files",
+    "release": "npx auto shipit --base-branch=main",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -34,8 +61,22 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "@types/react": "^17.0.9",
+    "@types/react-select": "^4.0.15",
+    "@types/styled-components": "^5.1.9",
     "auto": "^10.29.2",
-    "cross-env": "^7.0.3"
+    "chromatic": "^5.9.0",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "husky": "^6.0.0",
+    "rimraf": "^3.0.2",
+    "typed-scss-modules": "^4.1.1"
   },
   "babel": {
     "presets": [
@@ -44,11 +85,13 @@
         {
           "absoluteRuntime": false
         }
-      ]
+      ],
+      "@babel/preset-typescript"
     ]
   },
   "description": "The Storybook design system tutorial is a subset of the full [Storybook design system](https://github.com/storybookjs/design-system/), created as a learning resource for those interested in learning how to write and publish a design system using best in practice techniques.",
-  "main": "dist/index.js",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AppQuality/appquality-design-system.git"
