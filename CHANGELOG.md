@@ -1,3 +1,17 @@
+# v0.1.27 (Fri Jun 11 2021)
+
+#### 🐛 Bug Fix
+
+- Alignment storybook and ci integrations [#1](https://github.com/AppQuality/appquality-design-system/pull/1) (davide.bizzi@app-quality.com iacopo.leardini@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.26 (Thu Jun 10 2021)
 
 #### ⚠️ Pushed to `develop`
