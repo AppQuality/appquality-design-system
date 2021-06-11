@@ -40,11 +40,15 @@ const customStyle: Styles<any, any> = {
   control: (provided, state) => {
     const borderColor = `${aqBootstrapTheme.colors.disabled}`;
     const boxShadow = "none";
+    const lineHeight = "1.5";
+    const minHeight = "39px";
 
     return {
       ...provided,
       borderColor,
+      minHeight,
       boxShadow,
+      lineHeight,
       ":hover": {
         borderColor: borderColor,
       },
@@ -62,7 +66,7 @@ const customStyle: Styles<any, any> = {
       transform,
     };
   },
-  menu: (provided, state) => {
+  menu: (provided) => {
     const borderColor = `${aqBootstrapTheme.colors.disabled}`;
     const borderWidth = "1px";
     const borderStyle = "solid";
@@ -78,7 +82,7 @@ const customStyle: Styles<any, any> = {
       boxShadow,
     };
   },
-  groupHeading: (provided, state) => {
+  groupHeading: (provided) => {
     const fontFamily = `${aqBootstrapTheme.typography.fontFamily.mono}`;
     const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
     const fontSize = `${aqBootstrapTheme.typography.fontSize.small}`;
@@ -92,9 +96,8 @@ const customStyle: Styles<any, any> = {
       color,
     };
   },
-  noOptionsMessage: (provided, state) => {
+  noOptionsMessage: (provided) => {
     const color = `${aqBootstrapTheme.colors.disabled}`;
-    const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
 
     return {
       ...provided,
@@ -106,7 +109,6 @@ const customStyle: Styles<any, any> = {
       const color = `${aqBootstrapTheme.colors.disabled}`;
       const textAlign = "center";
       const background = "none";
-      const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
 
       return {
         ...provided,
