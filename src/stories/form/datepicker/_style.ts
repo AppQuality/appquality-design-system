@@ -3764,6 +3764,7 @@ export const DatepickerStyle = createGlobalStyle`
   }
 
   .mbsc-scroller-bar-cont {
+    display:none;
     position: absolute;
     z-index: 4;
     top: 0;
