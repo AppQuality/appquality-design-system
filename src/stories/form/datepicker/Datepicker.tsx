@@ -10,6 +10,8 @@ export const Datepicker = ({
   onChange,
   control = "date",
   placeholder,
+  setText = "Set",
+  cancelText = "Cancel",
 }: DatepickerProps) => {
   return (
     <>
@@ -20,6 +22,9 @@ export const Datepicker = ({
         max={maxDate}
         onChange={onChange}
         placeholder={placeholder}
+        setText={setText}
+        cancelText={cancelText}
+        buttons={["cancel", "set"]}
         theme="appquality"
         controls={[control]}
         themeVariant="light"
