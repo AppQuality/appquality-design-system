@@ -4,7 +4,11 @@ function addOpacityToHex(hex: string, alpha: string) {
   return `${hex}${hexAlphaPercent}`;
 }
 
-export const DatepickerStyle = styled.div`
+export const DatepickerStyle = createGlobalStyle`${(props) => {
+  if ((window as any).MBSCappqGlobalStyleAlreadyRendered) return;
+  (window as any).MBSCappqGlobalStyleAlreadyRendered = true;
+
+  return `
   @font-face {
     font-family: Mobiscroll;
     src: url(icons_mobiscroll.woff?vytnpl) format("woff"),
@@ -596,7 +600,7 @@ export const DatepickerStyle = styled.div`
 
   .mbsc-material.mbsc-textfield-box.mbsc-select.mbsc-hover,
   .mbsc-material.mbsc-textfield-inner-box.mbsc-hover {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
   }
 
   .mbsc-material.mbsc-textfield-box.mbsc-select.mbsc-focus,
@@ -781,12 +785,12 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-textfield::-moz-placeholder {
-    color: ${(props) => props.theme.colors.disabled};
+    color: ${props.theme.colors.disabled};
     opacity: 1;
   }
 
   .mbsc-textfield::-webkit-input-placeholder {
-    color: ${(props) => props.theme.colors.disabled};
+    color: ${props.theme.colors.disabled};
     opacity: 1;
   }
 
@@ -954,7 +958,7 @@ export const DatepickerStyle = styled.div`
   .mbsc-font {
     font-family: -apple-system, Segoe UI, Roboto, sans-serif;
     font-size: 16px;
-    font-weight: ${(props) => props.theme.typography.fontWeight.light};
+    font-weight: ${props.theme.typography.fontWeight.light};
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-text-size-adjust: 100%;
   }
@@ -2489,8 +2493,8 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-material.mbsc-calendar-title {
-    font-size: ${(props) => props.theme.typography.fontSize.base};
-    font-weight: ${(props) => props.theme.typography.fontWeight.light};
+    font-size: ${props.theme.typography.fontSize.base};
+    font-weight: ${props.theme.typography.fontWeight.light};
     text-transform: none;
     line-height: 1.4em;
   }
@@ -3270,7 +3274,7 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-calendar-day-outer .mbsc-appquality.mbsc-calendar-day-text {
-    color: ${(props) => props.theme.colors.disabled};
+    color: ${props.theme.colors.disabled};
   }
 
   .mbsc-calendar-day-outer.mbsc-selected .mbsc-calendar-day-text {
@@ -3485,7 +3489,7 @@ export const DatepickerStyle = styled.div`
 
   .mbsc-material.mbsc-scroller-wheel-item {
     padding: 0 0.272727em;
-    font-size: ${(props) => props.theme.typography.fontSize.base};
+    font-size: ${props.theme.typography.fontSize.base};
     text-align: center;
   }
 
@@ -4120,7 +4124,7 @@ export const DatepickerStyle = styled.div`
 
   .mbsc-material.mbsc-range-control-label {
     text-transform: capitalize;
-    color: ${(props) => props.theme.colors.cyan300};
+    color: ${props.theme.colors.cyan300};
   }
 
   .mbsc-material.mbsc-range-control-value {
@@ -4326,27 +4330,27 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-appquality.mbsc-calendar-button.mbsc-button {
-    color: ${(props) => props.theme.palette.primary};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-calendar-picker-slide,
   .mbsc-appquality.mbsc-calendar-slide {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-calendar-week-day {
-    color: ${(props) => props.theme.palette.primary};
-    font-weight: ${(props) => props.theme.typography.fontWeight.light};
-    font-size: ${(props) => props.theme.typography.fontSize.base};
+    color: ${props.theme.palette.primary};
+    font-weight: ${props.theme.typography.fontWeight.light};
+    font-size: ${props.theme.typography.fontSize.base};
   }
 
   .mbsc-appquality.mbsc-calendar-cell-text {
-    color: ${(props) => props.theme.palette.primary};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-calendar-today {
-    color: ${(props) => props.theme.palette.primary};
-    font-weight: ${(props) => props.theme.typography.fontWeight.normal};
+    color: ${props.theme.palette.primary};
+    font-weight: ${props.theme.typography.fontWeight.normal};
   }
 
   .mbsc-appquality.mbsc-focus .mbsc-calendar-cell-text {
@@ -4354,7 +4358,7 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-appquality.mbsc-hover .mbsc-calendar-cell-text {
-    background: ${(props) => addOpacityToHex(props.theme.palette.info, "0.2")};
+    background: ${addOpacityToHex(props.theme.palette.info, "0.2")};
   }
 
   .mbsc-appquality.mbsc-range-hover:before {
@@ -4366,17 +4370,17 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-appquality.mbsc-selected .mbsc-calendar-cell-text {
-    background: ${(props) => props.theme.palette.success};
-    border-color: ${(props) => props.theme.palette.success};
-    color: ${(props) => props.theme.colors.white};
+    background: ${props.theme.palette.success};
+    border-color: ${props.theme.palette.success};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-calendar-mark {
-    background: ${(props) => props.theme.palette.success};
+    background: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-calendar-label {
-    color: ${(props) => props.theme.palette.success};
+    color: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-calendar-label-inner {
@@ -4394,12 +4398,12 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-appquality.mbsc-calendar-text-more .mbsc-calendar-label-text {
-    color: ${(props) => props.theme.palette.primary};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-calendar-popup .mbsc-popup-arrow,
   .mbsc-appquality.mbsc-calendar-popup .mbsc-popup-body {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-calendar-height-md .mbsc-calendar-day,
@@ -4408,38 +4412,38 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-appquality.mbsc-datepicker .mbsc-calendar-slide {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-datepicker-inline {
-    background: ${(props) => props.theme.colors.white};
-    color: ${(props) => props.theme.palette.primary};
+    background: ${props.theme.colors.white};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-datepicker-inline .mbsc-calendar-slide {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-range-control-wrapper {
-    border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
+    border-bottom: 1px solid ${props.theme.colors.disabled};
   }
 
   .mbsc-appquality.mbsc-range-control-wrapper
     .mbsc-appquality.mbsc-segmented-button.mbsc-selected {
-    border-bottom-color: ${(props) => props.theme.palette.success};
+    border-bottom-color: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-range-control-label.active {
-    color: ${(props) => props.theme.palette.info};
-    font-weight: ${(props) => props.theme.typography.fontWeight.normal};
+    color: ${props.theme.palette.info};
+    font-weight: ${props.theme.typography.fontWeight.normal};
   }
   .mbsc-appquality.mbsc-range-control-value.active {
-    color: ${(props) => props.theme.palette.success};
+    color: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-range-control-text-empty,
   .mbsc-appquality.mbsc-range-control-text-empty.active {
-    color: ${(props) => props.theme.colors.disabled};
+    color: ${props.theme.colors.disabled};
     text-transform: capitalize;
   }
 
@@ -4492,42 +4496,42 @@ export const DatepickerStyle = styled.div`
 
   .mbsc-appquality.mbsc-button-primary.mbsc-button-standard {
     background: #3f97f6;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-secondary.mbsc-button-standard {
     background: #90979e;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-success.mbsc-button-standard {
     background: #43be5f;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-danger.mbsc-button-standard {
     background: #f5504e;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-warning.mbsc-button-standard {
     background: #f8b042;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-info.mbsc-button-standard {
     background: #5bb7c5;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-dark.mbsc-button-standard {
     background: #47494a;
-    color: ${(props) => props.theme.colors.white};
+    color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-button-light.mbsc-button-standard {
     background: #fff;
-    color: ${(props) => props.theme.palette.primary};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-button-primary.mbsc-button-flat {
@@ -4747,27 +4751,27 @@ export const DatepickerStyle = styled.div`
   }
 
   .mbsc-appquality.mbsc-popup-body {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
     box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
       0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
-    color: ${(props) => props.theme.palette.primary};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-popup-arrow {
-    background: ${(props) => props.theme.colors.white};
+    background: ${props.theme.colors.white};
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   }
 
   .mbsc-appquality.mbsc-popup-button.mbsc-font {
-    color: ${(props) => props.theme.palette.success};
+    color: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-popup-button.mbsc-font.mbsc-popup-button-close {
-    color: ${(props) => props.theme.palette.danger};
+    color: ${props.theme.palette.danger};
   }
 
   .mbsc-appquality.mbsc-scroller-wheel-cont {
-    border-color: ${(props) => props.theme.palette.success};
+    border-color: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-scroller-pointer
@@ -4780,17 +4784,18 @@ export const DatepickerStyle = styled.div`
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-active,
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-focus,
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-hover {
-    background: ${(props) => addOpacityToHex(props.theme.palette.info, "0.2")};
+    background: ${addOpacityToHex(props.theme.palette.info, "0.2")};
   }
 
   .mbsc-appquality.mbsc-wheel-checkmark:after {
-    border-color: ${(props) => props.theme.palette.success};
+    border-color: ${props.theme.palette.success};
   }
 
   .mbsc-appquality.mbsc-scroller-pointer
     .mbsc-wheel-group-cont-single
     .mbsc-scroller-wheel-item.mbsc-selected {
-    color: ${(props) => props.theme.palette.success};
+    color: ${props.theme.palette.success};
     background: rgba(0, 0, 0, 0.15);
   }
 `;
+}}`;
