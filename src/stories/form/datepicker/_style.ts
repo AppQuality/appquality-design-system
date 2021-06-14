@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 function hexToRGB(hex: string, alpha: string) {
   var r = parseInt(hex.slice(1, 3), 16),
     g = parseInt(hex.slice(3, 5), 16),
@@ -11,10 +11,12 @@ function hexToRGB(hex: string, alpha: string) {
   }
 }
 
-export const DatepickerStyle = createGlobalStyle`
+export const DatepickerStyle = styled.div`
   @font-face {
     font-family: Mobiscroll;
-    src: url(icons_mobiscroll.woff?vytnpl) format("woff"), url(icons_mobiscroll.woff) format("woff"), url(icons_mobiscroll.ttf?vytnpl) format("truetype");
+    src: url(icons_mobiscroll.woff?vytnpl) format("woff"),
+      url(icons_mobiscroll.woff) format("woff"),
+      url(icons_mobiscroll.ttf?vytnpl) format("truetype");
     font-weight: 400;
     font-style: normal;
   }
@@ -244,7 +246,7 @@ export const DatepickerStyle = createGlobalStyle`
     width: 100%;
     padding: 0.5rem 0.75rem;
     color: #17405c;
-    font-size: .875rem;
+    font-size: 0.875rem;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #f0f5f7;
@@ -1058,7 +1060,6 @@ export const DatepickerStyle = createGlobalStyle`
     border-radius: 0.285715em;
     font-size: 0.875em;
     font-weight: 600;
-    text-transform: uppercase;
     line-height: 1.714286em;
     -webkit-transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
     transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
@@ -1120,16 +1121,19 @@ export const DatepickerStyle = createGlobalStyle`
   .mbsc-material.mbsc-button-standard {
     background: #cfcfcf;
     color: #000;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-material.mbsc-button-standard.mbsc-hover {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-material.mbsc-button-standard.mbsc-active,
   .mbsc-material.mbsc-button-standard.mbsc-focus {
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-material.mbsc-button-flat,
@@ -1412,16 +1416,19 @@ export const DatepickerStyle = createGlobalStyle`
   .mbsc-material-dark.mbsc-button-standard {
     background: #2b2b2b;
     color: #fff;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-material-dark.mbsc-button-standard.mbsc-hover {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-material-dark.mbsc-button-standard.mbsc-active,
   .mbsc-material-dark.mbsc-button-standard.mbsc-focus {
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-material-dark.mbsc-button-flat,
@@ -1836,7 +1843,8 @@ export const DatepickerStyle = createGlobalStyle`
 
   .mbsc-material.mbsc-popup-body {
     background: #fff;
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+      0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
     color: #303030;
   }
 
@@ -1851,7 +1859,8 @@ export const DatepickerStyle = createGlobalStyle`
 
   .mbsc-material-dark.mbsc-popup-body {
     background: #303030;
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+      0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
     color: #fff;
   }
 
@@ -2122,7 +2131,8 @@ export const DatepickerStyle = createGlobalStyle`
     -moz-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    border-width: var(--mbsc-safe-top) var(--mbsc-safe-right) var(--mbsc-safe-bottom) var(--mbsc-safe-left);
+    border-width: var(--mbsc-safe-top) var(--mbsc-safe-right)
+      var(--mbsc-safe-bottom) var(--mbsc-safe-left);
   }
 
   .mbsc-popup-wrapper-top {
@@ -2620,7 +2630,9 @@ export const DatepickerStyle = createGlobalStyle`
     min-height: 4em;
   }
 
-  .mbsc-material.mbsc-calendar-width-md .mbsc-calendar-day-labels .mbsc-calendar-day-inner {
+  .mbsc-material.mbsc-calendar-width-md
+    .mbsc-calendar-day-labels
+    .mbsc-calendar-day-inner {
     min-height: 5.5em;
   }
 
@@ -2657,15 +2669,21 @@ export const DatepickerStyle = createGlobalStyle`
     font-size: 1.2em;
   }
 
-  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md .mbsc-calendar-day.mbsc-ltr,
-  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md .mbsc-calendar-marks.mbsc-ltr,
-  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md .mbsc-calendar-week-day.mbsc-ltr {
+  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md
+    .mbsc-calendar-day.mbsc-ltr,
+  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md
+    .mbsc-calendar-marks.mbsc-ltr,
+  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md
+    .mbsc-calendar-week-day.mbsc-ltr {
     text-align: left;
   }
 
-  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md .mbsc-calendar-day.mbsc-rtl,
-  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md .mbsc-calendar-marks.mbsc-rtl,
-  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md .mbsc-calendar-week-day.mbsc-rtl {
+  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md
+    .mbsc-calendar-day.mbsc-rtl,
+  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md
+    .mbsc-calendar-marks.mbsc-rtl,
+  .mbsc-material.mbsc-calendar-height-md.mbsc-calendar-width-md
+    .mbsc-calendar-week-day.mbsc-rtl {
     text-align: right;
   }
 
@@ -2730,7 +2748,8 @@ export const DatepickerStyle = createGlobalStyle`
 
   .mbsc-material.mbsc-calendar-label.mbsc-calendar-label-active,
   .mbsc-material.mbsc-calendar-label.mbsc-calendar-label-dragging {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 3px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12),
+      0 1px 3px -1px rgba(0, 0, 0, 0.2);
   }
 
   .mbsc-material.mbsc-calendar-text-more {
@@ -2815,7 +2834,8 @@ export const DatepickerStyle = createGlobalStyle`
 
   .mbsc-material-dark.mbsc-calendar-label.mbsc-calendar-label-active,
   .mbsc-material-dark.mbsc-calendar-label.mbsc-calendar-label-dragging {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 3px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12),
+      0 1px 3px -1px rgba(0, 0, 0, 0.2);
   }
 
   .mbsc-material-dark.mbsc-calendar-text-more {
@@ -3550,12 +3570,16 @@ export const DatepickerStyle = createGlobalStyle`
     padding: 0 2em;
   }
 
-  .mbsc-material.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-item.mbsc-ltr,
+  .mbsc-material.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-item.mbsc-ltr,
   .mbsc-material.mbsc-scroller-pointer .mbsc-wheel-item-multi.mbsc-ltr {
     text-align: left;
   }
 
-  .mbsc-material.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-item.mbsc-rtl,
+  .mbsc-material.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-item.mbsc-rtl,
   .mbsc-material.mbsc-scroller-pointer .mbsc-wheel-item-multi.mbsc-rtl {
     text-align: right;
   }
@@ -3564,7 +3588,9 @@ export const DatepickerStyle = createGlobalStyle`
     border-color: #1a73e8;
   }
 
-  .mbsc-material.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-single,
+  .mbsc-material.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-single,
   .mbsc-material.mbsc-scroller-wheel-multi {
     border-color: transparent;
   }
@@ -3579,7 +3605,9 @@ export const DatepickerStyle = createGlobalStyle`
     border-color: #1a73e8;
   }
 
-  .mbsc-material.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-item.mbsc-selected {
+  .mbsc-material.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-item.mbsc-selected {
     color: #1a73e8;
     background: rgba(0, 0, 0, 0.15);
   }
@@ -3588,7 +3616,9 @@ export const DatepickerStyle = createGlobalStyle`
     border-color: #87b0f3;
   }
 
-  .mbsc-material-dark.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-single,
+  .mbsc-material-dark.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-single,
   .mbsc-material-dark.mbsc-scroller-wheel-multi {
     border-color: transparent;
   }
@@ -3603,7 +3633,9 @@ export const DatepickerStyle = createGlobalStyle`
     border-color: #87b0f3;
   }
 
-  .mbsc-material-dark.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-item.mbsc-selected {
+  .mbsc-material-dark.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-item.mbsc-selected {
     color: #87b0f3;
     background: rgba(0, 0, 0, 0.15);
   }
@@ -3764,7 +3796,7 @@ export const DatepickerStyle = createGlobalStyle`
   }
 
   .mbsc-scroller-bar-cont {
-    display:none;
+    display: none;
     position: absolute;
     z-index: 4;
     top: 0;
@@ -3826,7 +3858,8 @@ export const DatepickerStyle = createGlobalStyle`
     border-bottom-left-radius: 0.25em;
   }
 
-  .mbsc-material.mbsc-segmented-item:first-child .mbsc-segmented-button.mbsc-rtl {
+  .mbsc-material.mbsc-segmented-item:first-child
+    .mbsc-segmented-button.mbsc-rtl {
     border-radius: 0 0.25em 0.25em 0;
     border-right-width: 0.142858em;
   }
@@ -3837,7 +3870,8 @@ export const DatepickerStyle = createGlobalStyle`
     border-right-width: 0.142858em;
   }
 
-  .mbsc-material.mbsc-segmented-item:last-child .mbsc-segmented-button.mbsc-rtl {
+  .mbsc-material.mbsc-segmented-item:last-child
+    .mbsc-segmented-button.mbsc-rtl {
     border-radius: 0.25em 0 0 0.25em;
     border-right-width: 0;
   }
@@ -4049,7 +4083,8 @@ export const DatepickerStyle = createGlobalStyle`
     width: 18.5em;
   }
 
-  .mbsc-material.mbsc-range-control-wrapper .mbsc-segmented-button.mbsc-button.mbsc-font {
+  .mbsc-material.mbsc-range-control-wrapper
+    .mbsc-segmented-button.mbsc-button.mbsc-font {
     background: none;
     border: 0;
     border-bottom: 2px solid transparent;
@@ -4066,17 +4101,27 @@ export const DatepickerStyle = createGlobalStyle`
     text-align: right;
   }
 
-  .mbsc-material.mbsc-range-control-wrapper .mbsc-range-value-nonempty .mbsc-segmented-button.mbsc-ltr {
+  .mbsc-material.mbsc-range-control-wrapper
+    .mbsc-range-value-nonempty
+    .mbsc-segmented-button.mbsc-ltr {
     padding-right: 2.642857em;
   }
 
-  .mbsc-material.mbsc-range-control-wrapper .mbsc-range-value-nonempty .mbsc-segmented-button.mbsc-rtl {
+  .mbsc-material.mbsc-range-control-wrapper
+    .mbsc-range-value-nonempty
+    .mbsc-segmented-button.mbsc-rtl {
     padding-left: 2.642857em;
   }
 
-  .mbsc-material.mbsc-datepicker-control-calendar.mbsc-datepicker-control-time .mbsc-range-control-wrapper .mbsc-segmented,
-  .mbsc-material.mbsc-datepicker-control-date.mbsc-datepicker-control-time .mbsc-range-control-wrapper .mbsc-segmented,
-  .mbsc-material.mbsc-datepicker-control-datetime .mbsc-range-control-wrapper .mbsc-segmented {
+  .mbsc-material.mbsc-datepicker-control-calendar.mbsc-datepicker-control-time
+    .mbsc-range-control-wrapper
+    .mbsc-segmented,
+  .mbsc-material.mbsc-datepicker-control-date.mbsc-datepicker-control-time
+    .mbsc-range-control-wrapper
+    .mbsc-segmented,
+  .mbsc-material.mbsc-datepicker-control-datetime
+    .mbsc-range-control-wrapper
+    .mbsc-segmented {
     width: 25em;
   }
 
@@ -4128,7 +4173,8 @@ export const DatepickerStyle = createGlobalStyle`
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
-  .mbsc-material.mbsc-range-control-wrapper .mbsc-material.mbsc-segmented-button.mbsc-selected {
+  .mbsc-material.mbsc-range-control-wrapper
+    .mbsc-material.mbsc-segmented-button.mbsc-selected {
     border-bottom-color: #1a73e8;
   }
 
@@ -4167,7 +4213,8 @@ export const DatepickerStyle = createGlobalStyle`
     border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
   }
 
-  .mbsc-material-dark.mbsc-range-control-wrapper .mbsc-material-dark.mbsc-segmented-button.mbsc-selected {
+  .mbsc-material-dark.mbsc-range-control-wrapper
+    .mbsc-material-dark.mbsc-segmented-button.mbsc-selected {
     border-bottom-color: #87b0f3;
   }
 
@@ -4345,7 +4392,8 @@ export const DatepickerStyle = createGlobalStyle`
 
   .mbsc-appquality.mbsc-calendar-label.mbsc-calendar-label-active,
   .mbsc-appquality.mbsc-calendar-label.mbsc-calendar-label-dragging {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 3px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12),
+      0 1px 3px -1px rgba(0, 0, 0, 0.2);
   }
 
   .mbsc-appquality.mbsc-calendar-text-more {
@@ -4383,7 +4431,8 @@ export const DatepickerStyle = createGlobalStyle`
     border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
   }
 
-  .mbsc-appquality.mbsc-range-control-wrapper .mbsc-appquality.mbsc-segmented-button.mbsc-selected {
+  .mbsc-appquality.mbsc-range-control-wrapper
+    .mbsc-appquality.mbsc-segmented-button.mbsc-selected {
     border-bottom-color: ${(props) => props.theme.palette.success};
   }
 
@@ -4412,16 +4461,19 @@ export const DatepickerStyle = createGlobalStyle`
   .mbsc-appquality.mbsc-button-standard {
     background: #bdbdbd;
     color: #000;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-appquality.mbsc-button-standard.mbsc-hover {
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-appquality.mbsc-button-standard.mbsc-active,
   .mbsc-appquality.mbsc-button-standard.mbsc-focus {
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   }
 
   .mbsc-appquality.mbsc-button-flat,
@@ -4703,7 +4755,8 @@ export const DatepickerStyle = createGlobalStyle`
 
   .mbsc-appquality.mbsc-popup-body {
     background: ${(props) => props.theme.colors.white};
-    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2),
+      0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
     color: ${(props) => props.theme.palette.primary};
   }
 
@@ -4716,11 +4769,17 @@ export const DatepickerStyle = createGlobalStyle`
     color: ${(props) => props.theme.palette.success};
   }
 
+  .mbsc-appquality.mbsc-popup-button.mbsc-font.mbsc-popup-button-close {
+    color: ${(props) => props.theme.palette.danger};
+  }
+
   .mbsc-appquality.mbsc-scroller-wheel-cont {
     border-color: ${(props) => props.theme.palette.success};
   }
 
-  .mbsc-appquality.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-single,
+  .mbsc-appquality.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-single,
   .mbsc-appquality.mbsc-scroller-wheel-multi {
     border-color: transparent;
   }
@@ -4735,7 +4794,9 @@ export const DatepickerStyle = createGlobalStyle`
     border-color: ${(props) => props.theme.palette.success};
   }
 
-  .mbsc-appquality.mbsc-scroller-pointer .mbsc-wheel-group-cont-single .mbsc-scroller-wheel-item.mbsc-selected {
+  .mbsc-appquality.mbsc-scroller-pointer
+    .mbsc-wheel-group-cont-single
+    .mbsc-scroller-wheel-item.mbsc-selected {
     color: ${(props) => props.theme.palette.success};
     background: rgba(0, 0, 0, 0.15);
   }

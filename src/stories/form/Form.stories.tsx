@@ -59,15 +59,19 @@ export const Template: Story = () => (
                 />
                 <GeneralStyledInput className="aq-mb-3">
                   <div className="form-label">Date</div>
-                  <Datepicker select="date" />
+                  <Datepicker id="date1" select="date" />
                 </GeneralStyledInput>
                 <GeneralStyledInput className="aq-mb-3">
                   <div className="form-label">Date Range</div>
-                  <Datepicker select="range" control="calendar" />
+                  <Datepicker id="range1" select="range" control="calendar" />
                 </GeneralStyledInput>
                 <GeneralStyledInput className="aq-mb-3 is-invalid">
                   <div className="form-label">Invalid input example</div>
-                  <Datepicker select="date" placeholder="select a date" />
+                  <Datepicker
+                    id="date2"
+                    select="date"
+                    placeholder="select a date"
+                  />
                   <div className="invalid-feedback">
                     This is a required field
                   </div>
