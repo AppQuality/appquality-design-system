@@ -1,6 +1,5 @@
 import { Datepicker as MobiScrollDatePicker } from "@mobiscroll/react";
 import { DatepickerProps } from "./_types";
-import DatepickerStyle from "./_style";
 
 export const Datepicker = ({
   select,
@@ -15,7 +14,6 @@ export const Datepicker = ({
 }: DatepickerProps) => {
   return (
     <>
-      <DatepickerStyle />
       <MobiScrollDatePicker
         select={select}
         min={minDate}
