@@ -1,3 +1,16 @@
+# v0.1.29 (Mon Jun 14 2021)
+
+#### 🐛 Bug Fix
+
+- fix: Export datepicker [#3](https://github.com/AppQuality/appquality-design-system/pull/3) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.28 (Mon Jun 14 2021)
 
 #### 🐛 Bug Fix
