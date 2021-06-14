@@ -4805,9 +4805,7 @@ const DatepickerStyle = () => {
   if ((window as any).MBSCappqGlobalStyleAlreadyRendered) return null;
   return (
     <>
-      <StyleSheetManager disableVendorPrefixes={true}>
-        <DatepickerGlobalStyle />
-      </StyleSheetManager>
+      <DatepickerGlobalStyle />
       {((window as any).MBSCappqGlobalStyleAlreadyRendered = true)}
     </>
   );
