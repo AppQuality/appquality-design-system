@@ -1,13 +1,11 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, StyleSheetManager } from "styled-components";
+import { useEffect } from "react";
 function addOpacityToHex(hex: string, alpha: string) {
   let hexAlphaPercent = parseInt((parseFloat(alpha) * 100).toString(), 16);
   return `${hex}${hexAlphaPercent}`;
 }
 
-export const DatepickerStyle = createGlobalStyle`${(props) => {
-  if ((window as any).MBSCappqGlobalStyleAlreadyRendered) return;
-  (window as any).MBSCappqGlobalStyleAlreadyRendered = true;
-
+export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   return `
   @font-face {
     font-family: Mobiscroll;
@@ -4799,3 +4797,20 @@ export const DatepickerStyle = createGlobalStyle`${(props) => {
   }
 `;
 }}`;
+
+const DatepickerStyle = () => {
+  useEffect(() => {
+    (window as any).MBSCappqGlobalStyleAlreadyRendered = false;
+  });
+  if ((window as any).MBSCappqGlobalStyleAlreadyRendered) return null;
+  return (
+    <>
+      <StyleSheetManager disableVendorPrefixes={true}>
+        <DatepickerGlobalStyle />
+      </StyleSheetManager>
+      {((window as any).MBSCappqGlobalStyleAlreadyRendered = true)}
+    </>
+  );
+};
+
+export default DatepickerStyle;
