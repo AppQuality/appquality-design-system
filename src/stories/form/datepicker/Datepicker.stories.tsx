@@ -9,7 +9,7 @@ export default {
 const DatepickerTemplate: Story = (args) => (
   <>
     <h2>Seleziona una data</h2>
-    <Datepicker {...args} />
+    <Datepicker {...args} id="test1" />
   </>
 );
 export const DatepickerInput = DatepickerTemplate.bind({});
