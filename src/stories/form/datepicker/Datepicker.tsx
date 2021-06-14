@@ -1,6 +1,6 @@
 import { Datepicker as MobiScrollDatePicker } from "@mobiscroll/react";
 import { DatepickerProps } from "./_types";
-import { DatepickerStyle } from "./_style";
+import DatepickerStyle from "./_style";
 
 export const Datepicker = ({
   select,
@@ -14,7 +14,7 @@ export const Datepicker = ({
   cancelText = "Cancel",
 }: DatepickerProps) => {
   return (
-    <div>
+    <>
       <DatepickerStyle />
       <MobiScrollDatePicker
         select={select}
@@ -29,6 +29,6 @@ export const Datepicker = ({
         controls={[control]}
         themeVariant="light"
       />
-    </div>
+    </>
   );
 };
