@@ -1,5 +1,6 @@
 import { Datepicker } from "./Datepicker";
 import { Story, Meta } from "@storybook/react";
+import { DatepickerGlobalStyle } from "./_style";
 
 export default {
   title: "Datepicker",
@@ -8,6 +9,7 @@ export default {
 
 const DatepickerTemplate: Story = (args) => (
   <>
+    <DatepickerGlobalStyle />
     <h2>Seleziona una data</h2>
     <Datepicker {...args} id="test1" />
   </>
