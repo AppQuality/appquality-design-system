@@ -8,6 +8,7 @@ import * as TableType from "./stories/table/_types";
 import * as SelectType from "./stories/select/_types";
 import * as SidebarType from "./stories/sidebar/SidebarProps";
 import * as DatepickerType from "./stories/form/datepicker/_types";
+import { DatepickerGlobalStyle } from "./stories/form/datepicker/_style";
 import { ThemeProvider } from "styled-components";
 import { Formik, Form, FieldProps, Field as FormikField } from "formik";
 import { aqBootstrapTheme } from "./stories/theme/defaultTheme";
@@ -17,7 +18,7 @@ import "styled-components";
 
 //
 export type { FieldProps };
-export { FormikField, Formik, Form };
+export { FormikField, Formik, Form, DatepickerGlobalStyle };
 export { TableType, SelectType, SidebarType, DatepickerType, ThemeProvider };
 export { COLORS, GlobalStyle, icons, aqBootstrapTheme };
 
