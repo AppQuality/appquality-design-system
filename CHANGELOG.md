@@ -1,3 +1,16 @@
+# v0.1.31 (Mon Jun 14 2021)
+
+#### 🐛 Bug Fix
+
+- fix: Use only global style in stories [#5](https://github.com/AppQuality/appquality-design-system/pull/5) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.30 (Mon Jun 14 2021)
 
 #### 🐛 Bug Fix
