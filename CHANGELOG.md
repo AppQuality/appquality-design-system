@@ -1,3 +1,15 @@
+# v0.1.36 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(datepicker): Expose onOpen and onCancel (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.35 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
