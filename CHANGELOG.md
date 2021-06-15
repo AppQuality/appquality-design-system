@@ -1,3 +1,16 @@
+# v0.1.33 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: Add nmprc to get npm token from env (davide.bizzi@app-quality.com)
+- rework: Use private npm for mobiscroll (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.32 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
