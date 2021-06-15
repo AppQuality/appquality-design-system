@@ -20,6 +20,15 @@ DatepickerInput.args = {
     console.log(value);
   },
 };
+export const DatepickerInputItalian = DatepickerTemplate.bind({});
+DatepickerInputItalian.args = {
+  locale: "it",
+  setText: "Conferma",
+  cancelText: "Annulla",
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+};
 export const DatepickerInputWithMinimum = DatepickerTemplate.bind({});
 DatepickerInputWithMinimum.args = {
   onChange: ({ value }: { value: Date }) => {
