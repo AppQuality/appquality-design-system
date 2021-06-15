@@ -23,6 +23,7 @@
     "@mobiscroll/react": "file:./src/lib/mobiscroll-package/mobiscroll-react-5.5.1.tgz"
   },
   "scripts": {
+    "preinstall": "npm install ./src/lib/mobiscroll-package/mobiscroll-react-5.5.1.tgz",
     "prepare": "npx husky install",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss src/**/*.d.ts src/*.d.ts  dist/",
