@@ -1,3 +1,15 @@
+# v0.1.35 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: Add localization for datepicker (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.34 (Tue Jun 15 2021)
 
 #### 🐛 Bug Fix
