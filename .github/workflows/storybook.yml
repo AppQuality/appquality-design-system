@@ -36,6 +36,8 @@ jobs:
             npm-deps-${{ hashFiles('package-lock.json') }}
       - name: Publish storybook
         id: storybook
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm ci
           npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci > /tmp/cires
