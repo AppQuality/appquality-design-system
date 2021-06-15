@@ -7,6 +7,7 @@ export const initialValues = {
   email: "",
   password: "",
   subscribe: "",
+  date2: "",
 };
 export const validationSchema = {
   name: yup.string().required("This is a required field"),
@@ -23,4 +24,5 @@ export const validationSchema = {
     .boolean()
     .oneOf([true], "This is a required field")
     .required("This is a required field"),
+  date2: yup.string().required(),
 };

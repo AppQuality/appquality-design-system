@@ -120,6 +120,14 @@ const customStyle: Styles<any, any> = {
 
     return provided;
   },
+  placeholder: (provided, state) => {
+    const color = `${aqBootstrapTheme.colors.gray500}`;
+
+    return {
+      ...provided,
+      color,
+    };
+  },
 };
 
 export { aqTheme, customComponents, customStyle };

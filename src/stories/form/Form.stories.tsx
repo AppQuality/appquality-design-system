@@ -68,17 +68,6 @@ export const Template: Story = () => (
                     <div className="form-label">Date Range</div>
                     <Datepicker id="range1" select="range" control="calendar" />
                   </GeneralStyledInput>
-                  <GeneralStyledInput className="aq-mb-3 is-invalid">
-                    <div className="form-label">Invalid input example</div>
-                    <Datepicker
-                      id="date2"
-                      select="date"
-                      placeholder="select a date"
-                    />
-                    <div className="invalid-feedback">
-                      This is a required field
-                    </div>
-                  </GeneralStyledInput>
                 </Form>
               )}
             </Formik>
