@@ -1,3 +1,15 @@
+# v0.1.40 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Restore link color (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.39 (Tue Jun 15 2021)
 
 #### 🐛 Bug Fix
