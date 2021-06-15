@@ -1,3 +1,15 @@
+# v0.1.41 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Remove button shadow (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.40 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
