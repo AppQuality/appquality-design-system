@@ -5,6 +5,8 @@ export interface DatepickerProps {
   minDate?: Date;
   maxDate?: Date;
   locale?: string;
+  onOpen?: () => void;
+  onCancel?: () => void;
   onChange?: ({ value, valueText }: { value: Date; valueText: string }) => void;
   placeholder?: string;
   control?: "date" | "calendar";

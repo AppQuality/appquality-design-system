@@ -11,6 +11,8 @@ export const Datepicker = ({
   minDate,
   maxDate,
   onChange,
+  onOpen,
+  onCancel,
   locale = "en",
   control = "date",
   placeholder,
@@ -26,6 +28,8 @@ export const Datepicker = ({
         min={minDate}
         max={maxDate}
         locale={currentLocale}
+        onOpen={onOpen}
+        onCancel={onCancel}
         onChange={onChange}
         placeholder={placeholder}
         setText={setText}
