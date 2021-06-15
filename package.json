@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "dependencies": {
     "@mobiscroll/react": "file:src/lib/mobiscroll-package/mobiscroll-react-5.5.1.tgz",
     "@testing-library/jest-dom": "^5.11.4",
