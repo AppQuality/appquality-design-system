@@ -1,7 +1,31 @@
-import { Field as FormikField, FieldProps } from "formik";
+import {
+  Field as FormikField,
+  FieldProps,
+  ErrorMessage as FormikErrorMessage,
+} from "formik";
 import { Search } from "react-bootstrap-icons";
+import styled from "styled-components";
 import { FormCheck, FormGroup } from "./_style";
 import { FieldInterface, GenericFieldInterface } from "./_types";
+
+const BasicErrorMessage = ({
+  name,
+  className,
+}: {
+  name: string;
+  className?: string;
+}) => (
+  <div className={className}>
+    <FormikErrorMessage name={name} />{" "}
+  </div>
+);
+
+export const ErrorMessage = styled(BasicErrorMessage)`
+  color: ${(props) => props.theme.palette.danger};
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+`;
 
 export const Field = ({
   type = "text",
@@ -46,9 +70,7 @@ export const Field = ({
                 </span>
               )}
             </div>
-            {meta.touched && meta.error && (
-              <div className="invalid-feedback">{meta.error}</div>
-            )}
+            <ErrorMessage name={name} />
           </FormGroup>
         );
       }}
@@ -89,9 +111,7 @@ export const Checkbox = ({
               className="form-check-input"
               {...field}
             />
-            {meta.touched && meta.error && (
-              <div className="invalid-feedback">{meta.error}</div>
-            )}
+            <ErrorMessage name={name} />
           </FormCheck>
         );
       }}

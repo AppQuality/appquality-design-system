@@ -19,12 +19,6 @@ export const GeneralStyledInput = styled.div`
       float: right;
     }
   }
-  .invalid-feedback {
-    color: ${(props) => props.theme.palette.danger};
-    width: 100%;
-    margin-top: 0.25rem;
-    font-size: 0.875em;
-  }
   &.is-invalid {
     .form-control,
     .mbsc-material.mbsc-textfield-box {
