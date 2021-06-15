@@ -6,12 +6,10 @@ interface ButtonStyleProps {
   type: ButtonProps["htmlType"];
 }
 export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
-  const shadow = `box-shadow:  0 1px 1px rgb(0 0 0 / 8%);`;
   const styles = Object.entries(theme.palette)
     .map(
       ([key, value]) => `
 		 &.aq-btn-${key} {
-       ${shadow}
 			 border: 1px solid ${value};
 			 background-color: ${value};
 			 color: ${theme.colors.white};
@@ -90,7 +88,6 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
 		${styles}
     
     &.aq-btn-link {
-      ${shadow}
       box-shadow: none;
       border-color: transparent;
       background-color: transparent;
@@ -98,7 +95,6 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
       text-decoration: underline;
     }
     &.aq-btn-light {
-      ${shadow}
       border-color: transparent;
       background-color: ${theme.colors.white};
     }
