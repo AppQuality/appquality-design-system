@@ -1,4 +1,4 @@
-import { Datepicker as MobiScrollDatePicker } from "@mobiscroll/react";
+import { Datepicker as MobiScrollDatePicker } from "@appquality/mobiscroll";
 import { DatepickerProps } from "./_types";
 
 export const Datepicker = ({
