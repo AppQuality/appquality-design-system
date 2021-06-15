@@ -1,3 +1,53 @@
+# v0.1.34 (Tue Jun 15 2021)
+
+#### 🐛 Bug Fix
+
+- fix: Use only global style in stories [#5](https://github.com/AppQuality/appquality-design-system/pull/5) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- fix: Export datepicker style [#4](https://github.com/AppQuality/appquality-design-system/pull/4) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- fix: Export datepicker [#3](https://github.com/AppQuality/appquality-design-system/pull/3) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat: Add datepicker component [#2](https://github.com/AppQuality/appquality-design-system/pull/2) (iacopo.leardini@app-quality.com davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### ⚠️ Pushed to `main`
+
+- feat: Add nmprc to get npm token from env (davide.bizzi@app-quality.com)
+- rework: Use private npm for mobiscroll (davide.bizzi@app-quality.com)
+- Update package json (davide.bizzi@app-quality.com)
+- Update package.json ([@d-beezee](https://github.com/d-beezee))
+- fix: Use only global style in stories (davide.bizzi@app-quality.com)
+- fix: Export datepicker style (davide.bizzi@app-quality.com)
+- fix: Export datepicker (davide.bizzi@app-quality.com)
+- rework(datepicker): Include style just once (davide.bizzi@app-quality.com)
+- rework(datepicker): Convert back to global style but include only once (davide.bizzi@app-quality.com)
+- Merge remote-tracking branch 'origin/develop' into develop (iacopo.leardini@app-quality.com)
+- feat (datepicker): convert to styled component from global style (iacopo.leardini@app-quality.com)
+- feat(datepicker): Add cancel and set button (davide.bizzi@app-quality.com)
+- rework(datepicker): Change opacity to rgbahex (davide.bizzi@app-quality.com)
+- ci: Remove slack post on build (davide.bizzi@app-quality.com)
+- feat: Add min/max to datepicker (davide.bizzi@app-quality.com)
+- rework: Add types to util function (davide.bizzi@app-quality.com)
+- rework: Use no scrollbar variant for datepicker (davide.bizzi@app-quality.com)
+- feat: Add transparency to hover datepicker (davide.bizzi@app-quality.com)
+- docs: Add title to datepicker story (davide.bizzi@app-quality.com)
+- feat: Add no-scrollbar variant to datepicker (davide.bizzi@app-quality.com)
+- Merge branch 'CP-789-datepicker' into develop (iacopo.leardini@app-quality.com)
+- feat: adapt style to figma (iacopo.leardini@app-quality.com)
+- fix: add more informative label (iacopo.leardini@app-quality.com)
+- feat: style for placeholder and invalid feedback (iacopo.leardini@app-quality.com)
+- feat: include label style in GeneralStyledInput (iacopo.leardini@app-quality.com)
+- feat: datepicker with styled component (iacopo.leardini@app-quality.com)
+- Merge branch 'develop' into CP-789-datepicker (iacopo.leardini@app-quality.com)
+- wip: add style to datepicker (iacopo.leardini@app-quality.com)
+- wip: test picker props (iacopo.leardini@app-quality.com)
+- wip: install mobiscroll react package (iacopo.leardini@app-quality.com)
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.32 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
