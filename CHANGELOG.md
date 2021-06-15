@@ -1,3 +1,15 @@
+# v0.1.38 (Tue Jun 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- rework(datepicker): Extract error message component from form (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.37 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
