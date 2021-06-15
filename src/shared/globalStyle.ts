@@ -26,6 +26,10 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     h4 { font-size: ${props.theme.typography.fontSize.h4} }
     h5 { font-size: ${props.theme.typography.fontSize.h5} }
     h6 { font-size: ${props.theme.typography.fontSize.h6} }
+    a {
+      color: ${props.theme.palette.primary};
+      text-decoration: underline;
+    }
     body {
       font-family: ${props.theme.typography.fontFamily.base};
       -webkit-font-smoothing: antialiased;
