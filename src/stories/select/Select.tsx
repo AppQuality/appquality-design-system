@@ -8,7 +8,8 @@ import {
   OptionActionType,
   SelectProps,
 } from "./_types";
-import { FormGroup, FormLabel } from "../typography/Typography";
+import { FormGroup } from "../form/Form";
+import { FormLabel } from "../typography/Typography";
 
 function updateOptions(state: Option[], action: OptionAction): Option[] {
   const { type, payload } = action;
