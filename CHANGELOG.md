@@ -1,3 +1,19 @@
+# v0.1.39 (Tue Jun 15 2021)
+
+#### 🐛 Bug Fix
+
+- fix: Use new formgroup in select [#8](https://github.com/AppQuality/appquality-design-system/pull/8) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- fix: Remove mobiscroll... again [#7](https://github.com/AppQuality/appquality-design-system/pull/7) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Develop [#6](https://github.com/AppQuality/appquality-design-system/pull/6) (iacopo.leardini@app-quality.com davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.38 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
