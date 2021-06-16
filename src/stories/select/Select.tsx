@@ -201,7 +201,7 @@ export const Select = ({
           maxMenuHeight={200}
           captureMenuScroll={true}
           onMenuScrollToBottom={onMenuScrollToBottom}
-          // menuPlacement='auto'
+          menuShouldScrollIntoView
           theme={aqTheme}
           {...customComponents}
         />
