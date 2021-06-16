@@ -14,8 +14,8 @@ export const containers = (theme: DefaultTheme) => {
 	  .container,
 	  .container-fluid {
 		  width: 100%;
-		  padding-right: ${theme.grid.gutter.x};
-		  padding-left: ${theme.grid.gutter.x};
+		  padding-right: calc(${theme.grid.gutter.x} / 2);
+		  padding-left: calc(${theme.grid.gutter.x} / 2);
 		  margin-right: auto;
 		  margin-left: auto;
 	  }
