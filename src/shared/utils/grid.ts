@@ -39,7 +39,6 @@ export const grid = (theme: DefaultTheme) => {
 			padding-right: calc(var(--gutter-x) / 2); 
 			padding-left: calc(var(--gutter-x) / 2); 
 			margin-top: var(--gutter-y);
-	    @include make-col-ready();
 	  }
 	}
 	
