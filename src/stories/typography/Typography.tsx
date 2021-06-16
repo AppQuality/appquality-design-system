@@ -18,8 +18,10 @@ export const Paragraph = styled.p(({ theme, small }: ParagraphProps) => {
   color: ${palette.primary};
   font-family: ${typography.fontFamily.base};
   font-size: ${small ? typography.fontSize.small : typography.fontSize.base};
-  font-weight: ${typography.fontWeight.light};
-  line-height: 1.5;
+  font-weight: ${
+    small ? typography.fontWeight.normal : typography.fontWeight.light
+  };
+  line-height: ${small ? 1.2 : 1.5};
 `;
 });
 
