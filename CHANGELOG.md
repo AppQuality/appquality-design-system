@@ -1,3 +1,16 @@
+# v0.1.49 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge remote-tracking branch 'origin/main' (iacopo.leardini@app-quality.com)
+- feat: add menu scrolling into view on mobile also (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.48 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
