@@ -6,6 +6,12 @@ import styled from "styled-components";
 
 const headerHeight = 54;
 const contentHeight = 30;
+const HeaderSpacer = styled.div`
+  position: sticky;
+  top: 0;
+  height: ${headerHeight}px;
+  padding: ${(headerHeight - contentHeight) / 2}px;
+`;
 const StyledHeader = styled.div`
   position: fixed;
   top: 0;
@@ -83,31 +89,34 @@ export const Header = ({
     .matches;
 
   return (
-    <StyledHeader className={className}>
-      <div className="brand-logo">
-        {logo ? (
-          { logo }
+    <>
+      <HeaderSpacer />
+      <StyledHeader className={className}>
+        <div className="brand-logo">
+          {logo ? (
+            { logo }
+          ) : (
+            <a href={logoUrl}>
+              <img
+                alt="logo"
+                src="https://crowd.app-quality.com/wp-content/themes/crowdappquality/img/aq_vector_logo_light_crowd.svg"
+              />
+            </a>
+          )}
+        </div>
+        <div className="header-menu" />
+        {showMobile && user ? (
+          <Hamburger isOpen={isMenuOpen} clickToggle={toggleMenu} />
         ) : (
-          <a href={logoUrl}>
-            <img
-              alt="logo"
-              src="https://crowd.app-quality.com/wp-content/themes/crowdappquality/img/aq_vector_logo_light_crowd.svg"
-            />
-          </a>
+          <UserInfo
+            showLogin={showLogin}
+            user={user}
+            isLoading={isLoading}
+            onLogin={handleLoginClick}
+            onLogout={handleLogoutClick}
+          />
         )}
-      </div>
-      <div className="header-menu" />
-      {showMobile && user ? (
-        <Hamburger isOpen={isMenuOpen} clickToggle={toggleMenu} />
-      ) : (
-        <UserInfo
-          showLogin={showLogin}
-          user={user}
-          isLoading={isLoading}
-          onLogin={handleLoginClick}
-          onLogout={handleLogoutClick}
-        />
-      )}
-    </StyledHeader>
+      </StyledHeader>
+    </>
   );
 };
