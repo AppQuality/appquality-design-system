@@ -1,3 +1,17 @@
+# v0.1.50 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(global): Remove p margin (davide.bizzi@app-quality.com)
+- feat(containers): Allow setting class to containers (davide.bizzi@app-quality.com)
+- feat(containers): Reduce container padding (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.49 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
