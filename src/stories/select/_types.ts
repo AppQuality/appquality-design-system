@@ -1,3 +1,5 @@
+import { ChangeEvent } from "react";
+
 export interface Option {
   label: string;
   value?: string;
@@ -22,6 +24,7 @@ export type GetOptionsAsync = (
 export interface SelectProps /*extends GenericFieldInterface*/ {
   name: string;
   label: string;
+  onBlur?: (e: ChangeEvent) => void;
   onChange?: (value: Option) => void;
   options: Options;
   value: Option;
