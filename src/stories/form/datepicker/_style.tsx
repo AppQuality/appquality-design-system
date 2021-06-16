@@ -244,7 +244,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     font-size: 0.875rem;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #f0f5f7;
+    border: 1px solid ${props.theme.colors.disabled};
     line-height: 1.5;
   }
 
