@@ -32,6 +32,7 @@ let timer: NodeJS.Timeout | false = false;
 export const Select = ({
   label,
   name,
+  onBlur,
   onChange,
   value,
   options,
@@ -138,6 +139,9 @@ export const Select = ({
     }
     setSearching(false);
     setLoading(false);
+    if (onBlur) {
+      onBlur(e);
+    }
   };
 
   const resetOptions = () => {
