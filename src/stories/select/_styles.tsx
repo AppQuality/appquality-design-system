@@ -133,6 +133,14 @@ const customStyle: Styles<any, any> = {
       fontWeight,
     };
   },
+  singleValue: (provided, state) => {
+    const color = `${aqBootstrapTheme.palette.primary}`;
+
+    return {
+      ...provided,
+      color,
+    };
+  },
 };
 
 export { aqTheme, customComponents, customStyle };
