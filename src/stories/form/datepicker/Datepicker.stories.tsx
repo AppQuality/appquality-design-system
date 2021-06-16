@@ -11,7 +11,7 @@ const DatepickerTemplate: Story = (args) => (
   <>
     <DatepickerGlobalStyle />
     <h2>Seleziona una data</h2>
-    <Datepicker {...args} id="test1" />
+    <Datepicker {...args} id="test1" placeholder="Select a date... " />
   </>
 );
 export const DatepickerInput = DatepickerTemplate.bind({});

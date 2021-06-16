@@ -755,7 +755,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     border: 0;
     border-radius: 0;
     outline: 0;
-    font-family: inherit;
+    font-family: ${props.theme.typography.fontFamily.base};
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     -moz-appearance: none;
