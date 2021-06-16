@@ -1,3 +1,15 @@
+# v0.1.51 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): Use primary on single value (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.50 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
