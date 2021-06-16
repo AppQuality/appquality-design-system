@@ -548,14 +548,6 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     padding-top: 1.125em;
   }
 
-  .mbsc-material.mbsc-textfield {
-    color: rgba(0, 0, 0, 0.87);
-  }
-
-  .mbsc-material.mbsc-textfield.mbsc-hover {
-    /*border-color: rgba(0, 0, 0, 0.87);*/
-  }
-
   .mbsc-material.mbsc-textfield.mbsc-error {
     border-color: #de3226;
   }
