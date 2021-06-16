@@ -1,3 +1,15 @@
+# v0.1.47 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(grid): Remove unused scss (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.46 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
