@@ -1,3 +1,16 @@
+# v0.1.46 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(header): correct position fixed (iacopo.leardini@app-quality.com)
+- fix(datepicker): correct color variable (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.45 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
