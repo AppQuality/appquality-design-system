@@ -62,7 +62,7 @@ export const FormGroup = styled(GeneralStyledInput)`
     font-size: ${(props) => props.theme.typography.fontSize.base};
     background-color: ${(props) => props.theme.colors.white};
     background-clip: padding-box;
-    border: 1px solid ${(props) => props.theme.colors.gray100};
+    border: 1px solid ${(props) => props.theme.colors.disabled};
     border-radius: 5px;
     line-height: 1.5;
     box-shadow: none;

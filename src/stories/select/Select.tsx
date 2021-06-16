@@ -179,7 +179,7 @@ export const Select = ({
   }
 
   return (
-    <FormGroup>
+    <>
       {label && <FormLabel htmlFor={name}>{label}</FormLabel>}
       <div>
         <ReactSelect
@@ -206,6 +206,6 @@ export const Select = ({
           {...customComponents}
         />
       </div>
-    </FormGroup>
+    </>
   );
 };

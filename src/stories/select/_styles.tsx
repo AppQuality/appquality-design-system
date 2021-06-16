@@ -122,10 +122,15 @@ const customStyle: Styles<any, any> = {
   },
   placeholder: (provided, state) => {
     const color = `${aqBootstrapTheme.colors.gray500}`;
+    const fontWeight = parseInt(
+      `${aqBootstrapTheme.typography.fontWeight.light}`
+    );
+    const borderColor = `${aqBootstrapTheme.colors.disabled}`;
 
     return {
       ...provided,
       color,
+      fontWeight,
     };
   },
 };
