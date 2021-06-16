@@ -1,3 +1,15 @@
+# v0.1.42 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(select): Allow check on blur (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.41 (Tue Jun 15 2021)
 
 #### ⚠️ Pushed to `main`
