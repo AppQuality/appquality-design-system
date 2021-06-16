@@ -1,3 +1,40 @@
+# v0.1.48 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(header): Correct position sticky (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.47 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(grid): Remove unused scss (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.46 (Wed Jun 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(header): correct position fixed (iacopo.leardini@app-quality.com)
+- fix(datepicker): correct color variable (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.45 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
