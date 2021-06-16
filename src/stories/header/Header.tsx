@@ -7,7 +7,7 @@ import styled from "styled-components";
 const headerHeight = 54;
 const contentHeight = 30;
 const StyledHeader = styled.div`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
   width: 100%;
