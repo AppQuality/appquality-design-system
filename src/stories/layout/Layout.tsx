@@ -52,6 +52,11 @@ export const CSSGrid = styled.div(
   }
 );
 
-export const Container = ({ children }: LayoutProps) => {
-  return <div className="container aq-pt-3">{children}</div>;
+interface ContainerProps extends LayoutProps {
+  className?: string;
+}
+export const Container = ({ children, className }: ContainerProps) => {
+  return (
+    <div className={`container ${className ? className : ""}`}>{children}</div>
+  );
 };

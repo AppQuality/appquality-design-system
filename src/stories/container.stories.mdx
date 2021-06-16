@@ -2,6 +2,7 @@ import { Meta } from "@storybook/addon-docs/blocks";
 import GlobalStyle from "../shared/globalStyle";
 import { ThemeProvider } from "styled-components";
 import { aqBootstrapTheme } from "./theme/defaultTheme";
+import { Container } from "./layout/Layout";
 
 <Meta
   title="Example/Containers"
@@ -19,7 +20,7 @@ import { aqBootstrapTheme } from "./theme/defaultTheme";
   }}
 />
 
-<div className="container" style={{"background":"red"}}>
+<Container >
 
   <div style={{color:"#fff",textAlign:"center","background":"blue", "min-height": "100px"}}>container</div>
-</div>
+</Container>
