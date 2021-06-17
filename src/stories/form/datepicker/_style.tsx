@@ -247,6 +247,11 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     border: 1px solid ${props.theme.colors.disabled};
     line-height: 1.5;
   }
+  
+  .mbsc-material.mbsc-textfield-box::placeholder {
+    font-weight: ${props.theme.typography.fontWeight.light};
+    color: ${props.theme.colors.disabled};
+  }
 
   .mbsc-material.mbsc-textfield-box-floating,
   .mbsc-material.mbsc-textfield-box-stacked {
