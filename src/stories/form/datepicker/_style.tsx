@@ -250,7 +250,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   
   .mbsc-material.mbsc-textfield-box::placeholder {
     font-weight: ${props.theme.typography.fontWeight.light};
-    color: ${props.theme.colors.disabled};
+    color: ${props.theme.colors.gray500};
   }
 
   .mbsc-material.mbsc-textfield-box-floating,
