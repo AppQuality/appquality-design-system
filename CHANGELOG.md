@@ -1,3 +1,15 @@
+# v0.1.53 (Thu Jun 17 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: adjust color and font-weight in picker placeholder (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.52 (Wed Jun 16 2021)
 
 #### ⚠️ Pushed to `main`
