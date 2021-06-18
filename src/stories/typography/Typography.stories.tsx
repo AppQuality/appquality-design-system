@@ -1,12 +1,12 @@
 import { Story, Meta } from "@storybook/react";
-import { Paragraph } from "./Typography.tsx";
+import { Paragraph, ParagraphProps } from "./Typography";
 
 export default {
   title: "Typography",
   component: Paragraph,
 } as Meta;
 
-const ParagraphTemplate: Story<SelectProps> = (args) => {
+const ParagraphTemplate: Story<ParagraphProps> = (args) => {
   return <Paragraph {...args}>Lorem ipsum dolor sit amet </Paragraph>;
 };
 
@@ -18,32 +18,9 @@ SmallParagraph.args = {
   small: true,
 };
 
-const TitleTemplate: Story<SelectProps> = (args) => {
-  let Component = args.component;
-  return <Component {...args}>Lorem ipsum dolor sit amet </Component>;
-};
-
-export const TitleExtraLarge = TitleTemplate.bind({});
-TitleExtraLarge.args = {
-  component: "h1",
-};
-export const TitleLarge = TitleTemplate.bind({});
-TitleLarge.args = {
-  component: "h2",
-};
-export const TitleMid = TitleTemplate.bind({});
-TitleMid.args = {
-  component: "h3",
-};
-export const TitleMidSmall = TitleTemplate.bind({});
-TitleMidSmall.args = {
-  component: "h4",
-};
-export const TitleSmall = TitleTemplate.bind({});
-TitleSmall.args = {
-  component: "h5",
-};
-export const TitleExtraSmall = TitleTemplate.bind({});
-TitleExtraSmall.args = {
-  component: "h6",
-};
+export const TitleExtraLarge = () => <h1>Lorem ipsum dolor sit amet</h1>;
+export const TitleLarge = () => <h2>Lorem ipsum dolor sit amet</h2>;
+export const TitleMid = () => <h3>Lorem ipsum dolor sit amet</h3>;
+export const TitleMidSmall = () => <h4>Lorem ipsum dolor sit amet</h4>;
+export const TitleSmall = () => <h5>Lorem ipsum dolor sit amet</h5>;
+export const TitleExtraSmall = () => <h6>Lorem ipsum dolor sit amet</h6>;
