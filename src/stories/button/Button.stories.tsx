@@ -36,6 +36,13 @@ Primary.args = {
   children: "click",
   onClick: () => alert("clicked!"),
 };
+Primary.parameters = {
+  design: {
+    type: "figma",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
+  },
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {
@@ -50,12 +57,70 @@ Large.args = {
   children: "click",
   onClick: () => alert("clicked!"),
 };
+Large.parameters = {
+  design: {
+    type: "figma",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
+  },
+};
 
 export const Small = Template.bind({});
 Small.args = {
   size: "sm",
   children: "click",
   onClick: () => alert("clicked!"),
+};
+Small.parameters = {
+  design: {
+    type: "figma",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
+  },
+};
+
+export const Squared = Template.bind({});
+Squared.args = {
+  children: "o",
+  onClick: () => alert("clicked!"),
+  squared: true,
+};
+Squared.parameters = {
+  design: {
+    type: "figma",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
+  },
+};
+
+export const SquaredLarge = Template.bind({});
+SquaredLarge.args = {
+  children: "o",
+  size: "lg",
+  onClick: () => alert("clicked!"),
+  squared: true,
+};
+SquaredLarge.parameters = {
+  design: {
+    type: "figma",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
+  },
+};
+
+export const SquaredSmall = Template.bind({});
+SquaredSmall.args = {
+  children: "o",
+  size: "sm",
+  onClick: () => alert("clicked!"),
+  squared: true,
+};
+SquaredSmall.parameters = {
+  design: {
+    type: "figma",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
+  },
 };
 
 export const IconButton = Template.bind({});
