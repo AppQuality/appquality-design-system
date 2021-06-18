@@ -33,6 +33,14 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       color: ${props.theme.palette.primary};
       text-decoration: underline;
     }
+    html {
+      font-size: 14px;
+    }
+    @media only screen and (max-width: 600px) {
+      html {
+        font-size: 16px;
+      }
+    }
     body {
       font-family: ${props.theme.typography.fontFamily.base};
       -webkit-font-smoothing: antialiased;

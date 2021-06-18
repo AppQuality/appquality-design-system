@@ -13,8 +13,8 @@ const aqBootstrapTheme = {
       mono: "'IBM Plex Mono', monospace;",
     },
     fontSize: {
-      base: ".875rem",
-      small: ".75rem",
+      base: "1rem",
+      small: ".857rem",
       h1: "2.5rem", // 35
       h2: "2rem", // 28
       h3: "1.5rem", // 21
