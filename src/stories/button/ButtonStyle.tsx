@@ -34,13 +34,13 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
 
   const sizes = {
     sm: {
-      padding: ".375rem .5rem",
+      padding: "6px 8px",
       fontSize: theme.typography.fontSize.small,
       borderRadius: ".2rem",
       squaredMinWidth: "2.438rem",
     },
     lg: {
-      padding: ".813rem 1rem",
+      padding: "13px 16px",
       fontSize: theme.typography.fontSize.base,
       borderRadius: ".3rem",
       squaredMinWidth: "3.125rem",
@@ -63,7 +63,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     .join(" ");
 
   return `
-    padding: .5rem .75rem;
+    padding: 8px 12px;
     font-size: ${theme.typography.fontSize.base};
     border-radius: 5px;
 		
