@@ -1,3 +1,16 @@
+# v0.1.58 (Tue Jun 22 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'CP-837-modal' (iacopo.leardini@app-quality.com)
+- feat(modal): add onClose prop and use children for body (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.57 (Tue Jun 22 2021)
 
 #### 🐛 Bug Fix
