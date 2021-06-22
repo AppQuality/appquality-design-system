@@ -1,3 +1,17 @@
+# v0.1.55 (Tue Jun 22 2021)
+
+#### 🐛 Bug Fix
+
+- Cp 837 modal [#9](https://github.com/AppQuality/appquality-design-system/pull/9) (davide.bizzi@app-quality.com iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.54 (Thu Jun 17 2021)
 
 #### ⚠️ Pushed to `main`
