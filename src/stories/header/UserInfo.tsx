@@ -5,7 +5,6 @@ import Skeleton from "../skeleton/Skeleton";
 import { Paragraph } from "../typography/Typography";
 
 export const UserInfo = ({
-  showLogin,
   user,
   isLoading,
   onLogin,
@@ -31,7 +30,7 @@ export const UserInfo = ({
             </span>
           </Button>
         </>
-      ) : showLogin ? (
+      ) : typeof onLogin !== "undefined" ? (
         <Button size="medium" type="link" onClick={onLogin}>
           login
         </Button>
