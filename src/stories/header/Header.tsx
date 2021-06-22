@@ -62,7 +62,7 @@ const StyledHeader = styled.div`
 export const Header = ({
   logo,
   logoUrl,
-  showLogin = true,
+  onLogin,
   isLoading,
   isMenuOpen,
   toggleMenu,
@@ -70,9 +70,6 @@ export const Header = ({
   className,
 }: HeaderProps) => {
   useWindowSize();
-  const handleLoginClick = () => {
-    window.location.href = "/";
-  };
   const handleLogoutClick = () => {
     fetch("/wp-admin/admin-ajax.php?action=appq_wp_logout", {
       method: "GET",
@@ -109,10 +106,9 @@ export const Header = ({
           <Hamburger isOpen={isMenuOpen} clickToggle={toggleMenu} />
         ) : (
           <UserInfo
-            showLogin={showLogin}
             user={user}
             isLoading={isLoading}
-            onLogin={handleLoginClick}
+            onLogin={onLogin}
             onLogout={handleLogoutClick}
           />
         )}
