@@ -4,4 +4,5 @@ export interface ModalProps {
   title?: React.ReactNode;
   content: React.ReactNode;
   footer?: React.ReactNode;
+  onClose: () => void;
 }
