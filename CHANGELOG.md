@@ -1,3 +1,16 @@
+# v0.1.57 (Tue Jun 22 2021)
+
+#### 🐛 Bug Fix
+
+- feat: add cursor on buttons [#11](https://github.com/AppQuality/appquality-design-system/pull/11) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.56 (Tue Jun 22 2021)
 
 #### 🐛 Bug Fix
