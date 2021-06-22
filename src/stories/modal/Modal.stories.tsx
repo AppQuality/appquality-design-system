@@ -12,12 +12,11 @@ export default {
 
 const Template: Story<ModalProps & BaseProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
-    <Modal {...args} />
+    <Modal {...args}>This is a modal content</Modal>
   </ThemeProvider>
 );
 
 export const SimpleModal = Template.bind({});
 SimpleModal.args = {
   isOpen: true,
-  content: "this is a test modal",
 };
