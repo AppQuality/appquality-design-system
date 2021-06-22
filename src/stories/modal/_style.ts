@@ -14,13 +14,18 @@ export const ModalOverlay = styled.div`
 
   .modal {
     z-index: 1099;
-    width: 400px;
+    width: 100%;
     max-width: 100%;
-    height: 300px;
+    min-height: 100px;
     max-height: 100%;
     background-color: ${(props) => props.theme.colors.white};
+
+    @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
+      width: 600px;
+    }
   }
   .modal-header {
+    padding: ${(props) => props.theme.grid.spacing.default};
     display: grid;
     grid-template-columns: 1fr 24px;
   }
@@ -37,7 +42,7 @@ export const ModalOverlay = styled.div`
     cursor: pointer;
   }
   .modal-body {
-    padding: 16px;
+    padding: ${(props) => props.theme.grid.spacing.default};
   }
   .modal-footer {
   }
