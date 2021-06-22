@@ -239,9 +239,9 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   .mbsc-material.mbsc-textfield-box {
     display: block;
     width: 100%;
-    padding: 0.5rem 0.75rem;
-    color: #17405c;
-    font-size: 0.875rem;
+    padding: 8px 12px;
+    color: ${props.theme.palette.primary};
+    font-size: 1rem;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid ${props.theme.colors.disabled};

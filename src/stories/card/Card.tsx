@@ -39,7 +39,7 @@ export const Card = styled(BasicCard)`
   }
   .aq-card-body {
     flex: 1 1 auto;
-    padding: 1rem 1rem;
+    padding: 16px;
   }
   .aq-card-head {
     display: flex;
@@ -50,7 +50,7 @@ export const Card = styled(BasicCard)`
     border-radius: 4px 4px 0 0;
   }
   .aq-card-header {
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     margin-bottom: 0;
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
