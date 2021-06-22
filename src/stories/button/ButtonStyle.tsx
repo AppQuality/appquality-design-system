@@ -60,6 +60,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     .join(" ");
 
   return `
+    cursor: pointer;
     padding: 8px 12px;
     font-size: ${theme.typography.fontSize.base};
     border-radius: 4px;
@@ -102,6 +103,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     }
     
     &:disabled, &.disabled {
+      cursor: not-allowed;
       pointer-events: none;
       opacity: .65;
       color: ${theme.colors.disabledDark};
