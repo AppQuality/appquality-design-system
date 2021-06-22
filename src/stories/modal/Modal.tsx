@@ -1,6 +1,5 @@
 import { BaseProps } from "../../shared/_types";
 import { ModalProps } from "./_types";
-import { useState, useEffect } from "react";
 import { ModalOverlay } from "./_style";
 import { X } from "react-bootstrap-icons";
 
