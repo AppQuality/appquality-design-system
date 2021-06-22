@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "0.1.56",
+  "version": "0.1.57",
   "dependencies": {
     "@appquality/mobiscroll": "^5.5.1",
     "@testing-library/jest-dom": "^5.11.4",
