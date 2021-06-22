@@ -1,3 +1,16 @@
+# v0.1.59 (Tue Jun 22 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge remote-tracking branch 'origin/main' (iacopo.leardini@app-quality.com)
+- fix(modal): remove required prop content (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.58 (Tue Jun 22 2021)
 
 #### ⚠️ Pushed to `main`
