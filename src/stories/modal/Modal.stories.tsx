@@ -19,4 +19,5 @@ const Template: Story<ModalProps & BaseProps> = (args) => (
 export const SimpleModal = Template.bind({});
 SimpleModal.args = {
   isOpen: true,
+  title: "Modal Basic",
 };
