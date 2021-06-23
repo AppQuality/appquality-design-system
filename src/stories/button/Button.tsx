@@ -10,20 +10,25 @@ export const Button: React.FC<ButtonProps & BaseProps> = ({
   htmlType = "button",
   type = "primary",
   size = "medium",
+  className,
   flat = false,
   squared = false,
   children,
   ...props
 }) => {
-  let className = [`aq-btn-${size}`, `aq-btn-${type}`];
+  let classes = [`aq-btn-${size}`, `aq-btn-${type}`];
   if (flat) {
-    className.push("aq-btn-flat");
+    classes.push("aq-btn-flat");
   }
   if (squared) {
-    className.push("aq-btn-squared");
+    classes.push("aq-btn-squared");
   }
   return (
-    <ButtonStyle type={htmlType} className={className.join(" ")} {...props}>
+    <ButtonStyle
+      type={htmlType}
+      className={`${className} ${classes.join(" ")}`}
+      {...props}
+    >
       {children}
     </ButtonStyle>
   );
