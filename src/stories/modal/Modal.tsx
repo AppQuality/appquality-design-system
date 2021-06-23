@@ -21,7 +21,7 @@ export const Modal: React.FC<ModalProps & BaseProps> = ({
                 <strong>{title}</strong>
               </Text>
               <div className="modal-close" onClick={onClose}>
-                <X />
+                <X height="24px" width="24px" />
               </div>
             </div>
             <div className="modal-body">{children}</div>

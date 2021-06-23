@@ -35,7 +35,6 @@ export const ModalOverlay = styled.div`
     font-weight: ${(props) => props.theme.typography.fontWeight.bold};
   }
   .modal-close {
-    height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
