@@ -3,10 +3,11 @@ import {
   FieldProps,
   ErrorMessage as FormikErrorMessage,
 } from "formik";
-import { Search } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { FormCheck, FormGroup } from "./_style";
 import { FieldInterface, GenericFieldInterface } from "./_types";
+import FormLabel from "./formlabel/FormLabel";
+import Input from "./input/Input";
 
 const BasicErrorMessage = ({
   name,
@@ -45,30 +46,18 @@ export const Field = ({
         let fieldId = name;
         if (status && status.id) fieldId = `${status.id}-${name}`;
         let className = "aq-mb-3";
-        if (meta.touched && meta.error) {
-          className += " is-invalid";
-        }
         return (
           <FormGroup className={className}>
-            {label && (
-              <label htmlFor={fieldId} className="form-label">
-                {label}
-              </label>
-            )}
+            {label && <FormLabel htmlFor={fieldId} label={label} />}
             <div className="input-group">
-              <input
+              <Input
                 id={fieldId}
                 type={type}
                 placeholder={placeholder}
-                className="form-control"
                 disabled={disabled}
-                {...field}
+                isInvalid={meta.touched && typeof meta.error == "string"}
+                extra={{ ...field }}
               />
-              {type === "search" && (
-                <span className="input-group-text" id="basic-addon2">
-                  <Search />
-                </span>
-              )}
             </div>
             <ErrorMessage name={name} />
           </FormGroup>
@@ -119,4 +108,4 @@ export const Checkbox = ({
   );
 };
 
-export { FormGroup, FormCheck };
+export { FormGroup, FormCheck, FormLabel, Input };

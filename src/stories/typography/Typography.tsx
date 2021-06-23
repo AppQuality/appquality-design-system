@@ -70,9 +70,3 @@ export const Text = styled.div(({ theme, small, color }: TextProps) => {
 `;
 });
 
-export const FormLabel = styled.label(({ theme }: H5Props) => {
-  return `
-    font-size: ${theme.typography.fontSize.base};
-    margin-bottom: .5rem;
-`;
-});

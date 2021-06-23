@@ -1,5 +1,7 @@
-import { createGlobalStyle, StyleSheetManager } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { useEffect } from "react";
+import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
+
 function addOpacityToHex(hex: string, alpha: string) {
   let hexAlphaPercent = parseInt((parseFloat(alpha) * 100).toString(), 16);
   return `${hex}${hexAlphaPercent}`;
@@ -4791,6 +4793,12 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     .mbsc-scroller-wheel-item.mbsc-selected {
     color: ${props.theme.palette.success};
     background: rgba(0, 0, 0, 0.15);
+  }
+  .mbsc-material.mbsc-textfield-box {
+    ${InvalidInputStyle}
+    &:focus {
+      ${InvalidFocusStyle}
+    }
   }
 `;
 }}`;
