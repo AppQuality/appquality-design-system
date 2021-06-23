@@ -1,3 +1,16 @@
+# v0.1.62 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix(Button): remove classname override [#17](https://github.com/AppQuality/appquality-design-system/pull/17) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.61 (Wed Jun 23 2021)
 
 #### 🐛 Bug Fix
