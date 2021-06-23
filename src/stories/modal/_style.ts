@@ -8,7 +8,7 @@ export const StyledModal = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,8 @@ export const StyledModal = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    border-radius: ${(props) => props.theme.general.borderRadius};
+    width: calc(100vw - 24px);
     max-width: 100%;
     min-height: 100px;
     max-height: 100%;
@@ -33,6 +34,7 @@ export const StyledModal = styled.div`
     padding: ${(props) => props.theme.grid.spacing.default};
     display: grid;
     grid-template-columns: 1fr 24px;
+    border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
   }
   .modal-title {
     font-size: 16px;
