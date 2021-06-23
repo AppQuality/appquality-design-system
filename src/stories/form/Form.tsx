@@ -108,4 +108,4 @@ export const Checkbox = ({
   );
 };
 
-export { FormGroup, FormCheck };
+export { FormGroup, FormCheck, FormLabel, Input };

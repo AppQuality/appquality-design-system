@@ -38,10 +38,3 @@ export const SmallTitle = styled.div(({ theme }: H5Props) => {
   line-height: 1.5;
 `;
 });
-
-export const FormLabel = styled.label(({ theme }: H5Props) => {
-  return `
-    font-size: ${theme.typography.fontSize.base};
-    margin-bottom: .5rem;
-`;
-});
