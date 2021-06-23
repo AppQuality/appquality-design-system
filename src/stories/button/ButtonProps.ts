@@ -19,10 +19,6 @@ export interface ButtonProps {
    */
   size?: "sm" | "medium" | "lg" | "block";
   /**
-   * Forms contents
-   */
-  children?: ReactNode;
-  /**
    * Is flat?
    */
   flat?: boolean;
