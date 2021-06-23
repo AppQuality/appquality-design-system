@@ -21,6 +21,12 @@ export const InvalidInput: Story = () => (
     disabled={false}
   />
 );
-export const DisabledInput: Story = () => (
-  <Input id="input" type="text" placeholder="Placeholder" disabled={true} />
+export const ReadonlyInput: Story = () => (
+  <Input
+    id="input"
+    type="text"
+    placeholder="Placeholder"
+    value="My value"
+    disabled={true}
+  />
 );

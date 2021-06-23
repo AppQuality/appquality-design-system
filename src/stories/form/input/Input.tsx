@@ -7,6 +7,7 @@ const BaseInput = ({
   type,
   className,
   placeholder,
+  value,
   disabled,
   isInvalid,
   extra,
@@ -16,6 +17,7 @@ const BaseInput = ({
   type: string;
   className?: string;
   placeholder?: string;
+  value?: string;
   disabled?: boolean;
   isInvalid?: boolean;
   extra?: any;
@@ -28,6 +30,7 @@ const BaseInput = ({
         type={type}
         placeholder={placeholder}
         disabled={disabled}
+        value={value}
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
