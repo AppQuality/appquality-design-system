@@ -55,7 +55,7 @@ export const Field = ({
                 type={type}
                 placeholder={placeholder}
                 disabled={disabled}
-                isInvalid={meta.touched && meta.error}
+                isInvalid={meta.touched && typeof meta.error == "string"}
                 extra={{ ...field }}
               />
             </div>

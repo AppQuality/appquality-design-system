@@ -18,7 +18,7 @@ const BaseInput = ({
   placeholder?: string;
   disabled?: boolean;
   isInvalid?: boolean;
-  extra: any;
+  extra?: any;
   onChange?: (val: string) => void;
 }) => {
   return (
