@@ -1,3 +1,17 @@
+# v0.1.63 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix(shared): fix react select bortder radius [#19](https://github.com/AppQuality/appquality-design-system/pull/19) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+- Cp 837 modal styel fixes [#18](https://github.com/AppQuality/appquality-design-system/pull/18) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.62 (Wed Jun 23 2021)
 
 #### 🐛 Bug Fix
