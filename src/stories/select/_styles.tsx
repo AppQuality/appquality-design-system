@@ -4,7 +4,7 @@ import { ChevronDown, X } from "react-bootstrap-icons";
 import { borderRadius } from "react-select/src/theme";
 
 const aqTheme = (theme: Theme) => ({
-  borderRadius: aqBootstrapTheme.general.borderRadius,
+  borderRadius: aqBootstrapTheme.general.borderRadiusNumber,
   spacing: theme.spacing,
   colors: {
     ...theme.colors,
