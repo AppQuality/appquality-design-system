@@ -3,7 +3,6 @@ import {
   FieldProps,
   ErrorMessage as FormikErrorMessage,
 } from "formik";
-import { Search } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { FormCheck, FormGroup } from "./_style";
 import { FieldInterface, GenericFieldInterface } from "./_types";
