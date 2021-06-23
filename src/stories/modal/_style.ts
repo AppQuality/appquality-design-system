@@ -19,6 +19,7 @@ export const StyledModal = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: ${(props) => props.theme.general.borderRadius};
     width: 100%;
     max-width: 100%;
     min-height: 100px;

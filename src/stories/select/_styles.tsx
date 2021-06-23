@@ -70,7 +70,7 @@ const customStyle: Styles<any, any> = {
     const borderColor = `${aqBootstrapTheme.colors.disabled}`;
     const borderWidth = "1px";
     const borderStyle = "solid";
-    const borderRadius = `${aqBootstrapTheme.general.borderRadius}px`;
+    const borderRadius = `${aqBootstrapTheme.general.borderRadius}`;
     const boxShadow = `${aqBootstrapTheme.general.boxShadow}`;
 
     return {

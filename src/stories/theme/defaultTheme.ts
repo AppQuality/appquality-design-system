@@ -2,7 +2,7 @@ import * as COLORS from "../../shared/colors.module.scss";
 
 const aqBootstrapTheme = {
   general: {
-    borderRadius: 4,
+    borderRadius: "4px",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
   },
   typography: {
