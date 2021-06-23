@@ -1,3 +1,16 @@
+# v0.1.61 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- extend button props, export modal, add bold and italic in Text component [#16](https://github.com/AppQuality/appquality-design-system/pull/16) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.60 (Wed Jun 23 2021)
 
 #### 🐛 Bug Fix
