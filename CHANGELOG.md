@@ -1,3 +1,18 @@
+# v0.1.60 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- Extract simple input and form labeld from formfield, add basic modal and init typography [#15](https://github.com/AppQuality/appquality-design-system/pull/15) (iacopo.leardini@app-quality.com davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Separate input from form [#13](https://github.com/AppQuality/appquality-design-system/pull/13) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.59 (Tue Jun 22 2021)
 
 #### ⚠️ Pushed to `main`
