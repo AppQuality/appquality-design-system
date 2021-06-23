@@ -1,6 +1,6 @@
 import { BaseProps } from "../../shared/_types";
 import { ModalProps } from "./_types";
-import { ModalOverlay } from "./_style";
+import { StyledModal } from "./_style";
 import { X } from "react-bootstrap-icons";
 import { Text } from "../typography/Typography";
 
@@ -14,7 +14,8 @@ export const Modal: React.FC<ModalProps & BaseProps> = ({
   return (
     <>
       {isOpen && (
-        <ModalOverlay onClick={onClose}>
+        <StyledModal>
+          <div className="modal-overlay" onClick={onClose} />
           <div className="modal">
             <div className="modal-header">
               <Text>
@@ -27,7 +28,7 @@ export const Modal: React.FC<ModalProps & BaseProps> = ({
             <div className="modal-body">{children}</div>
             <div className="modal-footer">{footer}</div>
           </div>
-        </ModalOverlay>
+        </StyledModal>
       )}
     </>
   );
