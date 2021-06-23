@@ -46,10 +46,16 @@ const Input = styled(BaseInput)`
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
+  .input-group-text {
+    position: absolute;
+    right: 15px;
+    top: 29%;
+  }
   input {
     display: block;
     width: 100%;
     padding: 0.5rem 0.75rem;
+    ${(props) => (props.type == "search" ? "padding-right: 40px;" : "")}
     color: ${(props) => props.theme.palette.primary};
     font-size: ${(props) => props.theme.typography.fontSize.base};
     background-color: ${(props) => props.theme.colors.white};
