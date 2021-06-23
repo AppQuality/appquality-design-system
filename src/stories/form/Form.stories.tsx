@@ -9,6 +9,7 @@ import { Card } from "../card/Card";
 import { Datepicker } from "./datepicker/Datepicker";
 import { GeneralStyledInput } from "./_style";
 import { DatepickerGlobalStyle } from "./datepicker/_style";
+import FormLabel from "./formlabel/FormLabel";
 
 export default {
   title: "Forms",
@@ -18,62 +19,38 @@ export default {
 export const Template: Story = () => (
   <>
     <DatepickerGlobalStyle />
-    <Container>
-      <BSGrid>
-        <BSCol size="col-sm-12">
-          <Card>
-            <Formik
-              initialValues={initialValues}
-              validationSchema={yup.object(validationSchema)}
-              onSubmit={(data) => {
-                console.log(data);
-              }}
-            >
-              {(props: FormikProps<any>) => (
-                <Form id="testForm">
-                  <SmallTitle as="h5">Create an account</SmallTitle>
-                  <Field
-                    type="text"
-                    name="name"
-                    label="Name"
-                    placeholder="Name"
-                  />
-                  <Field
-                    type="text"
-                    name="surname"
-                    label="Surname"
-                    disabled={true}
-                  />
-                  <Field
-                    type="text"
-                    name="withvalue"
-                    label="Surname"
-                    disabled={true}
-                  />
-                  <Field type="email" name="email" label="Email" />
-                  <Field type="password" name="password" label="Password" />
-                  <Paragraph small>
-                    The password must be at least 6 characters long, contain an
-                    uppercase letter, a lowercase letter and a number.
-                  </Paragraph>
-                  <Checkbox
-                    name="subscribe"
-                    label="I agree to receive earning opportunity emails from AppQuality"
-                  />
-                  <GeneralStyledInput className="aq-mb-3">
-                    <div className="form-label">Date</div>
-                    <Datepicker id="date1" select="date" />
-                  </GeneralStyledInput>
-                  <GeneralStyledInput className="aq-mb-3">
-                    <div className="form-label">Date Range</div>
-                    <Datepicker id="range1" select="range" control="calendar" />
-                  </GeneralStyledInput>
-                </Form>
-              )}
-            </Formik>
-          </Card>
-        </BSCol>
-      </BSGrid>
-    </Container>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={yup.object(validationSchema)}
+      onSubmit={(data) => {
+        console.log(data);
+      }}
+    >
+      {(props: FormikProps<any>) => (
+        <Form id="testForm">
+          <Field type="text" name="name" label="Name" placeholder="Name" />
+          <Field type="text" name="surname" label="Surname" disabled={true} />
+          <Field type="text" name="withvalue" label="Surname" disabled={true} />
+          <Field type="email" name="email" label="Email" />
+          <Field type="password" name="password" label="Password" />
+          <Paragraph small>
+            The password must be at least 6 characters long, contain an
+            uppercase letter, a lowercase letter and a number.
+          </Paragraph>
+          <Checkbox
+            name="subscribe"
+            label="I agree to receive earning opportunity emails from AppQuality"
+          />
+          <GeneralStyledInput className="aq-mb-3">
+            <FormLabel htmlFor="date1" label="Date" />
+            <Datepicker id="date1" select="date" />
+          </GeneralStyledInput>
+          <GeneralStyledInput className="aq-mb-3">
+            <FormLabel htmlFor="range1" label="Date Range" />
+            <Datepicker id="range1" select="range" control="calendar" />
+          </GeneralStyledInput>
+        </Form>
+      )}
+    </Formik>
   </>
 );

@@ -18,6 +18,7 @@ const BaseFormLabel = ({
 
 const FormLabel = styled(BaseFormLabel)`
   order: -1;
+  display: block;
   margin-bottom: 0.5rem;
   .form-icon {
     line-height: 1;
