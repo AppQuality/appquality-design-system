@@ -32,6 +32,7 @@ export * from "./stories/card/Card";
 export * from "./stories/form/Form";
 export * from "./stories/header/Header";
 export * from "./stories/layout/Layout";
+export * from "./stories/modal/Modal";
 export * from "./stories/pagination/Pagination";
 export * from "./stories/select/Select";
 export * from "./stories/sidebar/Sidebar";

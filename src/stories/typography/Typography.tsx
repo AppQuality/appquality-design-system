@@ -64,9 +64,11 @@ export const Text = styled.div(({ theme, small, color }: TextProps) => {
   font-weight: ${typography.fontWeight.normal};
   line-height: 1.5;
   ${small ? `font-size: .835rem` : `font-size: 1rem`}
-  strong {
+  strong, b {
     font-weight: ${typography.fontWeight.bold};
+  }
+  em, i {
+    font-style: italic;
   }
 `;
 });
-

@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from "react";
+import { MouseEventHandler } from "react";
 
 export interface ButtonProps {
   htmlType?: "button" | "submit" | "reset";
@@ -18,10 +18,6 @@ export interface ButtonProps {
    * How large should the button be?
    */
   size?: "sm" | "medium" | "lg" | "block";
-  /**
-   * Forms contents
-   */
-  children?: ReactNode;
   /**
    * Is flat?
    */
