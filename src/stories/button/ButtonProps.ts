@@ -1,4 +1,4 @@
-import { MouseEventHandler, ReactNode } from "react";
+import { MouseEventHandler } from "react";
 
 export interface ButtonProps {
   htmlType?: "button" | "submit" | "reset";
