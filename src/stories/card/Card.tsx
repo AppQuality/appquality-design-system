@@ -1,6 +1,6 @@
 import { CardProps } from "./CardProps";
 import styled from "styled-components";
-import { SmallTitle } from "../typography/Typography";
+import { Title } from "../typography/Typography";
 
 const BasicCard = ({
   children,
@@ -12,7 +12,9 @@ const BasicCard = ({
   if (title) {
     cardHeader = (
       <div className="aq-card-header">
-        <SmallTitle className="aq-card-title">{title}</SmallTitle>
+        <Title size="s" className="aq-card-title">
+          {title}
+        </Title>
       </div>
     );
   }

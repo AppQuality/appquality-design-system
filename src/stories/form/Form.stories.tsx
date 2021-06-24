@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react";
 import { Formik, Form, FormikProps } from "formik";
 import { validationSchema, initialValues } from "./_data";
 import * as yup from "yup";
-import { Paragraph } from "../typography/Typography";
+import { Text } from "../typography/Typography";
 import { Datepicker } from "./datepicker/Datepicker";
 import { GeneralStyledInput } from "./_style";
 import { DatepickerGlobalStyle } from "./datepicker/_style";
@@ -31,10 +31,10 @@ export const Template: Story = () => (
           <Field type="text" name="withvalue" label="Surname" disabled={true} />
           <Field type="email" name="email" label="Email" />
           <Field type="password" name="password" label="Password" />
-          <Paragraph small>
+          <Text small>
             The password must be at least 6 characters long, contain an
             uppercase letter, a lowercase letter and a number.
-          </Paragraph>
+          </Text>
           <Checkbox
             name="subscribe"
             label="I agree to receive earning opportunity emails from AppQuality"

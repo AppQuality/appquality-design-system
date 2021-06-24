@@ -2,7 +2,7 @@ import { BoxArrowRight } from "react-bootstrap-icons";
 import { Button } from "../button/Button";
 import { UserInfoProps } from "./_types";
 import Skeleton from "../skeleton/Skeleton";
-import { Paragraph } from "../typography/Typography";
+import { Text } from "../typography/Typography";
 
 export const UserInfo = ({
   user,
@@ -18,12 +18,12 @@ export const UserInfo = ({
           <div className={`user-avatar ${user.verified ? "verified" : ""}`}>
             <img alt={user.name + " " + user.surname} src={user.image} />
           </div>
-          <Paragraph as="div" className="user-name">
+          <Text as="div" className="user-name">
             {user.name} {user.surname}{" "}
-            <Paragraph as="span" small={true} className="user-id">
+            <Text as="span" small={true} className="user-id">
               (T{user.id})
-            </Paragraph>
-          </Paragraph>
+            </Text>
+          </Text>
           <Button size="medium" type="link" onClick={onLogout}>
             <span className="aq-text-danger">
               <BoxArrowRight />
