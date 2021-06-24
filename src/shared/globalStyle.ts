@@ -68,6 +68,9 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     .aq-text-left {
       text-align: left;
     }
+    .capitalize-first:first-letter {
+      text-transform: capitalize;
+    }
   `;
   style += base;
 
