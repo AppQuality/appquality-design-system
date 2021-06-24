@@ -68,6 +68,9 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     .aq-text-left {
       text-align: left;
     }
+    .aq-text-small {
+      font-size: ${props.theme.typography.fontSize.small};
+    }
   `;
   style += base;
 

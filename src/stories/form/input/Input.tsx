@@ -54,6 +54,9 @@ const Input = styled(BaseInput)`
     right: 15px;
     top: 29%;
   }
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
   input {
     display: block;
     width: 100%;

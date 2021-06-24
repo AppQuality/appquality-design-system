@@ -61,11 +61,12 @@ export const Text = styled.div(({ theme, small, color }: TextProps) => {
   return `
   color: ${color || palette.primary};
   font-family: ${typography.fontFamily.base};
-  font-weight: ${typography.fontWeight.normal};
+  font-size: 1rem;
+  font-weight: ${typography.fontWeight.light};
   line-height: 1.5;
   ${small ? `font-size: .835rem` : `font-size: 1rem`}
   strong, b {
-    font-weight: ${typography.fontWeight.bold};
+    font-weight: ${typography.fontWeight.medium};
   }
   em, i {
     font-style: italic;
