@@ -12,7 +12,7 @@ const BasicCard = ({
   if (title) {
     cardHeader = (
       <div className="aq-card-header">
-        <Title size="s" className="aq-card-title">
+        <Title size="xs" className="aq-card-title">
           {title}
         </Title>
       </div>
