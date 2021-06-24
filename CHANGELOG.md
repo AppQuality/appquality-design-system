@@ -1,3 +1,17 @@
+# v0.1.65 (Thu Jun 24 2021)
+
+#### 🐛 Bug Fix
+
+- Develop [#22](https://github.com/AppQuality/appquality-design-system/pull/22) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+- feat(typography): correct font size and weight [#20](https://github.com/AppQuality/appquality-design-system/pull/20) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.64 (Wed Jun 23 2021)
 
 #### ⚠️ Pushed to `main`
