@@ -1,3 +1,17 @@
+# v0.1.66 (Thu Jun 24 2021)
+
+#### 🐛 Bug Fix
+
+- Updated typography [#24](https://github.com/AppQuality/appquality-design-system/pull/24) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat: Add titles typography [#23](https://github.com/AppQuality/appquality-design-system/pull/23) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.65 (Thu Jun 24 2021)
 
 #### 🐛 Bug Fix
