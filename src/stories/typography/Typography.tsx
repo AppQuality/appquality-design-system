@@ -103,8 +103,8 @@ export const Text = styled.div(({ theme, small, color }: TextProps) => {
   font-family: ${typography.fontFamily.base};
   font-size: 1rem;
   font-weight: ${typography.fontWeight.light};
-  line-height: 1.5;
-  ${small ? `font-size: .835rem` : `font-size: 1rem`}
+  ${small ? `line-height: 1.2` : `line-height: 1.5`};
+  ${small ? `font-size: .875rem` : `font-size: 1rem`};
   strong, b {
     font-weight: ${typography.fontWeight.medium};
   }

@@ -1,13 +1,13 @@
 import { Story, Meta } from "@storybook/react";
-import { Paragraph, ParagraphProps, Title } from "./Typography";
+import { Paragraph, TextProps, Title, Text } from "./Typography";
 
 export default {
   title: "Typography",
-  component: Paragraph,
+  component: Text,
 } as Meta;
 
-const ParagraphTemplate: Story<ParagraphProps> = (args) => {
-  return <Paragraph {...args}>Lorem ipsum dolor sit amet </Paragraph>;
+const ParagraphTemplate: Story<TextProps> = (args) => {
+  return <Text {...args}>Lorem ipsum dolor sit amet </Text>;
 };
 
 export const SimpleParagraph = ParagraphTemplate.bind({});
