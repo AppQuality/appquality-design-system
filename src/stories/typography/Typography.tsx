@@ -45,14 +45,34 @@ export const SmallTitle = styled.div(({ theme }: H5Props) => {
 `;
 });
 
+const titleSizes = {
+  xs: { desktop: "14px", mobile: "16px" },
+  s: { desktop: "16px", mobile: false },
+  ms: { desktop: "24px", mobile: false },
+  m: { desktop: "28px", mobile: false },
+  l: { desktop: "32px", mobile: false },
+  xl: { desktop: "40px", mobile: false },
+};
 export const Title = styled.div(({ theme, size, color }: TitleProps) => {
-  const { palette, typography } = theme;
+  const { palette, typography, grid } = theme;
+
+  let fontSize = "font-size: 16px;";
+
+  if (Object.keys(titleSizes).includes(size)) {
+    fontSize = `font-size: ${titleSizes[size].desktop};`;
+    if (titleSizes[size].mobile) {
+      fontSize += `@media (max-width: ${grid.breakpoints.lg}) {
+        font-size: ${titleSizes[size].mobile};
+      }`;
+    }
+  }
+
   return `
   color: ${color || palette.primary};
   font-family: ${typography.fontFamily.base};
   font-weight: ${typography.fontWeight.bold};
   line-height: 1.5;
-  ${size === "s" && `font-size: 16px`}
+  ${fontSize}
 `;
 });
 
