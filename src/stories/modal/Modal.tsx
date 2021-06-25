@@ -1,16 +1,15 @@
-import { BaseProps } from "../../shared/_types";
 import { ModalProps } from "./_types";
 import { StyledModal } from "./_style";
 import { X } from "react-bootstrap-icons";
-import { Text } from "../typography/Typography";
+import { Title } from "../typography/Typography";
 
-export const Modal: React.FC<ModalProps & BaseProps> = ({
+export const Modal = ({
   isOpen,
   onClose,
   title,
   footer,
   children,
-}) => {
+}: ModalProps) => {
   return (
     <>
       {isOpen && (
@@ -18,9 +17,7 @@ export const Modal: React.FC<ModalProps & BaseProps> = ({
           <div className="modal-overlay" onClick={onClose} />
           <div className="modal">
             <div className="modal-header">
-              <Text>
-                <strong>{title}</strong>
-              </Text>
+              <Title size="s">{title}</Title>
               <div className="modal-close" onClick={onClose}>
                 <X height="24px" width="24px" />
               </div>

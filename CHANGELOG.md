@@ -164,7 +164,7 @@
 #### ⚠️ Pushed to `main`
 
 - Merge remote-tracking branch 'origin/main' (iacopo.leardini@app-quality.com)
-- fix: ops wrong color, sorry ¯\_(ツ)_/¯ (iacopo.leardini@app-quality.com)
+- fix: ops wrong color, sorry ¯\_(ツ)\_/¯ (iacopo.leardini@app-quality.com)
 
 #### Authors: 1
 
@@ -703,8 +703,6 @@
 
 # v0.1.15 (Thu Jun 10 2021)
 
-
-
 ---
 
 # v0.1.14 (Thu Jun 10 2021)
@@ -793,8 +791,6 @@
 
 # v0.1.10 (Tue Jun 08 2021)
 
-
-
 ---
 
 # v0.1.9 (Tue Jun 08 2021)
@@ -835,8 +831,6 @@
 ---
 
 # v0.1.7 (Tue Jun 08 2021)
-
-
 
 ---
 
@@ -901,8 +895,6 @@
 ---
 
 # v0.1.2 (Tue Jun 08 2021)
-
-
 
 ---
 
