@@ -1,3 +1,16 @@
+# v0.1.67 (Fri Jun 25 2021)
+
+#### 🐛 Bug Fix
+
+- rework: Change spacing with multiple of four [#25](https://github.com/AppQuality/appquality-design-system/pull/25) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.66 (Thu Jun 24 2021)
 
 #### 🐛 Bug Fix
