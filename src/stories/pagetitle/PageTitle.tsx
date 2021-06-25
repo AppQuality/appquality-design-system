@@ -1,6 +1,6 @@
 import { PageTitleProps } from "./_types";
 import styled from "styled-components";
-import { Title, Text, TitleProps } from "../typography/Typography";
+import { Title, TitleProps } from "../typography/Typography";
 import { ArrowLeftCircle } from "react-bootstrap-icons";
 
 const NavigationAnchor = styled.a`
@@ -8,6 +8,10 @@ const NavigationAnchor = styled.a`
   &:hover {
     text-decoration: underline;
   }
+`;
+const HeadingElement = styled.div`
+  font-size: 14px;
+  font-weight: ${(props) => props.theme.typography.fontWeight.light};
 `;
 const PageTitle = ({
   size,
@@ -39,12 +43,12 @@ const PageTitle = ({
   }
   if (heading) {
     headingElement = (
-      <Text
+      <HeadingElement
         as={typeof heading == "string" ? undefined : heading.as}
         className="aq-mb-2"
       >
         {typeof heading == "string" ? heading : heading.content}
-      </Text>
+      </HeadingElement>
     );
   }
   if (back) {
@@ -52,9 +56,7 @@ const PageTitle = ({
       <div className="aq-mt-2">
         <NavigationAnchor className="aq-text-info" href={back.navigation}>
           <ArrowLeftCircle className="aq-float-left" size={"1.3125rem"} />
-          <Text as="span" className="aq-text-info aq-ml-2">
-            {back.text}
-          </Text>
+          <span className="aq-text-info aq-ml-2">{back.text}</span>
         </NavigationAnchor>
       </div>
     );
