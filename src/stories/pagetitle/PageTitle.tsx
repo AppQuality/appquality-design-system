@@ -50,9 +50,9 @@ const PageTitle = ({
   if (back) {
     backElement = (
       <div className="aq-mt-2">
-        <NavigationAnchor href={back.navigation}>
+        <NavigationAnchor className="aq-text-info" href={back.navigation}>
           <ArrowLeftCircle className="aq-float-left" size={"1.3125rem"} />
-          <Text as="span" className="aq-ml-2">
+          <Text as="span" className="aq-text-info aq-ml-2">
             {back.text}
           </Text>
         </NavigationAnchor>
