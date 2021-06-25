@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     h5 { font-size: ${props.theme.typography.fontSize.h5} }
     h6 { font-size: ${props.theme.typography.fontSize.h6} }
     a {
-      color: ${props.theme.palette.primary};
+      color: inherit;
       text-decoration: underline;
     }
     html {
@@ -55,6 +55,12 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     }
     img {
       max-width: 100%;
+    }
+    strong, b {
+      font-weight: ${props.theme.typography.fontWeight.medium};
+    }
+    em, i {
+      font-style: italic;
     }
     .margin-default {
       margin-bottom: ${props.theme.grid.spacing.default};
