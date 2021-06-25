@@ -2,7 +2,7 @@ import { BaseProps } from "../../shared/_types";
 import { ModalProps } from "./_types";
 import { StyledModal } from "./_style";
 import { X } from "react-bootstrap-icons";
-import { Text, Title } from "../typography/Typography";
+import { Title } from "../typography/Typography";
 
 export const Modal: React.FC<ModalProps & BaseProps> = ({
   isOpen,
