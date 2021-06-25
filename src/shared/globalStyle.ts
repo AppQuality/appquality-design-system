@@ -18,17 +18,9 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       margin: 0;
     }
     h1, h2, h3, h4, h5, h6 {
-        margin-top: 0;
-        margin-bottom: .5rem;
-        font-weight: 500;
-        line-height: 1.2;
+      margin: 0;
+      font-size: unset
     }
-    h1 { font-size: ${props.theme.typography.fontSize.h1} }
-    h2 { font-size: ${props.theme.typography.fontSize.h2} }
-    h3 { font-size: ${props.theme.typography.fontSize.h3} }
-    h4 { font-size: ${props.theme.typography.fontSize.h4} }
-    h5 { font-size: ${props.theme.typography.fontSize.h5} }
-    h6 { font-size: ${props.theme.typography.fontSize.h6} }
     a {
       color: ${props.theme.palette.primary};
       text-decoration: underline;
@@ -68,8 +60,14 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     .aq-text-left {
       text-align: left;
     }
-    .aq-text-small {
-      font-size: ${props.theme.typography.fontSize.small};
+    .aq-float-right {
+      float: right;
+    }
+    .aq-float-left {
+      float: left;
+    }
+    .aq-float-none {
+      float: none;
     }
   `;
   style += base;

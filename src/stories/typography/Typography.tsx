@@ -68,7 +68,6 @@ export const Text = styled.div(({ theme, small, color }: TextProps) => {
   return `
   color: ${color || palette.primary};
   font-family: ${typography.fontFamily.base};
-  font-size: 1rem;
   font-weight: ${typography.fontWeight.light};
   ${small ? `line-height: 1.2` : `line-height: 1.5`};
   ${small ? `font-size: .875rem` : `font-size: 1rem`};
