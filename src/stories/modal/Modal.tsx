@@ -1,4 +1,3 @@
-import { BaseProps } from "../../shared/_types";
 import { ModalProps } from "./_types";
 import { StyledModal } from "./_style";
 import { X } from "react-bootstrap-icons";
