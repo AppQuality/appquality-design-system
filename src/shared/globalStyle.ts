@@ -77,6 +77,9 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     .aq-text-small {
       font-size: ${props.theme.typography.fontSize.small};
     }
+    .capitalize-first:first-letter {
+      text-transform: capitalize;
+    }
   `;
   style += base;
 
