@@ -4,13 +4,13 @@ import { StyledModal } from "./_style";
 import { X } from "react-bootstrap-icons";
 import { Title } from "../typography/Typography";
 
-export const Modal: React.FC<ModalProps & BaseProps> = ({
+export const Modal = ({
   isOpen,
   onClose,
   title,
   footer,
   children,
-}) => {
+}: ModalProps) => {
   return (
     <>
       {isOpen && (
