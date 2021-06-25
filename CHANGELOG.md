@@ -1,3 +1,16 @@
+# v0.1.69 (Fri Jun 25 2021)
+
+#### 🐛 Bug Fix
+
+- feat(utility): add capitalize first letter utility [#27](https://github.com/AppQuality/appquality-design-system/pull/27) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.68 (Fri Jun 25 2021)
 
 #### 🐛 Bug Fix
