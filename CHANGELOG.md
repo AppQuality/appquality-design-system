@@ -1,3 +1,83 @@
+# v0.1.66 (Thu Jun 24 2021)
+
+#### 🐛 Bug Fix
+
+- Updated typography [#24](https://github.com/AppQuality/appquality-design-system/pull/24) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat: Add titles typography [#23](https://github.com/AppQuality/appquality-design-system/pull/23) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.65 (Thu Jun 24 2021)
+
+#### 🐛 Bug Fix
+
+- Develop [#22](https://github.com/AppQuality/appquality-design-system/pull/22) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+- feat(typography): correct font size and weight [#20](https://github.com/AppQuality/appquality-design-system/pull/20) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
+# v0.1.64 (Wed Jun 23 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: Use 8px for size-1 (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.63 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix(shared): fix react select bortder radius [#19](https://github.com/AppQuality/appquality-design-system/pull/19) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+- Cp 837 modal styel fixes [#18](https://github.com/AppQuality/appquality-design-system/pull/18) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
+# v0.1.62 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix(Button): remove classname override [#17](https://github.com/AppQuality/appquality-design-system/pull/17) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
+# v0.1.61 (Wed Jun 23 2021)
+
+#### 🐛 Bug Fix
+
+- extend button props, export modal, add bold and italic in Text component [#16](https://github.com/AppQuality/appquality-design-system/pull/16) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.60 (Wed Jun 23 2021)
 
 #### 🐛 Bug Fix
@@ -84,7 +164,7 @@
 #### ⚠️ Pushed to `main`
 
 - Merge remote-tracking branch 'origin/main' (iacopo.leardini@app-quality.com)
-- fix: ops wrong color, sorry ¯\_(ツ)_/¯ (iacopo.leardini@app-quality.com)
+- fix: ops wrong color, sorry ¯\_(ツ)\_/¯ (iacopo.leardini@app-quality.com)
 
 #### Authors: 1
 
@@ -623,8 +703,6 @@
 
 # v0.1.15 (Thu Jun 10 2021)
 
-
-
 ---
 
 # v0.1.14 (Thu Jun 10 2021)
@@ -713,8 +791,6 @@
 
 # v0.1.10 (Tue Jun 08 2021)
 
-
-
 ---
 
 # v0.1.9 (Tue Jun 08 2021)
@@ -755,8 +831,6 @@
 ---
 
 # v0.1.7 (Tue Jun 08 2021)
-
-
 
 ---
 
@@ -821,8 +895,6 @@
 ---
 
 # v0.1.2 (Tue Jun 08 2021)
-
-
 
 ---
 

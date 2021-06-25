@@ -34,11 +34,11 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       text-decoration: underline;
     }
     html {
-      font-size: 14px;
+      font-size: 16px;
     }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (min-width: ${props.theme.grid.breakpoints.lg}) {
       html {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     body {
@@ -68,8 +68,8 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     .aq-text-left {
       text-align: left;
     }
-    .capitalize-first:first-letter {
-      text-transform: capitalize;
+    .aq-text-small {
+      font-size: ${props.theme.typography.fontSize.small};
     }
   `;
   style += base;

@@ -53,10 +53,10 @@ const aqBootstrapTheme = {
       default: "16px",
     },
     sizes: {
-      1: "10px",
-      2: "14px",
+      1: "4px",
+      2: "8px",
       3: "16px",
-      4: "20px",
+      4: "24px",
     },
     gutter: {
       x: "24px",
