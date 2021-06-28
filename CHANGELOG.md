@@ -1,3 +1,17 @@
+# v0.1.70 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- Add color prop to typography and add pagetitle [#30](https://github.com/AppQuality/appquality-design-system/pull/30) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Add pagetitle component [#26](https://github.com/AppQuality/appquality-design-system/pull/26) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.69 (Fri Jun 25 2021)
 
 #### 🐛 Bug Fix
