@@ -12,6 +12,7 @@ export interface UserData {
 
 export type User = undefined | UserData;
 export interface UserInfoProps {
+  loginText: string;
   onLogin?: () => void;
   onLogout?: () => void;
   isLoading?: boolean;
@@ -20,6 +21,7 @@ export interface UserInfoProps {
 
 export interface HeaderProps {
   isLoading?: boolean;
+  loginText?: string;
   user?: User;
   logo?: React.ReactNode;
   logoUrl?: string;

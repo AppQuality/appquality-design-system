@@ -68,6 +68,7 @@ export const Header = ({
   toggleMenu,
   user,
   className,
+  loginText = "login",
 }: HeaderProps) => {
   useWindowSize();
   const handleLogoutClick = () => {
@@ -110,6 +111,7 @@ export const Header = ({
             isLoading={isLoading}
             onLogin={onLogin}
             onLogout={handleLogoutClick}
+            loginText={loginText}
           />
         )}
       </StyledHeader>
