@@ -20,7 +20,7 @@ const BasicTabHead = ({
 );
 export const TabHead = styled(BasicTabHead)`
   ${(props) => (!props.disabled ? `cursor: pointer;` : "")}
-
+  flex-grow: 1;
   padding: 10px 16px;
   text-align: center;
   ${(props) =>
@@ -37,6 +37,9 @@ export const TabHead = styled(BasicTabHead)`
   &:hover {
     ${(props) =>
       !props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
+  }
+  @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+    flex-grow: 0;
   }
 `;
 
