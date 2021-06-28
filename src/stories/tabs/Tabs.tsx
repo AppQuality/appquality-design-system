@@ -20,9 +20,6 @@ const BasicTabHead = ({
 );
 export const TabHead = styled(BasicTabHead)`
   ${(props) => (!props.disabled ? `cursor: pointer;` : "")}
-  flex-grow: 1;
-  padding: 10px 16px;
-  text-align: center;
   ${(props) =>
     props.active
       ? `box-shadow: inset 0px -2px 0 ${props.theme.palette.primary};`
@@ -33,13 +30,9 @@ export const TabHead = styled(BasicTabHead)`
       : props.disabled
       ? props.theme.colors.disabledDark
       : props.theme.palette.secondary};
-  font-weight: ${(props) => props.theme.typography.fontWeight.medium};
   &:hover {
     ${(props) =>
       !props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
-  }
-  @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
-    flex-grow: 0;
   }
 `;
 
@@ -75,6 +68,16 @@ const BasicTabs = ({ active, children, className }: TabsProps) => {
   );
 };
 
-export const Tabs = styled(BasicTabs)``;
+export const Tabs = styled(BasicTabs)`
+  ${TabHead} {
+    flex-grow: 1;
+    padding: 10px 16px;
+    text-align: center;
+    font-weight: ${(props) => props.theme.typography.fontWeight.medium};
+    @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
+      flex-grow: 0;
+    }
+  }
+`;
 
 export type { TabsProps, TabProps };
