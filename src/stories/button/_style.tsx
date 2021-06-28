@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { ButtonProps } from "./ButtonProps";
+import { ButtonProps } from "./_types";
 
 interface ButtonStyleProps {
   theme: DefaultTheme;
@@ -72,7 +72,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     font-family:${theme.typography.fontFamily.base};
     font-weight: ${theme.typography.fontWeight.medium};
     line-height: 1.5;
-    transition: filter 0.15s ease-in-out 0s, background-color  0.15s ease-in-out 0s;
+    transition: filter 50ms ease-in-out 0s, background-color  50ms ease-in-out 0s;
     color: ${theme.palette.primary};
     
     svg {

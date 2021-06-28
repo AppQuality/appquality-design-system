@@ -1,6 +1,5 @@
 import { Button, ButtonGroup } from "./Button";
-import { ButtonProps } from "./ButtonProps";
-import { BaseProps } from "../../shared/_types";
+import { ButtonProps } from "./_types";
 import { Story, Meta } from "@storybook/react";
 import { Search } from "react-bootstrap-icons";
 import { ThemeProvider } from "styled-components";
@@ -12,12 +11,12 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps & BaseProps> = (args) => (
+const Template: Story<ButtonProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <Button {...args} />
   </ThemeProvider>
 );
-const GroupTemplate: Story<ButtonProps & BaseProps> = (args) => (
+const GroupTemplate: Story<ButtonProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <ButtonGroup>
       <Button flat={true}>
@@ -50,6 +49,15 @@ Secondary.args = {
   type: "secondary",
   children: "click",
   onClick: () => alert("clicked!"),
+};
+
+export const Link = Template.bind({});
+Link.args = {
+  type: "link",
+  children: "This render as an anchor tag, but looks like a Button!",
+  as: "a",
+  href: "#",
+  target: "_blank",
 };
 
 export const Large = Template.bind({});

@@ -1,13 +1,12 @@
-import { ButtonProps } from "./ButtonProps";
-import { BaseProps } from "../../shared/_types";
-import { ButtonStyle } from "./ButtonStyle";
+import { ButtonProps } from "./_types";
+import { ButtonStyle } from "./_style";
 import styled from "styled-components";
 
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps & BaseProps> = ({
-  htmlType = "button",
+export const Button = ({
+  htmlType,
   type = "primary",
   size = "medium",
   className,
@@ -15,8 +14,8 @@ export const Button: React.FC<ButtonProps & BaseProps> = ({
   squared = false,
   children,
   ...props
-}) => {
-  let classes = [`aq-btn-${size}`, `aq-btn-${type}`];
+}: ButtonProps) => {
+  let classes = [`aq-btn-${size}`, `aq-btn-${type}`, className];
   if (flat) {
     classes.push("aq-btn-flat");
   }
@@ -24,11 +23,7 @@ export const Button: React.FC<ButtonProps & BaseProps> = ({
     classes.push("aq-btn-squared");
   }
   return (
-    <ButtonStyle
-      type={htmlType}
-      className={`${className} ${classes.join(" ")}`}
-      {...props}
-    >
+    <ButtonStyle type={htmlType} className={`${classes.join(" ")}`} {...props}>
       {children}
     </ButtonStyle>
   );
