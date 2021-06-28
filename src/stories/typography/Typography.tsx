@@ -55,7 +55,7 @@ export const Title = styled.div(({ theme, size, color }: TitleProps) => {
   }
 
   return `
-  color: ${color || palette.primary};
+  color: ${color ? palette[color] : palette.primary};
   font-family: ${typography.fontFamily.base};
   line-height: 1.5;
   ${fontSize}
