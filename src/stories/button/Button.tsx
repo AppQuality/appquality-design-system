@@ -1,5 +1,5 @@
 import { ButtonProps } from "./_types";
-import { ButtonStyle } from "./ButtonStyle";
+import { ButtonStyle } from "./_style";
 import styled from "styled-components";
 
 /**
