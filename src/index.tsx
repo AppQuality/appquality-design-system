@@ -40,3 +40,6 @@ export * from "./stories/skeleton/Skeleton";
 export * from "./stories/spinner/Spinner";
 export * from "./stories/table/Table";
 export * from "./stories/typography/Typography";
+export * from "./stories/pagetitle/PageTitle";
+export * from "./stories/pagetitle/PageTitle";
+export * from "./stories/tabs/Tabs";

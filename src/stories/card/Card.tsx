@@ -6,6 +6,7 @@ const BasicCard = ({
   children,
   title,
   shadow = false,
+  bodyClass = "aq-m-3",
   className,
 }: CardProps) => {
   let cardHeader = null;
@@ -21,7 +22,7 @@ const BasicCard = ({
   return (
     <div className={`${className}${shadow ? " aq-card-shadow" : ""}`}>
       {cardHeader}
-      <div className="aq-card-body">{children}</div>
+      <div className={`${bodyClass} aq-card-body`}>{children}</div>
     </div>
   );
 };
@@ -41,7 +42,6 @@ export const Card = styled(BasicCard)`
   }
   .aq-card-body {
     flex: 1 1 auto;
-    padding: 16px;
   }
   .aq-card-head {
     display: flex;

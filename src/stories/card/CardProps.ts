@@ -7,5 +7,6 @@ export interface CardProps {
   children?: ReactNode;
   title?: String;
   className?: string;
+  bodyClass?: string;
   shadow?: boolean;
 }

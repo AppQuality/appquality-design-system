@@ -1,3 +1,86 @@
+# v0.1.72 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- fix(header): Make header text configurable [#32](https://github.com/AppQuality/appquality-design-system/pull/32) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.71 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- fix(typography): Add color to text [#31](https://github.com/AppQuality/appquality-design-system/pull/31) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.70 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- Add color prop to typography and add pagetitle [#30](https://github.com/AppQuality/appquality-design-system/pull/30) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Add pagetitle component [#26](https://github.com/AppQuality/appquality-design-system/pull/26) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.69 (Fri Jun 25 2021)
+
+#### 🐛 Bug Fix
+
+- feat(utility): add capitalize first letter utility [#27](https://github.com/AppQuality/appquality-design-system/pull/27) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
+# v0.1.68 (Fri Jun 25 2021)
+
+#### 🐛 Bug Fix
+
+- feat(global): add util to capitalize first letter [#21](https://github.com/AppQuality/appquality-design-system/pull/21) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' (iacopo.leardini@app-quality.com)
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
+# v0.1.67 (Fri Jun 25 2021)
+
+#### 🐛 Bug Fix
+
+- rework: Change spacing with multiple of four [#25](https://github.com/AppQuality/appquality-design-system/pull/25) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.66 (Thu Jun 24 2021)
 
 #### 🐛 Bug Fix
