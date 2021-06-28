@@ -18,6 +18,12 @@ SmallParagraph.args = {
   small: true,
 };
 
+export const ColoredSmallParagraph = ParagraphTemplate.bind({});
+ColoredSmallParagraph.args = {
+  color: "danger",
+  small: true,
+};
+
 export const TitleExtraLarge = () => (
   <Title size="xl">Lorem ipsum dolor sit amet</Title>
 );

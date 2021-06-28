@@ -66,7 +66,7 @@ export const Title = styled.div(({ theme, size, color }: TitleProps) => {
 export const Text = styled.div(({ theme, small, color }: TextProps) => {
   const { palette, typography } = theme;
   return `
-  color: ${color || palette.primary};
+  color: ${color ? palette[color] : palette.primary};
   font-family: ${typography.fontFamily.base};
   font-weight: ${
     small ? typography.fontWeight.normal : typography.fontWeight.light
