@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { TabsProps, TabProps, TabHeadProps } from "./_types";
 
 const TabHeadContainer = styled.div`
+  display: flex;
   width: 100%;
-  float: left;
   box-shadow: inset 0px -1px 0 ${(props) => props.theme.colors.disabled};
 `;
 const BasicTabHead = ({
@@ -19,7 +19,6 @@ const BasicTabHead = ({
   </div>
 );
 export const TabHead = styled(BasicTabHead)`
-  float: left;
   ${(props) => (!props.disabled ? `cursor: pointer;` : "")}
 
   padding: 10px 16px;
@@ -68,7 +67,7 @@ const BasicTabs = ({ active, children, className }: TabsProps) => {
   return (
     <div className={className}>
       <TabHeadContainer>{tabHead}</TabHeadContainer>
-      <div className="aq-float-left">{tabs}</div>
+      {tabs}
     </div>
   );
 };
