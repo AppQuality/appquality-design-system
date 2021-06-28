@@ -6,7 +6,7 @@ import {
   marginFromTop,
 } from "./variables";
 import { LanguageIcons, LanguageIconWrapper } from "./LanguageIcons";
-import { ButtonStyle } from "../button/ButtonStyle";
+import { ButtonStyle } from "../button/_style";
 import { SidebarIcon } from "./SidebarIcon";
 import { SidebarText } from "./SidebarText";
 import { SidebarProps } from "./SidebarProps";
