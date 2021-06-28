@@ -55,7 +55,7 @@ export const Title = styled.div(({ theme, size, color }: TitleProps) => {
   }
 
   return `
-  color: ${color || palette.primary};
+  color: ${color ? palette[color] : palette.primary};
   font-family: ${typography.fontFamily.base};
   line-height: 1.5;
   ${fontSize}
@@ -68,7 +68,6 @@ export const Text = styled.div(({ theme, small, color }: TextProps) => {
   return `
   color: ${color || palette.primary};
   font-family: ${typography.fontFamily.base};
-  font-size: 1rem;
   font-weight: ${
     small ? typography.fontWeight.normal : typography.fontWeight.light
   };
