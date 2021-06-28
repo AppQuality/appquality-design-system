@@ -1,3 +1,18 @@
+# v0.1.75 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- Fix link style for button [#37](https://github.com/AppQuality/appquality-design-system/pull/37) (iacopo.leardini@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- fix(Modal): fix base style [#36](https://github.com/AppQuality/appquality-design-system/pull/36) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.74 (Mon Jun 28 2021)
 
 #### 🐛 Bug Fix
