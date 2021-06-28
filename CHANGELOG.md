@@ -1,3 +1,16 @@
+# v0.1.71 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- fix(typography): Add color to text [#31](https://github.com/AppQuality/appquality-design-system/pull/31) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.70 (Mon Jun 28 2021)
 
 #### 🐛 Bug Fix
