@@ -6,6 +6,12 @@ const TabHeadContainer = styled.div`
   display: flex;
   width: 100%;
   box-shadow: inset 0px -1px 0 ${(props) => props.theme.colors.disabled};
+  overflow: scroll;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 const BasicTabHead = ({
   active,
@@ -71,9 +77,12 @@ const BasicTabs = ({ active, children, className }: TabsProps) => {
 export const Tabs = styled(BasicTabs)`
   ${TabHead} {
     flex-grow: 1;
+    white-space: nowrap;
+    flex-wrap: nowrap;
     padding: 10px 16px;
     text-align: center;
     font-weight: ${(props) => props.theme.typography.fontWeight.medium};
+
     @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
       flex-grow: 0;
     }
