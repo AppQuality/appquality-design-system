@@ -64,6 +64,8 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     padding: 8px 12px;
     font-size: ${theme.typography.fontSize.base};
     border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
 		
     background-color: transparent;
     border-width: 1px;
