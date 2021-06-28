@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react";
 import { BaseProps } from "../../shared/_types";
 
-export interface ButtonProps extends BaseProps {
+export type ButtonProps = BaseProps & {
   htmlType?: "button" | "submit" | "reset";
   /**
    * Is this the principal call to action on the page?
@@ -42,5 +42,6 @@ export interface ButtonProps extends BaseProps {
   /**
    * Optional as html tag
    */
-  as?: React.ElementType;
-}
+  as?: React.ElementType | keyof JSX.IntrinsicElements;
+  target?: string;
+};

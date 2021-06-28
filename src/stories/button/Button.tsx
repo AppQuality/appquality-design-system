@@ -6,7 +6,7 @@ import styled from "styled-components";
  * Primary UI component for user interaction
  */
 export const Button = ({
-  htmlType = "button",
+  htmlType,
   type = "primary",
   size = "medium",
   className,
@@ -15,7 +15,7 @@ export const Button = ({
   children,
   ...props
 }: ButtonProps) => {
-  let classes = [`aq-btn-${size}`, `aq-btn-${type}`];
+  let classes = [`aq-btn-${size}`, `aq-btn-${type}`, className];
   if (flat) {
     classes.push("aq-btn-flat");
   }
@@ -23,11 +23,7 @@ export const Button = ({
     classes.push("aq-btn-squared");
   }
   return (
-    <ButtonStyle
-      type={htmlType}
-      className={`${className} ${classes.join(" ")}`}
-      {...props}
-    >
+    <ButtonStyle type={htmlType} className={`${classes.join(" ")}`} {...props}>
       {children}
     </ButtonStyle>
   );

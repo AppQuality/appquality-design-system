@@ -51,6 +51,15 @@ Secondary.args = {
   onClick: () => alert("clicked!"),
 };
 
+export const Link = Template.bind({});
+Link.args = {
+  type: "link",
+  children: "This render as an anchor tag, but looks like a Button!",
+  as: "a",
+  href: "#",
+  target: "_blank",
+};
+
 export const Large = Template.bind({});
 Large.args = {
   size: "lg",
