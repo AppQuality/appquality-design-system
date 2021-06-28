@@ -5,6 +5,7 @@ import Skeleton from "../skeleton/Skeleton";
 import { Text } from "../typography/Typography";
 
 export const UserInfo = ({
+  loginText,
   user,
   isLoading,
   onLogin,
@@ -31,8 +32,13 @@ export const UserInfo = ({
           </Button>
         </>
       ) : typeof onLogin !== "undefined" ? (
-        <Button size="medium" type="link" onClick={onLogin}>
-          login
+        <Button
+          className="capitalize-first"
+          size="medium"
+          type="link"
+          onClick={onLogin}
+        >
+          {loginText}
         </Button>
       ) : null}
     </div>
