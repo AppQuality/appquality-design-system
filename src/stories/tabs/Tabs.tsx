@@ -38,7 +38,7 @@ export const TabHead = styled(BasicTabHead)`
     ${(props) =>
       !props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
   }
-  @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+  @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
     flex-grow: 0;
   }
 `;
