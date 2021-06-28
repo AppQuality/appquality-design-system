@@ -1,3 +1,15 @@
+# v0.1.73 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- fix: Export pagetitle (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.72 (Mon Jun 28 2021)
 
 #### 🐛 Bug Fix
