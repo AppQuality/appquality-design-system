@@ -39,4 +39,8 @@ export interface ButtonProps extends BaseProps {
    * Optional href for anchor
    */
   href?: string;
+  /**
+   * Optional as html tag
+   */
+  as?: React.ElementType;
 }
