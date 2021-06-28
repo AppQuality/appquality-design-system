@@ -1,6 +1,5 @@
 import { Button, ButtonGroup } from "./Button";
-import { ButtonProps } from "./ButtonProps";
-import { BaseProps } from "../../shared/_types";
+import { ButtonProps } from "./_types";
 import { Story, Meta } from "@storybook/react";
 import { Search } from "react-bootstrap-icons";
 import { ThemeProvider } from "styled-components";
@@ -12,12 +11,12 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps & BaseProps> = (args) => (
+const Template: Story<ButtonProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <Button {...args} />
   </ThemeProvider>
 );
-const GroupTemplate: Story<ButtonProps & BaseProps> = (args) => (
+const GroupTemplate: Story<ButtonProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <ButtonGroup>
       <Button flat={true}>

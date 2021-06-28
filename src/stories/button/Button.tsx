@@ -1,12 +1,11 @@
-import { ButtonProps } from "./ButtonProps";
-import { BaseProps } from "../../shared/_types";
+import { ButtonProps } from "./_types";
 import { ButtonStyle } from "./ButtonStyle";
 import styled from "styled-components";
 
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps & BaseProps> = ({
+export const Button = ({
   htmlType = "button",
   type = "primary",
   size = "medium",
@@ -15,7 +14,7 @@ export const Button: React.FC<ButtonProps & BaseProps> = ({
   squared = false,
   children,
   ...props
-}) => {
+}: ButtonProps) => {
   let classes = [`aq-btn-${size}`, `aq-btn-${type}`];
   if (flat) {
     classes.push("aq-btn-flat");

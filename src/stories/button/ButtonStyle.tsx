@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { ButtonProps } from "./ButtonProps";
+import { ButtonProps } from "./_types";
 
 interface ButtonStyleProps {
   theme: DefaultTheme;
