@@ -1,3 +1,21 @@
+# v0.1.74 (Mon Jun 28 2021)
+
+#### 🐛 Bug Fix
+
+- Update buttons to handle anchor href and added tabs component [#35](https://github.com/AppQuality/appquality-design-system/pull/35) (iacopo.leardini@app-quality.com davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat: Add tabs component [#29](https://github.com/AppQuality/appquality-design-system/pull/29) (it@app-quality.com iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Extends Button to be <a> [#34](https://github.com/AppQuality/appquality-design-system/pull/34) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 5
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.73 (Mon Jun 28 2021)
 
 #### 🐛 Bug Fix
