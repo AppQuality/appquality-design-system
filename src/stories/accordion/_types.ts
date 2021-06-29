@@ -14,6 +14,7 @@ export interface ItemProps extends BaseProps {
   Body?: React.FC<ItemBodyProps>;
 }
 export interface ItemHeadProps extends BaseProps {
+  as?: React.ElementType | keyof JSX.IntrinsicElements;
   id?: string;
   disabled?: boolean;
   active?: boolean;
