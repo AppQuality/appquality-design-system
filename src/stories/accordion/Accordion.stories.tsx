@@ -57,7 +57,7 @@ export const BasicAccordion = Template.bind({});
 BasicAccordion.args = {};
 BasicAccordion.parameters = {};
 
-export const TabsInsideCard = () => {
+export const AccordionInsideCard = () => {
   const { Item } = Accordion;
   return (
     <Card bodyClass="aq-mb-3">

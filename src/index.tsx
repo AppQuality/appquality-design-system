@@ -43,3 +43,4 @@ export * from "./stories/typography/Typography";
 export * from "./stories/pagetitle/PageTitle";
 export * from "./stories/pagetitle/PageTitle";
 export * from "./stories/tabs/Tabs";
+export * from "./stories/accordion/Accordion";
