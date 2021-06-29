@@ -6,4 +6,6 @@ export default {
   component: Address,
 } as Meta;
 
-export const SimpleAddress: Story = () => <Address />;
+export const SimpleAddress: Story = () => (
+  <Address id="address" onChange={() => {}} />
+);
