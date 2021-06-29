@@ -1,11 +1,12 @@
 import usePlacesAutocomplete, {
   getGeocode,
-  getLatLng,
+  getDetails,
 } from "use-places-autocomplete";
 import useOnclickOutside from "react-cool-onclickoutside";
 import Input from "../input/Input";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { MapsDetails, AddressType } from "./_types";
 
 const SuggestionBox = styled.div`
   border: 1px solid ${(props) => props.theme.colors.disabled};
@@ -16,7 +17,13 @@ const SuggestionBox = styled.div`
   }
 `;
 
-const Address = ({ id, onChange }: { id: string; onChange: any }) => {
+const Address = ({
+  id,
+  onChange,
+  placeholder,
+  disabled,
+  isInvalid,
+}: AddressType) => {
   const {
     ready,
     value,
@@ -49,7 +56,13 @@ const Address = ({ id, onChange }: { id: string; onChange: any }) => {
     setStringValue(value);
   };
 
-  const handleSelect = ({ description }: { description: string }) => () => {
+  const handleSelect = ({
+    description,
+    place_id,
+  }: {
+    description: string;
+    place_id: string;
+  }) => () => {
     // When user selects a place, we can replace the keyword without request data from API
     // by setting the second parameter to "false"
     setValue(description, false);
@@ -57,12 +70,22 @@ const Address = ({ id, onChange }: { id: string; onChange: any }) => {
     clearSuggestions();
 
     // Get latitude and longitude via utility functions
-    getGeocode({ address: description })
-      .then((results) => getLatLng(results[0]))
-      .then(({ lat, lng }) => {
+    getDetails({ placeId: place_id })
+      .then((data: { address_components?: Array<MapsDetails> } | string) => {
+        const objectData: { [key: string]: string } = {};
+        if (typeof data !== "string" && data.address_components) {
+          data.address_components.forEach(
+            ({ long_name, types }: MapsDetails) => {
+              objectData[types.join("_")] = long_name;
+            }
+          );
+        }
+        onChange(objectData);
         setMapsData(description);
       })
-      .catch((error) => {});
+      .catch((error) => {
+        throw new Error(error);
+      });
   };
 
   const renderSuggestions = () =>
@@ -90,8 +113,9 @@ const Address = ({ id, onChange }: { id: string; onChange: any }) => {
         type="text"
         value={stringValue}
         onChange={handleInput}
-        disabled={!ready}
-        placeholder="Where are you going?"
+        isInvalid={isInvalid}
+        disabled={!ready || disabled}
+        placeholder={placeholder}
       />
       {/* We can use the "status" to decide whether we should display the dropdown or not */}
       {status === "OK" && <SuggestionBox>{renderSuggestions()}</SuggestionBox>}

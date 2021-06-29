@@ -7,5 +7,11 @@ export default {
 } as Meta;
 
 export const SimpleAddress: Story = () => (
-  <Address id="address" onChange={() => {}} />
+  <Address
+    id="address"
+    onChange={(data) => {
+      console.log(data);
+    }}
+    placeholder="Select an address"
+  />
 );
