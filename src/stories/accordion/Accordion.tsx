@@ -33,14 +33,14 @@ export const StyledItemHead = styled.div(
 `
 );
 
-const ItemBody = ({ children, className }: ItemBodyProps) => {
-  return <div className={className}>{children}</div>;
+const ItemBody = ({ children, ...props }: ItemBodyProps) => {
+  return <StyledItemBody>{children}</StyledItemBody>;
 };
 export const StyledItemBody = styled.div`
   background-color: deeppink;
 `;
 
-const Item = ({ id, active, children, className }: ItemProps) => {
+const Item = ({ children, ...props }: ItemProps) => {
   const head = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === ItemHead) {
       return React.cloneElement(child);
@@ -54,13 +54,17 @@ const Item = ({ id, active, children, className }: ItemProps) => {
     return null;
   });
   return (
-    <div className={className}>
+    <StyledItem {...props}>
       {head}
       {body}
-    </div>
+    </StyledItem>
   );
 };
-export const StyledItem = styled.div``;
+export const StyledItem = styled.div`
+  ${StyledItemBody} {
+    color: #fff;
+  }
+`;
 
 const Accordion = ({ initialActive, children, className }: AccordionProps) => {
   let [current, setCurrent] = useState(initialActive);
