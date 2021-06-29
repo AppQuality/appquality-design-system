@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Text, Title } from "../typography/Typography";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
+import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 import {
   AccordionProps,
@@ -39,7 +40,7 @@ export const StyledItemHead = styled.div((props: StyledItemHeadProps) => {
         @media (min-width: ${props.theme.grid.breakpoints.lg}) {
           width: 21px;
           height: 21px;
-        } 
+        }
       }
       &:hover {
         ${!props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
@@ -55,7 +56,8 @@ export const StyledItemBody = styled.div`
   padding: ${(props) => props.theme.grid.spacing.default};
 `;
 
-const Item = ({ children, active, ...props }: ItemProps) => {
+const Item = ({ children, active, id, ...props }: ItemProps) => {
+  console.log(props);
   const head = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === ItemHead) {
       return React.cloneElement(child, {
@@ -72,9 +74,16 @@ const Item = ({ children, active, ...props }: ItemProps) => {
     return null;
   });
   return (
-    <StyledItem {...props}>
+    <StyledItem id={id}>
       {head}
-      {active && body}
+      <CSSTransition
+        timeout={200}
+        classNames="accordion-item"
+        in={active}
+        unmountOnExit
+      >
+        <div>{body}</div>
+      </CSSTransition>
     </StyledItem>
   );
 };
@@ -85,6 +94,20 @@ export const StyledAccordion = styled.div`
 
   ${StyledItem}:not(:last-child) {
     border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
+  }
+  .accordion-item-enter {
+    max-height: 1000px;
+  }
+  .accordion-item-enter-active {
+    max-height: 0;
+    transition: max-height 200ms;
+  }
+  .accordion-item-exit {
+    max-height: 0;
+  }
+  .accordion-item-exit-active {
+    max-height: 1;
+    transition: max-height 200ms;
   }
 `;
 
