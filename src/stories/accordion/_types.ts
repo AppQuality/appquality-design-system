@@ -9,17 +9,16 @@ export interface ItemProps extends BaseProps {
   id: string;
   active?: boolean;
   disabled?: boolean;
-  title?: string;
+  setActive?: () => void;
   Head?: React.FC<ItemHeadProps>;
   Body?: React.FC<ItemBodyProps>;
 }
 export interface ItemHeadProps extends BaseProps {
-  as?: React.ElementType | keyof JSX.IntrinsicElements;
   id?: string;
-  disabled?: boolean;
   active?: boolean;
-  title?: string;
-  setActive?: () => void;
+  disabled?: boolean;
+  setActive?: (id: string) => void;
+  as?: React.ElementType | keyof JSX.IntrinsicElements;
 }
 export interface StyledItemHeadProps extends ItemHeadProps {
   theme: DefaultTheme;
