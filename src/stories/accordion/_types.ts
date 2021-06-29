@@ -1,4 +1,6 @@
 import { BaseProps } from "../../shared/_types";
+import { DefaultTheme } from "styled-components";
+
 export interface AccordionProps extends BaseProps {
   initialActive: string;
   Item?: React.FC<ItemProps>;
@@ -17,6 +19,9 @@ export interface ItemHeadProps extends BaseProps {
   active?: boolean;
   title?: string;
   setActive?: () => void;
+}
+export interface StyledItemHeadProps extends ItemHeadProps {
+  theme: DefaultTheme;
 }
 export interface ItemBodyProps extends BaseProps {
   active?: boolean;

@@ -5,38 +5,42 @@ import {
   AccordionProps,
   ItemProps,
   ItemHeadProps,
+  StyledItemHeadProps,
   ItemBodyProps,
 } from "./_types";
 
-const ItemHead = ({ children }: ItemHeadProps) => {
-  return <div className="item-head">{children}</div>;
+const ItemHead = ({ children, ...props }: ItemHeadProps) => {
+  return <StyledItemHead {...props}>{children}</StyledItemHead>;
 };
-export const StyledItemHead = styled(ItemHead)`
-  ${(props) => (!props.disabled ? `cursor: pointer;` : "")}
-  ${(props) =>
+export const StyledItemHead = styled.div(
+  (props: StyledItemHeadProps) => `
+  ${!props.disabled ? `cursor: pointer;` : ""}
+  ${
     props.active
       ? `box-shadow: inset 0px -2px 0 ${props.theme.palette.primary};`
-      : ""}
-  color: ${(props) =>
+      : ""
+  }
+  color: ${
     props.active
       ? props.theme.palette.success
       : props.disabled
       ? props.theme.colors.disabledDark
-      : props.theme.palette.secondary};
+      : props.theme.palette.secondary
+  };
   &:hover {
-    ${(props) =>
-      !props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
+    ${!props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
   }
-`;
+`
+);
 
-const ItemBody = ({ children }: ItemBodyProps) => {
-  return <div className="item-body">{children}</div>;
+const ItemBody = ({ children, className }: ItemBodyProps) => {
+  return <div className={className}>{children}</div>;
 };
-export const StyledItemBody = styled(ItemBody)`
+export const StyledItemBody = styled.div`
   background-color: deeppink;
 `;
 
-const Item = ({ id, active, children }: ItemProps) => {
+const Item = ({ id, active, children, className }: ItemProps) => {
   const head = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === ItemHead) {
       return React.cloneElement(child);
@@ -50,19 +54,15 @@ const Item = ({ id, active, children }: ItemProps) => {
     return null;
   });
   return (
-    <div className="accordion-item">
+    <div className={className}>
       {head}
       {body}
     </div>
   );
 };
-export const StyledItem = styled(Item);
+export const StyledItem = styled.div``;
 
-export const BasicAccordion = ({
-  initialActive,
-  children,
-  className,
-}: AccordionProps) => {
+const Accordion = ({ initialActive, children, className }: AccordionProps) => {
   let [current, setCurrent] = useState(initialActive);
   let accordionHead: React.ReactNode = null;
   const items = React.Children.map(children, (child) => {
@@ -71,22 +71,11 @@ export const BasicAccordion = ({
     }
     return null;
   });
-  return <div className="accordion">{items}</div>;
+  return <div className={className}>{items}</div>;
 };
 
 Accordion.Item = Item;
 Item.Head = ItemHead;
 Item.Body = ItemBody;
 
-export const Accordion = styled(BasicAccordion)`
-  background: #fff;
-  .accordion {
-    display: flex;
-  }
-  .item-head {
-    max-height: 8px;
-  }
-  ${StyledItemHead} {
-    max-height: 10px;
-  }
-`;
+export { Accordion };

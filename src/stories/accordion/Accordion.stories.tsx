@@ -12,7 +12,7 @@ const Template: Story<AccordionProps> = (args) => {
   const { Item } = Accordion;
   return (
     <Accordion {...args} initialActive="item1">
-      <Item id="item1">
+      <Item disabled id="item1">
         <Item.Head>Item 1</Item.Head>
         <Item.Body className="aq-m-3">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ipsum,
