@@ -1,10 +1,7 @@
-import usePlacesAutocomplete, {
-  getGeocode,
-  getDetails,
-} from "use-places-autocomplete";
+import usePlacesAutocomplete, { getDetails } from "use-places-autocomplete";
 import useOnclickOutside from "react-cool-onclickoutside";
 import Input from "../input/Input";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { MapsDetails, AddressType } from "./_types";
 
