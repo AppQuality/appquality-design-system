@@ -1,7 +1,6 @@
 import { components, Styles, Theme } from "react-select";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 import { ChevronDown, X } from "react-bootstrap-icons";
-import { borderRadius } from "react-select/src/theme";
 
 const aqTheme = (theme: Theme) => ({
   borderRadius: aqBootstrapTheme.general.borderRadiusNumber,
@@ -105,7 +104,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   option: (provided, state) => {
-    if (state.data.value == "loading-placeholder") {
+    if (state.data.value === "loading-placeholder") {
       const color = `${aqBootstrapTheme.colors.disabled}`;
       const textAlign = "center";
       const background = "none";
@@ -125,7 +124,6 @@ const customStyle: Styles<any, any> = {
     const fontWeight = parseInt(
       `${aqBootstrapTheme.typography.fontWeight.light}`
     );
-    const borderColor = `${aqBootstrapTheme.colors.disabled}`;
 
     return {
       ...provided,
