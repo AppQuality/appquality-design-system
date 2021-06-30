@@ -16,14 +16,16 @@ export const Modal = ({
         <StyledModal>
           <div className="modal-overlay" onClick={onClose} />
           <div className="modal">
-            <div className="modal-header">
-              <Title size="s">{title}</Title>
-              <div className="modal-close" onClick={onClose}>
-                <X height="24px" width="24px" />
+            {title ? (
+              <div className="modal-header">
+                <Title size="s">{title}</Title>
+                <div className="modal-close" onClick={onClose}>
+                  <X height="24px" width="24px" />
+                </div>
               </div>
-            </div>
+            ) : null}
             <div className="modal-body">{children}</div>
-            <div className="modal-footer">{footer}</div>
+            {footer ? <div className="modal-footer">{footer}</div> : null}
           </div>
         </StyledModal>
       )}

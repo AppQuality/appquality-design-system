@@ -16,3 +16,14 @@ SimpleModal.args = {
   isOpen: true,
   title: "Modal Basic",
 };
+
+export const ModalNoHeader = Template.bind({});
+ModalNoHeader.args = {
+  isOpen: true,
+};
+
+export const ModalWithFooter = Template.bind({});
+ModalWithFooter.args = {
+  isOpen: true,
+  footer: <div>Hello i'm a footer</div>,
+};

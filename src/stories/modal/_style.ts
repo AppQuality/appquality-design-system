@@ -22,7 +22,6 @@ export const StyledModal = styled.div`
     border-radius: ${(props) => props.theme.general.borderRadius};
     width: calc(100vw - 24px);
     max-width: 100%;
-    min-height: 100px;
     max-height: 100%;
     background-color: ${(props) => props.theme.colors.white};
 
@@ -51,5 +50,7 @@ export const StyledModal = styled.div`
     padding: ${(props) => props.theme.grid.spacing.default};
   }
   .modal-footer {
+    border-top: 1px solid ${(props) => props.theme.colors.disabled};
+    padding: ${(props) => props.theme.grid.spacing.default};
   }
 `;
