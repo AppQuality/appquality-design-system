@@ -18,6 +18,7 @@ const Address = ({
   id,
   onChange,
   placeholder,
+  initialValue,
   disabled = false,
   isInvalid = false,
 }: AddressType) => {
@@ -33,8 +34,10 @@ const Address = ({
     },
     debounce: 300,
   });
-  const [mapsData, setMapsData] = useState<string | null>(null);
-  const [stringValue, setStringValue] = useState<string>(value);
+  const [mapsData, setMapsData] = useState<string | undefined>(initialValue);
+  const [stringValue, setStringValue] = useState<string>(
+    value ? value : initialValue ? initialValue : ""
+  );
   const ref = useOnclickOutside(() => {
     // When user clicks outside of the component, we can dismiss
     // the searched suggestions by calling this method
@@ -48,7 +51,7 @@ const Address = ({
 
   const handleInput = (value: string) => {
     // Update the keyword of the input element
-    setMapsData(null);
+    setMapsData(undefined);
     setValue(value);
     setStringValue(value);
   };

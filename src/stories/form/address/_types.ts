@@ -7,6 +7,7 @@ export interface MapsDetails {
 }
 export interface AddressType extends BaseProps {
   id: string;
+  initialValue?: string;
   placeholder: string;
   disabled?: boolean;
   isInvalid?: boolean;

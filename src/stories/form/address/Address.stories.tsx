@@ -15,3 +15,14 @@ export const SimpleAddress: Story = () => (
     placeholder="Select an address"
   />
 );
+
+export const PrefilledAddress: Story = () => (
+  <Address
+    id="address"
+    initialValue="Via dell'Innovazione Digitale, 3, Cremona, CR, Italia"
+    onChange={(data) => {
+      console.log(data);
+    }}
+    placeholder="Select an address"
+  />
+);
