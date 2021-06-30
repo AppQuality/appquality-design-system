@@ -30,18 +30,17 @@ jobs:
         with:
           node-version: 12.x
       - name: Cache node modules
-        uses: actions/cache@v1
+        id: cache-node-modules
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: npm-deps-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            npm-deps-${{ hashFiles('package-lock.json') }}
-      - name: Publish storybook
-        id: storybook
+      - name: Npm Install
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm ci
+      - name: Publish storybook
+        id: storybook
         run: |
-          npm ci
-          npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci > /tmp/cires
-          echo ::set-output name=visual_changes::"$(cat /tmp/cires | grep "✖ Found")$(cat /tmp/cires | grep "No visual changes")%0A"
-          echo ::set-output name=build_url::"$(cat /tmp/cires | grep "ℹ View build details")"
+          npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci
