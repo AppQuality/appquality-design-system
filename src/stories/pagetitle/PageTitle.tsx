@@ -26,7 +26,7 @@ const PageTitle = ({
   let headingElement = null;
   let subtitleElement = null;
   let backElement = null;
-  if (size == "regular") {
+  if (size === "regular") {
     titleSize = "l";
     subtitleSize = "s";
   }
