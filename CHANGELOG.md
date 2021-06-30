@@ -1,3 +1,15 @@
+# v0.1.76 (Wed Jun 30 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Add cursor pointer to lang buttons (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.75 (Mon Jun 28 2021)
 
 #### 🐛 Bug Fix
