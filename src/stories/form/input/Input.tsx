@@ -12,6 +12,7 @@ const BaseInput = ({
   isInvalid,
   extra,
   onChange,
+  autocomplete = true,
 }: {
   id: string;
   type: string;
@@ -19,6 +20,7 @@ const BaseInput = ({
   placeholder?: string;
   value?: string;
   disabled?: boolean;
+  autocomplete?: boolean;
   isInvalid?: boolean;
   extra?: any;
   onChange?: (val: string) => void;
@@ -31,6 +33,7 @@ const BaseInput = ({
         placeholder={placeholder}
         disabled={disabled}
         value={value}
+        autocomplete={autocomplete ? null : "off"}
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
