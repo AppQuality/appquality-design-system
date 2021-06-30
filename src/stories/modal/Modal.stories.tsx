@@ -17,6 +17,20 @@ SimpleModal.args = {
   title: "Modal Basic",
 };
 
+export const SimpleModalLarge = Template.bind({});
+SimpleModalLarge.args = {
+  isOpen: true,
+  size: "large",
+  title: "Modal Basic",
+};
+
+export const SimpleModalSmall = Template.bind({});
+SimpleModalSmall.args = {
+  isOpen: true,
+  size: "small",
+  title: "Modal Basic",
+};
+
 export const ModalNoHeader = Template.bind({});
 ModalNoHeader.args = {
   isOpen: true,

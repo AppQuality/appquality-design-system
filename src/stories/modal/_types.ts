@@ -4,5 +4,6 @@ export interface ModalProps extends BaseProps {
   isOpen: boolean;
   title?: React.ReactNode;
   footer?: React.ReactNode;
+  size?: "small" | "mid" | "large";
   onClose: () => void;
 }
