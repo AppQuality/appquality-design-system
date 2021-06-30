@@ -40,7 +40,6 @@ export const StyledItemHead = styled.div(
       .accordion-head-icon {
         width: 24px;
         height: 24px;
-        color: ${theme.palette.primary};
         transition: transform 200ms;
         transform: rotate(0deg);
         ${active && ` transform: rotate(180deg);`}
@@ -49,9 +48,6 @@ export const StyledItemHead = styled.div(
           width: 21px;
           height: 21px;
         }
-      }
-      &:hover {
-        ${!disabled ? ` background: ${theme.colors.gray200};` : ""}
       }
     `;
   }
