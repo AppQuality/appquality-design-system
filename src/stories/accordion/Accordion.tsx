@@ -1,15 +1,12 @@
-import React, { useState, createRef, useRef, useEffect } from "react";
-import { Text, Title } from "../typography/Typography";
-import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
+import React, { useState, useRef, useEffect } from "react";
+import { ChevronDown } from "react-bootstrap-icons";
 import { CSSTransition } from "react-transition-group";
-import styled from "styled-components";
 import { StyledAccordion, StyledItemHead, StyledItemBody } from "./_style";
 import {
   AccordionProps,
   ItemProps,
   ItemHeadProps,
   StyledItemHeadProps,
-  StyledItemBodyProps,
   ItemBodyProps,
 } from "./_types";
 
@@ -60,7 +57,6 @@ const Item = ({
   setActive,
   disabled,
 }: ItemProps) => {
-  let body = null;
   return (
     <div className="accordion-item">
       <ItemHead
