@@ -1,3 +1,15 @@
+# v0.1.78 (Wed Jun 30 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Add module declaration to package json (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.77 (Wed Jun 30 2021)
 
 #### ⚠️ Pushed to `main`
