@@ -6,7 +6,6 @@ import {
   AccordionProps,
   ItemProps,
   ItemHeadProps,
-  StyledItemHeadProps,
   ItemBodyProps,
 } from "./_types";
 

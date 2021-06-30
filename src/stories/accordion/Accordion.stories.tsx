@@ -1,6 +1,5 @@
 import { Accordion } from "./Accordion";
 import { AccordionProps } from "./_types";
-import { Card } from "../card/Card";
 import { Story, Meta } from "@storybook/react";
 
 export default {
