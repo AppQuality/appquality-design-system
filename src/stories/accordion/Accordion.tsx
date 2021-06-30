@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, createRef, useRef, useEffect } from "react";
 import { Text, Title } from "../typography/Typography";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import { CSSTransition } from "react-transition-group";
@@ -8,6 +8,7 @@ import {
   ItemProps,
   ItemHeadProps,
   StyledItemHeadProps,
+  StyledItemBodyProps,
   ItemBodyProps,
 } from "./_types";
 
@@ -48,16 +49,33 @@ export const StyledItemHead = styled.div((props: StyledItemHeadProps) => {
     `;
 });
 
-const ItemBody = ({ children, ...props }: ItemBodyProps) => {
-  return <StyledItemBody>{children}</StyledItemBody>;
-};
-export const StyledItemBody = styled.div`
+const ItemBody = React.forwardRef<HTMLDivElement>(
+  ({ children, ...props }: ItemBodyProps, ref) => {
+    const [height, setHeight] = useState(0);
+    useEffect(() => {
+      if (ref && "current" in ref && ref.current)
+        setHeight(ref.current.offsetHeight);
+    }, [ref]);
+    return (
+      <StyledItemBody ref={ref} height={height}>
+        <div>{children}</div>
+      </StyledItemBody>
+    );
+  }
+);
+export const StyledItemBody = styled.div(
+  ({ theme, height }: StyledItemBodyProps) => `
   background-color: #fff;
-  padding: ${(props) => props.theme.grid.spacing.default};
-`;
+  overflow: hidden;
+  transition: max-height 400ms;
+  ${height ? `max-height: ${height}px` : ""};
+  > * {padding: ${theme.grid.spacing.default};}
+`
+);
 
 const Item = ({ children, active, id, ...props }: ItemProps) => {
-  console.log(props);
+  let body = null;
+  const ref = React.createRef();
   const head = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === ItemHead) {
       return React.cloneElement(child, {
@@ -67,9 +85,11 @@ const Item = ({ children, active, id, ...props }: ItemProps) => {
     }
     return null;
   });
-  const body = React.Children.map(children, (child) => {
+  body = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === ItemBody) {
-      return React.cloneElement(child);
+      return React.cloneElement(child, {
+        ref: ref,
+      });
     }
     return null;
   });
@@ -77,12 +97,12 @@ const Item = ({ children, active, id, ...props }: ItemProps) => {
     <StyledItem id={id}>
       {head}
       <CSSTransition
-        timeout={200}
+        timeout={400}
         classNames="accordion-item"
         in={active}
         unmountOnExit
       >
-        <div>{body}</div>
+        <>{body}</>
       </CSSTransition>
     </StyledItem>
   );
@@ -96,18 +116,14 @@ export const StyledAccordion = styled.div`
     border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
   }
   .accordion-item-enter {
-    max-height: 1000px;
+    max-height: 0px;
   }
   .accordion-item-enter-active {
-    max-height: 0;
-    transition: max-height 200ms;
   }
   .accordion-item-exit {
-    max-height: 0;
   }
   .accordion-item-exit-active {
-    max-height: 1;
-    transition: max-height 200ms;
+    max-height: 0px;
   }
 `;
 
