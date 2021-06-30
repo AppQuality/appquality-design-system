@@ -8,17 +8,16 @@ export default {
 } as Meta;
 
 const Template: Story<AccordionProps> = (args) => {
-  const { Item } = Accordion;
   return (
     <Accordion {...args} initialActive="item1">
-      <Item id="item1" title={<h4>Item 1 title is an h4</h4>}>
+      <Accordion.Item id="item1" title={<h4>Item 1 title is an h4</h4>}>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ipsum,
           nihil! Alias earum eos est fuga, illo libero maxime modi neque nihil
           odio omnis quaerat suscipit tempore ut, vel, voluptate.
         </div>
-      </Item>
-      <Item id="item2" title="Item 2">
+      </Accordion.Item>
+      <Accordion.Item id="item2" title="Item 2">
         Aliquam eu pretium velit. Proin arcu ligula, porta sed elementum id,
         fermentum sit amet ligula. Donec cursus quam velit, nec varius sapien
         faucibus sed. Etiam tincidunt blandit blandit. Mauris a tortor at sapien
@@ -30,8 +29,8 @@ const Template: Story<AccordionProps> = (args) => {
         vel. Vivamus venenatis nisl imperdiet dolor dignissim rhoncus.
         Suspendisse pellentesque scelerisque lorem blandit dignissim. Nam a
         elementum nisl, sit amet semper ipsum.
-      </Item>
-      <Item disabled id="item3" title="Item 3 (disabled)">
+      </Accordion.Item>
+      <Accordion.Item disabled id="item3" title="Item 3 (disabled)">
         <div>
           Nullam eu luctus massa. Maecenas id quam ultrices, tincidunt mi
           rhoncus, maximus orci. Nulla felis massa, aliquam quis mauris
@@ -42,8 +41,8 @@ const Template: Story<AccordionProps> = (args) => {
           Phasellus eget tortor risus. Sed aliquet ex velit, ac imperdiet est
           consectetur ut.
         </div>
-      </Item>
-      <Item id="item4" title="Item 4">
+      </Accordion.Item>
+      <Accordion.Item id="item4" title="Item 4">
         <div>
           Nullam eu luctus massa. Maecenas id quam ultrices, tincidunt mi
           rhoncus, maximus orci. Nulla felis massa, aliquam quis mauris
@@ -54,7 +53,7 @@ const Template: Story<AccordionProps> = (args) => {
           Phasellus eget tortor risus. Sed aliquet ex velit, ac imperdiet est
           consectetur ut.
         </div>
-      </Item>
+      </Accordion.Item>
     </Accordion>
   );
 };
