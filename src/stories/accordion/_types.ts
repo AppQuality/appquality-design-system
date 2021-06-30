@@ -8,11 +8,10 @@ export interface AccordionProps extends BaseProps {
 }
 export interface ItemProps extends BaseProps {
   id: string;
+  title: React.ReactNode;
   active?: boolean;
   disabled?: boolean;
   setActive?: () => void;
-  Head?: React.FC<ItemHeadProps>;
-  Body?: React.FC<ItemBodyProps>;
 }
 export interface ItemHeadProps extends BaseProps {
   id?: string;

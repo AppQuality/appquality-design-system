@@ -49,23 +49,21 @@ export const StyledItemHead = styled.div((props: StyledItemHeadProps) => {
     `;
 });
 
-const ItemBody = React.forwardRef<HTMLDivElement>(
-  ({ children, active, ...props }: ItemBodyProps, ref) => {
-    const anotherRef = useRef<HTMLDivElement>(null);
-    const [height, setHeight] = useState(0);
-    useEffect(() => {
-      if (anotherRef && "current" in anotherRef && anotherRef.current)
-        setHeight(anotherRef.current.offsetHeight);
-    }, [anotherRef]);
-    return (
-      <StyledItemBody ref={ref} height={height} active={active}>
-        <div ref={anotherRef} className="item-body-container">
-          {children}
-        </div>
-      </StyledItemBody>
-    );
-  }
-);
+const ItemBody = ({ children, active, ...props }: ItemBodyProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    if (ref && "current" in ref && ref.current)
+      setHeight(ref.current.offsetHeight);
+  }, [ref]);
+  return (
+    <StyledItemBody height={height} active={active}>
+      <div ref={ref} className="item-body-container">
+        {children}
+      </div>
+    </StyledItemBody>
+  );
+};
 export const StyledItemBody = styled.div(
   ({ theme, height, active }: StyledItemBodyProps) => `
     --accordion-element-height: ${height}px;
@@ -79,32 +77,15 @@ export const StyledItemBody = styled.div(
 `
 );
 
-const Item = ({ children, active, id, ...props }: ItemProps) => {
+const Item = ({ children, active, title, id, ...props }: ItemProps) => {
   let body = null;
-  const ref = React.createRef();
-  const head = React.Children.map(children, (child) => {
-    if (React.isValidElement(child) && child.type === ItemHead) {
-      return React.cloneElement(child, {
-        active: active,
-        ...props,
-      });
-    }
-    return null;
-  });
-  body = React.Children.map(children, (child) => {
-    if (React.isValidElement(child) && child.type === ItemBody) {
-      return React.cloneElement(child, {
-        active: active,
-        ref: ref,
-      });
-    }
-    return null;
-  });
   return (
     <StyledItem id={id}>
-      {head}
+      <ItemHead active={active} {...props}>
+        {title}
+      </ItemHead>
       <CSSTransition timeout={300} classNames="accordion-item" in={active}>
-        <>{body}</>
+        <ItemBody active={active}>{children}</ItemBody>
       </CSSTransition>
     </StyledItem>
   );
@@ -149,7 +130,5 @@ const Accordion = ({ initialActive, children, ...props }: AccordionProps) => {
 };
 
 Accordion.Item = Item;
-Item.Head = ItemHead;
-Item.Body = ItemBody;
 
 export { Accordion };
