@@ -8,7 +8,6 @@ import {
   OptionActionType,
   SelectProps,
 } from "./_types";
-import { FormGroup } from "../form/Form";
 import FormLabel from "../form/formlabel/FormLabel";
 
 function updateOptions(state: Option[], action: OptionAction): Option[] {
