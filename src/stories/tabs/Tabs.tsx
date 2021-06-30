@@ -62,7 +62,7 @@ const BasicTabs = ({ active, children, className }: TabsProps) => {
           />
         </>
       );
-      return React.cloneElement(child, { active: current == child.props.id });
+      return React.cloneElement(child, { active: current === child.props.id });
     }
     return null;
   });
