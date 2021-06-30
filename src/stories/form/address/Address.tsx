@@ -18,8 +18,8 @@ const Address = ({
   id,
   onChange,
   placeholder,
-  disabled,
-  isInvalid,
+  disabled = false,
+  isInvalid = false,
 }: AddressType) => {
   const {
     ready,
@@ -113,6 +113,7 @@ const Address = ({
         isInvalid={isInvalid}
         disabled={!ready || disabled}
         placeholder={placeholder}
+        autocomplete={false}
       />
       {/* We can use the "status" to decide whether we should display the dropdown or not */}
       {status === "OK" && <SuggestionBox>{renderSuggestions()}</SuggestionBox>}

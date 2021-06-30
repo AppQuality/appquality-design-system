@@ -8,7 +8,7 @@ export interface MapsDetails {
 export interface AddressType extends BaseProps {
   id: string;
   placeholder: string;
-  disabled: boolean;
-  isInvalid: boolean;
+  disabled?: boolean;
+  isInvalid?: boolean;
   onChange: (data: { [key: string]: string }) => void;
 }
