@@ -7,6 +7,9 @@ export interface LanguageItem {
 
 export const LanguageIconWrapper = styled.div`
   display: flex;
+  button {
+    cursor: pointer;
+  }
   button,
   div {
     border: 0;
