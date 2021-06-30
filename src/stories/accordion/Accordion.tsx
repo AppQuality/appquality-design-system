@@ -17,6 +17,7 @@ const ItemHead = ({
   disabled,
 }: ItemHeadProps) => {
   const handleActive = () => {
+    if (disabled) return;
     if (active) {
       setActive("");
     } else {
