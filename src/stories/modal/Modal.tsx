@@ -34,7 +34,7 @@ export const Modal = styled(BasicModal)`
           case "small":
             return "300px";
           default:
-            return "650px";
+            return "600px";
         }
       }};
     }
