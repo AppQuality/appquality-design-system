@@ -11,19 +11,20 @@ export interface ItemProps extends BaseProps {
   title: React.ReactNode;
   active?: boolean;
   disabled?: boolean;
-  setActive?: () => void;
+  setActive?: (id: string) => void;
 }
 export interface ItemHeadProps extends BaseProps {
-  id?: string;
+  itemId: string;
   active?: boolean;
   disabled?: boolean;
-  setActive?: (id: string) => void;
-  as?: React.ElementType | keyof JSX.IntrinsicElements;
+  setActive: (id: string) => void;
 }
-export interface StyledItemHeadProps extends ItemHeadProps {
+export interface StyledItemHeadProps {
+  active?: boolean;
+  disabled?: boolean;
   theme: DefaultTheme;
 }
-export interface StyledItemBodyProps extends ItemHeadProps {
+export interface StyledItemBodyProps {
   theme: DefaultTheme;
   height: number;
   active?: boolean;

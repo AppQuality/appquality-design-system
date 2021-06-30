@@ -12,42 +12,64 @@ import {
   ItemBodyProps,
 } from "./_types";
 
-const ItemHead = ({ children, setActive, ...props }: ItemHeadProps) => {
+const ItemHead = ({
+  children,
+  setActive,
+  itemId,
+  active,
+  disabled,
+}: ItemHeadProps) => {
+  const handleActive = () => {
+    if (active) {
+      setActive("");
+    } else {
+      setActive(itemId);
+    }
+  };
+
   return (
-    <StyledItemHead onClick={setActive} {...props}>
+    <StyledItemHead onClick={handleActive} active={active} disabled={disabled}>
       {children}
-      <ChevronDown />
+      <ChevronDown className="accordion-head-icon" />
     </StyledItemHead>
   );
 };
-export const StyledItemHead = styled.div((props: StyledItemHeadProps) => {
-  return `
-      ${!props.disabled ? `cursor: pointer;` : ""}
+export const StyledItemHead = styled.div(
+  ({ theme, active, disabled }: StyledItemHeadProps) => {
+    return `
+      ${!disabled ? `cursor: pointer;` : ""}
       color: ${
-        props.active
-          ? props.theme.palette.success
-          : props.disabled
-          ? props.theme.colors.disabledDark
-          : props.theme.palette.primary
+        active
+          ? theme.palette.success
+          : disabled
+          ? theme.colors.disabledDark
+          : theme.palette.primary
       };
-      font-size: ${props.theme.typography.fontSize.base};
-      font-weight: ${props.theme.typography.fontWeight.normal};
-      padding: ${props.theme.grid.spacing.default};
+      font-size: ${theme.typography.fontSize.base};
+      font-weight: ${theme.typography.fontWeight.normal};
+      padding: ${theme.grid.spacing.default};
       display: grid;
       grid-template-columns: 1fr 21px;
-      > svg {
+      
+      .accordion-head-icon {
         width: 24px;
         height: 24px;
-        @media (min-width: ${props.theme.grid.breakpoints.lg}) {
+        color: ${theme.palette.primary};
+        transition: transform 200ms;
+        transform: rotate(0deg);
+        ${active && ` transform: rotate(180deg);`}
+        
+        @media (min-width: ${theme.grid.breakpoints.lg}) {
           width: 21px;
           height: 21px;
         }
       }
       &:hover {
-        ${!props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
+        ${!disabled ? ` background: ${theme.colors.gray200};` : ""}
       }
     `;
-});
+  }
+);
 
 const ItemBody = ({ children, active, ...props }: ItemBodyProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -71,46 +93,59 @@ export const StyledItemBody = styled.div(
     overflow: hidden;
     max-height: ${active ? "auto" : "0px"};
     transition: max-height 300ms;
-    > * {
+    
+    .item-body-container {
       padding: ${theme.grid.spacing.default};
     }
 `
 );
 
-const Item = ({ children, active, title, id, ...props }: ItemProps) => {
+const Item = ({
+  children,
+  active,
+  title,
+  id,
+  setActive,
+  disabled,
+}: ItemProps) => {
   let body = null;
   return (
-    <StyledItem id={id}>
-      <ItemHead active={active} {...props}>
+    <div className="accordion-item">
+      <ItemHead
+        itemId={id}
+        active={active}
+        disabled={disabled}
+        setActive={(id: string) => setActive && setActive(id)}
+      >
         {title}
       </ItemHead>
-      <CSSTransition timeout={300} classNames="accordion-item" in={active}>
+      <CSSTransition timeout={300} classNames="accordion-body" in={active}>
         <ItemBody active={active}>{children}</ItemBody>
       </CSSTransition>
-    </StyledItem>
+    </div>
   );
 };
-export const StyledItem = styled.div``;
+
 export const StyledAccordion = styled.div`
   border: 1px solid ${(props) => props.theme.colors.disabled};
   border-radius: ${(props) => props.theme.general.borderRadius};
 
-  ${StyledItem}:not(:last-child) {
+  .accordion-item:not(:last-child) {
     border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
   }
-  .accordion-item-enter {
+  .accordion-body-enter {
     max-height: var(--accordion-element-height);
   }
-  .accordion-item-exit {
+  .accordion-body-exit {
     max-height: var(--accordion-element-height);
     transition-delay: 100ms;
   }
-  .accordion-item-exit-active {
+  .accordion-body-exit-active {
     max-height: 0px;
   }
 `;
 
-const Accordion = ({ initialActive, children, ...props }: AccordionProps) => {
+const Accordion = ({ initialActive, children }: AccordionProps) => {
   let [current, setCurrent] = useState(initialActive);
   let items: React.ReactNode = null;
   items = React.Children.map(children, (child) => {
@@ -119,14 +154,14 @@ const Accordion = ({ initialActive, children, ...props }: AccordionProps) => {
       return React.cloneElement(child, {
         disabled: disabled,
         active: id === current,
-        setActive: () => {
-          if (!disabled) setCurrent(id);
-        },
+        id: id,
+        key: id,
+        setActive: setCurrent,
       });
     }
     return null;
   });
-  return <StyledAccordion {...props}>{items}</StyledAccordion>;
+  return <StyledAccordion>{items}</StyledAccordion>;
 };
 
 Accordion.Item = Item;
