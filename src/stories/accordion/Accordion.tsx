@@ -50,26 +50,32 @@ export const StyledItemHead = styled.div((props: StyledItemHeadProps) => {
 });
 
 const ItemBody = React.forwardRef<HTMLDivElement>(
-  ({ children, ...props }: ItemBodyProps, ref) => {
+  ({ children, active, ...props }: ItemBodyProps, ref) => {
+    const anotherRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
     useEffect(() => {
-      if (ref && "current" in ref && ref.current)
-        setHeight(ref.current.offsetHeight);
-    }, [ref]);
+      if (anotherRef && "current" in anotherRef && anotherRef.current)
+        setHeight(anotherRef.current.offsetHeight);
+    }, [anotherRef]);
     return (
-      <StyledItemBody ref={ref} height={height}>
-        <div>{children}</div>
+      <StyledItemBody ref={ref} height={height} active={active}>
+        <div ref={anotherRef} className="item-body-container">
+          {children}
+        </div>
       </StyledItemBody>
     );
   }
 );
 export const StyledItemBody = styled.div(
-  ({ theme, height }: StyledItemBodyProps) => `
-  background-color: #fff;
-  overflow: hidden;
-  transition: max-height 400ms;
-  ${height ? `max-height: ${height}px` : ""};
-  > * {padding: ${theme.grid.spacing.default};}
+  ({ theme, height, active }: StyledItemBodyProps) => `
+    --accordion-element-height: ${height}px;
+    background-color: #fff;
+    overflow: hidden;
+    max-height: ${active ? "auto" : "0px"};
+    transition: max-height 300ms;
+    > * {
+      padding: ${theme.grid.spacing.default};
+    }
 `
 );
 
@@ -88,6 +94,7 @@ const Item = ({ children, active, id, ...props }: ItemProps) => {
   body = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === ItemBody) {
       return React.cloneElement(child, {
+        active: active,
         ref: ref,
       });
     }
@@ -96,12 +103,7 @@ const Item = ({ children, active, id, ...props }: ItemProps) => {
   return (
     <StyledItem id={id}>
       {head}
-      <CSSTransition
-        timeout={400}
-        classNames="accordion-item"
-        in={active}
-        unmountOnExit
-      >
+      <CSSTransition timeout={300} classNames="accordion-item" in={active}>
         <>{body}</>
       </CSSTransition>
     </StyledItem>
@@ -116,11 +118,11 @@ export const StyledAccordion = styled.div`
     border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
   }
   .accordion-item-enter {
-    max-height: 0px;
-  }
-  .accordion-item-enter-active {
+    max-height: var(--accordion-element-height);
   }
   .accordion-item-exit {
+    max-height: var(--accordion-element-height);
+    transition-delay: 100ms;
   }
   .accordion-item-exit-active {
     max-height: 0px;

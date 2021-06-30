@@ -27,5 +27,8 @@ export interface StyledItemHeadProps extends ItemHeadProps {
 export interface StyledItemBodyProps extends ItemHeadProps {
   theme: DefaultTheme;
   height: number;
+  active?: boolean;
 }
-export interface ItemBodyProps extends BaseProps {}
+export interface ItemBodyProps extends BaseProps {
+  active?: boolean;
+}
