@@ -33,7 +33,7 @@ const BaseInput = ({
         placeholder={placeholder}
         disabled={disabled}
         value={value}
-        autocomplete={autocomplete ? null : "off"}
+        autoComplete={autocomplete ? null : "off"}
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
