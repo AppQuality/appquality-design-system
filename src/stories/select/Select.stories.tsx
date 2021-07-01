@@ -50,5 +50,8 @@ export const MultipleSelect = Template.bind({});
 MultipleSelect.args = {
   isMulti: true,
   options: basicOptions,
-  value: { label: basicOptions[0].label, value: basicOptions[0].value },
+  value: [
+    { label: basicOptions[0].label, value: basicOptions[0].value },
+    { label: basicOptions[1].label, value: basicOptions[1].value },
+  ],
 };
