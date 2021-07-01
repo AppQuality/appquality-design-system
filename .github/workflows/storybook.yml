@@ -26,22 +26,21 @@ jobs:
       - name: Prepare repository
         run: git fetch --unshallow --tags
       - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: 12.x
-      - name: Cache node modules
-        uses: actions/cache@v1
+          node-version: "14"
+      - name: Cache npm cache
+        id: cache-npm
+        uses: actions/cache@v2
         with:
-          path: node_modules
-          key: npm-deps-${{ hashFiles('package-lock.json') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            npm-deps-${{ hashFiles('package-lock.json') }}
+            ${{ runner.os }}-node-
       - name: Publish storybook
         id: storybook
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm ci
-          npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci > /tmp/cires
-          echo ::set-output name=visual_changes::"$(cat /tmp/cires | grep "✖ Found")$(cat /tmp/cires | grep "No visual changes")%0A"
-          echo ::set-output name=build_url::"$(cat /tmp/cires | grep "ℹ View build details")"
+          npx chromatic --project-token  ${{ secrets.CHROMATIC_TOKEN }} --exit-zero-on-changes --ci

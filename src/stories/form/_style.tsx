@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { FormCheckProps, FormGroupProps } from "./_types";
 
 export const InvalidInputStyle = css`
   border-color: ${(props) => props.theme.palette.danger};

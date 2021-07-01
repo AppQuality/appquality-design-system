@@ -12,6 +12,7 @@ const BaseInput = ({
   isInvalid,
   extra,
   onChange,
+  autocomplete = true,
 }: {
   id: string;
   type: string;
@@ -19,6 +20,7 @@ const BaseInput = ({
   placeholder?: string;
   value?: string;
   disabled?: boolean;
+  autocomplete?: boolean;
   isInvalid?: boolean;
   extra?: any;
   onChange?: (val: string) => void;
@@ -31,6 +33,7 @@ const BaseInput = ({
         placeholder={placeholder}
         disabled={disabled}
         value={value}
+        autoComplete={autocomplete ? null : "off"}
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
@@ -61,7 +64,7 @@ const Input = styled(BaseInput)`
     display: block;
     width: 100%;
     padding: 0.5rem 0.75rem;
-    ${(props) => (props.type == "search" ? "padding-right: 40px;" : "")}
+    ${(props) => (props.type === "search" ? "padding-right: 40px;" : "")}
     color: ${(props) => props.theme.palette.primary};
     font-size: ${(props) => props.theme.typography.fontSize.base};
     background-color: ${(props) => props.theme.colors.white};
