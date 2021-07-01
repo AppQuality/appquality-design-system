@@ -71,3 +71,9 @@ export const columns: Column[] = [
     width: "110px",
   },
 ];
+
+const columnsWithOrderBy: Column[] = columns.map((a) => ({ ...a }));
+columnsWithOrderBy[0].isSortable = true;
+columnsWithOrderBy[1].isSortable = true;
+columnsWithOrderBy[2].isSortable = true;
+export { columnsWithOrderBy };

@@ -80,14 +80,16 @@ const BasicTable = ({
                       : undefined
                   }
                 >
-                  {column.title}
-                  {column.isSortable && (
-                    <ColumnSorter
-                      column={column}
-                      orderBy={orderBy}
-                      order={order}
-                    />
-                  )}
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <span>{column.title}</span>
+                    {column.isSortable && (
+                      <ColumnSorter
+                        column={column}
+                        orderBy={orderBy}
+                        order={order}
+                      />
+                    )}
+                  </div>
                 </th>
               );
             })}

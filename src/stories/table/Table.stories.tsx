@@ -1,11 +1,7 @@
-import { BSCol, Container } from "../layout/Layout";
-import { Card } from "../card/Card";
 import { TableProps } from "./_types";
 import { Table } from "./Table";
 import { Story, Meta } from "@storybook/react";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
-import { ThemeProvider } from "styled-components";
-import { dataSource, columns } from "./_data";
+import { dataSource, columns, columnsWithOrderBy } from "./_data";
 
 export default {
   title: "Table",
@@ -13,17 +9,7 @@ export default {
 } as Meta;
 
 const Template: Story<TableProps> = (args) => {
-  return (
-    <ThemeProvider theme={aqBootstrapTheme}>
-      <Container>
-        <BSCol size="col-lg-9">
-          <Card>
-            <Table {...args} />
-          </Card>
-        </BSCol>
-      </Container>
-    </ThemeProvider>
-  );
+  return <Table {...args} />;
 };
 
 export const TableWithData = Template.bind({});
@@ -45,4 +31,10 @@ TableLoading.args = {
   dataSource: dataSource,
   columns: columns,
   isLoading: true,
+};
+
+export const TableWithOrderBy = Template.bind({});
+TableWithOrderBy.args = {
+  dataSource: dataSource,
+  columns: columnsWithOrderBy,
 };
