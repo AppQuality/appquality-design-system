@@ -1,3 +1,19 @@
+# v0.1.80 (Fri Jul 02 2021)
+
+#### 🐛 Bug Fix
+
+- Add pills, fix table and add scaffolding tool [#43](https://github.com/AppQuality/appquality-design-system/pull/43) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Cp 874 pills [#41](https://github.com/AppQuality/appquality-design-system/pull/41) (davide.bizzi@app-quality.com it@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- fix(table): Align column sorter [#42](https://github.com/AppQuality/appquality-design-system/pull/42) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.79 (Thu Jul 01 2021)
 
 #### 🐛 Bug Fix
