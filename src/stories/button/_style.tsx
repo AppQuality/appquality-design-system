@@ -114,7 +114,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
       
       &.aq-btn-flat {
         background-color: transparent;
-        border-color: ${theme.colors.disabledDark};
+        border-color: ${theme.colors.disabled};
         color: ${theme.colors.disabledDark};
       }
     }
