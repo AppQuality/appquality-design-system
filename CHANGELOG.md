@@ -1,3 +1,21 @@
+# v0.1.79 (Thu Jul 01 2021)
+
+#### 🐛 Bug Fix
+
+- Add accordion and address components [#40](https://github.com/AppQuality/appquality-design-system/pull/40) (iacopo.leardini@app-quality.com davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Add address component [#38](https://github.com/AppQuality/appquality-design-system/pull/38) (it@app-quality.com [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Cp 830 accordion [#39](https://github.com/AppQuality/appquality-design-system/pull/39) (iacopo.leardini@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 5
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.78 (Wed Jun 30 2021)
 
 #### ⚠️ Pushed to `main`
