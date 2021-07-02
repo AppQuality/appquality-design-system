@@ -3,7 +3,7 @@ export default function debounce(callback: () => void, wait: number) {
   return () => {
     if (typeof timer !== "undefined") clearTimeout(timer);
     timer = setTimeout(() => {
-      timer = void 0;
+      timer = undefined;
       callback();
     }, wait);
   };
