@@ -4,7 +4,7 @@ import { Text } from "../typography/Typography";
 export const BasicPill = ({
   className,
   children,
-  type = "primary",
+  type,
   flat = false,
 }: PillProps) => {
   return (

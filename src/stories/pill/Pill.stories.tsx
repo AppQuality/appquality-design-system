@@ -7,7 +7,13 @@ export default {
   component: Pill,
 } as Meta;
 
-const Template: Story<PillProps> = (args) => <Pill {...args}>Pippo</Pill>;
+const Template: Story<PillProps> = (args) => (
+  <div style={{ padding: "10px" }}>
+    <Pill {...args}>Pippo</Pill>
+  </div>
+);
 
 export const PillBase = Template.bind({});
-PillBase.args = {};
+PillBase.args = {
+  type: "primary",
+};
