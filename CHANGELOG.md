@@ -1,3 +1,17 @@
+# v0.1.81 (Mon Jul 05 2021)
+
+#### 🐛 Bug Fix
+
+- Improved code quality [#45](https://github.com/AppQuality/appquality-design-system/pull/45) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- refactor: Fix some codequality issues [#44](https://github.com/AppQuality/appquality-design-system/pull/44) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.80 (Fri Jul 02 2021)
 
 #### 🐛 Bug Fix
