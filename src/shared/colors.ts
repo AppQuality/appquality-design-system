@@ -1,32 +1,29 @@
-const mix = (color_1: string, color_2: string, weight?: number) => {
-  function d2h(d: number) {
-    return d.toString(16);
-  } // convert a decimal value to hex
-  function h2d(h: string) {
-    return parseInt(h, 16);
-  } // convert a hex value to decimal
-  function expandColor(h: string) {
-    if (h.length == 3) {
-      let newH = "";
+const mix = (color1: string, color2: string, weight?: number): string => {
+  const d2h = (d: number): string => d.toString(16); // convert a decimal value to hex
+  const h2d = (h: string): number => parseInt(h, 16); // convert a hex value to decimal
+  const expandColor = (h: string): string => {
+    let newH = h;
+    if (h.length === 3) {
+      newH = "";
       newH += h[0] + h[0];
       newH += h[1] + h[1];
       newH += h[2] + h[2];
       h = newH;
     }
-    return h;
-  } // convert a hex value to decimal
-  color_1 = color_1.replace(/#/g, "");
-  color_1 = expandColor(color_1);
-  color_2 = color_2.replace(/#/g, "");
-  color_2 = expandColor(color_2);
+    return newH;
+  }; // convert a hex value to decimal
+  color1 = color1.replace(/#/g, "");
+  color1 = expandColor(color1);
+  color2 = color2.replace(/#/g, "");
+  color2 = expandColor(color2);
   weight = typeof weight !== "undefined" ? weight : 50; // set the weight to 50, if that argument is omitted
 
   var color = "#";
 
   for (var i = 0; i <= 5; i += 2) {
     // loop through each of the 3 hex pairs—red, green, and blue
-    var v1 = h2d(color_1.substr(i, 2)), // extract the current pairs
-      v2 = h2d(color_2.substr(i, 2)),
+    var v1 = h2d(color1.substr(i, 2)), // extract the current pairs
+      v2 = h2d(color2.substr(i, 2)),
       // combine the current pairs from each source color, according to the specified weight
       val = d2h(Math.round(v2 + (v1 - v2) * (weight / 100.0)));
 
@@ -40,20 +37,25 @@ const mix = (color_1: string, color_2: string, weight?: number) => {
   return color; // PROFIT!
 };
 
+const PERCENT_20 = 20;
+const PERCENT_40 = 40;
+const PERCENT_60 = 60;
+const PERCENT_80 = 80;
+
 export const white = "#fff";
 export const black = "#000";
 
 export const gray = "#b2cbd9";
 
-export const gray100 = mix(white, gray, 80);
-export const gray200 = mix(white, gray, 60);
-export const gray300 = mix(white, gray, 40);
-export const gray400 = mix(white, gray, 20);
+export const gray100 = mix(white, gray, PERCENT_80);
+export const gray200 = mix(white, gray, PERCENT_60);
+export const gray300 = mix(white, gray, PERCENT_40);
+export const gray400 = mix(white, gray, PERCENT_20);
 export const gray500 = gray;
-export const gray600 = mix(black, gray, 20);
-export const gray700 = mix(black, gray, 40);
-export const gray800 = mix(black, gray, 60);
-export const gray900 = mix(black, gray, 80);
+export const gray600 = mix(black, gray, PERCENT_20);
+export const gray700 = mix(black, gray, PERCENT_40);
+export const gray800 = mix(black, gray, PERCENT_60);
+export const gray900 = mix(black, gray, PERCENT_80);
 
 // scss-docs-end gray-colors-map
 // fusv-enable
@@ -72,105 +74,105 @@ export const cyan = "#55a0be";
 // scss-docs-end color-variables
 
 // fusv-disable
-export const blue100 = mix(white, blue, 80);
-export const blue200 = mix(white, blue, 60);
-export const blue300 = mix(white, blue, 40);
-export const blue400 = mix(white, blue, 20);
+export const blue100 = mix(white, blue, PERCENT_80);
+export const blue200 = mix(white, blue, PERCENT_60);
+export const blue300 = mix(white, blue, PERCENT_40);
+export const blue400 = mix(white, blue, PERCENT_20);
 export const blue500 = blue;
-export const blue600 = mix(black, blue, 20);
-export const blue700 = mix(black, blue, 40);
-export const blue800 = mix(black, blue, 60);
-export const blue900 = mix(black, blue, 80);
+export const blue600 = mix(black, blue, PERCENT_20);
+export const blue700 = mix(black, blue, PERCENT_40);
+export const blue800 = mix(black, blue, PERCENT_60);
+export const blue900 = mix(black, blue, PERCENT_80);
 
-export const indigo100 = mix(white, indigo, 80);
-export const indigo200 = mix(white, indigo, 60);
-export const indigo300 = mix(white, indigo, 40);
-export const indigo400 = mix(white, indigo, 20);
+export const indigo100 = mix(white, indigo, PERCENT_80);
+export const indigo200 = mix(white, indigo, PERCENT_60);
+export const indigo300 = mix(white, indigo, PERCENT_40);
+export const indigo400 = mix(white, indigo, PERCENT_20);
 export const indigo500 = indigo;
-export const indigo600 = mix(black, indigo, 20);
-export const indigo700 = mix(black, indigo, 40);
-export const indigo800 = mix(black, indigo, 60);
-export const indigo900 = mix(black, indigo, 80);
+export const indigo600 = mix(black, indigo, PERCENT_20);
+export const indigo700 = mix(black, indigo, PERCENT_40);
+export const indigo800 = mix(black, indigo, PERCENT_60);
+export const indigo900 = mix(black, indigo, PERCENT_80);
 
-export const purple100 = mix(white, purple, 80);
-export const purple200 = mix(white, purple, 60);
-export const purple300 = mix(white, purple, 40);
-export const purple400 = mix(white, purple, 20);
+export const purple100 = mix(white, purple, PERCENT_80);
+export const purple200 = mix(white, purple, PERCENT_60);
+export const purple300 = mix(white, purple, PERCENT_40);
+export const purple400 = mix(white, purple, PERCENT_20);
 export const purple500 = purple;
-export const purple600 = mix(black, purple, 20);
-export const purple700 = mix(black, purple, 40);
-export const purple800 = mix(black, purple, 60);
-export const purple900 = mix(black, purple, 80);
+export const purple600 = mix(black, purple, PERCENT_20);
+export const purple700 = mix(black, purple, PERCENT_40);
+export const purple800 = mix(black, purple, PERCENT_60);
+export const purple900 = mix(black, purple, PERCENT_80);
 
-export const pink100 = mix(white, pink, 80);
-export const pink200 = mix(white, pink, 60);
-export const pink300 = mix(white, pink, 40);
-export const pink400 = mix(white, pink, 20);
+export const pink100 = mix(white, pink, PERCENT_80);
+export const pink200 = mix(white, pink, PERCENT_60);
+export const pink300 = mix(white, pink, PERCENT_40);
+export const pink400 = mix(white, pink, PERCENT_20);
 export const pink500 = pink;
-export const pink600 = mix(black, pink, 20);
-export const pink700 = mix(black, pink, 40);
-export const pink800 = mix(black, pink, 60);
-export const pink900 = mix(black, pink, 80);
+export const pink600 = mix(black, pink, PERCENT_20);
+export const pink700 = mix(black, pink, PERCENT_40);
+export const pink800 = mix(black, pink, PERCENT_60);
+export const pink900 = mix(black, pink, PERCENT_80);
 
-export const red100 = mix(white, red, 80);
-export const red200 = mix(white, red, 60);
-export const red300 = mix(white, red, 40);
-export const red400 = mix(white, red, 20);
+export const red100 = mix(white, red, PERCENT_80);
+export const red200 = mix(white, red, PERCENT_60);
+export const red300 = mix(white, red, PERCENT_40);
+export const red400 = mix(white, red, PERCENT_20);
 export const red500 = red;
-export const red600 = mix(black, red, 20);
-export const red700 = mix(black, red, 40);
-export const red800 = mix(black, red, 60);
-export const red900 = mix(black, red, 80);
+export const red600 = mix(black, red, PERCENT_20);
+export const red700 = mix(black, red, PERCENT_40);
+export const red800 = mix(black, red, PERCENT_60);
+export const red900 = mix(black, red, PERCENT_80);
 
-export const orange100 = mix(white, orange, 80);
-export const orange200 = mix(white, orange, 60);
-export const orange300 = mix(white, orange, 40);
-export const orange400 = mix(white, orange, 20);
+export const orange100 = mix(white, orange, PERCENT_80);
+export const orange200 = mix(white, orange, PERCENT_60);
+export const orange300 = mix(white, orange, PERCENT_40);
+export const orange400 = mix(white, orange, PERCENT_20);
 export const orange500 = orange;
-export const orange600 = mix(black, orange, 20);
-export const orange700 = mix(black, orange, 40);
-export const orange800 = mix(black, orange, 60);
-export const orange900 = mix(black, orange, 80);
+export const orange600 = mix(black, orange, PERCENT_20);
+export const orange700 = mix(black, orange, PERCENT_40);
+export const orange800 = mix(black, orange, PERCENT_60);
+export const orange900 = mix(black, orange, PERCENT_80);
 
-export const yellow100 = mix(white, yellow, 80);
-export const yellow200 = mix(white, yellow, 60);
-export const yellow300 = mix(white, yellow, 40);
-export const yellow400 = mix(white, yellow, 20);
+export const yellow100 = mix(white, yellow, PERCENT_80);
+export const yellow200 = mix(white, yellow, PERCENT_60);
+export const yellow300 = mix(white, yellow, PERCENT_40);
+export const yellow400 = mix(white, yellow, PERCENT_20);
 export const yellow500 = yellow;
-export const yellow600 = mix(black, yellow, 20);
-export const yellow700 = mix(black, yellow, 40);
-export const yellow800 = mix(black, yellow, 60);
-export const yellow900 = mix(black, yellow, 80);
+export const yellow600 = mix(black, yellow, PERCENT_20);
+export const yellow700 = mix(black, yellow, PERCENT_40);
+export const yellow800 = mix(black, yellow, PERCENT_60);
+export const yellow900 = mix(black, yellow, PERCENT_80);
 
-export const green100 = mix(white, green, 80);
-export const green200 = mix(white, green, 60);
-export const green300 = mix(white, green, 40);
-export const green400 = mix(white, green, 20);
+export const green100 = mix(white, green, PERCENT_80);
+export const green200 = mix(white, green, PERCENT_60);
+export const green300 = mix(white, green, PERCENT_40);
+export const green400 = mix(white, green, PERCENT_20);
 export const green500 = green;
-export const green600 = mix(black, green, 20);
-export const green700 = mix(black, green, 40);
-export const green800 = mix(black, green, 60);
-export const green900 = mix(black, green, 80);
+export const green600 = mix(black, green, PERCENT_20);
+export const green700 = mix(black, green, PERCENT_40);
+export const green800 = mix(black, green, PERCENT_60);
+export const green900 = mix(black, green, PERCENT_80);
 
-export const teal100 = mix(white, teal, 80);
-export const teal200 = mix(white, teal, 60);
-export const teal300 = mix(white, teal, 40);
-export const teal400 = mix(white, teal, 20);
+export const teal100 = mix(white, teal, PERCENT_80);
+export const teal200 = mix(white, teal, PERCENT_60);
+export const teal300 = mix(white, teal, PERCENT_40);
+export const teal400 = mix(white, teal, PERCENT_20);
 export const teal500 = teal;
-export const teal600 = mix(black, teal, 20);
-export const teal700 = mix(black, teal, 40);
-export const teal800 = mix(black, teal, 60);
-export const teal900 = mix(black, teal, 80);
+export const teal600 = mix(black, teal, PERCENT_20);
+export const teal700 = mix(black, teal, PERCENT_40);
+export const teal800 = mix(black, teal, PERCENT_60);
+export const teal900 = mix(black, teal, PERCENT_80);
 
-export const cyan100 = mix(white, cyan, 80);
-export const cyan200 = mix(white, cyan, 60);
-export const cyan300 = mix(white, cyan, 40);
-export const cyan400 = mix(white, cyan, 20);
+export const cyan100 = mix(white, cyan, PERCENT_80);
+export const cyan200 = mix(white, cyan, PERCENT_60);
+export const cyan300 = mix(white, cyan, PERCENT_40);
+export const cyan400 = mix(white, cyan, PERCENT_20);
 export const cyan500 = cyan;
-export const cyan600 = mix(black, cyan, 20);
-export const cyan700 = mix(black, cyan, 40);
-export const cyan800 = mix(black, cyan, 60);
-export const cyan900 = mix(black, cyan, 80);
+export const cyan600 = mix(black, cyan, PERCENT_20);
+export const cyan700 = mix(black, cyan, PERCENT_40);
+export const cyan800 = mix(black, cyan, PERCENT_60);
+export const cyan900 = mix(black, cyan, PERCENT_80);
 
 export const disabled = gray300;
 export const disabledDark = gray600;
