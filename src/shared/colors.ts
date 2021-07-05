@@ -8,7 +8,6 @@ const mix = (color1: string, color2: string, weight?: number): string => {
       newH += h[0] + h[0];
       newH += h[1] + h[1];
       newH += h[2] + h[2];
-      h = newH;
     }
     return newH;
   }; // convert a hex value to decimal
