@@ -1,5 +1,5 @@
 // import * as styles from './shared/styles';
-import * as COLORS from "./shared/colors.module.scss";
+import * as COLORS from "./shared/colors";
 import GlobalStyle from "./shared/globalStyle";
 // import * as animation from './shared/animation';
 import * as icons from "react-bootstrap-icons";

@@ -10,7 +10,7 @@ if [ $# -lt 1 ]; then
 fi
 
 STORY_NAME="${1^}"
-STORY_NAME_LOWER="$(tr '[:upper:]' '[:lower:]' <<< ${STORY_NAME})"
+STORY_NAME_LOWER="$(tr '[:upper:]' '[:lower:]' <<< "${STORY_NAME}")"
 generate_component() {
 	cat << EOF
 import { ${STORY_NAME}Props } from "./_types";
@@ -52,9 +52,9 @@ ${STORY_NAME}Base.args = {};
 EOF
 }
 
-mkdir src/stories/$STORY_NAME_LOWER
+mkdir "src/stories/$STORY_NAME_LOWER"
 
-generate_component > src/stories/$STORY_NAME_LOWER/_component.tsx
-generate_types > src/stories/$STORY_NAME_LOWER/_types.ts
-generate_styled_component > src/stories/$STORY_NAME_LOWER/$STORY_NAME.tsx
-generate_stories > src/stories/$STORY_NAME_LOWER/$STORY_NAME.stories.tsx
+generate_component > "src/stories/$STORY_NAME_LOWER/_component.tsx"
+generate_types > "src/stories/$STORY_NAME_LOWER/_types.ts"
+generate_styled_component > "src/stories/$STORY_NAME_LOWER/$STORY_NAME.tsx"
+generate_stories > "src/stories/$STORY_NAME_LOWER/$STORY_NAME.stories.tsx"

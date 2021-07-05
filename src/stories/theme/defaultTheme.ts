@@ -1,4 +1,4 @@
-import * as COLORS from "../../shared/colors.module.scss";
+import * as COLORS from "../../shared/colors";
 
 const aqBootstrapTheme = {
   general: {

@@ -12,6 +12,21 @@ export interface TextProps extends TypographyProps {
   small?: boolean;
 }
 
+const generateResponsiveRule = (
+  type: string,
+  size: { desktop: string; mobile: string | boolean },
+  breakpoint: string
+) => {
+  let rule = `${type}: ${size.desktop};`;
+  if (size.mobile) {
+    rule += `@media (max-width: ${breakpoint}) {
+      font-size: ${size.mobile};
+    }`;
+  }
+
+  return rule;
+};
+
 export const Title = styled.div(({ theme, size, color }: TitleProps) => {
   const { palette, typography, grid } = theme;
 
@@ -25,33 +40,31 @@ export const Title = styled.div(({ theme, size, color }: TitleProps) => {
   };
   const titleWeight = {
     xs: {
-      desktop: typography.fontWeight.medium,
-      mobile: typography.fontWeight.bold,
+      desktop: typography.fontWeight.medium.toString(),
+      mobile: typography.fontWeight.bold.toString(),
     },
-    s: { desktop: typography.fontWeight.bold, mobile: false },
-    ms: { desktop: typography.fontWeight.normal, mobile: false },
-    m: { desktop: typography.fontWeight.medium, mobile: false },
-    l: { desktop: typography.fontWeight.medium, mobile: false },
-    xl: { desktop: typography.fontWeight.medium, mobile: false },
+    s: { desktop: typography.fontWeight.bold.toString(), mobile: false },
+    ms: { desktop: typography.fontWeight.normal.toString(), mobile: false },
+    m: { desktop: typography.fontWeight.medium.toString(), mobile: false },
+    l: { desktop: typography.fontWeight.medium.toString(), mobile: false },
+    xl: { desktop: typography.fontWeight.medium.toString(), mobile: false },
   };
   let fontSize = "font-size: 16px;";
   let fontWeight = "font-weight: 500;";
 
   if (Object.keys(titleSizes).includes(size)) {
-    fontSize = `font-size: ${titleSizes[size].desktop};`;
-    if (titleSizes[size].mobile) {
-      fontSize += `@media (max-width: ${grid.breakpoints.lg}) {
-        font-size: ${titleSizes[size].mobile};
-      }`;
-    }
+    fontSize = generateResponsiveRule(
+      "font-size",
+      titleSizes[size],
+      grid.breakpoints.lg
+    );
   }
   if (Object.keys(titleWeight).includes(size)) {
-    fontWeight = `font-weight: ${titleWeight[size].desktop};`;
-    if (titleWeight[size].mobile) {
-      fontWeight += `@media (max-width: ${grid.breakpoints.lg}) {
-        font-weight: ${titleWeight[size].mobile};
-      }`;
-    }
+    fontWeight = generateResponsiveRule(
+      "font-weight",
+      titleWeight[size],
+      grid.breakpoints.lg
+    );
   }
 
   return `
