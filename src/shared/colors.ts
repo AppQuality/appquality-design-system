@@ -1,3 +1,8 @@
+const PERCENT_20 = 20;
+const PERCENT_40 = 40;
+const PERCENT_60 = 60;
+const PERCENT_80 = 80;
+
 const mix = (color1: string, color2: string, weight?: number): string => {
   const d2h = (d: number): string => d.toString(16); // convert a decimal value to hex
   const h2d = (h: string): number => parseInt(h, 16); // convert a hex value to decimal
@@ -15,16 +20,16 @@ const mix = (color1: string, color2: string, weight?: number): string => {
   color1 = expandColor(color1);
   color2 = color2.replace(/#/g, "");
   color2 = expandColor(color2);
-  weight = typeof weight !== "undefined" ? weight : 50; // set the weight to 50, if that argument is omitted
+  weight = typeof weight !== "undefined" ? weight : PERCENT_40; // set the weight to 50, if that argument is omitted
 
   var color = "#";
 
-  for (var i = 0; i <= 5; i += 2) {
+  for (let i = 0; i <= 5; i += 2) {
     // loop through each of the 3 hex pairs—red, green, and blue
-    var v1 = h2d(color1.substr(i, 2)), // extract the current pairs
-      v2 = h2d(color2.substr(i, 2)),
-      // combine the current pairs from each source color, according to the specified weight
-      val = d2h(Math.round(v2 + (v1 - v2) * (weight / 100.0)));
+    const v1 = h2d(color1.substr(i, 2)), // extract the current pairs
+      v2 = h2d(color2.substr(i, 2));
+    // combine the current pairs from each source color, according to the specified weight
+    let val = d2h(Math.round(v2 + (v1 - v2) * (weight / 100.0)));
 
     while (val.length < 2) {
       val = "0" + val;
@@ -35,11 +40,6 @@ const mix = (color1: string, color2: string, weight?: number): string => {
 
   return color; // PROFIT!
 };
-
-const PERCENT_20 = 20;
-const PERCENT_40 = 40;
-const PERCENT_60 = 60;
-const PERCENT_80 = 80;
 
 export const white = "#fff";
 export const black = "#000";
