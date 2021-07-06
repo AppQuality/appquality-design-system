@@ -1,3 +1,15 @@
+# v0.1.82 (Mon Jul 05 2021)
+
+#### ⚠️ Pushed to `main`
+
+- ci: Compile to commonjs (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.81 (Mon Jul 05 2021)
 
 #### 🐛 Bug Fix
