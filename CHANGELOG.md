@@ -1,3 +1,16 @@
+# v0.1.83 (Tue Jul 06 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:AppQuality/appquality-design-system into main (davide.bizzi@app-quality.com)
+- chore: Remove unused lib (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.82 (Mon Jul 05 2021)
 
 #### ⚠️ Pushed to `main`
