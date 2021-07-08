@@ -1,3 +1,15 @@
+# v0.1.84 (Thu Jul 08 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Export pills (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.83 (Tue Jul 06 2021)
 
 #### ⚠️ Pushed to `main`
