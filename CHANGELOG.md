@@ -1,3 +1,15 @@
+# v0.1.85 (Fri Jul 09 2021)
+
+#### ⚠️ Pushed to `main`
+
+- ci: Move react as peer dependency (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.84 (Thu Jul 08 2021)
 
 #### ⚠️ Pushed to `main`
