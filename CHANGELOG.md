@@ -1,3 +1,15 @@
+# v0.1.86 (Mon Jul 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- wip: Try using styled components as peer dep (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.85 (Fri Jul 09 2021)
 
 #### ⚠️ Pushed to `main`
