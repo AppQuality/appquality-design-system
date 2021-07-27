@@ -1,9 +1,15 @@
 import { BaseProps } from "../../shared/_types";
 import { DefaultTheme } from "styled-components";
+import { Dispatch, SetStateAction } from "react";
 
 export interface CarouselProps extends BaseProps {
   controls?: boolean;
   navigation?: boolean;
+}
+export interface SlideProps extends BaseProps {
+  active?: boolean;
+  index: number;
+  onIntersecting: Dispatch<SetStateAction<number>>;
 }
 export interface StyledCarouselProps {
   controls?: boolean;
