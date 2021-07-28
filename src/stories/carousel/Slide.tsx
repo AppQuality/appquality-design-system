@@ -1,6 +1,16 @@
 import { CarouselProps, SlideProps } from "./_types";
-import { StyledCarousel, StyledItem } from "./_style";
 import React, { useState, useRef, useEffect } from "react";
+import styled from "styled-components";
+
+export const StyledItem = styled.div`
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: calc(100% - 36px);
+  @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+    width: 100%;
+    display: flex;
+  }
+`;
 
 export const Slide = ({ children, index, onIntersecting }: SlideProps) => {
   const [entry, setEntry] = useState<IntersectionObserverEntry>();
