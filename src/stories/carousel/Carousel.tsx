@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { CarouselProps, SlideProps } from "./_types";
 import { Slide } from "./Slide";
+import { Navigation } from "./Navigation";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
-import { ArrowLeft, ArrowRight } from "react-bootstrap-icons";
+
 import styled from "styled-components";
 
 export const StyledCarousel = styled.div`
@@ -22,51 +23,6 @@ export const StyledCarousel = styled.div`
       width: 0px;
       background: transparent; /* Chrome/Safari/Webkit */
       display: none;
-    }
-  }
-
-  .carousel-nav {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: ${(props) => props.theme.grid.spacing.default};
-    padding-right: ${(props) => props.theme.grid.spacing.default};
-  }
-  .carousel-nav-dots,
-  .carousel-nav-ctrl {
-    display: flex;
-  }
-  .carousel-nav-dot {
-    width: 15px;
-    height: 15px;
-    margin-right: 15px;
-    background-color: ${(props) => props.theme.colors.gray100};
-    overflow: hidden;
-    border-radius: 7.5px;
-    transition: all 0.2s ease-in-out;
-    &.active {
-      width: 45px;
-      background-color: ${(props) => props.theme.palette.primary};
-    }
-  }
-  .button-ctrl {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 44px;
-    width: 44px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%;
-    margin-left: ${(props) => props.theme.grid.spacing.default};
-    border: 2px solid ${(props) => props.theme.colors.white};
-    transition: background-color 0.15s ease;
-    color: ${(props) => props.theme.colors.white};
-    background-color: ${(props) => props.theme.colors.disabled};
-
-    &:hover {
-      background-color: ${(props) => props.theme.palette.primary};
     }
   }
 `;
@@ -130,25 +86,12 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
         ))}
       </div>
       {navigation && (
-        <div className="carousel-nav">
-          <div className="carousel-nav-dots">
-            {slides.map((slide, index) => {
-              let className = "carousel-nav-dot";
-              if (index === active) className += " active";
-              return <div className={className} key={index}></div>;
-            })}
-          </div>
-          {windowsize[0] > 991 && (
-            <div className="carousel-nav-ctrl">
-              <div className="button-ctrl ctrl-prev" onClick={handlePrev}>
-                <ArrowLeft />
-              </div>
-              <div className="button-ctrl ctrl-next" onClick={handleNext}>
-                <ArrowRight />
-              </div>
-            </div>
-          )}
-        </div>
+        <Navigation
+          active={active}
+          slides={slides}
+          handlePrev={handlePrev}
+          handleNext={handleNext}
+        />
       )}
     </StyledCarousel>
   );

@@ -15,3 +15,10 @@ export interface StyledCarouselProps {
   controls?: boolean;
   theme: DefaultTheme;
 }
+
+export interface NavigationProps {
+  handlePrev: () => void;
+  handleNext: () => void;
+  slides: [][];
+  active: number;
+}
