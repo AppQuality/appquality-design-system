@@ -14,7 +14,7 @@ const Template: Story<CarouselProps> = (args) => {
   return (
     <Carousel {...args}>
       {items.map((item, index) => (
-        <Card shadow className="card-list-item aq-m-3" key={index}>
+        <Card shadow className="card-list-item aq-my-3" key={index}>
           <div className="item-avatar aq-mb-2">
             <Text color="primary" className="capitalize-first avatar-name">
               <strong>

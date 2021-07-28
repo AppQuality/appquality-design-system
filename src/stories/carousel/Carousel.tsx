@@ -30,6 +30,8 @@ export const StyledCarousel = styled.div`
     flex-flow: row;
     justify-content: space-between;
     align-items: center;
+    padding-left: ${(props) => props.theme.grid.spacing.default};
+    padding-right: ${(props) => props.theme.grid.spacing.default};
   }
   .carousel-nav-dots,
   .carousel-nav-ctrl {
@@ -55,7 +57,7 @@ export const StyledCarousel = styled.div`
     font-size: 24px;
     cursor: pointer;
     border-radius: 50%;
-    margin-right: ${(props) => props.theme.grid.spacing.default};
+    margin-left: ${(props) => props.theme.grid.spacing.default};
     border-color: ${(props) => props.theme.colors.white};
     transition: background-color 0.15s ease;
     color: ${(props) => props.theme.colors.white};
@@ -72,6 +74,17 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [items, setItems] = useState<any[] | undefined | null>([]);
   const [slides, setSlides] = useState<[][]>([]);
+  const ref = useRef(document.createElement("div"));
+
+  const handlePrev = () => {
+    ref.current.scrollLeft = ref.current.offsetWidth * (active - 1);
+  };
+
+  const handleNext = () => {
+    console.log(active);
+    ref.current.scrollLeft = ref.current.offsetWidth * (active + 1);
+  };
+
   useEffect(() => {
     setItems(
       React.Children.map(children, (child) => {
@@ -81,6 +94,7 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
       })
     );
   }, [children]);
+
   useEffect(() => {
     let results = [];
     let finalIndex = -1; // to start from zero
@@ -97,6 +111,7 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
     }
     setSlides(results);
   }, [items, slidesPerView]);
+
   const windowsize = useWindowSize(); // [width, height]
   useEffect(() => {
     if (windowsize[0] > 991) setSlidesPerView(3);
@@ -104,7 +119,7 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
 
   return (
     <StyledCarousel>
-      <div className="slides">
+      <div className="slides" ref={ref}>
         {slides.map((slide, index) => (
           <Slide key={index} index={index} onIntersecting={setActive}>
             {slide.map((item, j) => item)}
@@ -120,14 +135,16 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
               return <div className={className} key={index}></div>;
             })}
           </div>
-          <div className="carousel-nav-ctrl">
-            <div className="button-ctrl ctrl-prev">
-              <ArrowLeft />
+          {windowsize[0] > 991 && (
+            <div className="carousel-nav-ctrl">
+              <div className="button-ctrl ctrl-prev" onClick={handlePrev}>
+                <ArrowLeft />
+              </div>
+              <div className="button-ctrl ctrl-next" onClick={handleNext}>
+                <ArrowRight />
+              </div>
             </div>
-            <div className="button-ctrl ctrl-next">
-              <ArrowRight />
-            </div>
-          </div>
+          )}
         </div>
       )}
     </StyledCarousel>

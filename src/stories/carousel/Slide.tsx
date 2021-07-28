@@ -5,10 +5,20 @@ import styled from "styled-components";
 export const StyledItem = styled.div`
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: calc(100% - 36px);
+  width: calc(100% - 52px);
+  margin-right: 16px;
+  margin-left: 16px;
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     width: 100%;
     display: flex;
+    margin-right: 0;
+    margin-left: 0;
+    > * {
+      margin-right: 16px;
+      margin-left: 16px;
+      width: calc((100% / 3));
+      flex: 0 1 calc((100% / 3));
+    }
   }
 `;
 
