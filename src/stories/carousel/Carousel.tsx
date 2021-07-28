@@ -43,8 +43,10 @@ export const StyledCarousel = styled.div`
     margin-right: 15px;
     background-color: ${(props) => props.theme.colors.gray100};
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 7.5px;
+    transition: all 0.2s ease-in-out;
     &.active {
+      width: 45px;
       background-color: ${(props) => props.theme.palette.primary};
     }
   }
@@ -58,7 +60,7 @@ export const StyledCarousel = styled.div`
     cursor: pointer;
     border-radius: 50%;
     margin-left: ${(props) => props.theme.grid.spacing.default};
-    border-color: ${(props) => props.theme.colors.white};
+    border: 2px solid ${(props) => props.theme.colors.white};
     transition: background-color 0.15s ease;
     color: ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.disabled};
@@ -71,6 +73,7 @@ export const StyledCarousel = styled.div`
 
 export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
   const [active, setActive] = useState(0);
+  const [activeDot, setActiveDot] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [items, setItems] = useState<any[] | undefined | null>([]);
   const [slides, setSlides] = useState<[][]>([]);
