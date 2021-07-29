@@ -3,8 +3,7 @@ import { DefaultTheme } from "styled-components";
 import { Dispatch, SetStateAction } from "react";
 
 export interface CarouselProps extends BaseProps {
-  controls?: boolean;
-  navigation?: boolean;
+  dark?: boolean;
 }
 export interface SlideProps extends BaseProps {
   active?: boolean;

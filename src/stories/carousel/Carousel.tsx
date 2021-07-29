@@ -24,25 +24,33 @@ export const StyledCarousel = styled.div`
       background: transparent; /* Chrome/Safari/Webkit */
       display: none;
     }
+
+    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+      overflow: hidden;
+    }
   }
 `;
 
-export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
+export const Carousel = ({ children, dark }: CarouselProps) => {
   const [active, setActive] = useState(0);
-  const [activeDot, setActiveDot] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [items, setItems] = useState<any[] | undefined | null>([]);
   const [slides, setSlides] = useState<[][]>([]);
   const ref = useRef(document.createElement("div"));
 
   const handlePrev = () => {
+    //setActive(active-1);
     ref.current.scrollLeft = ref.current.offsetWidth * (active - 1);
   };
 
   const handleNext = () => {
-    console.log(active);
+    //setActive(active+1);
     ref.current.scrollLeft = ref.current.offsetWidth * (active + 1);
   };
+
+  // useEffect(() => {
+  //   ref.current.style.transform = `translate(${ref.current.offsetWidth * (active)}, 0, 0)`;
+  // }, [active]);
 
   useEffect(() => {
     setItems(
@@ -85,14 +93,12 @@ export const Carousel = ({ children, controls, navigation }: CarouselProps) => {
           </Slide>
         ))}
       </div>
-      {navigation && (
-        <Navigation
-          active={active}
-          slides={slides}
-          handlePrev={handlePrev}
-          handleNext={handleNext}
-        />
-      )}
+      <Navigation
+        active={active}
+        slides={slides}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+      />
     </StyledCarousel>
   );
 };

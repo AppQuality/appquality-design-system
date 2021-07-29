@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NavigationProps } from "./_types";
-import { ArrowLeft, ArrowRight } from "react-bootstrap-icons";
+import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 
 const StyledNavigation = styled.div`
@@ -22,7 +22,8 @@ const StyledNavigation = styled.div`
     width: 15px;
     height: 15px;
     margin-right: 15px;
-    background-color: ${(props) => props.theme.colors.gray100};
+    background-color: ${(props) => props.theme.colors.white};
+    border: 1px solid ${(props) => props.theme.palette.primary};
     overflow: hidden;
     border-radius: 7.5px;
     transition: all 0.2s ease-in-out;
@@ -41,16 +42,20 @@ const StyledNavigation = styled.div`
     cursor: pointer;
     border-radius: 50%;
     margin-left: ${(props) => props.theme.grid.spacing.default};
-    border: 2px solid ${(props) => props.theme.colors.white};
-    transition: background-color 0.15s ease;
-    color: ${(props) => props.theme.colors.white};
-    background-color: ${(props) => props.theme.colors.disabled};
+    border: 1px solid;
+    border-color: ${(props) => props.theme.palette.primary};
+    color: ${(props) => props.theme.palette.primary};
+    background-color: ${(props) => props.theme.colors.white};
+    transition: all 0.15s ease;
 
     &.disabled {
       cursor: not-allowed;
+      background-color: transparent;
+      border-color: ${(props) => props.theme.colors.gray600};
+      color: ${(props) => props.theme.colors.gray600};
     }
     &:not(.disabled):hover {
-      background-color: ${(props) => props.theme.palette.primary};
+      background-color: ${(props) => props.theme.colors.white};
     }
   }
 `;
@@ -85,7 +90,7 @@ export const Navigation = ({
             }`}
             onClick={onPrev}
           >
-            <ArrowLeft />
+            <ArrowLeftShort />
           </div>
           <div
             className={`button-ctrl ctrl-next${
@@ -93,7 +98,7 @@ export const Navigation = ({
             }`}
             onClick={onNext}
           >
-            <ArrowRight />
+            <ArrowRightShort />
           </div>
         </div>
       )}
