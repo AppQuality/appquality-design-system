@@ -1,12 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import { CarouselProps, SlideProps } from "./_types";
+import { CarouselProps, StyledCarouselProps, SlideProps } from "./_types";
 import { Slide } from "./Slide";
 import { Navigation } from "./Navigation";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 
 import styled from "styled-components";
 
-export const StyledCarousel = styled.div`
+export const StyledCarousel = styled.div(
+  ({ xTranslation, theme }: StyledCarouselProps) => `
   .slides {
     scroll-snap-type: x mandatory;
     display: flex;
@@ -17,6 +18,7 @@ export const StyledCarousel = styled.div`
     -webkit-overflow-scrolling: touch;
     max-width: 100vw;
     transform: translate3d(0, 0, 0);
+    transition: transform .3s ease;
     will-change: transform;
 
     ::-webkit-scrollbar {
@@ -25,32 +27,33 @@ export const StyledCarousel = styled.div`
       display: none;
     }
 
-    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-      overflow: hidden;
+    @media (min-width: ${theme.grid.breakpoints.lg}) {
+      overflow: visible;
+      transform: translate3d(${xTranslation}px, 0, 0);
     }
   }
-`;
+`
+);
 
 export const Carousel = ({ children, dark }: CarouselProps) => {
   const [active, setActive] = useState(0);
+  const [xTranslation, setXTranslation] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [items, setItems] = useState<any[] | undefined | null>([]);
   const [slides, setSlides] = useState<[][]>([]);
   const ref = useRef(document.createElement("div"));
 
   const handlePrev = () => {
-    //setActive(active-1);
-    ref.current.scrollLeft = ref.current.offsetWidth * (active - 1);
+    setActive(active - 1);
   };
 
   const handleNext = () => {
-    //setActive(active+1);
-    ref.current.scrollLeft = ref.current.offsetWidth * (active + 1);
+    setActive(active + 1);
   };
 
-  // useEffect(() => {
-  //   ref.current.style.transform = `translate(${ref.current.offsetWidth * (active)}, 0, 0)`;
-  // }, [active]);
+  useEffect(() => {
+    setXTranslation(ref.current.offsetWidth * -active);
+  }, [active]);
 
   useEffect(() => {
     setItems(
@@ -85,7 +88,7 @@ export const Carousel = ({ children, dark }: CarouselProps) => {
   }, [windowsize]);
 
   return (
-    <StyledCarousel>
+    <StyledCarousel xTranslation={xTranslation}>
       <div className="slides" ref={ref}>
         {slides.map((slide, index) => (
           <Slide key={index} index={index} onIntersecting={setActive}>

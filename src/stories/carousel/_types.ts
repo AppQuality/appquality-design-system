@@ -11,7 +11,7 @@ export interface SlideProps extends BaseProps {
   onIntersecting: Dispatch<SetStateAction<number>>;
 }
 export interface StyledCarouselProps {
-  controls?: boolean;
+  xTranslation: number;
   theme: DefaultTheme;
 }
 

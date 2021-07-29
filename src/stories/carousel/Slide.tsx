@@ -47,7 +47,10 @@ export const Slide = ({ children, index, onIntersecting }: SlideProps) => {
     };
   }, [ref, options]);
   useEffect(() => {
-    if (entry?.isIntersecting) {
+    if (
+      entry?.isIntersecting &&
+      window.matchMedia("(max-width: 991px)").matches
+    ) {
       onIntersecting(index);
     }
   }, [entry]);

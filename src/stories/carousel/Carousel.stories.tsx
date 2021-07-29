@@ -36,5 +36,5 @@ const Template: Story<CarouselProps> = (args) => {
 };
 
 export const BasicCarousel = Template.bind({});
-BasicCarousel.args = { navigation: true };
+BasicCarousel.args = {};
 BasicCarousel.parameters = {};
