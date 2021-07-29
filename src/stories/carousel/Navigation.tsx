@@ -31,6 +31,9 @@ const StyledNavigation = styled.div`
       width: 45px;
       background-color: ${(props) => props.theme.palette.primary};
     }
+    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+      transition: all 0.2s ease-in-out 0.2s;
+    }
   }
   .button-ctrl {
     display: flex;
@@ -46,7 +49,7 @@ const StyledNavigation = styled.div`
     border-color: ${(props) => props.theme.palette.primary};
     color: ${(props) => props.theme.palette.primary};
     background-color: ${(props) => props.theme.colors.white};
-    transition: all 0.15s ease;
+    transition: all 0.15s ease-in-out;
 
     &.disabled {
       cursor: not-allowed;

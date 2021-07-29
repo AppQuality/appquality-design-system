@@ -18,7 +18,7 @@ export const StyledCarousel = styled.div(
     -webkit-overflow-scrolling: touch;
     max-width: 100vw;
     transform: translate3d(0, 0, 0);
-    transition: transform .3s ease;
+    transition: transform .4s ease-in-out;
     will-change: transform;
 
     ::-webkit-scrollbar {
