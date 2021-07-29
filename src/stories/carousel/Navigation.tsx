@@ -59,7 +59,9 @@ const StyledNavigation = styled.div(
       color: ${dark ? theme.colors.disabled : theme.colors.disabledDark};
     }
     &:not(.disabled):hover {
-      background-color: ${dark ? theme.palette.primary : theme.colors.white};
+      background-color: ${dark ? theme.colors.white : theme.palette.primary};
+      border-color: ${dark ? theme.palette.primary : theme.colors.white};
+      color: ${dark ? theme.palette.primary : theme.colors.white};
     }
   }
 `
