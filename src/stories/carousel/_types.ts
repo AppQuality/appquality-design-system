@@ -12,6 +12,7 @@ export interface SlideProps extends BaseProps {
 }
 export interface StyledCarouselProps {
   xTranslation: number;
+  dark?: boolean;
   theme: DefaultTheme;
 }
 
@@ -20,4 +21,10 @@ export interface NavigationProps {
   handleNext: () => void;
   slides: [][];
   active: number;
+  dark?: boolean;
+}
+
+export interface StyledNavigationProps {
+  dark?: boolean;
+  theme: DefaultTheme;
 }

@@ -1,17 +1,18 @@
 import styled from "styled-components";
-import { NavigationProps } from "./_types";
+import { NavigationProps, StyledNavigationProps } from "./_types";
 import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 
-const StyledNavigation = styled.div`
+const StyledNavigation = styled.div(
+  ({ theme, dark }: StyledNavigationProps) => `
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  padding-left: ${(props) => props.theme.grid.spacing.default};
-  padding-right: ${(props) => props.theme.grid.spacing.default};
+  padding-left: ${theme.grid.spacing.default};
+  padding-right: ${theme.grid.spacing.default};
 
-  @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+  @media (min-width: ${theme.grid.breakpoints.lg}) {
     justify-content: space-between;
   }
   .carousel-nav-dots,
@@ -22,16 +23,16 @@ const StyledNavigation = styled.div`
     width: 15px;
     height: 15px;
     margin-right: 15px;
-    background-color: ${(props) => props.theme.colors.white};
-    border: 1px solid ${(props) => props.theme.palette.primary};
+    background-color: ${theme.colors.white};
+    border: 1px solid ${theme.palette.primary};
     overflow: hidden;
     border-radius: 7.5px;
     transition: all 0.2s ease-in-out;
     &.active {
       width: 45px;
-      background-color: ${(props) => props.theme.palette.primary};
+      background-color: ${theme.palette.primary};
     }
-    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+    @media (min-width: ${theme.grid.breakpoints.lg}) {
       transition: all 0.2s ease-in-out 0.2s;
     }
   }
@@ -44,27 +45,29 @@ const StyledNavigation = styled.div`
     font-size: 24px;
     cursor: pointer;
     border-radius: 50%;
-    margin-left: ${(props) => props.theme.grid.spacing.default};
+    margin-left: ${theme.grid.spacing.default};
     border: 1px solid;
-    border-color: ${(props) => props.theme.palette.primary};
-    color: ${(props) => props.theme.palette.primary};
-    background-color: ${(props) => props.theme.colors.white};
+    border-color: ${dark ? theme.colors.white : theme.palette.primary};
+    color: ${dark ? theme.colors.white : theme.palette.primary};
+    background-color: transparent;
     transition: all 0.15s ease-in-out;
 
     &.disabled {
-      cursor: not-allowed;
+      cursor: default;
       background-color: transparent;
-      border-color: ${(props) => props.theme.colors.gray600};
-      color: ${(props) => props.theme.colors.gray600};
+      border-color: ${dark ? theme.colors.disabled : theme.colors.disabledDark};
+      color: ${dark ? theme.colors.disabled : theme.colors.disabledDark};
     }
     &:not(.disabled):hover {
-      background-color: ${(props) => props.theme.colors.white};
+      background-color: ${dark ? theme.palette.primary : theme.colors.white};
     }
   }
-`;
+`
+);
 export const Navigation = ({
   active,
   slides,
+  dark,
   handlePrev,
   handleNext,
 }: NavigationProps) => {
@@ -77,7 +80,7 @@ export const Navigation = ({
   };
 
   return (
-    <StyledNavigation>
+    <StyledNavigation dark={dark}>
       <div className="carousel-nav-dots">
         {slides.map((slide, index) => {
           let className = "carousel-nav-dot";

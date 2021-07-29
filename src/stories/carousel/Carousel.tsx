@@ -88,7 +88,7 @@ export const Carousel = ({ children, dark }: CarouselProps) => {
   }, [windowsize]);
 
   return (
-    <StyledCarousel xTranslation={xTranslation}>
+    <StyledCarousel xTranslation={xTranslation} dark={dark}>
       <div className="slides" ref={ref}>
         {slides.map((slide, index) => (
           <Slide key={index} index={index} onIntersecting={setActive}>
@@ -101,6 +101,7 @@ export const Carousel = ({ children, dark }: CarouselProps) => {
         slides={slides}
         handlePrev={handlePrev}
         handleNext={handleNext}
+        dark={dark}
       />
     </StyledCarousel>
   );
