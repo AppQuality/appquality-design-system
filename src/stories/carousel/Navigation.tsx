@@ -60,7 +60,7 @@ const StyledNavigation = styled.div(
     }
     &:not(.disabled):hover {
       background-color: ${dark ? theme.colors.white : theme.palette.primary};
-      border-color: ${dark ? theme.palette.primary : theme.colors.white};
+      border-color: ${dark ? theme.colors.white : theme.palette.primary};
       color: ${dark ? theme.palette.primary : theme.colors.white};
     }
   }
