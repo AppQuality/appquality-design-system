@@ -1,3 +1,29 @@
+# v0.1.87 (Mon Aug 02 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(carousel): fix hover border color (iacopo.leardini@app-quality.com)
+- feat(carousel): dark theme tweak (iacopo.leardini@app-quality.com)
+- feat(carousel): add dark theme (iacopo.leardini@app-quality.com)
+- feat(carousel): add better animation (iacopo.leardini@app-quality.com)
+- feat(carousel): translation mode in desktop (iacopo.leardini@app-quality.com)
+- feat(carousel): fix button style (iacopo.leardini@app-quality.com)
+- feat(carousel): create component and disabled buttons logic (iacopo.leardini@app-quality.com)
+- feat(carousel): add style and animation for active dot (iacopo.leardini@app-quality.com)
+- feat(carousel): ctrl buttons logic and fix for uneven number of slides (iacopo.leardini@app-quality.com)
+- feat(carousel): add ctrl buttons (iacopo.leardini@app-quality.com)
+- feat(carousel): add responsive (iacopo.leardini@app-quality.com)
+- feat(carousel): add navigation logic (iacopo.leardini@app-quality.com)
+- feat(carousel): add navigation style (iacopo.leardini@app-quality.com)
+- feat(carousel): first commit (iacopo.leardini@app-quality.com)
+- chore: move assets folder (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.86 (Mon Jul 12 2021)
 
 #### ⚠️ Pushed to `main`
