@@ -45,3 +45,4 @@ export * from "./stories/pagetitle/PageTitle";
 export * from "./stories/tabs/Tabs";
 export * from "./stories/accordion/Accordion";
 export * from "./stories/pill/Pill";
+export * from "./stories/carousel/Carousel";
