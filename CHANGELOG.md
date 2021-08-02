@@ -1,3 +1,15 @@
+# v0.1.88 (Mon Aug 02 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(carousel): export Carousel component in index (iacopo.leardini@app-quality.com)
+
+#### Authors: 1
+
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
 # v0.1.87 (Mon Aug 02 2021)
 
 #### ⚠️ Pushed to `main`
