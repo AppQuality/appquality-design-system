@@ -78,7 +78,7 @@ export const Navigation = ({
     if (active !== 0) handlePrev();
   };
   const onNext = () => {
-    if (active !== slides.length) handleNext();
+    if (active !== slides.length - 1) handleNext();
   };
 
   return (
