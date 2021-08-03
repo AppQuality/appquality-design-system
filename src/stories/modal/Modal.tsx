@@ -146,37 +146,37 @@ export const Modal = styled(BasicModal)`
 
   @keyframes shake {
     0% {
-      transform: translate(calc(-50% + 1px), calc(-50% + 1px)) rotate(0deg);
+      transform: translate(calc(-50% + 1px), -50%);
     }
     10% {
-      transform: translate(calc(-50% - 1px), calc(-50% - 2px)) rotate(-1deg);
+      transform: translate(calc(-50% - 1px), -50%);
     }
     20% {
       transform: translate(calc(-50% -3px), -50%) rotate(1deg);
     }
     30% {
-      transform: translate(calc(-50% + 3px), calc(-50% + 2px)) rotate(0deg);
+      transform: translate(calc(-50% + 3px), -50%);
     }
     40% {
-      transform: translate(calc(-50% + 1px), calc(-50% - 1px)) rotate(1deg);
+      transform: translate(calc(-50% + 1px), -50%);
     }
     50% {
-      transform: translate(calc(-50% - 1px), calc(-50% + 2px)) rotate(-1deg);
+      transform: translate(calc(-50% - 1px), -50%);
     }
     60% {
-      transform: translate(calc(-50% - 3px), calc(-50% + 1px)) rotate(0deg);
+      transform: translate(calc(-50% - 3px), -50%);
     }
     70% {
-      transform: translate(calc(-50% + 3px), calc(-50% + 1px)) rotate(-1deg);
+      transform: translate(calc(-50% + 3px), -50%);
     }
     80% {
-      transform: translate(calc(-50% - 1px), calc(-50% - 1px)) rotate(1deg);
+      transform: translate(calc(-50% - 1px), -50%);
     }
     90% {
-      transform: translate(calc(-50% + 1px), calc(-50% + 2px)) rotate(0deg);
+      transform: translate(calc(-50% + 1px), -50%);
     }
     100% {
-      transform: translate(calc(-50% + 1px), calc(-50% - 2px)) rotate(-1deg);
+      transform: translate(calc(-50% + 1px), -50%);
     }
   }
 `;
