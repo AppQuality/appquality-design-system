@@ -9,7 +9,7 @@ export default {
 
 const Template: Story<ModalProps> = (args) => (
   <Modal {...args}>
-    <ModalBody>This is a modal content</ModalBody>
+    <div>This is a modal content</div>
   </Modal>
 );
 const TemplateMulti: Story<ModalProps> = (args) => (

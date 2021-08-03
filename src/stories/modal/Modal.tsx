@@ -30,7 +30,13 @@ const BasicModal = ({
       <ModalOverlay onClick={onClose} />
       <div className="modal">
         {title ? <ModalHeader title={title} onClose={onClose} /> : null}
-        {isMultiple ? body[current] : body}
+        {body.length > 1 ? (
+          body[current]
+        ) : body.length === 0 ? (
+          <ModalBody>{children}</ModalBody>
+        ) : (
+          body
+        )}
         {isMultiple ? (
           <ModalFooter>
             <BSGrid>
