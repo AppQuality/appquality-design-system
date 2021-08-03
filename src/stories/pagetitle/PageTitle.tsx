@@ -36,6 +36,7 @@ const PageTitle = ({
         as={typeof subtitle == "string" ? undefined : subtitle.as}
         className="aq-mt-2"
         size={subtitleSize}
+        color="secondary"
       >
         {typeof subtitle == "string" ? subtitle : subtitle.content}
       </Title>
