@@ -54,3 +54,20 @@ export const ModalWithMultipleBodies = TemplateMulti.bind({});
 ModalWithMultipleBodies.args = {
   isOpen: true,
 };
+
+const TemplateMultiValidate: Story<ModalProps> = (args) => (
+  <Modal {...args}>
+    <ModalBody>This is the first modal content</ModalBody>
+    <ModalBody onNext={() => false}>This is the second modal content</ModalBody>
+    <ModalBody>
+      This is the third modal content (but you won't see this)
+    </ModalBody>
+  </Modal>
+);
+
+export const ModalWithMultipleBodiesAndValidation = TemplateMultiValidate.bind(
+  {}
+);
+ModalWithMultipleBodiesAndValidation.args = {
+  isOpen: true,
+};

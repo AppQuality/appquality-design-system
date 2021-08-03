@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { ModalProps } from "./_types";
 import { ModalOverlay } from "./ModalOverlay";
 import React, { useState } from "react";
-import { ModalBody } from "./ModalBody";
+import { ModalBody, ModalBodyProps } from "./ModalBody";
 import { ModalHeader } from "./ModalHeader";
 import { ModalFooter } from "./ModalFooter";
 import { Button } from "../button/Button";
@@ -19,16 +19,32 @@ const BasicModal = ({
   prevText = "Previous",
   nextText = "Next",
 }: ModalProps) => {
+  const shakeTimeout = 400;
   const [current, setCurrent] = useState(0);
+  const [shake, setShake] = useState(false);
+  const [prevButtonStyle, setPrevButtonStyle] = useState<"primary" | "danger">(
+    "primary"
+  );
+  const [nextButtonStyle, setNextButtonStyle] = useState<"primary" | "danger">(
+    "primary"
+  );
   if (!isOpen) return null;
+  const callbacks: ModalBodyProps[] = [];
   const body = React.Children.toArray(children).filter((child) => {
-    return React.isValidElement(child) && child.type === ModalBody;
+    if (React.isValidElement(child) && child.type === ModalBody) {
+      callbacks.push({
+        onPrev: child.props.onPrev ? child.props.onPrev : () => true,
+        onNext: child.props.onNext ? child.props.onNext : () => true,
+      });
+      return true;
+    }
+    return false;
   });
   const isMultiple = body.length > 1;
   return (
     <div className={className}>
       <ModalOverlay onClick={onClose} />
-      <div className="modal">
+      <div className={`modal ${shake ? "shaking" : ""}`}>
         {title ? <ModalHeader title={title} onClose={onClose} /> : null}
         {body.length > 1 ? (
           body[current]
@@ -45,8 +61,21 @@ const BasicModal = ({
                 <Button
                   size="block"
                   flat
+                  type={prevButtonStyle}
                   disabled={current === 0}
-                  onClick={() => setCurrent(current - 1)}
+                  onClick={() => {
+                    const onPrev = callbacks[current].onPrev;
+                    if (onPrev && onPrev()) setCurrent(current - 1);
+                    else {
+                      setTimeout(
+                        () => setPrevButtonStyle("primary"),
+                        shakeTimeout * 2
+                      );
+                      setTimeout(() => setShake(false), shakeTimeout);
+                      setShake(true);
+                      setPrevButtonStyle("danger");
+                    }
+                  }}
                 >
                   {prevText}
                 </Button>
@@ -55,8 +84,21 @@ const BasicModal = ({
                 <Button
                   size="block"
                   flat
+                  type={nextButtonStyle}
                   disabled={current === body.length - 1}
-                  onClick={() => setCurrent(current + 1)}
+                  onClick={() => {
+                    const onNext = callbacks[current].onNext;
+                    if (onNext && onNext()) setCurrent(current + 1);
+                    else {
+                      setTimeout(
+                        () => setNextButtonStyle("primary"),
+                        shakeTimeout * 2
+                      );
+                      setTimeout(() => setShake(false), shakeTimeout);
+                      setShake(true);
+                      setNextButtonStyle("danger");
+                    }
+                  }}
                 >
                   {nextText}
                 </Button>
@@ -84,6 +126,10 @@ export const Modal = styled(BasicModal)`
     max-height: 100%;
     background-color: ${(props) => props.theme.colors.white};
 
+    &.shaking {
+      animation: shake 0.5s;
+      animation-iteration-count: infinite;
+    }
     @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
       width: ${(props) => {
         switch (props.size) {
@@ -95,6 +141,42 @@ export const Modal = styled(BasicModal)`
             return "600px";
         }
       }};
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(calc(-50% + 1px), calc(-50% + 1px)) rotate(0deg);
+    }
+    10% {
+      transform: translate(calc(-50% - 1px), calc(-50% - 2px)) rotate(-1deg);
+    }
+    20% {
+      transform: translate(calc(-50% -3px), -50%) rotate(1deg);
+    }
+    30% {
+      transform: translate(calc(-50% + 3px), calc(-50% + 2px)) rotate(0deg);
+    }
+    40% {
+      transform: translate(calc(-50% + 1px), calc(-50% - 1px)) rotate(1deg);
+    }
+    50% {
+      transform: translate(calc(-50% - 1px), calc(-50% + 2px)) rotate(-1deg);
+    }
+    60% {
+      transform: translate(calc(-50% - 3px), calc(-50% + 1px)) rotate(0deg);
+    }
+    70% {
+      transform: translate(calc(-50% + 3px), calc(-50% + 1px)) rotate(-1deg);
+    }
+    80% {
+      transform: translate(calc(-50% - 1px), calc(-50% - 1px)) rotate(1deg);
+    }
+    90% {
+      transform: translate(calc(-50% + 1px), calc(-50% + 2px)) rotate(0deg);
+    }
+    100% {
+      transform: translate(calc(-50% + 1px), calc(-50% - 2px)) rotate(-1deg);
     }
   }
 `;
