@@ -1,3 +1,15 @@
+# v0.1.89 (Tue Aug 03 2021)
+
+#### 🐛 Bug Fix
+
+- CP-469 [#47](https://github.com/AppQuality/appquality-design-system/pull/47) (gianpaolo.sinatra@app-quality.com)
+
+#### Authors: 1
+
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+---
+
 # v0.1.88 (Mon Aug 02 2021)
 
 #### ⚠️ Pushed to `main`
