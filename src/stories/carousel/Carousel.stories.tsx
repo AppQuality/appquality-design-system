@@ -10,12 +10,36 @@ export default {
 
 const Template: Story<CarouselProps> = (args) => (
   <Carousel {...args}>
-    <CarouselSlide>Slide 1</CarouselSlide>
-    <CarouselSlide>Slide 2</CarouselSlide>
-    <CarouselSlide>Slide 3</CarouselSlide>
-    <CarouselSlide>Slide 4</CarouselSlide>
-    <CarouselSlide>Slide 5</CarouselSlide>
-    <CarouselSlide>Slide 6</CarouselSlide>
+    <CarouselSlide>
+      <div style={{ padding: "25px", height: "100px", border: "1px solid" }}>
+        Slide 1
+      </div>
+    </CarouselSlide>
+    <CarouselSlide>
+      <div style={{ padding: "25px", height: "100px", border: "1px solid" }}>
+        Slide 2
+      </div>
+    </CarouselSlide>
+    <CarouselSlide>
+      <div style={{ padding: "25px", height: "100px", border: "1px solid" }}>
+        Slide 3
+      </div>
+    </CarouselSlide>
+    <CarouselSlide>
+      <div style={{ padding: "25px", height: "100px", border: "1px solid" }}>
+        Slide 4
+      </div>
+    </CarouselSlide>
+    <CarouselSlide>
+      <div style={{ padding: "25px", height: "100px", border: "1px solid" }}>
+        Slide 5
+      </div>
+    </CarouselSlide>
+    <CarouselSlide>
+      <div style={{ padding: "25px", height: "100px", border: "1px solid" }}>
+        Slide 6
+      </div>
+    </CarouselSlide>
   </Carousel>
 );
 

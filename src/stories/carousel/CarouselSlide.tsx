@@ -16,8 +16,5 @@ export const CarouselSlide = styled(BasicCarouselSlide)`
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     padding-right: 16px;
     padding-left: 16px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
   }
 `;
