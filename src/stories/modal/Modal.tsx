@@ -29,12 +29,14 @@ const BasicModal = ({
     "primary"
   );
   if (!isOpen) return null;
-  const callbacks: ModalBodyProps[] = [];
+  const bodyData: ModalBodyProps[] = [];
   const body = React.Children.toArray(children).filter((child) => {
     if (React.isValidElement(child) && child.type === ModalBody) {
-      callbacks.push({
+      bodyData.push({
         onPrev: child.props.onPrev ? child.props.onPrev : () => true,
         onNext: child.props.onNext ? child.props.onNext : () => true,
+        prevText: child.props.prevText ? child.props.prevText : prevText,
+        nextText: child.props.nextText ? child.props.nextText : nextText,
       });
       return true;
     }
@@ -64,7 +66,7 @@ const BasicModal = ({
                   type={prevButtonStyle}
                   disabled={current === 0}
                   onClick={() => {
-                    const onPrev = callbacks[current].onPrev;
+                    const onPrev = bodyData[current].onPrev;
                     if (onPrev && onPrev()) setCurrent(current - 1);
                     else {
                       setTimeout(
@@ -77,7 +79,7 @@ const BasicModal = ({
                     }
                   }}
                 >
-                  {prevText}
+                  {bodyData[current].prevText}
                 </Button>
               </BSCol>
               <BSCol size="col-3">
@@ -87,7 +89,7 @@ const BasicModal = ({
                   type={nextButtonStyle}
                   disabled={current === body.length - 1}
                   onClick={() => {
-                    const onNext = callbacks[current].onNext;
+                    const onNext = bodyData[current].onNext;
                     if (onNext && onNext()) setCurrent(current + 1);
                     else {
                       setTimeout(
@@ -100,7 +102,7 @@ const BasicModal = ({
                     }
                   }}
                 >
-                  {nextText}
+                  {bodyData[current].nextText}
                 </Button>
               </BSCol>
             </BSGrid>
