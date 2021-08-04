@@ -81,4 +81,4 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
 };
 
 const Carousel = withTheme(BasicCarousel);
-export { Carousel };
+export { Carousel, CarouselSlide };
