@@ -4,6 +4,8 @@ import { BaseProps } from "../../shared/_types";
 export interface ModalBodyProps extends BaseProps {
   onPrev?: () => boolean;
   onNext?: () => boolean;
+  prevText?: string;
+  nextText?: string;
 }
 
 const BasicModalBody = ({ children, className }: ModalBodyProps) => (
