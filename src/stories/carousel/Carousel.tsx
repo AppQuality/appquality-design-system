@@ -8,22 +8,26 @@ import { withTheme } from "styled-components";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 const getFirstMatchingBreakpoint = (
-  stepsByBreakpoint: CarouselProps.step,
-  breakpoints: keyof typeof aqBootstrapTheme.grid.breakpoints,
+  stepsByBreakpoint: CarouselProps["step"],
+  breakpoints: typeof aqBootstrapTheme.grid.breakpoints,
   currentViewportWidth: number
 ) => {
+  if (!stepsByBreakpoint || typeof stepsByBreakpoint == "number") return false;
   const stepBp = Object.keys(stepsByBreakpoint);
-  const bp = Object.entries(breakpoints)
+  const breakpointsNames = Object.keys(
+    breakpoints
+  ) as (keyof typeof breakpoints)[];
+
+  const bp = breakpointsNames
     .filter(
-      ([key, val]) =>
-        typeof val == "string" &&
+      (key) =>
         stepBp.includes(key) &&
-        parseInt(val) < currentViewportWidth
+        parseInt(breakpoints[key]) < currentViewportWidth
     )
     .reverse()
     .shift();
   if (bp) {
-    return stepsByBreakpoint[bp[0]];
+    return stepsByBreakpoint[bp];
   }
   return false;
 };
@@ -34,21 +38,24 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
   const slides = React.Children.map(children, (child) =>
     React.isValidElement(child) && child.type === CarouselSlide ? child : null
   );
+  const totalSlides = slides ? slides.length : 0;
 
-  let currentStep = step;
-  if (typeof step != "number") {
+  let currentStep = 1;
+  if (typeof step == "number") {
+    currentStep = step;
+  } else {
     const firstMatchingBp = getFirstMatchingBreakpoint(
       step,
       theme.grid.breakpoints,
       vW
     );
-    currentStep = 1;
     if (firstMatchingBp) currentStep = firstMatchingBp;
   }
-  const totalSteps = Math.ceil(slides.length / currentStep);
 
-  let onNext: CarouselNavProps.onNext = false;
-  let onPrev: CarouselNavProps.onPrev = false;
+  const totalSteps = Math.ceil(totalSlides / currentStep);
+
+  let onNext: CarouselNavProps["onNext"] = false;
+  let onPrev: CarouselNavProps["onPrev"] = false;
   if (current < totalSteps - 1) {
     onNext = () => setCurrent(current + 1);
   }

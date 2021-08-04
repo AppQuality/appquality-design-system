@@ -3,10 +3,11 @@ import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 type breakpoints = keyof typeof aqBootstrapTheme.grid.breakpoints;
 export interface CarouselProps extends BaseProps {
+  theme: typeof aqBootstrapTheme;
   step?:
     | number
     | {
-        [index: breakpoints]: number;
+        [index in breakpoints]?: number;
       };
 }
 export interface CarouselNavProps extends BaseProps {
