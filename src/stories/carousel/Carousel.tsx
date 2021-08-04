@@ -1,108 +1,84 @@
-import React, { useState, useRef, useEffect } from "react";
-import { CarouselProps, StyledCarouselProps, SlideProps } from "./_types";
-import { Slide } from "./Slide";
-import { Navigation } from "./Navigation";
+import React, { useState } from "react";
+import { CarouselSlide } from "./CarouselSlide";
+import { CarouselNav } from "./CarouselNav";
+import { CarouselProps, CarouselNavProps } from "./_types";
+import { SlidesContainer } from "./SlidesContainer";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
+import { withTheme } from "styled-components";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
-import styled from "styled-components";
+const getFirstMatchingBreakpoint = (
+  stepsByBreakpoint: CarouselProps["step"],
+  breakpoints: typeof aqBootstrapTheme.grid.breakpoints,
+  currentViewportWidth: number
+) => {
+  if (!stepsByBreakpoint || typeof stepsByBreakpoint == "number") return false;
+  const stepBp = Object.keys(stepsByBreakpoint);
+  const breakpointsNames = Object.keys(
+    breakpoints
+  ) as (keyof typeof breakpoints)[];
 
-export const StyledCarousel = styled.div(
-  ({ xTranslation, theme }: StyledCarouselProps) => `
-  .slides {
-    scroll-snap-type: x mandatory;
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    scrollbar-width: none; /* Firefox */
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100vw;
-    transform: translate3d(0, 0, 0);
-    transition: transform .4s ease-in-out;
-    will-change: transform;
-
-    ::-webkit-scrollbar {
-      width: 0px;
-      background: transparent; /* Chrome/Safari/Webkit */
-      display: none;
-    }
-
-    @media (min-width: ${theme.grid.breakpoints.lg}) {
-      overflow: visible;
-      transform: translate3d(${xTranslation}px, 0, 0);
-    }
+  const bp = breakpointsNames
+    .filter(
+      (key) =>
+        stepBp.includes(key) &&
+        parseInt(breakpoints[key]) < currentViewportWidth
+    )
+    .reverse()
+    .shift();
+  if (bp) {
+    return stepsByBreakpoint[bp];
   }
-`
-);
+  return false;
+};
 
-export const Carousel = ({ children, dark }: CarouselProps) => {
-  const [active, setActive] = useState(0);
-  const [xTranslation, setXTranslation] = useState(0);
-  const [slidesPerView, setSlidesPerView] = useState(1);
-  const [items, setItems] = useState<any[] | undefined | null>([]);
-  const [slides, setSlides] = useState<[][]>([]);
-  const ref = useRef(document.createElement("div"));
+const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
+  const [current, setCurrent] = useState(0);
+  const [vW, vH] = useWindowSize();
+  const slides = React.Children.map(children, (child) =>
+    React.isValidElement(child) && child.type === CarouselSlide ? child : null
+  );
+  const totalSlides = slides ? slides.length : 0;
 
-  const handlePrev = () => {
-    setActive(active - 1);
-  };
-
-  const handleNext = () => {
-    setActive(active + 1);
-  };
-
-  useEffect(() => {
-    setXTranslation(ref.current.offsetWidth * -active);
-  }, [active]);
-
-  useEffect(() => {
-    setItems(
-      React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child);
-        }
-      })
+  let currentStep = 1;
+  if (typeof step == "number") {
+    currentStep = step;
+  } else {
+    const firstMatchingBp = getFirstMatchingBreakpoint(
+      step,
+      theme.grid.breakpoints,
+      vW
     );
-  }, [children]);
+    if (firstMatchingBp) currentStep = firstMatchingBp;
+  }
 
-  useEffect(() => {
-    let results = [];
-    let finalIndex = -1; // to start from zero
-    if (Array.isArray(items) && items.length) {
-      results = items.reduce((accumulator, current, i) => {
-        if (i % slidesPerView === 0) {
-          finalIndex++;
-          return [...accumulator, [current]];
-        } else {
-          accumulator[finalIndex].push(current);
-          return accumulator;
-        }
-      }, []);
-    }
-    setSlides(results);
-  }, [items, slidesPerView]);
+  const totalSteps = Math.ceil(totalSlides / currentStep);
 
-  const windowsize = useWindowSize(); // [width, height]
-  useEffect(() => {
-    if (windowsize[0] > 991) setSlidesPerView(3);
-  }, [windowsize]);
+  let onNext: CarouselNavProps["onNext"] = false;
+  let onPrev: CarouselNavProps["onPrev"] = false;
+  if (current < totalSteps - 1) {
+    onNext = () => setCurrent(current + 1);
+  }
+  if (current > 0) {
+    onPrev = () => setCurrent(current - 1);
+  }
 
   return (
-    <StyledCarousel xTranslation={xTranslation} dark={dark}>
-      <div className="slides" ref={ref}>
-        {slides.map((slide, index) => (
-          <Slide key={index} index={index} onIntersecting={setActive}>
-            {slide.map((item, j) => item)}
-          </Slide>
-        ))}
-      </div>
-      <Navigation
-        active={active}
-        slides={slides}
-        handlePrev={handlePrev}
-        handleNext={handleNext}
-        dark={dark}
+    <>
+      <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
+        {slides}
+      </SlidesContainer>
+      <CarouselNav
+        current={current}
+        max={totalSteps}
+        showArrows={vW > parseInt(theme.grid.breakpoints.lg)}
+        setCurrent={setCurrent}
+        onNext={onNext}
+        onPrev={onPrev}
       />
-    </StyledCarousel>
+    </>
   );
 };
+
+const Carousel = withTheme(BasicCarousel);
+export { Carousel };
