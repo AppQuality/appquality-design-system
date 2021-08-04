@@ -1,30 +1,21 @@
 import { BaseProps } from "../../shared/_types";
-import { DefaultTheme } from "styled-components";
-import { Dispatch, SetStateAction } from "react";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
+type breakpoints = keyof typeof aqBootstrapTheme.grid.breakpoints;
 export interface CarouselProps extends BaseProps {
-  dark?: boolean;
+  theme: typeof aqBootstrapTheme;
+  step?:
+    | number
+    | {
+        [index in breakpoints]?: number;
+      };
 }
-export interface SlideProps extends BaseProps {
-  active?: boolean;
-  index: number;
-  onIntersecting: Dispatch<SetStateAction<number>>;
-}
-export interface StyledCarouselProps {
-  xTranslation: number;
+export interface CarouselNavProps extends BaseProps {
   dark?: boolean;
-  theme: DefaultTheme;
-}
-
-export interface NavigationProps {
-  handlePrev: () => void;
-  handleNext: () => void;
-  slides: [][];
-  active: number;
-  dark?: boolean;
-}
-
-export interface StyledNavigationProps {
-  dark?: boolean;
-  theme: DefaultTheme;
+  onPrev: false | (() => void);
+  onNext: false | (() => void);
+  setCurrent: (val: number) => void;
+  current: number;
+  max: number;
+  showArrows: boolean;
 }
