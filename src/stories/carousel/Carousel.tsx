@@ -63,19 +63,31 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
     onPrev = () => setCurrent(current - 1);
   }
 
+  const [touchStart, setTouchStart] = React.useState(0);
+  const [touchEnd, setTouchEnd] = React.useState(0);
+
   return (
     <>
-      <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
-        {slides}
-      </SlidesContainer>
-      <CarouselNav
-        current={current}
-        max={totalSteps}
-        showArrows={vW > parseInt(theme.grid.breakpoints.lg)}
-        setCurrent={setCurrent}
-        onNext={onNext}
-        onPrev={onPrev}
-      />
+      <div
+        onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
+        onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
+        onTouchEnd={() => {
+          onNext && touchStart - touchEnd > 150 && onNext();
+          onPrev && touchStart - touchEnd < -150 && onPrev();
+        }}
+      >
+        <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
+          {slides}
+        </SlidesContainer>
+        <CarouselNav
+          current={current}
+          max={totalSteps}
+          showArrows={vW > parseInt(theme.grid.breakpoints.lg)}
+          setCurrent={setCurrent}
+          onNext={onNext}
+          onPrev={onPrev}
+        />
+      </div>
     </>
   );
 };
