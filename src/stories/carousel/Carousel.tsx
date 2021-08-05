@@ -34,6 +34,9 @@ const getFirstMatchingBreakpoint = (
 
 const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
   const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
   const [vW, vH] = useWindowSize();
   const slides = React.Children.map(children, (child) =>
     React.isValidElement(child) && child.type === CarouselSlide ? child : null
@@ -63,17 +66,14 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
     onPrev = () => setCurrent(current - 1);
   }
 
-  const [touchStart, setTouchStart] = React.useState(0);
-  const [touchEnd, setTouchEnd] = React.useState(0);
-
   return (
     <>
       <div
         onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
         onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
         onTouchEnd={() => {
-          onNext && touchStart - touchEnd > 150 && onNext();
-          onPrev && touchStart - touchEnd < -150 && onPrev();
+          onNext && touchStart - touchEnd > 0 && onNext();
+          onPrev && touchStart - touchEnd < 0 && onPrev();
         }}
       >
         <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
