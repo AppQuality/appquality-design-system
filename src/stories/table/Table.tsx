@@ -66,6 +66,9 @@ const BasicTable = ({
           <tr>
             {columns.map((column) => {
               let className = column.align ? `aq-text-${column.align}` : "";
+              let justifyContent = "flex-start";
+              if (column.align == "center") justifyContent = "center";
+              else if (column.align == "right") justifyContent = "flex-end";
               return (
                 <th
                   key={column.key}
@@ -80,7 +83,13 @@ const BasicTable = ({
                       : undefined
                   }
                 >
-                  <div style={{ display: "flex", alignItems: "center" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: justifyContent,
+                    }}
+                  >
                     <span>{column.title}</span>
                     {column.isSortable && (
                       <ColumnSorter
