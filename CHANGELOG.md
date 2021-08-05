@@ -1,3 +1,16 @@
+# v0.1.91 (Thu Aug 05 2021)
+
+#### 🐛 Bug Fix
+
+- fix(table): Restore table alignment for header [#51](https://github.com/AppQuality/appquality-design-system/pull/51) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.90 (Wed Aug 04 2021)
 
 #### 🐛 Bug Fix
