@@ -1,3 +1,45 @@
+# v0.1.91 (Thu Aug 05 2021)
+
+#### 🐛 Bug Fix
+
+- fix(table): Restore table alignment for header [#51](https://github.com/AppQuality/appquality-design-system/pull/51) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.90 (Wed Aug 04 2021)
+
+#### 🐛 Bug Fix
+
+- Rework carousel component [#50](https://github.com/AppQuality/appquality-design-system/pull/50) (iacopo.leardini@app-quality.com [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Cp 985 carousel [#49](https://github.com/AppQuality/appquality-design-system/pull/49) (iacopo.leardini@app-quality.com davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Update develop from main [#46](https://github.com/AppQuality/appquality-design-system/pull/46) (it@app-quality.com iacopo.leardini@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- iacopolea (iacopo.leardini@app-quality.com)
+
+---
+
+# v0.1.89 (Tue Aug 03 2021)
+
+#### 🐛 Bug Fix
+
+- CP-469 [#47](https://github.com/AppQuality/appquality-design-system/pull/47) (gianpaolo.sinatra@app-quality.com)
+
+#### Authors: 1
+
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+---
+
 # v0.1.88 (Mon Aug 02 2021)
 
 #### ⚠️ Pushed to `main`
