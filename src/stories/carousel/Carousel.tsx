@@ -72,8 +72,10 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
         onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
         onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
         onTouchEnd={() => {
-          onNext && touchStart - touchEnd > 0 && onNext();
-          onPrev && touchStart - touchEnd < 0 && onPrev();
+          if (vW <= parseInt(theme.grid.breakpoints.lg)) {
+            onNext && touchStart - touchEnd > 0 && onNext();
+            onPrev && touchStart - touchEnd < 0 && onPrev();
+          }
         }}
       >
         <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
