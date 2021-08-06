@@ -1,3 +1,19 @@
+# v0.1.95 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- Allow multiple bodies on modal [#56](https://github.com/AppQuality/appquality-design-system/pull/56) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Cp 988 [#48](https://github.com/AppQuality/appquality-design-system/pull/48) (gianpaolo.sinatra@app-quality.com [@d-beezee](https://github.com/d-beezee) it@app-quality.com davide.bizzi@app-quality.com)
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Gianpaolo Sinatra (gianpaolo.sinatra@app-quality.com)
+
+---
+
 # v0.1.94 (Fri Aug 06 2021)
 
 #### 🐛 Bug Fix
