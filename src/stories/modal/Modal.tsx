@@ -22,12 +22,8 @@ const BasicModal = ({
   const shakeTimeout = 400;
   const [current, setCurrent] = useState(0);
   const [shake, setShake] = useState(false);
-  const [prevButtonStyle, setPrevButtonStyle] = useState<"primary" | "danger">(
-    "primary"
-  );
-  const [nextButtonStyle, setNextButtonStyle] = useState<"primary" | "danger">(
-    "primary"
-  );
+  const [prevError, setPrevError] = useState(false);
+  const [nextError, setNextError] = useState(false);
   if (!isOpen) return null;
   const bodyData: ModalBodyProps[] = [];
   const body = React.Children.toArray(children).filter((child) => {
@@ -37,11 +33,19 @@ const BasicModal = ({
         onNext: child.props.onNext ? child.props.onNext : () => true,
         prevText: child.props.prevText ? child.props.prevText : prevText,
         nextText: child.props.nextText ? child.props.nextText : nextText,
+        prevButtonStyle: child.props.prevButtonStyle
+          ? child.props.prevButtonStyle
+          : "primary",
+        nextButtonStyle: child.props.nextButtonStyle
+          ? child.props.nextButtonStyle
+          : "primary",
       });
       return true;
     }
     return false;
   });
+  const nextButtonStyle = "primary";
+  const prevButtonStyle = "primary";
   const isMultiple = body.length > 1;
   return (
     <div className={className}>
@@ -63,19 +67,22 @@ const BasicModal = ({
                 <Button
                   size="block"
                   flat
-                  type={prevButtonStyle}
+                  type={
+                    prevError
+                      ? "danger"
+                      : bodyData[current].prevButtonStyle
+                      ? bodyData[current].prevButtonStyle
+                      : prevButtonStyle
+                  }
                   disabled={current === 0}
                   onClick={() => {
                     const onPrev = bodyData[current].onPrev;
                     if (onPrev && onPrev()) setCurrent(current - 1);
                     else {
-                      setTimeout(
-                        () => setPrevButtonStyle("primary"),
-                        shakeTimeout * 2
-                      );
+                      setTimeout(() => setPrevError(false), shakeTimeout * 2);
                       setTimeout(() => setShake(false), shakeTimeout);
                       setShake(true);
-                      setPrevButtonStyle("danger");
+                      setPrevError(true);
                     }
                   }}
                 >
@@ -86,19 +93,22 @@ const BasicModal = ({
                 <Button
                   size="block"
                   flat
-                  type={nextButtonStyle}
+                  type={
+                    nextError
+                      ? "danger"
+                      : bodyData[current].nextButtonStyle
+                      ? bodyData[current].nextButtonStyle
+                      : nextButtonStyle
+                  }
                   disabled={current === body.length - 1}
                   onClick={() => {
                     const onNext = bodyData[current].onNext;
                     if (onNext && onNext()) setCurrent(current + 1);
                     else {
-                      setTimeout(
-                        () => setNextButtonStyle("primary"),
-                        shakeTimeout * 2
-                      );
+                      setTimeout(() => setNextError(false), shakeTimeout * 2);
                       setTimeout(() => setShake(false), shakeTimeout);
                       setShake(true);
-                      setNextButtonStyle("danger");
+                      setNextError(true);
                     }
                   }}
                 >
