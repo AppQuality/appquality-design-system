@@ -23,6 +23,10 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
   ${CarouselSlide} {
     width: ${(props) => 100 / props.itemsPerSlide}%;
     transition: transform 0.4s ease-in-out;
-    transform: translate3d(-${(props) => props.currentSlide * 100}%, 0, 0);
+    transform: translate3d(
+      -${(props) => props.currentSlide * props.itemsPerSlide * 100}%,
+      0,
+      0
+    );
   }
 `;
