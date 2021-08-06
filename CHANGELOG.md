@@ -1,3 +1,16 @@
+# v0.1.94 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- feat(carousel): Keep max slide heigth for carousel height [#55](https://github.com/AppQuality/appquality-design-system/pull/55) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.93 (Fri Aug 06 2021)
 
 #### 🐛 Bug Fix
