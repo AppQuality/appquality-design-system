@@ -1,3 +1,16 @@
+# v0.1.93 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- fix(carousel): Fix error on responsive slide [#54](https://github.com/AppQuality/appquality-design-system/pull/54) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.92 (Fri Aug 06 2021)
 
 #### 🐛 Bug Fix
