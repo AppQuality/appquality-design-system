@@ -1,3 +1,19 @@
+# v0.1.92 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- Update carousel scroll behaviour [#53](https://github.com/AppQuality/appquality-design-system/pull/53) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Update scroll behaviour for modal; Fix Subtitle component [#52](https://github.com/AppQuality/appquality-design-system/pull/52) (gianpaolo.sinatra@app-quality.com [@d-beezee](https://github.com/d-beezee) it@app-quality.com)
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Gianpaolo Sinatra (gianpaolo.sinatra@app-quality.com)
+
+---
+
 # v0.1.91 (Thu Aug 05 2021)
 
 #### 🐛 Bug Fix
