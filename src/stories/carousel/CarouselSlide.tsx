@@ -12,6 +12,7 @@ export const CarouselSlide = styled(BasicCarouselSlide)`
   flex-shrink: 0;
   padding-right: 8px;
   padding-left: 8px;
+  display: flex;
 
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     padding-right: 16px;
