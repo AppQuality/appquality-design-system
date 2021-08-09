@@ -32,7 +32,10 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
   }
 
   ${CarouselSlide} {
-    width: ${(props) => 100 / props.itemsPerSlide}%;
+    width: ${(props) => 90 / props.itemsPerSlide}%;
+    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
+      width: ${(props) => 100 / props.itemsPerSlide}%;
+    }
   }
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     overflow: hidden;
