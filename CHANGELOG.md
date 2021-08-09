@@ -1,3 +1,15 @@
+# v0.1.97 (Mon Aug 09 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Allow onShow callback with single modalbody (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.96 (Mon Aug 09 2021)
 
 #### 🐛 Bug Fix
