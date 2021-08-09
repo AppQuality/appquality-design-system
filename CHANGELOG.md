@@ -1,3 +1,16 @@
+# v0.1.96 (Mon Aug 09 2021)
+
+#### 🐛 Bug Fix
+
+- feat(modal): Add callback for show body [#58](https://github.com/AppQuality/appquality-design-system/pull/58) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.95 (Fri Aug 06 2021)
 
 #### 🐛 Bug Fix
