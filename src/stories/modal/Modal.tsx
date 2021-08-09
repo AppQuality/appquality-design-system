@@ -31,6 +31,7 @@ const BasicModal = ({
       bodyData.push({
         onPrev: child.props.onPrev ? child.props.onPrev : () => true,
         onNext: child.props.onNext ? child.props.onNext : () => true,
+        onShow: child.props.onShow ? child.props.onShow : () => {},
         prevText: child.props.prevText ? child.props.prevText : prevText,
         nextText: child.props.nextText ? child.props.nextText : nextText,
         prevButtonStyle: child.props.prevButtonStyle
@@ -47,6 +48,10 @@ const BasicModal = ({
   const nextButtonStyle = "primary";
   const prevButtonStyle = "primary";
   const isMultiple = body.length > 1;
+  if (body.length > 1) {
+    const onShow = bodyData[current].onShow;
+    if (onShow) onShow();
+  }
   return (
     <div className={className}>
       <ModalOverlay onClick={onClose} />

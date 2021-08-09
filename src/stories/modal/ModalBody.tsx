@@ -5,6 +5,7 @@ import { ButtonProps } from "../button/_types";
 export interface ModalBodyProps extends BaseProps {
   onPrev?: () => boolean;
   onNext?: () => boolean;
+  onShow?: () => void;
   prevText?: string;
   nextText?: string;
   prevButtonStyle?: ButtonProps["type"];

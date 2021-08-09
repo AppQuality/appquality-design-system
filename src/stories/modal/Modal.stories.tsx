@@ -60,7 +60,11 @@ const TemplateMultiValidate: Story<ModalProps> = (args) => (
     <ModalBody nextButtonStyle="warning">
       This is the first modal content
     </ModalBody>
-    <ModalBody nextText="Error here" onNext={() => false}>
+    <ModalBody
+      onShow={() => alert("I'm showing the second modal body")}
+      nextText="Error here"
+      onNext={() => false}
+    >
       This is the second modal content
     </ModalBody>
     <ModalBody>
