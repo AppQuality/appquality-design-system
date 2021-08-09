@@ -48,10 +48,8 @@ const BasicModal = ({
   const nextButtonStyle = "primary";
   const prevButtonStyle = "primary";
   const isMultiple = body.length > 1;
-  if (body.length > 1) {
-    const onShow = bodyData[current].onShow;
-    if (onShow) onShow();
-  }
+  const onShow = body.length >= 1 ? bodyData[current].onShow : false;
+  if (onShow) onShow();
   return (
     <div className={className}>
       <ModalOverlay onClick={onClose} />
