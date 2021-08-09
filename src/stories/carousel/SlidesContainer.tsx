@@ -35,7 +35,7 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
     width: ${(props) => 100 / props.itemsPerSlide}%;
   }
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-    overflow: visible;
+    overflow: hidden;
     transform: translate3d(-${(props) => props.currentSlide * 100}%, 0, 0);
   }
 `;
