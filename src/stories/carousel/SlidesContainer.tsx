@@ -2,6 +2,9 @@ import styled from "styled-components";
 import { BaseProps } from "../../shared/_types";
 import { CarouselSlide } from "./CarouselSlide";
 
+const slideViewDesktop = 100;
+const slideViewMob = 90;
+
 interface SlidesContainerProps extends BaseProps {
   itemsPerSlide: number;
   currentSlide: number;
@@ -32,9 +35,9 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
   }
 
   ${CarouselSlide} {
-    width: ${(props) => 90 / props.itemsPerSlide}%;
+    width: ${(props) => slideViewMob / props.itemsPerSlide}%;
     @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-      width: ${(props) => 100 / props.itemsPerSlide}%;
+      width: ${(props) => slideViewDesktop / props.itemsPerSlide}%;
     }
   }
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
