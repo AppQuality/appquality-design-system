@@ -76,6 +76,8 @@ const SidebarItems = styled.div(({ open = false }: { open: boolean }) => {
 const NavigationContainer = styled.div`
   width: calc(100% - ${sidebarWidth}px);
   float: right;
+  z-index: 0;
+  position: relative;
 `;
 export const DesktopSidebar = ({
   children,
