@@ -25,12 +25,19 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
 
   ${CarouselSlide} {
     width: ${(props) => slideViewMob / props.itemsPerSlide}%;
+    transition: transform 0.4s ease-in-out;
+    transform: translate3d(
+      -${(props) => props.currentSlide * props.itemsPerSlide * 100}%,
+      0,
+      0
+    );
+
     @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
       width: ${(props) => slideViewDesktop / props.itemsPerSlide}%;
     }
   }
+
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     overflow: hidden;
-    transform: translate3d(-${(props) => props.currentSlide * props.itemsPerSlide * 100}%, 0, 0);
   }
 `;
