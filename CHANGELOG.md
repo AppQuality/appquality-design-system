@@ -1,3 +1,17 @@
+# v0.1.98 (Tue Aug 10 2021)
+
+#### 🐛 Bug Fix
+
+- Update carousel [#59](https://github.com/AppQuality/appquality-design-system/pull/59) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- fix(sidebar): fix for sidebar going beneath z-index elements in content [#57](https://github.com/AppQuality/appquality-design-system/pull/57) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.97 (Mon Aug 09 2021)
 
 #### ⚠️ Pushed to `main`
