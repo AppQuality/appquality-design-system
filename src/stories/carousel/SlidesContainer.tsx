@@ -19,20 +19,9 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
   scroll-snap-type: x mandatory;
   display: flex;
   flex-direction: row;
-  overflow: auto;
-  scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  overflow: visible;
   max-width: 100vw;
   transform: translate3d(0, 0, 0);
-  transition: transform 0.4s ease-in-out;
-  will-change: transform;
-
-  ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* Chrome/Safari/Webkit */
-    display: none;
-  }
 
   ${CarouselSlide} {
     width: ${(props) => slideViewMob / props.itemsPerSlide}%;
@@ -42,6 +31,6 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
   }
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     overflow: hidden;
-    transform: translate3d(-${(props) => props.currentSlide * 100}%, 0, 0);
+    transform: translate3d(-${(props) => props.currentSlide * props.itemsPerSlide * 100}%, 0, 0);
   }
 `;

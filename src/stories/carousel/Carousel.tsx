@@ -34,6 +34,9 @@ const getFirstMatchingBreakpoint = (
 
 const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
   const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
   const [vW, vH] = useWindowSize();
   const slides = React.Children.map(children, (child) =>
     React.isValidElement(child) && child.type === CarouselSlide ? child : null
@@ -65,20 +68,31 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
 
   return (
     <>
-      <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
-        {slides}
-      </SlidesContainer>
-      <CarouselNav
-        current={current}
-        max={totalSteps}
-        showArrows={vW > parseInt(theme.grid.breakpoints.lg)}
-        setCurrent={setCurrent}
-        onNext={onNext}
-        onPrev={onPrev}
-      />
+      <div
+        onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
+        onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
+        onTouchEnd={() => {
+          if (vW <= parseInt(theme.grid.breakpoints.lg)) {
+            onNext && touchStart - touchEnd > 0 && onNext();
+            onPrev && touchStart - touchEnd < 0 && onPrev();
+          }
+        }}
+      >
+        <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
+          {slides}
+        </SlidesContainer>
+        <CarouselNav
+          current={current}
+          max={totalSteps}
+          showArrows={vW > parseInt(theme.grid.breakpoints.lg)}
+          setCurrent={setCurrent}
+          onNext={onNext}
+          onPrev={onPrev}
+        />
+      </div>
     </>
   );
 };
 
 const Carousel = withTheme(BasicCarousel);
-export { Carousel };
+export { Carousel, CarouselSlide };
