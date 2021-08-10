@@ -1,3 +1,15 @@
+# v0.1.99 (Tue Aug 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(carousel): Restore overflow from rebase (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.98 (Tue Aug 10 2021)
 
 #### 🐛 Bug Fix
