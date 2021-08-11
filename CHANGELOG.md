@@ -1,3 +1,22 @@
+# v0.1.100 (Wed Aug 11 2021)
+
+#### 🐛 Bug Fix
+
+- feat: Add disabled link button [#63](https://github.com/AppQuality/appquality-design-system/pull/63) ([@d-beezee](https://github.com/d-beezee) marco.bonomo@app-quality.com)
+- fix: button link specific style + restore other buttons disabled style [#62](https://github.com/AppQuality/appquality-design-system/pull/62) (marco.bonomo@app-quality.com [@marcbon](https://github.com/marcbon))
+- fix: fix button disabled behavior and class [#61](https://github.com/AppQuality/appquality-design-system/pull/61) (marco.bonomo@app-quality.com [@marcbon](https://github.com/marcbon))
+- Update develop [#60](https://github.com/AppQuality/appquality-design-system/pull/60) ([@d-beezee](https://github.com/d-beezee) it@app-quality.com davide.bizzi@app-quality.com)
+
+#### Authors: 5
+
+- [@d-beezee](https://github.com/d-beezee)
+- [@marcbon](https://github.com/marcbon)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Marco Bonomo (marco.bonomo@app-quality.com)
+
+---
+
 # v0.1.99 (Tue Aug 10 2021)
 
 #### ⚠️ Pushed to `main`
