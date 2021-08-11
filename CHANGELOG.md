@@ -1,3 +1,112 @@
+# v0.1.99 (Tue Aug 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(carousel): Restore overflow from rebase (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.98 (Tue Aug 10 2021)
+
+#### 🐛 Bug Fix
+
+- Update carousel [#59](https://github.com/AppQuality/appquality-design-system/pull/59) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- fix(sidebar): fix for sidebar going beneath z-index elements in content [#57](https://github.com/AppQuality/appquality-design-system/pull/57) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.97 (Mon Aug 09 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Allow onShow callback with single modalbody (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.96 (Mon Aug 09 2021)
+
+#### 🐛 Bug Fix
+
+- feat(modal): Add callback for show body [#58](https://github.com/AppQuality/appquality-design-system/pull/58) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.95 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- Allow multiple bodies on modal [#56](https://github.com/AppQuality/appquality-design-system/pull/56) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Cp 988 [#48](https://github.com/AppQuality/appquality-design-system/pull/48) (gianpaolo.sinatra@app-quality.com [@d-beezee](https://github.com/d-beezee) it@app-quality.com davide.bizzi@app-quality.com)
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Gianpaolo Sinatra (gianpaolo.sinatra@app-quality.com)
+
+---
+
+# v0.1.94 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- feat(carousel): Keep max slide heigth for carousel height [#55](https://github.com/AppQuality/appquality-design-system/pull/55) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.93 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- fix(carousel): Fix error on responsive slide [#54](https://github.com/AppQuality/appquality-design-system/pull/54) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.92 (Fri Aug 06 2021)
+
+#### 🐛 Bug Fix
+
+- Update carousel scroll behaviour [#53](https://github.com/AppQuality/appquality-design-system/pull/53) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Update scroll behaviour for modal; Fix Subtitle component [#52](https://github.com/AppQuality/appquality-design-system/pull/52) (gianpaolo.sinatra@app-quality.com [@d-beezee](https://github.com/d-beezee) it@app-quality.com)
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Gianpaolo Sinatra (gianpaolo.sinatra@app-quality.com)
+
+---
+
 # v0.1.91 (Thu Aug 05 2021)
 
 #### 🐛 Bug Fix
