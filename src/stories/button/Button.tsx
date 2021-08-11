@@ -10,6 +10,7 @@ export const Button = ({
   type = "primary",
   size = "medium",
   className,
+  disabled,
   flat = false,
   squared = false,
   children,
@@ -22,8 +23,18 @@ export const Button = ({
   if (squared) {
     classes.push("aq-btn-squared");
   }
+  let disabled_attr = false;
+  if (disabled) {
+    disabled_attr = true;
+    classes.push("disabled");
+  }
   return (
-    <ButtonStyle type={htmlType} className={`${classes.join(" ")}`} {...props}>
+    <ButtonStyle
+      disabled={disabled_attr}
+      type={htmlType}
+      className={`${classes.join(" ")}`}
+      {...props}
+    >
       {children}
     </ButtonStyle>
   );
