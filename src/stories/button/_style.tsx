@@ -107,10 +107,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     &:disabled, &.disabled {
       cursor: not-allowed;
       pointer-events: none;
-      opacity: .65;
       color: ${theme.colors.disabledDark};
-      background-color: ${theme.colors.disabled};
-      border-color: ${theme.colors.disabled};
       
       &.aq-btn-flat {
         background-color: transparent;
