@@ -93,6 +93,15 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
       background-color: transparent;
       color: ${theme.palette.info};
       text-decoration: underline;
+      
+      &:disabled, &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        color: ${theme.colors.disabledDark};
+        background-color: transparent;
+        border-color: transparent;
+        opacity: 1;
+      }
     }
     &.aq-btn-light {
       border-color: transparent;
@@ -107,7 +116,10 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
     &:disabled, &.disabled {
       cursor: not-allowed;
       pointer-events: none;
+      opacity: .65;
       color: ${theme.colors.disabledDark};
+      background-color: ${theme.colors.disabled};
+      border-color: ${theme.colors.disabled};
       
       &.aq-btn-flat {
         background-color: transparent;
