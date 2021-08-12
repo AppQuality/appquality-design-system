@@ -1,3 +1,16 @@
+# v0.1.101 (Thu Aug 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- i18n(table): Allow translating table data (davide.bizzi@app-quality.com)
+- fix(modal): Show 50%/50% buttons on multimodal (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.100 (Wed Aug 11 2021)
 
 #### 🐛 Bug Fix
