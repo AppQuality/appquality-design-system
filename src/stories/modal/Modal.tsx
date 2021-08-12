@@ -65,8 +65,8 @@ const BasicModal = ({
         {isMultiple ? (
           <ModalFooter>
             <BSGrid>
-              <BSCol size="col-6"></BSCol>
-              <BSCol size="col-3">
+              <BSCol size="col-lg-6"></BSCol>
+              <BSCol size="col-6 col-lg-3">
                 <Button
                   size="block"
                   flat
@@ -92,7 +92,7 @@ const BasicModal = ({
                   {bodyData[current].prevText}
                 </Button>
               </BSCol>
-              <BSCol size="col-3">
+              <BSCol size="col-6 col-lg-3">
                 <Button
                   size="block"
                   flat
