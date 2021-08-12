@@ -13,18 +13,32 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
 			 border: 1px solid ${value};
 			 background-color: ${value};
 			 color: ${theme.colors.white};
-       &:hover {
+     
+       &:active {
         filter: saturate(0.7);
+       }
+       @media (hover: hover) and (pointer: fine) {
+         &:hover {
+          filter: saturate(0.7);
+         }
        }
 			 &.aq-btn-flat {
 				 background-color: ${theme.colors.white};
 				 color: ${value};
          
-         &:hover {
-          filter: none;
-     			border: 1px solid ${value};
-     			background-color: ${value};
-     			color: ${theme.colors.white};
+         &:active {
+           filter: none;
+           border: 1px solid ${value};
+           background-color: ${value};
+           color: ${theme.colors.white};
+         }
+         @media (hover: hover) and (pointer: fine) {
+           &:hover {
+            filter: none;
+       			border: 1px solid ${value};
+       			background-color: ${value};
+       			color: ${theme.colors.white};
+           }
          }
 			 }
 		 }
