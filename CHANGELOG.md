@@ -1,3 +1,17 @@
+# v0.1.102 (Thu Aug 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(button): Ignore hover style on mobile (davide.bizzi@app-quality.com)
+- feat(modal): Close on last body (davide.bizzi@app-quality.com)
+- fix: Set lower sensibility on carousel (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.101 (Thu Aug 12 2021)
 
 #### ⚠️ Pushed to `main`
