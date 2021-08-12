@@ -42,4 +42,8 @@ export interface TableProps {
   className?: string;
   orderBy?: string;
   order?: Order;
+  i18n?: {
+    loading: string;
+    empty: string;
+  };
 }

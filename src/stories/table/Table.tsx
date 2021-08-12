@@ -14,11 +14,15 @@ const BasicTable = ({
   orderBy,
   order,
   className,
+  i18n = {
+    loading: "Loading Data",
+    empty: "There's no data here",
+  },
 }: TableProps) => {
   const LoadingStatus = () => (
     <div className="aq-table-loading-placeholder">
       <Spinner />
-      <div>Loading Data</div>
+      <div>{i18n.loading}</div>
     </div>
   );
 
@@ -26,7 +30,7 @@ const BasicTable = ({
     <tr className="aq-table-empty-placeholder">
       <td colSpan={columns.length}>
         <Inboxes className="aq-table-placeholder-icon" />
-        <div>There's no data here</div>
+        <div>{i18n.empty}</div>
       </td>
     </tr>
   );
