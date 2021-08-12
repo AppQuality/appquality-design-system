@@ -103,15 +103,18 @@ const BasicModal = ({
                       ? bodyData[current].nextButtonStyle
                       : nextButtonStyle
                   }
-                  disabled={current === body.length - 1}
                   onClick={() => {
-                    const onNext = bodyData[current].onNext;
-                    if (onNext && onNext()) setCurrent(current + 1);
-                    else {
-                      setTimeout(() => setNextError(false), shakeTimeout * 2);
-                      setTimeout(() => setShake(false), shakeTimeout);
-                      setShake(true);
-                      setNextError(true);
+                    if (current === body.length - 1) {
+                      onClose();
+                    } else {
+                      const onNext = bodyData[current].onNext;
+                      if (onNext && onNext()) setCurrent(current + 1);
+                      else {
+                        setTimeout(() => setNextError(false), shakeTimeout * 2);
+                        setTimeout(() => setShake(false), shakeTimeout);
+                        setShake(true);
+                        setNextError(true);
+                      }
                     }
                   }}
                 >
