@@ -66,6 +66,7 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
     onPrev = () => setCurrent(current - 1);
   }
 
+  const CAROUSEL_SCROLL_SENSITIVITY = 75;
   return (
     <>
       <div
@@ -73,8 +74,12 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
         onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
         onTouchEnd={() => {
           if (vW <= parseInt(theme.grid.breakpoints.lg)) {
-            onNext && touchStart - touchEnd > 150 && onNext();
-            onPrev && touchStart - touchEnd < 150 && onPrev();
+            onNext &&
+              touchStart - touchEnd > CAROUSEL_SCROLL_SENSITIVITY &&
+              onNext();
+            onPrev &&
+              touchStart - touchEnd < -CAROUSEL_SCROLL_SENSITIVITY &&
+              onPrev();
           }
         }}
       >
