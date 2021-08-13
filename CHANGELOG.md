@@ -1,3 +1,15 @@
+# v0.1.103 (Fri Aug 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(carousel): Make scroll more sensitive (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.102 (Thu Aug 12 2021)
 
 #### ⚠️ Pushed to `main`
