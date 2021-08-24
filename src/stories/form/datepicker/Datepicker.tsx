@@ -18,6 +18,7 @@ export const Datepicker = ({
   placeholder,
   setText = "Set",
   cancelText = "Cancel",
+  dateFormat = "DD/MM/YYYY",
 }: DatepickerProps) => {
   let currentLocale = localeEn;
   if (locale === "it") currentLocale = localeIt;
@@ -32,6 +33,7 @@ export const Datepicker = ({
         onCancel={onCancel}
         onChange={onChange}
         placeholder={placeholder}
+        dateFormat={dateFormat}
         setText={setText}
         cancelText={cancelText}
         buttons={["cancel", "set"]}

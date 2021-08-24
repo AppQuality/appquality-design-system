@@ -12,4 +12,5 @@ export interface DatepickerProps {
   control?: "date" | "calendar";
   setText?: string;
   cancelText?: string;
+  dateFormat?: string;
 }
