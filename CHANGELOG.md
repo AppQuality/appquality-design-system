@@ -1,3 +1,15 @@
+# v0.1.104 (Tue Aug 24 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(datepicker): Allow configuration of date format (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.103 (Fri Aug 13 2021)
 
 #### ⚠️ Pushed to `main`
