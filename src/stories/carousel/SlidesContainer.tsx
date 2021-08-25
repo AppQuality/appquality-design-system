@@ -6,6 +6,7 @@ const slideViewDesktop = 100;
 const slideViewMob = 90;
 
 interface SlidesContainerProps extends BaseProps {
+  peekNext: boolean;
   itemsPerSlide: number;
   currentSlide: number;
 }
@@ -24,20 +25,29 @@ export const SlidesContainer = styled(BasicSlidesContainer)`
   transform: translate3d(0, 0, 0);
 
   ${CarouselSlide} {
-    width: ${(props) => slideViewMob / props.itemsPerSlide}%;
     transition: transform 0.4s ease-in-out;
     transform: translate3d(
       -${(props) => props.currentSlide * props.itemsPerSlide * 100}%,
       0,
       0
     );
-
-    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-      width: ${(props) => slideViewDesktop / props.itemsPerSlide}%;
-    }
+    ${(props) =>
+      props.peekNext
+        ? `
+      width: ${slideViewMob / props.itemsPerSlide}%;
+      @media (min-width: ${props.theme.grid.breakpoints.lg}) {
+        width: ${slideViewDesktop / props.itemsPerSlide}%;
+      }
+      `
+        : `
+      width: ${slideViewDesktop / props.itemsPerSlide}%;
+      `}
   }
 
-  @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-    overflow: hidden;
-  }
+  ${(props) =>
+    props.peekNext
+      ? `  @media (min-width: ${props.theme.grid.breakpoints.lg}) {
+      overflow: hidden;
+    }`
+      : `  overflow: hidden;`}
 `;

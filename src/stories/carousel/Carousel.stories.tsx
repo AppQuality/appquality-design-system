@@ -46,6 +46,11 @@ const Template: Story<CarouselProps> = (args) => (
 export const BasicCarousel = Template.bind({});
 BasicCarousel.args = {};
 
+export const CarouselWithoutPeekNext = Template.bind({});
+CarouselWithoutPeekNext.args = {
+  peekNext: false,
+};
+
 export const CarouselWithStep = Template.bind({});
 CarouselWithStep.args = {
   step: 3,
