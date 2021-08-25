@@ -1,3 +1,17 @@
+# v0.1.105 (Wed Aug 25 2021)
+
+#### 🐛 Bug Fix
+
+- Add scroll on long modal [#65](https://github.com/AppQuality/appquality-design-system/pull/65) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat(modal): Add scroll on long content [#64](https://github.com/AppQuality/appquality-design-system/pull/64) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.104 (Tue Aug 24 2021)
 
 #### ⚠️ Pushed to `main`
