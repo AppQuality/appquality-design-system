@@ -1,3 +1,17 @@
+# v0.1.106 (Wed Aug 25 2021)
+
+#### 🐛 Bug Fix
+
+- Allow disabling peek next on carousel [#67](https://github.com/AppQuality/appquality-design-system/pull/67) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat(carousel): Allow disabling peek next [#66](https://github.com/AppQuality/appquality-design-system/pull/66) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.105 (Wed Aug 25 2021)
 
 #### 🐛 Bug Fix
