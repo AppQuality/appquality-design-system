@@ -32,7 +32,12 @@ const getFirstMatchingBreakpoint = (
   return false;
 };
 
-const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
+const BasicCarousel = ({
+  peekNext = true,
+  children,
+  step = 1,
+  theme,
+}: CarouselProps) => {
   const [current, setCurrent] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
@@ -83,7 +88,11 @@ const BasicCarousel = ({ children, step = 1, theme }: CarouselProps) => {
           }
         }}
       >
-        <SlidesContainer itemsPerSlide={currentStep} currentSlide={current}>
+        <SlidesContainer
+          peekNext={peekNext}
+          itemsPerSlide={currentStep}
+          currentSlide={current}
+        >
           {slides}
         </SlidesContainer>
         <CarouselNav
