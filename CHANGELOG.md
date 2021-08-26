@@ -1,3 +1,15 @@
+# v0.1.107 (Thu Aug 26 2021)
+
+#### ⚠️ Pushed to `main`
+
+- chore: Cleanup dependencies (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.106 (Wed Aug 25 2021)
 
 #### 🐛 Bug Fix
