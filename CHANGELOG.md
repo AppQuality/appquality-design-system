@@ -1,3 +1,16 @@
+# v0.1.110 (Fri Aug 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(modal): Make modal shorter for phone controls (davide.bizzi@app-quality.com)
+- fix(sidebar): Don't refresh content on close (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.109 (Fri Aug 27 2021)
 
 #### ⚠️ Pushed to `main`
