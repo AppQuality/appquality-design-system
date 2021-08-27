@@ -18,6 +18,6 @@ const BasicModalBody = ({ children, className }: ModalBodyProps) => (
 
 export const ModalBody = styled(BasicModalBody)`
   padding: ${(props) => props.theme.grid.spacing.default};
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 180px);
   overflow: auto;
 `;
