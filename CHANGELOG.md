@@ -1,3 +1,15 @@
+# v0.1.109 (Fri Aug 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Make color helpers important (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.108 (Fri Aug 27 2021)
 
 #### ⚠️ Pushed to `main`
