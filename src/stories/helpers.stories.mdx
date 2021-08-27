@@ -1,0 +1,83 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import GlobalStyle from "../shared/globalStyle";
+import { ThemeProvider } from "styled-components";
+import { aqBootstrapTheme } from "./theme/defaultTheme";
+
+<Meta
+  title="Example/Helpers"
+  parameters={{
+    docs: {
+      container: ({ children, context }) => (
+        <DocsContainer context={context}>
+          <ThemeProvider theme={aqBootstrapTheme}>
+            <GlobalStyle />
+            {children}
+          </ThemeProvider>
+        </DocsContainer>
+      ),
+    },
+  }}
+/>
+
+<div style={{ fontSize: "30px" }}>Text Colors</div>
+<div className="aq-text-primary">aq-text-primary</div>
+<div className="aq-text-secondary">aq-text-secondary</div>
+<div className="aq-text-success">aq-text-success</div>
+<div className="aq-text-warning">aq-text-warning</div>
+<div className="aq-text-danger">aq-text-danger</div>
+<div className="aq-text-disabled">aq-text-disabled</div>
+<div className="aq-text-disabled-dark">aq-text-disabled-dark</div>
+<hr />
+<div style={{ fontSize: "30px" }}>Margins</div>
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-m-1" style={{ background: "white" }}>
+    aq-m-1
+  </div>
+</div>
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-m-2" style={{ background: "white" }}>
+    aq-m-2
+  </div>
+</div>
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-m-3" style={{ background: "white" }}>
+    aq-m-3
+  </div>
+</div>
+<hr />
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-mx-1" style={{ background: "white" }}>
+    aq-mx-1
+  </div>
+</div>
+<hr />
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-my-1" style={{ background: "white" }}>
+    aq-my-1
+  </div>
+</div>
+<hr />
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-mt-1" style={{ background: "white" }}>
+    aq-mt-1
+  </div>
+</div>
+<hr />
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-mb-1" style={{ background: "white" }}>
+    aq-mb-1
+  </div>
+</div>
+<hr />
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-mr-1" style={{ background: "white" }}>
+    aq-mr-1
+  </div>
+</div>
+<hr />
+<div style={{ background: "red", width: "100%", float: "left" }}>
+  <div className="aq-ml-1" style={{ background: "white" }}>
+    aq-ml-1
+  </div>
+</div>
+<hr />

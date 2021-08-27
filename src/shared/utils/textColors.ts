@@ -9,5 +9,13 @@ export const textColors = (theme: DefaultTheme) => {
       }`
     )
     .join("");
+  style += `
+    .aq-text-disabled {
+      color: ${theme.colors.disabled}
+    }
+    .aq-text-disabled-dark {
+      color: ${theme.colors.disabledDark}
+    }
+  `;
   return style;
 };
