@@ -5,9 +5,10 @@ import { BoxArrowRight } from "react-bootstrap-icons";
 import { LanguageIcons, LanguageIconWrapper } from "./LanguageIcons";
 
 const SidebarMobileWrapper = styled.div(
-  ({ theme }: { theme: DefaultTheme }) => {
+  ({ theme, hidden }: { theme: DefaultTheme; hidden: boolean }) => {
     const { palette } = theme;
     return `
+    ${hidden ? "display:none" : ""}
     min-height: calc(100vh - ${marginFromTop}px);
 		background-color: ${palette.primary};
 		position:sticky;
@@ -52,7 +53,7 @@ const MobileSidebarItem = styled.div`
 `;
 
 const ContentWrapper = styled.div`
-  display: none;
+  ${(props) => (props.hidden ? "display: none" : "")};
 `;
 const LogoutButton = styled.button`
   width: 100%;
@@ -78,12 +79,9 @@ export const MobileSidebar = ({
   open = false,
   route,
 }: SidebarProps) => {
-  if (!open) {
-    return <>{children}</>;
-  }
   return (
     <>
-      <SidebarMobileWrapper>
+      <SidebarMobileWrapper hidden={!open}>
         {items.map((i, idx) => {
           return (
             <MobileSidebarItem key={idx} className={i.last ? "aq-last" : ""}>
@@ -101,7 +99,7 @@ export const MobileSidebar = ({
           Logout <BoxArrowRight />
         </LogoutButton>
       </SidebarMobileWrapper>
-      <ContentWrapper>{children}</ContentWrapper>
+      <ContentWrapper hidden={open}>{children}</ContentWrapper>
     </>
   );
 };
