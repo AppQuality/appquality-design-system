@@ -5,16 +5,16 @@ export const textColors = (theme: DefaultTheme) => {
     .map(
       ([key, value]) => `
       .aq-text-${key} {
-        color: ${value}
+        color: ${value} !important;
       }`
     )
     .join("");
   style += `
     .aq-text-disabled {
-      color: ${theme.colors.disabled}
+      color: ${theme.colors.disabled} !important;
     }
     .aq-text-disabled-dark {
-      color: ${theme.colors.disabledDark}
+      color: ${theme.colors.disabledDark} !important;
     }
   `;
   return style;
