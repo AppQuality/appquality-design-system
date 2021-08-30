@@ -108,13 +108,23 @@ export const CarouselNav = styled(BasicCarouselNav)`
           ? props.theme.colors.disabled
           : props.theme.colors.disabledDark};
     }
-    &:not(.disabled):hover {
+    &:not(.disabled):active {
       background-color: ${(props) =>
         props.dark ? props.theme.colors.white : props.theme.palette.primary};
       border-color: ${(props) =>
         props.dark ? props.theme.colors.white : props.theme.palette.primary};
       color: ${(props) =>
         props.dark ? props.theme.palette.primary : props.theme.colors.white};
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:not(.disabled):hover {
+        background-color: ${(props) =>
+          props.dark ? props.theme.colors.white : props.theme.palette.primary};
+        border-color: ${(props) =>
+          props.dark ? props.theme.colors.white : props.theme.palette.primary};
+        color: ${(props) =>
+          props.dark ? props.theme.palette.primary : props.theme.colors.white};
+      }
     }
   }
 `;
