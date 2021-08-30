@@ -141,8 +141,10 @@ export const Modal = styled(BasicModal)`
     border-radius: ${(props) => props.theme.general.borderRadius};
     width: calc(100vw - 24px);
     max-width: 100%;
-    max-height: 100%;
+    max-height: calc(100% - 24px);
     background-color: ${(props) => props.theme.colors.white};
+    display: flex;
+    flex-flow: column;
 
     &.shaking {
       animation: shake 0.5s;
