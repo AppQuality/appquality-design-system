@@ -1,3 +1,80 @@
+# v0.1.110 (Fri Aug 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(modal): Make modal shorter for phone controls (davide.bizzi@app-quality.com)
+- fix(sidebar): Don't refresh content on close (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.109 (Fri Aug 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Make color helpers important (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.108 (Fri Aug 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: Add disabled text color helpers (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.107 (Thu Aug 26 2021)
+
+#### ⚠️ Pushed to `main`
+
+- chore: Cleanup dependencies (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.106 (Wed Aug 25 2021)
+
+#### 🐛 Bug Fix
+
+- Allow disabling peek next on carousel [#67](https://github.com/AppQuality/appquality-design-system/pull/67) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat(carousel): Allow disabling peek next [#66](https://github.com/AppQuality/appquality-design-system/pull/66) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.105 (Wed Aug 25 2021)
+
+#### 🐛 Bug Fix
+
+- Add scroll on long modal [#65](https://github.com/AppQuality/appquality-design-system/pull/65) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- feat(modal): Add scroll on long content [#64](https://github.com/AppQuality/appquality-design-system/pull/64) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.104 (Tue Aug 24 2021)
 
 #### ⚠️ Pushed to `main`
