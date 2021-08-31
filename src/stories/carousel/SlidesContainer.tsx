@@ -17,7 +17,6 @@ const BasicSlidesContainer = ({
 }: SlidesContainerProps) => <div className={className}>{children}</div>;
 
 export const SlidesContainer = styled(BasicSlidesContainer)`
-  scroll-snap-type: x mandatory;
   display: flex;
   flex-direction: row;
   overflow: visible;

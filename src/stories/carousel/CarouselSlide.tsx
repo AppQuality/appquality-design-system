@@ -8,7 +8,6 @@ const BasicCarouselSlide = ({ className, children }: CarouselSlideProps) => (
 );
 
 export const CarouselSlide = styled(BasicCarouselSlide)`
-  scroll-snap-align: start;
   flex-shrink: 0;
   padding-right: 8px;
   padding-left: 8px;
