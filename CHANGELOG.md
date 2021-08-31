@@ -1,3 +1,17 @@
+# v0.1.111 (Tue Aug 31 2021)
+
+#### 🐛 Bug Fix
+
+- Some mobile fixes [#69](https://github.com/AppQuality/appquality-design-system/pull/69) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- feat(modal): improve responsive [#68](https://github.com/AppQuality/appquality-design-system/pull/68) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.110 (Fri Aug 27 2021)
 
 #### ⚠️ Pushed to `main`
