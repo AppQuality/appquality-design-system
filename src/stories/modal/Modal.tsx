@@ -140,6 +140,7 @@ export const Modal = styled(BasicModal)`
     transform: translate(-50%, -50%);
     border-radius: ${(props) => props.theme.general.borderRadius};
     width: calc(100vw - 24px);
+    height: 100%;
     max-width: 100%;
     max-height: calc(100% - 24px);
     background-color: ${(props) => props.theme.colors.white};

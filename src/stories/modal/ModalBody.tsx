@@ -17,6 +17,7 @@ const BasicModalBody = ({ children, className }: ModalBodyProps) => (
 );
 
 export const ModalBody = styled(BasicModalBody)`
+  height: 100%;
   padding: ${(props) => props.theme.grid.spacing.default};
   flex: 1 1 100%;
   overflow: auto;
