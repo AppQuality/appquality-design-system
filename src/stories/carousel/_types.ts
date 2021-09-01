@@ -5,18 +5,21 @@ type breakpoints = keyof typeof aqBootstrapTheme.grid.breakpoints;
 export interface CarouselProps extends BaseProps {
   peekNext?: boolean;
   theme: typeof aqBootstrapTheme;
-  step?:
-    | number
-    | {
-        [index in breakpoints]?: number;
-      };
-}
-export interface CarouselNavProps extends BaseProps {
-  dark?: boolean;
-  onPrev: false | (() => void);
-  onNext: false | (() => void);
+  step?: CarouselStep;
+  totalSlides: number;
   setCurrent: (val: number) => void;
   current: number;
-  max: number;
+}
+export type CarouselStep =
+  | number
+  | {
+      [index in breakpoints]?: number;
+    };
+export interface CarouselNavProps extends BaseProps {
+  dark?: boolean;
+  setCurrent: (val: number) => void;
+  current: number;
   showArrows: boolean;
+  totalSlides: number;
+  step?: CarouselStep;
 }

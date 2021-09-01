@@ -1,24 +1,37 @@
 import { CarouselNavProps } from "./_types";
 import styled from "styled-components";
 import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
+import React from "react";
+import { getCurrentStep } from "./utils";
+import { useWindowSize } from "../../shared/effects";
 
 const BasicCarouselNav = ({
-  onPrev,
-  onNext,
   dark,
   className,
   current,
   setCurrent,
-  max,
   showArrows,
+  totalSlides,
+  step = 1,
 }: CarouselNavProps) => {
-  const dots = Array.from(Array(max).keys()).map((slide, index) => {
+  const [vW, vH] = useWindowSize();
+  const currentStep = getCurrentStep(step, vW);
+  const totalSteps = Math.ceil(totalSlides / currentStep);
+  let onNext;
+  let onPrev;
+  if (current < totalSteps - 1) {
+    onNext = () => setCurrent(current + 1);
+  }
+  if (current > 0) {
+    onPrev = () => setCurrent(current - 1);
+  }
+  const dots = Array.from(Array(totalSteps).keys()).map((slide, index) => {
     return (
       <div
         className={`carousel-nav-dot ${index == current ? "active" : ""}`}
         onClick={() => setCurrent(index)}
         key={index}
-      ></div>
+      />
     );
   });
   return (
