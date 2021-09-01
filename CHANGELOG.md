@@ -1,3 +1,15 @@
+# v0.1.114 (Wed Sep 01 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Move react scripts to devdependecies (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.113 (Wed Sep 01 2021)
 
 #### 🐛 Bug Fix
