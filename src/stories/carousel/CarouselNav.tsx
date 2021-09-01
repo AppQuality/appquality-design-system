@@ -4,13 +4,13 @@ import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
 import React from "react";
 import { getCurrentStep } from "./utils";
 import { useWindowSize } from "../../shared/effects";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 const BasicCarouselNav = ({
   dark,
   className,
   current,
   setCurrent,
-  showArrows,
   totalSlides,
   step = 1,
 }: CarouselNavProps) => {
@@ -37,7 +37,7 @@ const BasicCarouselNav = ({
   return (
     <div className={className}>
       <div className="carousel-nav-dots">{dots}</div>
-      {showArrows && (
+      {vW > parseInt(aqBootstrapTheme.grid.breakpoints.lg) && (
         <div className="carousel-nav-ctrl">
           <div
             className={`button-ctrl ctrl-prev${!onPrev ? " disabled" : ""}`}
