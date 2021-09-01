@@ -1,3 +1,17 @@
+# v0.1.112 (Wed Sep 01 2021)
+
+#### 🐛 Bug Fix
+
+- feat(carousel): extract navigation [#72](https://github.com/AppQuality/appquality-design-system/pull/72) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- feat(carousel): extract navigation [#71](https://github.com/AppQuality/appquality-design-system/pull/71) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.111 (Tue Aug 31 2021)
 
 #### 🐛 Bug Fix
