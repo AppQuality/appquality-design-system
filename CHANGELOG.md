@@ -1,3 +1,16 @@
+# v0.1.113 (Wed Sep 01 2021)
+
+#### 🐛 Bug Fix
+
+- fix(carousel): Restore mobile behaviour for show arrows [#73](https://github.com/AppQuality/appquality-design-system/pull/73) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.112 (Wed Sep 01 2021)
 
 #### 🐛 Bug Fix
