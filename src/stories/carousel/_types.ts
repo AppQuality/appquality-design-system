@@ -19,7 +19,6 @@ export interface CarouselNavProps extends BaseProps {
   dark?: boolean;
   setCurrent: (val: number) => void;
   current: number;
-  showArrows: boolean;
   totalSlides: number;
   step?: CarouselStep;
 }
