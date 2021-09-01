@@ -2,7 +2,6 @@ import { Story, Meta } from "@storybook/react";
 import { Carousel, CarouselNav } from "./Carousel";
 import { CarouselSlide } from "./CarouselSlide";
 import { CarouselProps } from "./_types";
-import { findAllByDisplayValue } from "@testing-library/react";
 import { useState } from "react";
 
 export default {

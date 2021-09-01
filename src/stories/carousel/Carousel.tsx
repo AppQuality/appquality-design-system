@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CarouselSlide } from "./CarouselSlide";
 import { CarouselNav } from "./CarouselNav";
-import { CarouselProps, CarouselNavProps } from "./_types";
+import { CarouselProps } from "./_types";
 import { SlidesContainer } from "./SlidesContainer";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 import { withTheme } from "styled-components";
