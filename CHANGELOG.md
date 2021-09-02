@@ -1,3 +1,17 @@
+# v0.1.115 (Thu Sep 02 2021)
+
+#### 🐛 Bug Fix
+
+- fix sidebar alignment [#74](https://github.com/AppQuality/appquality-design-system/pull/74) (davide.bizzi@app-quality.com [@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.114 (Wed Sep 01 2021)
 
 #### ⚠️ Pushed to `main`
