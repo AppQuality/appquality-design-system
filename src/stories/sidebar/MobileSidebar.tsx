@@ -42,13 +42,20 @@ const SidebarMobileWrapper = styled.div(
 const MobileSidebarItem = styled.div`
   padding: 10px 20px;
   width: 100%;
+  display: flex;
+  align-items: center;
 
   &.aq-last {
     border-bottom: 3px solid rgba(41, 114, 168, 0.3);
   }
   svg {
-    min-width: 24px;
-    margin: 0 8px;
+    width: 1.5em;
+    height: 1em;
+    margin: 0 0.5em;
+  }
+  a {
+    height: 1.5em;
+    line-height: calc(1.5em + 1px);
   }
 `;
 

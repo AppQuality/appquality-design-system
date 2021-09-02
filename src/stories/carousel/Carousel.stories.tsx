@@ -58,12 +58,7 @@ const Template: Story<CarouselProps> = (args) => {
         </CarouselSlide>
       </Carousel>
       <div>
-        <CarouselNav
-          showArrows
-          {...args}
-          current={current}
-          setCurrent={setCurrent}
-        />
+        <CarouselNav {...args} current={current} setCurrent={setCurrent} />
       </div>
     </div>
   );
