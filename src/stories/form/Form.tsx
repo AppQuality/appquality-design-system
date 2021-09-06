@@ -5,7 +5,7 @@ import {
 } from "formik";
 import styled from "styled-components";
 import { FormGroup } from "./_style";
-import { FieldInterface, GenericFieldInterface } from "./_types";
+import { FieldInterface } from "./_types";
 import FormLabel from "./formlabel/FormLabel";
 import Input from "./input/Input";
 import { Checkbox } from "./checkBox/Checkbox";
