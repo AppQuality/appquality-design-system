@@ -1,11 +1,11 @@
-import { Checkbox, Field } from "./Form";
+import { Field } from "./Form";
+import { Checkbox } from "./checkBox/Checkbox";
 import { Story, Meta } from "@storybook/react";
 import { Formik, Form, FormikProps } from "formik";
 import { validationSchema, initialValues } from "./_data";
 import * as yup from "yup";
 import { Text } from "../typography/Typography";
 import { Datepicker } from "./datepicker/Datepicker";
-import { GeneralStyledInput } from "./_style";
 import { DatepickerGlobalStyle } from "./datepicker/_style";
 import FormLabel from "./formlabel/FormLabel";
 
@@ -36,17 +36,19 @@ export const Template: Story = () => (
             uppercase letter, a lowercase letter and a number.
           </Text>
           <Checkbox
-            name="subscribe"
+            id="subscribe"
+            value="on"
+            disabled
             label="I agree to receive earning opportunity emails from AppQuality"
           />
-          <GeneralStyledInput className="aq-mb-3">
+          <div className="aq-mb-3">
             <FormLabel htmlFor="date1" label="Date" />
             <Datepicker id="date1" select="date" />
-          </GeneralStyledInput>
-          <GeneralStyledInput className="aq-mb-3">
+          </div>
+          <div className="aq-mb-3">
             <FormLabel htmlFor="range1" label="Date Range" />
             <Datepicker id="range1" select="range" control="calendar" />
-          </GeneralStyledInput>
+          </div>
         </Form>
       )}
     </Formik>
