@@ -9,7 +9,7 @@ import {
 } from "react-bootstrap-icons";
 
 export interface ToastrProps extends BaseProps {
-  type: "success" | "info" | "warning" | "danger";
+  type: keyof DefaultTheme["palette"];
   onClose?: () => void;
 }
 
@@ -29,6 +29,8 @@ const BasicToastr = ({ type, className, onClose, children }: ToastrProps) => {
         return <CheckCircleFill />;
       case "warning":
         return <ExclamationTriangleFill />;
+      default:
+        return <InfoCircleFill />;
     }
   };
   return (

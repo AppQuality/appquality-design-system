@@ -33,6 +33,24 @@ const Template: Story<ToastrProps> = (args) => (
     >
       <div>{args.children}</div>
     </Toastr>
+    <Toastr
+      type="primary"
+      className="aq-mb-2"
+      onClose={() => {
+        alert("onclose callback");
+      }}
+    >
+      <div>{args.children}</div>
+    </Toastr>
+    <Toastr
+      type="secondary"
+      className="aq-mb-2"
+      onClose={() => {
+        alert("onclose callback");
+      }}
+    >
+      <div>{args.children}</div>
+    </Toastr>
   </div>
 );
 
