@@ -5,17 +5,24 @@ import { Step } from "./Step";
 
 export interface StepsProps extends BaseProps {
   current: number;
-  direction: "horizontal" | "vertical";
+  direction?: "horizontal" | "vertical";
 }
 
-const Steps = ({ current, children, direction, className }: StepsProps) => {
+export const defaultDirection: StepsProps["direction"] = "vertical";
+
+const Steps = ({
+  current,
+  children,
+  direction = "vertical",
+  className,
+}: StepsProps) => {
   let items: ReactNode = null;
   items = React.Children.map(children, (child, index) => {
     if (React.isValidElement(child) && child.type === Step) {
+      const isActive = index === current;
       return React.cloneElement(child, {
-        status: index === current ? "current" : "inactive",
+        status: isActive ? "current" : child.props.status,
         direction: direction,
-        ...child.props,
       });
     }
     return null;
