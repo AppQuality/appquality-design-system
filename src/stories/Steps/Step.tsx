@@ -30,8 +30,8 @@ const StyledStep = styled.div<{
     props.direction === "horizontal" ? "row" : "column"};
   align-items: center;
   color: ${(props) =>
-    props.status === "current"
-      ? props.theme.palette.primary
+    props.status === "current" || props.status === "completed"
+      ? props.theme.palette.info
       : props.theme.colors.disabled};
   .step-icon {
     flex: 0 0 ${mobileSize};
