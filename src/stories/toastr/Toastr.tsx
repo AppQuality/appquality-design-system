@@ -68,14 +68,19 @@ export const Toastr = styled(BasicToastr)(({ theme }: ToastrStyleProps) => {
     display: flex;
     align-items: flex-start;
     box-shadow: 0 0 10px rgb(0 0 0 / 25%);
-    @media (min-width: ${theme.grid.breakpoints.md}) {
     
+    .toastr-message {
+      flex: 1 1 100%;
     }
     .toastr-icon {
+      display: none;
       flex: 0 0 42px;
       svg {
         width: 100%;
         height: 100%;
+      }
+      @media (min-width: ${theme.grid.breakpoints.md}) {
+        display: block;
       }
     }
     .toastr-close {
