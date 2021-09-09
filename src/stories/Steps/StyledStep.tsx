@@ -1,16 +1,18 @@
 import styled, { css } from "styled-components";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 import { StepProps } from "./Step";
 
 const mobileSize = "24px";
 const desktopSize = "21px";
+const spacingUnit = aqBootstrapTheme.grid.spacing.default;
 
 const horizontalGrid = css`
   grid-template-areas:
-    "icon"
+    "status"
     "title";
-  grid-row-gap: 8px;
+  grid-row-gap: calc(${spacingUnit} / 2);
   grid-template-rows: ${mobileSize} auto;
-  margin-right: ${(props) => props.theme.grid.spacing.default};
+  margin-right: ${spacingUnit};
 
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     grid-template-rows: ${desktopSize} auto;
@@ -19,14 +21,20 @@ const horizontalGrid = css`
   .step-icon {
     margin: 0 auto;
   }
+  .step-icon:after,
+  .step-icon:before {
+    content: "";
+    display: block;
+    width: 50%;
+  }
 `;
 
 const verticalGrid = css`
   grid-template-areas:
-    "icon title"
-    "icon description";
+    "status title"
+    "status description";
   grid-template-columns: ${mobileSize} auto;
-  grid-column-gap: 8px;
+  grid-column-gap: calc(${spacingUnit} / 2);
   margin-bottom: ${(props) => props.theme.grid.spacing.default};
 
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
@@ -58,11 +66,36 @@ export const StyledStep = styled.div<{
       ? props.theme.palette.info
       : props.theme.colors.infoDisabled};
 
-  .step-icon {
-    grid-area: icon;
+  .step-status {
+    grid-area: status;
     position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: calc(50% + (${spacingUnit} / 2));
+      position: absolute;
+      top: calc(50% - 1px);
+      background-color: transparent;
+    }
+  }
+  &:not(:first-child) .step-status:before {
+    left: calc(${spacingUnit} / -2);
+    background-color: ${(props) => props.theme.palette.primary};
+  }
+  &:not(:last-child) .step-status:after {
+    right: calc(${spacingUnit} / -2);
+    background-color: ${(props) => props.theme.palette.primary};
+  }
+  .step-status-icon {
+    margin: 0 auto;
     width: ${mobileSize};
     height: ${mobileSize};
+    background-color: ${(props) => props.theme.colors.white};
+    position: relative;
+    z-index: 1;
     @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
       width: ${desktopSize};
       height: ${desktopSize};
@@ -71,6 +104,23 @@ export const StyledStep = styled.div<{
       width: 100%;
       height: 100%;
     }
+  }
+  .status-icon-enter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity var(--animation-timeout);
+  }
+  .status-icon-enter.status-icon-enter-active {
+    opacity: 1;
+  }
+  .status-icon-exit {
+    opacity: 1;
+    transition: opacity var(--animation-timeout);
+  }
+  .status-icon-exit.status-icon-exit-active {
+    opacity: 0;
   }
   .step-title {
     grid-area: title;
@@ -81,26 +131,10 @@ export const StyledStep = styled.div<{
   }
   .step-description {
     grid-area: description;
+    transition: color var(--animation-timeout);
     color: ${(props) =>
       props.status === "current" || props.status === "completed"
         ? props.theme.colors.disabledFont
         : props.theme.colors.disabledElement};
-  }
-  .icon-enter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  .icon-enter.icon-enter-active {
-    opacity: 1;
-  }
-  .icon-exit {
-    opacity: 1;
-    transition: opacity 0.2s;
-  }
-  .icon-exit.icon-exit-active {
-    opacity: 0;
   }
 `;

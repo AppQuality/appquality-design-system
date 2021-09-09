@@ -16,6 +16,7 @@ export interface StepExternalProps extends BaseProps {
   isCompleted?: boolean;
 }
 
+const animationTimeout = 250;
 // this is just the component we expose to the user,
 // we compose the final "Step" into the Steps main component adding props and current status,
 // we don't use the same component for example to leverage typescript type check
@@ -50,28 +51,31 @@ export const Step = ({
       onClick={handleClick}
       clickable={clickHandler instanceof Function}
       className={className}
+      style={{ "--animation-timeout": animationTimeout + "ms" }}
     >
-      <TransitionGroup className="step-icon">
-        {status === "current" && (
-          <CSSTransition classNames="icon" timeout={200}>
-            {direction === "vertical" ? (
-              <ArrowRightCircle />
-            ) : (
-              <ArrowDownCircle />
-            )}
-          </CSSTransition>
-        )}
-        {status === "completed" && (
-          <CSSTransition classNames="icon" timeout={200}>
-            <CheckCircleFill />
-          </CSSTransition>
-        )}
-        {status === "inactive" && (
-          <CSSTransition classNames="icon" timeout={200}>
-            <Circle />
-          </CSSTransition>
-        )}
-      </TransitionGroup>
+      <div className="step-status">
+        <TransitionGroup className="step-status-icon">
+          {status === "current" && (
+            <CSSTransition classNames="status-icon" timeout={animationTimeout}>
+              {direction === "vertical" ? (
+                <ArrowRightCircle />
+              ) : (
+                <ArrowDownCircle />
+              )}
+            </CSSTransition>
+          )}
+          {status === "completed" && (
+            <CSSTransition classNames="status-icon" timeout={animationTimeout}>
+              <CheckCircleFill />
+            </CSSTransition>
+          )}
+          {status === "inactive" && (
+            <CSSTransition classNames="status-icon" timeout={animationTimeout}>
+              <Circle />
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+      </div>
       <Text className="step-title">{title}</Text>
       {direction === "vertical" && (
         <Text small className="step-description">
