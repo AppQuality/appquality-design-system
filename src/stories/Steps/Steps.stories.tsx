@@ -20,8 +20,7 @@ const data = [
     desc: "the second step",
   },
   {
-    title: "Step 3",
-    desc: "the third step",
+    title: "Step without description",
   },
   {
     title: "Step 4",
@@ -68,7 +67,7 @@ const TemplateClickableControl: Story<StepsProps> = (args) => {
   const [active, setActive] = useState(1);
 
   const handleChange = (index: number, current: number) => {
-    if (index < current || data[current].completed) {
+    if (index <= current || data[current].completed) {
       setActive(index);
     } else {
       alert("you can go on only if you complete the step");
