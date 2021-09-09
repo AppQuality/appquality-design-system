@@ -1,5 +1,5 @@
 import { BaseProps } from "../../shared/_types";
-import styled from "styled-components";
+import { StyledStep } from "./StyledStep";
 import { defaultDirection, StepsProps } from "./Steps";
 import {
   ArrowRightCircle,
@@ -10,67 +10,49 @@ import {
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Text } from "../typography/Typography";
 
-export interface StepProps extends BaseProps {
+export interface StepExternalProps extends BaseProps {
   title?: string;
   description?: string;
-  direction?: StepsProps["direction"];
-  status?: "inactive" | "current" | "completed";
-  onClick?: () => void;
+  isCompleted?: boolean;
 }
 
-const mobileSize = "24px";
-const desktopSize = "21px";
+// this is just the component we expose to the user,
+// we compose the final "Step" into the Steps main component adding props and current status,
+// we don't use the same component for example to leverage typescript type check
+// and to avoid to expose a number of internal props as optional in StepExternal
+export const StepExternal = (props: StepExternalProps) => null;
 
-const StyledStep = styled.div<{
-  status: StepProps["status"];
-  direction: StepsProps["direction"];
-}>`
-  display: flex;
-  flex-flow: ${(props) =>
-    props.direction === "horizontal" ? "row" : "column"};
-  align-items: center;
-  color: ${(props) =>
-    props.status === "current" || props.status === "completed"
-      ? props.theme.palette.info
-      : props.theme.colors.disabled};
-  .step-icon {
-    flex: 0 0 ${mobileSize};
-    height: ${mobileSize};
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-      flex: 0 0 ${desktopSize};
-      height: ${desktopSize};
-    }
-  }
-  .step-title {
-    &:hover {
-      text-decoration: ${(props) => (props.onClick ? "underline" : "none")};
-    }
-  }
-`;
+export interface StepProps extends StepExternalProps {
+  direction?: StepsProps["direction"];
+  status: "inactive" | "current" | "completed";
+  index: number;
+  onChange?: StepsProps["onChange"];
+}
 
 export const Step = ({
   title,
   description,
   direction = defaultDirection,
   status = "inactive",
-  onClick,
+  onChange,
+  index,
   className,
 }: StepProps) => {
+  const handleClick = () => {
+    onChange && onChange(index);
+  };
   return (
     <StyledStep
       status={status}
       direction={direction}
-      onClick={onClick}
+      onClick={handleClick}
+      clickable={onChange instanceof Function}
       className={className}
     >
       <TransitionGroup className="step-icon">
         {status === "current" && (
           <CSSTransition classNames="icon" timeout={200}>
-            {direction === "horizontal" ? (
+            {direction === "vertical" ? (
               <ArrowRightCircle />
             ) : (
               <ArrowDownCircle />
@@ -89,8 +71,10 @@ export const Step = ({
         )}
       </TransitionGroup>
       <Text className="step-title">{title}</Text>
-      {direction === "horizontal" && (
-        <div className="step-description">{description}</div>
+      {direction === "vertical" && (
+        <Text small className="step-description">
+          {description}
+        </Text>
       )}
     </StyledStep>
   );

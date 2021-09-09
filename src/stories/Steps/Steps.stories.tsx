@@ -1,5 +1,8 @@
 import { Story, Meta } from "@storybook/react";
 import { Steps, StepsProps } from "./Steps";
+import { useState } from "react";
+import { BSCol, BSGrid } from "../layout/Layout";
+import { set } from "husky";
 
 export default {
   title: "Steps",
@@ -8,26 +11,33 @@ export default {
 
 const Template: Story<StepsProps> = (args) => {
   return (
-    <Steps {...args}>
+    <Steps current={1} className="aq-m-3">
       <Steps.Step
         title="step1 completed"
         description="a completed step"
-        className="aq-mr-3"
-        status="completed"
+        isCompleted
       />
+      <Steps.Step title="step2 current" description="the second step" />
+      <Steps.Step title="step3 next" description="the third step" />
+      <Steps.Step title="step4 next" description="the fourth step" />
+    </Steps>
+  );
+};
+const TemplateClickable: Story<StepsProps> = (args) => {
+  const [active, setActive] = useState(0);
+  return (
+    <Steps {...args} current={active} onChange={setActive} className="aq-m-3">
       <Steps.Step
-        title="step2"
-        description="the second step"
-        className="aq-mr-3"
+        title="step1 completed"
+        description="a completed step"
+        isCompleted
       />
-      <Steps.Step
-        title="step3"
-        description="the third step"
-        className="aq-mr-3"
-      />
+      <Steps.Step title="step2 current" description="the second step" />
+      <Steps.Step title="step3 next" description="the third step" />
+      <Steps.Step title="step4 next" description="the fourth step" />
     </Steps>
   );
 };
 
 export const BasicSteps = Template.bind({});
-BasicSteps.args = { current: 1 };
+export const ClickableSteps = TemplateClickable.bind({});
