@@ -60,6 +60,7 @@ export const StyledStep = styled.div<{
 
   .step-icon {
     grid-area: icon;
+    position: relative;
     width: ${mobileSize};
     height: ${mobileSize};
     @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
@@ -77,5 +78,22 @@ export const StyledStep = styled.div<{
   .step-description {
     grid-area: description;
     color: ${(props) => props.theme.colors.disabled};
+  }
+  .icon-enter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .icon-enter.icon-enter-active {
+    opacity: 1;
+  }
+  .icon-exit {
+    opacity: 1;
+    transition: opacity 0.2s;
+  }
+  .icon-exit.icon-exit-active {
+    opacity: 0;
   }
 `;
