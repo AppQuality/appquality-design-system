@@ -32,8 +32,9 @@ const data = [
 const Template: Story<StepsProps> = (args) => {
   return (
     <Steps {...args} className="aq-m-3">
-      {data.map((item) => (
+      {data.map((item, index) => (
         <Step
+          key={index}
           title={item.title}
           description={item.desc}
           isCompleted={item.completed}
@@ -51,8 +52,9 @@ const TemplateClickable: Story<StepsProps> = (args) => {
       clickHandler={setActive}
       className="aq-m-3"
     >
-      {data.map((item) => (
+      {data.map((item, index) => (
         <Step
+          key={index}
           title={item.title}
           description={item.desc}
           isCompleted={item.completed}
@@ -79,8 +81,9 @@ const TemplateClickableControl: Story<StepsProps> = (args) => {
       clickHandler={handleChange}
       className="aq-m-3"
     >
-      {data.map((item) => (
+      {data.map((item, index) => (
         <Step
+          key={index}
           title={item.title}
           description={item.desc}
           isCompleted={item.completed}
