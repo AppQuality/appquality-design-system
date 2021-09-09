@@ -49,6 +49,39 @@ const clickableRules = css`
   }
 `;
 
+const horizontalProgressBar = css`
+  &:not(:first-child) .step-status:before {
+    left: calc(${spacingUnit} / -2);
+  }
+  &:not(:last-child) .step-status:after {
+    right: calc(${spacingUnit} / -2);
+  }
+  .step-status {
+    &:before,
+    &:after {
+      height: 1px;
+      width: calc(50% + (${spacingUnit} / 2));
+      top: calc(50% - 1px);
+    }
+  }
+`;
+const verticalProgressBar = css`
+  &:not(:first-child) .step-status:before {
+    top: calc(${spacingUnit} / -2);
+  }
+  &:not(:last-child) .step-status:after {
+    bottom: calc(${spacingUnit} / -2);
+  }
+  .step-status {
+    &:before,
+    &:after {
+      width: 1px;
+      height: calc(50% + (${spacingUnit} / 2));
+      left: calc(50% - 1px);
+    }
+  }
+`;
+
 export const StyledStep = styled.div<{
   status: StepProps["status"];
   direction: StepProps["direction"];
@@ -66,6 +99,7 @@ export const StyledStep = styled.div<{
       ? props.theme.palette.info
       : props.theme.colors.infoDisabled};
 
+  // progress bar general rules
   .step-status {
     grid-area: status;
     position: relative;
@@ -74,21 +108,22 @@ export const StyledStep = styled.div<{
     &:after {
       content: "";
       display: block;
-      height: 1px;
-      width: calc(50% + (${spacingUnit} / 2));
       position: absolute;
-      top: calc(50% - 1px);
       background-color: transparent;
     }
   }
   &:not(:first-child) .step-status:before {
-    left: calc(${spacingUnit} / -2);
     background-color: ${(props) => props.theme.palette.primary};
   }
   &:not(:last-child) .step-status:after {
-    right: calc(${spacingUnit} / -2);
     background-color: ${(props) => props.theme.palette.primary};
   }
+  // now place the progress bar
+  ${(props) =>
+    props.direction === "horizontal"
+      ? horizontalProgressBar
+      : verticalProgressBar}
+
   .step-status-icon {
     margin: 0 auto;
     width: ${mobileSize};
