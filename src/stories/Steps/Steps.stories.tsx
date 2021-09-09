@@ -11,7 +11,7 @@ export default {
 
 const Template: Story<StepsProps> = (args) => {
   return (
-    <Steps current={1} className="aq-m-3">
+    <Steps {...args} current={1} className="aq-m-3">
       <Steps.Step
         title="step1 completed"
         description="a completed step"
