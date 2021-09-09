@@ -1,6 +1,6 @@
 import { BaseProps } from "../../shared/_types";
 import styled from "styled-components";
-import React, { ReactNode, SetStateAction, Dispatch } from "react";
+import React, { ReactNode } from "react";
 import { StepExternal, Step, StepProps } from "./Step";
 
 export interface StepsProps extends BaseProps {

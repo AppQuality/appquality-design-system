@@ -1,8 +1,6 @@
 import { Story, Meta } from "@storybook/react";
 import { Steps, StepsProps } from "./Steps";
 import { useState } from "react";
-import { BSCol, BSGrid } from "../layout/Layout";
-import { set } from "husky";
 
 export default {
   title: "Steps",
