@@ -6,7 +6,7 @@ import { StepExternal, Step, StepProps } from "./Step";
 export interface StepsProps extends BaseProps {
   current: number;
   direction?: "vertical" | "horizontal";
-  onChange?: (n: number) => void;
+  clickHandler?: (index: number, current: number) => void;
 }
 
 export const defaultDirection: StepsProps["direction"] = "horizontal";
@@ -15,7 +15,7 @@ const Steps = ({
   current,
   children,
   direction = "horizontal",
-  onChange,
+  clickHandler,
   className,
 }: StepsProps) => {
   let items: ReactNode = null;
@@ -34,9 +34,10 @@ const Steps = ({
           title={title}
           description={description}
           status={status}
+          current={current}
           index={index}
           direction={direction}
-          onChange={onChange}
+          clickHandler={clickHandler}
         />
       );
     }

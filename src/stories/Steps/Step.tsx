@@ -26,7 +26,8 @@ export interface StepProps extends StepExternalProps {
   direction?: StepsProps["direction"];
   status: "inactive" | "current" | "completed";
   index: number;
-  onChange?: StepsProps["onChange"];
+  current: number;
+  clickHandler?: StepsProps["clickHandler"];
 }
 
 export const Step = ({
@@ -34,19 +35,20 @@ export const Step = ({
   description,
   direction = defaultDirection,
   status = "inactive",
-  onChange,
+  clickHandler,
   index,
+  current,
   className,
 }: StepProps) => {
   const handleClick = () => {
-    onChange && onChange(index);
+    clickHandler && clickHandler(index, current);
   };
   return (
     <StyledStep
       status={status}
       direction={direction}
       onClick={handleClick}
-      clickable={onChange instanceof Function}
+      clickable={clickHandler instanceof Function}
       className={className}
     >
       <TransitionGroup className="step-icon">
