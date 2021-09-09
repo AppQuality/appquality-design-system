@@ -56,7 +56,7 @@ export const StyledStep = styled.div<{
   color: ${(props) =>
     props.status === "current" || props.status === "completed"
       ? props.theme.palette.info
-      : props.theme.colors.disabled};
+      : props.theme.colors.infoDisabled};
 
   .step-icon {
     grid-area: icon;
@@ -74,10 +74,17 @@ export const StyledStep = styled.div<{
   }
   .step-title {
     grid-area: title;
+    color: ${(props) =>
+      props.status === "current" || props.status === "completed"
+        ? props.theme.palette.primary
+        : props.theme.colors.disabledFont};
   }
   .step-description {
     grid-area: description;
-    color: ${(props) => props.theme.colors.disabled};
+    color: ${(props) =>
+      props.status === "current" || props.status === "completed"
+        ? props.theme.colors.disabledFont
+        : props.theme.colors.disabledElement};
   }
   .icon-enter {
     position: absolute;
