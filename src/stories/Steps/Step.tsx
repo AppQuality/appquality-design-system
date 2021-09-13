@@ -50,7 +50,7 @@ export const Step = ({
       direction={direction}
       onClick={handleClick}
       clickable={clickHandler instanceof Function}
-      className={className}
+      className={`${className} step`}
       style={{ "--animation-timeout": animationTimeout + "ms" }}
     >
       <div className="step-status">
