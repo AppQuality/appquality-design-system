@@ -1,3 +1,15 @@
+# v0.1.118 (Mon Sep 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): Increase zindex of menuportal (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.117 (Mon Sep 13 2021)
 
 #### ⚠️ Pushed to `main`
