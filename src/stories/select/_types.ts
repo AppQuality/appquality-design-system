@@ -35,6 +35,7 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   isDisabled?: boolean;
   isLoading?: boolean;
   isSearchable?: boolean;
+  menuTargetQuery?: string;
 }
 
 export type OptionActionType = "add" | "reset" | "set";
