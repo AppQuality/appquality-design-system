@@ -1,3 +1,15 @@
+# v0.1.117 (Mon Sep 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Export steps (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.116 (Mon Sep 13 2021)
 
 #### 🐛 Bug Fix
