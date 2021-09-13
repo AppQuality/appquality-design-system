@@ -42,6 +42,7 @@ export const Select = ({
   isLoading,
   isClearable = true,
   isSearchable,
+  menuTargetQuery,
 }: SelectProps) => {
   const [loading, setLoading] = useState(isLoading);
   const [searching, setSearching] = useState<string | false>(false);
@@ -190,6 +191,11 @@ export const Select = ({
             }
             return opt.value === value.value;
           })}
+          menuPortalTarget={
+            menuTargetQuery
+              ? document.querySelector<HTMLElement>(menuTargetQuery)
+              : undefined
+          }
           onBlur={handleBlur}
           onChange={handleChange}
           onInputChange={handleInputChange}
