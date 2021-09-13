@@ -19,6 +19,23 @@ export const containers = (theme: DefaultTheme) => {
 		  margin-right: auto;
 		  margin-left: auto;
 	  }
+    
+    .container .hero {
+      margin-left: calc(-24px/2);
+      margin-right: calc(-24px/2);
+      @media (min-width: 768px) {
+        margin-left: calc((720px - 100vw - 24px)/2);
+        margin-right: calc((720px - 100vw - 24px)/2);
+      }
+      @media (min-width: 1200px) {
+        margin-left: calc((1140px - 100vw - 24px)/2);
+        margin-right: calc((1140px - 100vw - 24px)/2);
+      }
+      @media (min-width: 1400px) {
+        margin-left: calc((1320px - 100vw - 24px)/2);
+        margin-right: calc((1320px - 100vw - 24px)/2);
+      }
+    }
 	
 	`;
 
