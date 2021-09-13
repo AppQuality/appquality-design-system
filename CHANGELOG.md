@@ -1,3 +1,19 @@
+# v0.1.116 (Mon Sep 13 2021)
+
+#### 🐛 Bug Fix
+
+- Added new components [#78](https://github.com/AppQuality/appquality-design-system/pull/78) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Componente Steps [#77](https://github.com/AppQuality/appquality-design-system/pull/77) ([@iacopolea](https://github.com/iacopolea) davide.bizzi@app-quality.com)
+- Cp 1148 toastr [#76](https://github.com/AppQuality/appquality-design-system/pull/76) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.115 (Thu Sep 02 2021)
 
 #### 🐛 Bug Fix
