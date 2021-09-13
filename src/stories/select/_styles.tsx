@@ -101,6 +101,13 @@ const customStyle: Styles<any, any> = {
       boxShadow,
     };
   },
+  menuPortal: (provided) => {
+    const zIndex = "9999";
+    return {
+      ...provided,
+      zIndex,
+    };
+  },
   groupHeading: (provided) => {
     const fontFamily = `${aqBootstrapTheme.typography.fontFamily.mono}`;
     const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
