@@ -1,3 +1,17 @@
+# v0.1.119 (Mon Sep 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global) Add herobox (davide.bizzi@app-quality.com)
+- feat(global): Add ul and body resets (davide.bizzi@app-quality.com)
+- feat(steps): Use all available space (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.118 (Mon Sep 13 2021)
 
 #### ⚠️ Pushed to `main`
