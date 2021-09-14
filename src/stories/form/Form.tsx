@@ -4,10 +4,11 @@ import {
   ErrorMessage as FormikErrorMessage,
 } from "formik";
 import styled from "styled-components";
-import { FormCheck, FormGroup } from "./_style";
-import { FieldInterface, GenericFieldInterface } from "./_types";
+import { FormGroup } from "./_style";
+import { FieldInterface } from "./_types";
 import FormLabel from "./formlabel/FormLabel";
 import Input from "./input/Input";
+import { Checkbox } from "./checkBox/Checkbox";
 
 const BasicErrorMessage = ({
   name,
@@ -67,45 +68,4 @@ export const Field = ({
   );
 };
 
-export const Checkbox = ({
-  name,
-  onChange,
-  label,
-  disabled,
-}: GenericFieldInterface) => {
-  return (
-    <FormikField name={name}>
-      {({
-        field, // { name, value, onChange, onBlur }
-        form: { touched, errors, status }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
-        meta,
-      }: FieldProps) => {
-        let fieldId = name;
-        if (status && status.id) fieldId = `${status.id}-${name}`;
-        let className = "aq-mb-3";
-        if (meta.touched && meta.error) {
-          className += " is-invalid";
-        }
-        return (
-          <FormCheck className={className}>
-            {label && (
-              <label htmlFor={fieldId} className="form-check-label">
-                {label}
-              </label>
-            )}
-            <input
-              id={fieldId}
-              type="checkbox"
-              disabled={disabled}
-              className="form-check-input"
-              {...field}
-            />
-            <ErrorMessage name={name} />
-          </FormCheck>
-        );
-      }}
-    </FormikField>
-  );
-};
-
-export { FormGroup, FormCheck, FormLabel, Input };
+export { FormGroup, Checkbox, FormLabel, Input };
