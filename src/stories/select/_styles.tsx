@@ -61,9 +61,11 @@ const customStyle: Styles<any, any> = {
     const boxShadow = "none";
     const lineHeight = "1.5";
     const minHeight = "39px";
+    const background = `${aqBootstrapTheme.colors.white}`;
 
     return {
       ...provided,
+      background,
       borderColor,
       minHeight,
       boxShadow,
@@ -74,7 +76,9 @@ const customStyle: Styles<any, any> = {
     };
   },
   dropdownIndicator: (provided, state) => {
-    const color = `${aqBootstrapTheme.palette.primary}`;
+    const color = state.isDisabled
+      ? `${aqBootstrapTheme.colors.disabledFont}`
+      : `${aqBootstrapTheme.palette.primary}`;
     const fontSize = "20px";
     const transform = state.selectProps.menuIsOpen ? "rotate(180deg)" : "";
 
@@ -147,7 +151,9 @@ const customStyle: Styles<any, any> = {
     return provided;
   },
   placeholder: (provided, state) => {
-    const color = `${aqBootstrapTheme.colors.gray500}`;
+    const color = state.isDisabled
+      ? `${aqBootstrapTheme.colors.disabledFont}`
+      : `${aqBootstrapTheme.colors.gray500}`;
     const fontWeight = parseInt(
       `${aqBootstrapTheme.typography.fontWeight.light}`
     );
