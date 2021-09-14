@@ -47,3 +47,4 @@ export * from "./stories/accordion/Accordion";
 export * from "./stories/pill/Pill";
 export * from "./stories/carousel/Carousel";
 export * from "./stories/Steps/Steps";
+export * from "./stories/toastr/Toastr";
