@@ -1,3 +1,15 @@
+# v0.1.120 (Tue Sep 14 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(toastr): Export toastr (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.119 (Mon Sep 13 2021)
 
 #### ⚠️ Pushed to `main`
