@@ -9,7 +9,7 @@ const BaseFormLabel = ({
   htmlFor: string;
   label: string;
   className?: string;
-  isDisabled?: string;
+  isDisabled?: boolean;
 }) => {
   return (
     <label htmlFor={htmlFor} className={className}>
