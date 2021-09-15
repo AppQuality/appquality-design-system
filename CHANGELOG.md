@@ -1,3 +1,15 @@
+# v0.1.123 (Wed Sep 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(select): Add disabled with content variant (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.122 (Wed Sep 15 2021)
 
 #### ⚠️ Pushed to `main`
