@@ -18,6 +18,7 @@ const BasicModal = ({
   className,
   prevText = "Previous",
   nextText = "Next",
+  closeOnClickOutside = true,
 }: ModalProps) => {
   const shakeTimeout = 400;
   const [current, setCurrent] = useState(0);
@@ -52,7 +53,7 @@ const BasicModal = ({
   if (onShow) onShow();
   return (
     <div className={className}>
-      <ModalOverlay onClick={onClose} />
+      <ModalOverlay onClick={closeOnClickOutside ? onClose : undefined} />
       <div className={`modal ${shake ? "shaking" : ""}`}>
         {title ? <ModalHeader title={title} onClose={onClose} /> : null}
         {body.length > 1 ? (
