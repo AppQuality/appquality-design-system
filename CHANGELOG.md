@@ -1,3 +1,16 @@
+# v0.1.121 (Wed Sep 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(label): Use correct typing (davide.bizzi@app-quality.com)
+- fix(select): Use correct style for disabled (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.120 (Tue Sep 14 2021)
 
 #### ⚠️ Pushed to `main`
