@@ -1,3 +1,15 @@
+# v0.1.122 (Wed Sep 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(modal): Allow disabling close on click outside (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.121 (Wed Sep 15 2021)
 
 #### ⚠️ Pushed to `main`
