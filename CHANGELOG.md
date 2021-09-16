@@ -1,3 +1,15 @@
+# v0.1.124 (Thu Sep 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(table): Remove text top alignment (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.123 (Wed Sep 15 2021)
 
 #### ⚠️ Pushed to `main`
