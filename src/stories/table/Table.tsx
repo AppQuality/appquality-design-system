@@ -179,7 +179,6 @@ export const Table = styled(BasicTable)`
         overflow-wrap: break-word;
         font-weight: 400;
         padding: ${cellPadding};
-        vertical-align: text-top;
       }
       tr:hover:not(.aq-table-empty-placeholder) {
         background-color: ${(props) => props.theme.colors.gray300};
