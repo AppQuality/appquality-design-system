@@ -7,6 +7,7 @@ import { orders } from "./utils/orders";
 import { grid } from "./utils/grid";
 import { containers } from "./utils/containers";
 import { textColors } from "./utils/textColors";
+import { Text } from "../stories/typography/Typography";
 
 const GlobalStyle = createGlobalStyle`${(props) => {
   let style = "";
@@ -51,6 +52,11 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       list-style: none;
       padding: 0;
       margin: 0;
+    }
+    ${Text} ul {
+      list-style: disc;
+      padding: 1em;
+      margin: 1em;
     }
     img {
       max-width: 100%;
