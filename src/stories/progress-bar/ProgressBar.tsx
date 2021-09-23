@@ -1,50 +1,26 @@
 import styled, { DefaultTheme } from "styled-components";
 import {
-  ProgressBarLineProps,
   ProgressBarProps,
+  ProgressBarLineProps,
   ProgressBarType,
 } from "./_types";
 
 const getBackgroundByType = (theme: DefaultTheme, type: ProgressBarType) => {
-  let bkg = "";
   switch (type) {
     case ProgressBarType.INFO:
-      bkg = theme.palette.info;
-      break;
+      return theme.palette.info;
     case ProgressBarType.SUCCESS:
-      bkg = theme.palette.success;
-      break;
+      return theme.palette.success;
     case ProgressBarType.WARNING:
-      bkg = theme.palette.warning;
-      break;
+      return theme.palette.warning;
     case ProgressBarType.DANGER:
-      bkg = theme.palette.danger;
-      break;
+      return theme.palette.danger;
     case ProgressBarType.DISABLED:
-      bkg = theme.colors.gray900;
-      break;
+      return theme.colors.gray100;
   }
-  return bkg;
 };
 
-const getNormalizedValue = (value: number) => {
-  // Check nullity and falsy values
-  if (value) {
-    // Upper bound and lower bound adjustement
-    if (value > 100) {
-      value = 100;
-    } else if (value < 0) {
-      value = 0;
-    }
-  }
-  // Set to default
-  else {
-    value = 100;
-  }
-  return value;
-};
-
-const isBlank = (str: string): boolean => {
+const isBlank = (str?: string): boolean => {
   return !str || str.length === 0 || /^\s*$/.test(str);
 };
 
@@ -60,30 +36,28 @@ export const ProgressBar = (props: ProgressBarProps) => {
   // Ignore themes when disabled
   const current_type = disabled ? ProgressBarType.DISABLED : type;
   return (
-    <ProgressBarContainer className={`${className} aq-progress-bar`} {...rest}>
-      <ProgressBarLine
-        disabled={disabled}
-        type={current_type}
-        value={getNormalizedValue(value)}
-      >
-        <ProgressBarText>
-          {isBlank(label) ? `${getNormalizedValue(value)} %` : label}
-        </ProgressBarText>
-      </ProgressBarLine>
-    </ProgressBarContainer>
+    <ProgressBarLine
+      disabled={disabled}
+      type={current_type}
+      label={label}
+      value={value > 100 || value === null ? 100 : value < 0 ? 0 : value}
+      {...rest}
+    />
   );
 };
 
-const ProgressBarContainer = styled.div<{ theme: DefaultTheme }>`
-  border-radius: ${(props) => props.theme.general.borderRadius};
-`;
-
 const ProgressBarLine = styled.div<ProgressBarLineProps>`
   // Changes according to the provided value
-  width: ${(props) => props.value + "%"};
+  &:after {
+    content: "${(props) =>
+      isBlank(props.label) ? `${props.value} %` : props.label}";
+    background: ${(props) =>
+      getBackgroundByType(props.theme, props.type as ProgressBarType)};
+    width: ${(props) => props.value + "%"};
+    display: block;
+  }
   // Switch according to type (cast because it's always initialised)
-  background: ${(props) =>
-    getBackgroundByType(props.theme, props.type as ProgressBarType)};
+  background: ${(props) => props.theme.colors.gray100};
   // Text & stuff
   color: ${(props) => (props.disabled ? props.theme.colors.gray900 : "white")};
   text-align: center;
@@ -95,8 +69,4 @@ const ProgressBarLine = styled.div<ProgressBarLineProps>`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  // Add space to text (so it's not a sandwich-like)
-  padding: 0 4px;
 `;
-
-const ProgressBarText = styled.span``;

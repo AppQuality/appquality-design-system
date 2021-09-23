@@ -8,16 +8,11 @@ export enum ProgressBarType {
   DISABLED = "DISABLED",
 }
 
-export type ProgressBarProps = ProgressBarTextProps &
-  ProgressBarLineProps &
-  BaseProps;
+export type ProgressBarProps = ProgressBarLineProps & BaseProps;
 
-export interface ProgressBarLineProps {
+export interface ProgressBarLineProps extends BaseProps {
   value: number;
   type?: ProgressBarType;
   disabled?: boolean;
-}
-
-export interface ProgressBarTextProps {
   label?: string;
 }
