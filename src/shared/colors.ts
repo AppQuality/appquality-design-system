@@ -176,5 +176,5 @@ export const cyan900 = mix(black, cyan, PERCENT_80);
 export const disabled = gray300;
 export const disabledElement = gray300;
 export const infoDisabled = cyan300;
-export const disabledFont = gray600;
-export const disabledDark = gray600;
+export const disabledFont = gray900;
+export const disabledDark = gray900;
