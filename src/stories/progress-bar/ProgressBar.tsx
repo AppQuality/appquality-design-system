@@ -62,8 +62,6 @@ const ProgressBarLine = styled.div<ProgressBarLineProps>`
   color: ${(props) => (props.disabled ? props.theme.colors.gray900 : "white")};
   text-align: center;
   // Adapt to current theme
-  font-family: ${(props) => props.theme.typography.fontFamily.base};
-  font-size: ${(props) => props.theme.typography.fontSize.h5};
   border-radius: ${(props) => props.theme.general.borderRadius};
   // For text overflow
   white-space: nowrap;
