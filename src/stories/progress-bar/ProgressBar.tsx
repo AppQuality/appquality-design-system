@@ -1,4 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
+import { Text } from "../typography/Typography";
 import {
   ProgressBarProps,
   ProgressBarLineProps,
@@ -42,19 +43,19 @@ export const ProgressBar = (props: ProgressBarProps) => {
       label={label}
       value={value > 100 || value === null ? 100 : value < 0 ? 0 : value}
       {...rest}
-    />
+    >
+      <Text small>{isBlank(label) ? `${value} %` : label}</Text>
+    </ProgressBarLine>
   );
 };
 
 const ProgressBarLine = styled.div<ProgressBarLineProps>`
   // Changes according to the provided value
-  &:after {
-    content: "${(props) =>
-      isBlank(props.label) ? `${props.value} %` : props.label}";
+  ${Text} {
     background: ${(props) =>
       getBackgroundByType(props.theme, props.type as ProgressBarType)};
     width: ${(props) => props.value + "%"};
-    display: block;
+    color: #fff;
   }
   // Switch according to type (cast because it's always initialised)
   background: ${(props) => props.theme.colors.gray100};
