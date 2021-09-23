@@ -21,7 +21,7 @@ const getBackgroundByType = (theme: DefaultTheme, type: ProgressBarType) => {
       bkg = theme.palette.danger;
       break;
     case ProgressBarType.DISABLED:
-      bkg = theme.colors.disabled;
+      bkg = theme.colors.gray900;
       break;
   }
   return bkg;
@@ -85,8 +85,7 @@ const ProgressBarLine = styled.div<ProgressBarLineProps>`
   background: ${(props) =>
     getBackgroundByType(props.theme, props.type as ProgressBarType)};
   // Text & stuff
-  color: ${(props) =>
-    props.disabled ? props.theme.colors.disabledDark : "white"};
+  color: ${(props) => (props.disabled ? props.theme.colors.gray900 : "white")};
   text-align: center;
   // Adapt to current theme
   font-family: ${(props) => props.theme.typography.fontFamily.base};
