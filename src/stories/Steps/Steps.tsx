@@ -57,6 +57,12 @@ const StyledSteps = styled.div<{ direction: StepsProps["direction"] }>`
     display: flex;
     flex-flow: ${(props) =>
       props.direction === "vertical" ? "column" : "row"};
+
+    .step {
+      flex: 1 1 100%;
+      ${(props) =>
+        props.direction === "horizontal" ? "text-align: center;" : ""};
+    }
   }
 `;
 

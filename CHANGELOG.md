@@ -1,3 +1,185 @@
+# v0.1.124 (Thu Sep 16 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(table): Remove text top alignment (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.123 (Wed Sep 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(select): Add disabled with content variant (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.122 (Wed Sep 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(modal): Allow disabling close on click outside (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.121 (Wed Sep 15 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(label): Use correct typing (davide.bizzi@app-quality.com)
+- fix(select): Use correct style for disabled (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.120 (Tue Sep 14 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(toastr): Export toastr (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.119 (Mon Sep 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(global) Add herobox (davide.bizzi@app-quality.com)
+- feat(global): Add ul and body resets (davide.bizzi@app-quality.com)
+- feat(steps): Use all available space (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.118 (Mon Sep 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): Increase zindex of menuportal (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.117 (Mon Sep 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Export steps (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.116 (Mon Sep 13 2021)
+
+#### 🐛 Bug Fix
+
+- Added new components [#78](https://github.com/AppQuality/appquality-design-system/pull/78) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Componente Steps [#77](https://github.com/AppQuality/appquality-design-system/pull/77) ([@iacopolea](https://github.com/iacopolea) davide.bizzi@app-quality.com)
+- Cp 1148 toastr [#76](https://github.com/AppQuality/appquality-design-system/pull/76) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.115 (Thu Sep 02 2021)
+
+#### 🐛 Bug Fix
+
+- fix sidebar alignment [#74](https://github.com/AppQuality/appquality-design-system/pull/74) (davide.bizzi@app-quality.com [@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.114 (Wed Sep 01 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Move react scripts to devdependecies (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.113 (Wed Sep 01 2021)
+
+#### 🐛 Bug Fix
+
+- fix(carousel): Restore mobile behaviour for show arrows [#73](https://github.com/AppQuality/appquality-design-system/pull/73) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.112 (Wed Sep 01 2021)
+
+#### 🐛 Bug Fix
+
+- feat(carousel): extract navigation [#72](https://github.com/AppQuality/appquality-design-system/pull/72) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- feat(carousel): extract navigation [#71](https://github.com/AppQuality/appquality-design-system/pull/71) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.111 (Tue Aug 31 2021)
+
+#### 🐛 Bug Fix
+
+- Some mobile fixes [#69](https://github.com/AppQuality/appquality-design-system/pull/69) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- feat(modal): improve responsive [#68](https://github.com/AppQuality/appquality-design-system/pull/68) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.110 (Fri Aug 27 2021)
 
 #### ⚠️ Pushed to `main`

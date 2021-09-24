@@ -8,6 +8,7 @@ export interface ModalHeaderProps extends BaseProps {
 
 export interface ModalProps extends ModalHeaderProps {
   isOpen: boolean;
+  closeOnClickOutside?: boolean;
   footer?: React.ReactNode;
   size?: "small" | "mid" | "large";
   prevText?: string;

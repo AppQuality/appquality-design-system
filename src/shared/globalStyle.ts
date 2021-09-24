@@ -45,6 +45,12 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       background-color: ${props.theme.colors.gray100};
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
     img {
       max-width: 100%;

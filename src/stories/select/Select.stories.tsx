@@ -32,6 +32,22 @@ SelectBase.args = {
   value: { label: "", value: "" },
 };
 
+export const SelectDisabled = Template.bind({});
+SelectDisabled.args = {
+  label: "My label",
+  options: basicOptions,
+  value: { label: "", value: "" },
+  isDisabled: true,
+};
+
+export const SelectDisabledWithContent = Template.bind({});
+SelectDisabledWithContent.args = {
+  label: "My label",
+  options: basicOptions,
+  value: basicOptions[0],
+  isDisabled: true,
+};
+
 export const GroupedAsync = Template.bind({});
 GroupedAsync.args = {
   options: groupedOptions,

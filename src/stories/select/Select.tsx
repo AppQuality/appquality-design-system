@@ -180,7 +180,9 @@ export const Select = ({
 
   return (
     <>
-      {label && <FormLabel htmlFor={name} label={label} />}
+      {label && (
+        <FormLabel isDisabled={isDisabled} htmlFor={name} label={label} />
+      )}
       <div>
         <ReactSelect
           id={name}
