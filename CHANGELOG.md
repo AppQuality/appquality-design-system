@@ -1,3 +1,21 @@
+# v0.1.125 (Fri Sep 24 2021)
+
+#### 🐛 Bug Fix
+
+- Use generic checkbox component, add progress bar [#82](https://github.com/AppQuality/appquality-design-system/pull/82) ([@iacopolea](https://github.com/iacopolea) [@MrSnix](https://github.com/MrSnix) [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Cp 835 [#81](https://github.com/AppQuality/appquality-design-system/pull/81) ([@MrSnix](https://github.com/MrSnix) [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- CP-835-Progress-Bar [#79](https://github.com/AppQuality/appquality-design-system/pull/79) ([@MrSnix](https://github.com/MrSnix))
+- feat(form): separate checkbox from formik [#75](https://github.com/AppQuality/appquality-design-system/pull/75) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Giuseppe B. ([@MrSnix](https://github.com/MrSnix))
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.124 (Thu Sep 16 2021)
 
 #### ⚠️ Pushed to `main`
