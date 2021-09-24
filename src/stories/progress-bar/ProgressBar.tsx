@@ -25,30 +25,6 @@ const isBlank = (str?: string): boolean => {
   return !str || str.length === 0 || /^\s*$/.test(str);
 };
 
-export const ProgressBar = (props: ProgressBarProps) => {
-  const {
-    className = "",
-    label = "",
-    value = 100,
-    disabled = false,
-    type = ProgressBarType.INFO,
-    ...rest
-  } = props;
-  // Ignore themes when disabled
-  const current_type = disabled ? ProgressBarType.DISABLED : type;
-  return (
-    <ProgressBarLine
-      disabled={disabled}
-      type={current_type}
-      label={label}
-      value={value > 100 || value === null ? 100 : value < 0 ? 0 : value}
-      {...rest}
-    >
-      <Text small>{isBlank(label) ? `${value} %` : label}</Text>
-    </ProgressBarLine>
-  );
-};
-
 const ProgressBarLine = styled.div<ProgressBarLineProps>`
   // Changes according to the provided value
   ${Text} {
@@ -69,3 +45,27 @@ const ProgressBarLine = styled.div<ProgressBarLineProps>`
   text-overflow: ellipsis;
   overflow: hidden;
 `;
+
+export const ProgressBar = (props: ProgressBarProps) => {
+  const {
+    className = "",
+    label = "",
+    value = 100,
+    disabled = false,
+    type = ProgressBarType.INFO,
+    ...rest
+  } = props;
+  // Ignore themes when disabled
+  const currentType = disabled ? ProgressBarType.DISABLED : type;
+  return (
+    <ProgressBarLine
+      disabled={disabled}
+      type={currentType}
+      label={label}
+      value={value > 100 || value === null ? 100 : value < 0 ? 0 : value}
+      {...rest}
+    >
+      <Text small>{isBlank(label) ? `${value} %` : label}</Text>
+    </ProgressBarLine>
+  );
+};
