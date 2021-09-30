@@ -1,4 +1,5 @@
 import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
+import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
 import {
@@ -43,6 +44,7 @@ export const Select = ({
   isClearable = true,
   isSearchable,
   menuTargetQuery,
+  onCreate,
 }: SelectProps) => {
   const [loading, setLoading] = useState(isLoading);
   const [searching, setSearching] = useState<string | false>(false);
@@ -178,45 +180,49 @@ export const Select = ({
     });
   }
 
+  const args = {
+    id: name,
+    name: name,
+    value: optionsArray.filter((opt) => {
+      if (Array.isArray(value)) {
+        return value.filter((v) => v.value == opt.value).length > 0;
+      }
+      return opt.value === value.value;
+    }),
+    menuPortalTarget: menuTargetQuery
+      ? document.querySelector<HTMLElement>(menuTargetQuery)
+      : undefined,
+    onBlur: handleBlur,
+    onChange: handleChange,
+    onInputChange: handleInputChange,
+    options: optionsDropdown,
+    defaultValue: defaultValue,
+    placeholder: placeholder,
+    isDisabled: isDisabled,
+    isLoading: loading,
+    isClearable: isClearable,
+    isSearchable: isSearchable,
+    styles: customStyle,
+    isMulti: isMulti,
+    maxMenuHeight: 200,
+    captureMenuScroll: true,
+    onMenuScrollToBottom: onMenuScrollToBottom,
+    menuShouldScrollIntoView: true,
+    theme: aqTheme,
+    ...customComponents,
+  };
+
   return (
     <>
       {label && (
         <FormLabel isDisabled={isDisabled} htmlFor={name} label={label} />
       )}
       <div>
-        <ReactSelect
-          id={name}
-          name={name}
-          value={optionsArray.filter((opt) => {
-            if (Array.isArray(value)) {
-              return value.filter((v) => v.value == opt.value).length > 0;
-            }
-            return opt.value === value.value;
-          })}
-          menuPortalTarget={
-            menuTargetQuery
-              ? document.querySelector<HTMLElement>(menuTargetQuery)
-              : undefined
-          }
-          onBlur={handleBlur}
-          onChange={handleChange}
-          onInputChange={handleInputChange}
-          options={optionsDropdown}
-          defaultValue={defaultValue}
-          placeholder={placeholder}
-          isDisabled={isDisabled}
-          isLoading={loading}
-          isClearable={isClearable}
-          isSearchable={isSearchable}
-          styles={customStyle}
-          isMulti={isMulti}
-          maxMenuHeight={200}
-          captureMenuScroll={true}
-          onMenuScrollToBottom={onMenuScrollToBottom}
-          menuShouldScrollIntoView
-          theme={aqTheme}
-          {...customComponents}
-        />
+        {onCreate ? (
+          <Creatable {...args} onCreateOption={onCreate} />
+        ) : (
+          <ReactSelect {...args} />
+        )}
       </div>
     </>
   );

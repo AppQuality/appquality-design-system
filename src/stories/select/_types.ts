@@ -26,6 +26,7 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   label: string;
   onBlur?: (e: ChangeEvent) => void;
   onChange?: (value: Option) => void;
+  onCreate?: (value: Option) => void;
   options: Options;
   value: Option | Array<Option>;
   defaultValue?: Option;
