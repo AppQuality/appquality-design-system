@@ -219,7 +219,16 @@ export const Select = ({
       )}
       <div>
         {onCreate ? (
-          <Creatable {...args} onCreateOption={onCreate} />
+          <Creatable
+            {...args}
+            onCreateOption={(value) => {
+              onCreate(value);
+              setOptions({
+                type: "add",
+                payload: [{ value: value, label: value }],
+              });
+            }}
+          />
         ) : (
           <ReactSelect {...args} />
         )}
