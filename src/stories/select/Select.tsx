@@ -45,6 +45,7 @@ export const Select = ({
   isSearchable,
   menuTargetQuery,
   onCreate,
+  formatCreateLabel,
 }: SelectProps) => {
   const [loading, setLoading] = useState(isLoading);
   const [searching, setSearching] = useState<string | false>(false);
@@ -221,6 +222,7 @@ export const Select = ({
         {onCreate ? (
           <Creatable
             {...args}
+            formatCreateLabel={formatCreateLabel}
             onCreateOption={(value) => {
               onCreate(value);
               setOptions({
