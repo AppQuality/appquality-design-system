@@ -1,3 +1,22 @@
+# v0.1.126 (Wed Oct 06 2021)
+
+#### 🐛 Bug Fix
+
+- feat(select): Add creatable variant [#83](https://github.com/AppQuality/appquality-design-system/pull/83) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(datepicker): add es locale ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.125 (Fri Sep 24 2021)
 
 #### 🐛 Bug Fix
