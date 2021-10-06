@@ -1,3 +1,16 @@
+# v0.1.127 (Wed Oct 06 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(checkbox): add missing props ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.126 (Wed Oct 06 2021)
 
 #### 🐛 Bug Fix
