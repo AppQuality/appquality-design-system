@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 
 const BaseCheckbox = ({
   id,
+  name,
   label,
   className,
   disabled,
@@ -10,8 +11,9 @@ const BaseCheckbox = ({
   isInvalid, // used by styled
   checked = false,
 }: {
-  id: string;
-  label: ReactNode;
+  id?: string;
+  name?: string;
+  label?: ReactNode;
   className?: string;
   value?: string;
   disabled?: boolean;
@@ -32,6 +34,7 @@ const BaseCheckbox = ({
       )}
       <input
         id={id}
+        name={name}
         type="checkbox"
         value={value}
         disabled={disabled}
