@@ -2,6 +2,7 @@ import {
   Datepicker as MobiScrollDatePicker,
   localeIt,
   localeEn,
+  localeEs,
 } from "@appquality/mobiscroll";
 import { DatepickerProps } from "./_types";
 
@@ -22,6 +23,7 @@ export const Datepicker = ({
 }: DatepickerProps) => {
   let currentLocale = localeEn;
   if (locale === "it") currentLocale = localeIt;
+  if (locale === "es") currentLocale = localeEs;
   return (
     <>
       <MobiScrollDatePicker
