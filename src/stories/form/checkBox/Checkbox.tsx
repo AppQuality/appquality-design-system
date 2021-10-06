@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { ReactNode } from "react";
+import React, { ChangeEventHandler, FocusEventHandler, ReactNode } from "react";
 
 const BaseCheckbox = ({
   id,
@@ -8,6 +8,8 @@ const BaseCheckbox = ({
   className,
   disabled,
   value,
+  onChange,
+  onBlur,
   isInvalid, // used by styled
   checked = false,
 }: {
@@ -19,7 +21,8 @@ const BaseCheckbox = ({
   disabled?: boolean;
   isInvalid?: boolean;
   checked?: boolean;
-  onChange?: (val: string) => void;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  onBlur?: FocusEventHandler<HTMLInputElement>;
 }) => {
   return (
     <div className={className}>
@@ -39,6 +42,8 @@ const BaseCheckbox = ({
         value={value}
         disabled={disabled}
         defaultChecked={checked}
+        onChange={onChange}
+        onBlur={onBlur}
         className="form-check-input"
       />
     </div>
