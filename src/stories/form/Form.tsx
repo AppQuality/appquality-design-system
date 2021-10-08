@@ -9,6 +9,7 @@ import { FieldInterface } from "./_types";
 import FormLabel from "./formlabel/FormLabel";
 import Input from "./input/Input";
 import { Checkbox } from "./checkBox/Checkbox";
+import { Radio } from "./radio/Radio";
 
 const BasicErrorMessage = ({
   name,
@@ -68,4 +69,4 @@ export const Field = ({
   );
 };
 
-export { FormGroup, Checkbox, FormLabel, Input };
+export { FormGroup, Checkbox, FormLabel, Input, Radio };
