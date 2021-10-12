@@ -1,7 +1,7 @@
 import { BaseProps } from "../../shared/_types";
 
 export interface PageTitleProps extends BaseProps {
-  size?: "big" | "regular";
+  size?: "big" | "regular" | "small";
   as?: React.ElementType;
   subtitle?:
     | string

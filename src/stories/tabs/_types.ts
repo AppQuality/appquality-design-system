@@ -1,6 +1,7 @@
 import { BaseProps } from "../../shared/_types";
 export interface TabsProps extends BaseProps {
   active: string;
+  setActive?: (tab: string) => void;
 }
 export interface TabProps extends BaseProps {
   id: string;
