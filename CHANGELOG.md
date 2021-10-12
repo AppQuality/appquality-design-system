@@ -1,3 +1,19 @@
+# v0.1.129 (Tue Oct 12 2021)
+
+#### 🐛 Bug Fix
+
+- Add radio and update components [#86](https://github.com/AppQuality/appquality-design-system/pull/86) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- feat(pagetitle): Add small variant [#85](https://github.com/AppQuality/appquality-design-system/pull/85) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+- Cp 1300 radio [#84](https://github.com/AppQuality/appquality-design-system/pull/84) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.128 (Wed Oct 06 2021)
 
 #### ⚠️ Pushed to `main`
