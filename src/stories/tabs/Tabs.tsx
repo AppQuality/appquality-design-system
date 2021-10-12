@@ -45,8 +45,13 @@ export const TabHead = styled(BasicTabHead)`
 export const Tab = ({ id, active, children }: TabProps) =>
   active ? <div>{children}</div> : null;
 
-const BasicTabs = ({ active, children, className }: TabsProps) => {
+//() = setActive('asd')
+const BasicTabs = ({ active, children, className, setActive }: TabsProps) => {
   let [current, setCurrent] = useState(active);
+  if (!setActive) {
+    setActive = setCurrent;
+    active = current;
+  }
   let tabHead: React.ReactNode = null;
   const tabs = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === Tab) {
@@ -54,15 +59,15 @@ const BasicTabs = ({ active, children, className }: TabsProps) => {
         <>
           {tabHead}
           <TabHead
-            active={current === child.props.id}
+            active={active === child.props.id}
             id={child.props.id}
             title={child.props.title}
             disabled={child.props.disabled}
-            setActive={() => setCurrent(child.props.id)}
+            setActive={() => setActive && setActive(child.props.id)}
           />
         </>
       );
-      return React.cloneElement(child, { active: current === child.props.id });
+      return React.cloneElement(child, { active: active === child.props.id });
     }
     return null;
   });
