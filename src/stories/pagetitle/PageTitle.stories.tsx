@@ -22,6 +22,12 @@ PageTitleWithSubtitle.args = {
   subtitle: "Subtitle",
 };
 
+export const PageTitleSmallWithSubtitle = Template.bind({});
+PageTitleSmallWithSubtitle.args = {
+  size: "small",
+  subtitle: "Subtitle",
+};
+
 export const PageTitleWithSubtitleAndHeading = Template.bind({});
 PageTitleWithSubtitleAndHeading.args = {
   size: "regular",
