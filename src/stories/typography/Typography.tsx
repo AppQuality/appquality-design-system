@@ -6,7 +6,7 @@ export interface TypographyProps {
 }
 
 export interface TitleProps extends TypographyProps {
-  size: "xs" | "s" | "ms" | "m" | "l" | "xl";
+  size: "xs" | "s" | "ms" | "mt" | "m" | "l" | "xl";
 }
 export interface TextProps extends TypographyProps {
   small?: boolean;
@@ -33,7 +33,8 @@ export const Title = styled.div(({ theme, size, color }: TitleProps) => {
   const titleSizes = {
     xs: { desktop: "14px", mobile: "16px" },
     s: { desktop: "16px", mobile: false },
-    ms: { desktop: "24px", mobile: false },
+    ms: { desktop: "20px", mobile: false },
+    mt: { desktop: "24px", mobile: false },
     m: { desktop: "28px", mobile: false },
     l: { desktop: "32px", mobile: false },
     xl: { desktop: "40px", mobile: false },
@@ -44,7 +45,8 @@ export const Title = styled.div(({ theme, size, color }: TitleProps) => {
       mobile: typography.fontWeight.bold.toString(),
     },
     s: { desktop: typography.fontWeight.bold.toString(), mobile: false },
-    ms: { desktop: typography.fontWeight.normal.toString(), mobile: false },
+    ms: { desktop: typography.fontWeight.bold.toString(), mobile: false },
+    mt: { desktop: typography.fontWeight.normal.toString(), mobile: false },
     m: { desktop: typography.fontWeight.medium.toString(), mobile: false },
     l: { desktop: typography.fontWeight.medium.toString(), mobile: false },
     xl: { desktop: typography.fontWeight.medium.toString(), mobile: false },

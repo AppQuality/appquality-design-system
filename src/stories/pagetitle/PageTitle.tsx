@@ -22,13 +22,16 @@ const PageTitle = ({
   as,
 }: PageTitleProps) => {
   let titleSize: TitleProps["size"] = "xl";
-  let subtitleSize: TitleProps["size"] = "ms";
+  let subtitleSize: TitleProps["size"] = "mt";
   let headingElement = null;
   let subtitleElement = null;
   let backElement = null;
   if (size === "regular") {
     titleSize = "l";
     subtitleSize = "s";
+  } else if (size === "small") {
+    titleSize = "ms";
+    subtitleSize = "xs";
   }
   if (subtitle) {
     subtitleElement = (

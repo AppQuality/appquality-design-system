@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Tabs, Tab, TabsProps } from "./Tabs";
 import { Card } from "../card/Card";
 import { Story, Meta } from "@storybook/react";
@@ -52,6 +53,31 @@ export const TabsInsideCard = () => (
     </Tabs>
   </Card>
 );
+
+export const TabsSelectFromOutside = () => {
+  const [active, setActive] = useState("tab1");
+  return (
+    <Card bodyClass="aq-mb-3">
+      <select onChange={(e) => setActive(e.target.value)}>
+        <option value="tab1">Tab 1</option>
+        <option value="tab2">Tab 2</option>
+      </select>
+      <Tabs active={active} setActive={setActive}>
+        <Tab id="tab1" title="Tab 1">
+          <div className="aq-m-3">Lorem ipsum dolor sit amet</div>
+        </Tab>
+        <Tab id="tab2" title="Tab 2">
+          <div className="aq-m-3">numquam concupescendit elit</div>
+        </Tab>
+        <Tab id="tab3" title="Tab 3" disabled>
+          <div className="aq-m-3">
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </Tab>
+      </Tabs>
+    </Card>
+  );
+};
 
 export const MobileScrollTabs = () => (
   <Card bodyClass="aq-mb-3">
