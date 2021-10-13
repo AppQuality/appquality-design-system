@@ -1,3 +1,15 @@
+# v0.1.130 (Wed Oct 13 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(tabs): Allow react node on title (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.129 (Tue Oct 12 2021)
 
 #### 🐛 Bug Fix
