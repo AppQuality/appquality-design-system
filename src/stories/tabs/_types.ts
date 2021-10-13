@@ -7,12 +7,12 @@ export interface TabProps extends BaseProps {
   id: string;
   active?: boolean;
   disabled?: boolean;
-  title?: string;
+  title?: React.ReactNode;
 }
 export interface TabHeadProps extends BaseProps {
   id: string;
   disabled?: boolean;
   active?: boolean;
-  title?: string;
+  title?: React.ReactNode;
   setActive?: () => void;
 }
