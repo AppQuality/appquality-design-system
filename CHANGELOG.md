@@ -1,3 +1,15 @@
+# v0.1.132 (Mon Oct 18 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(datepicker): Allow setting default value (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.131 (Mon Oct 18 2021)
 
 #### ⚠️ Pushed to `main`
