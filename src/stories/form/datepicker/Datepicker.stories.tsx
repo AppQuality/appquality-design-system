@@ -45,3 +45,11 @@ DatepickerInputWithMaximum.args = {
   },
   maxDate: new Date(now.getFullYear() - 18, now.getMonth(), now.getDate()),
 };
+
+export const DatePickerWithValue = DatepickerTemplate.bind({});
+DatePickerWithValue.args = {
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+  value: now,
+};

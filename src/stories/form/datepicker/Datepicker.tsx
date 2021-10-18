@@ -27,6 +27,7 @@ export const Datepicker = ({
   return (
     <>
       <MobiScrollDatePicker
+        defaultValue={value}
         select={select}
         min={minDate}
         max={maxDate}
