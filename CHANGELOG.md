@@ -1,3 +1,15 @@
+# v0.1.131 (Mon Oct 18 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(radio): Add name and onchange props (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.130 (Wed Oct 13 2021)
 
 #### ⚠️ Pushed to `main`
