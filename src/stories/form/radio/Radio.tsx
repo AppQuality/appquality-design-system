@@ -3,14 +3,17 @@ import React, { ReactNode } from "react";
 
 const BaseRadio = ({
   id,
+  name,
   label,
   className,
   disabled,
   value,
   isInvalid, // used by styled
   checked = false,
+  onChange,
 }: {
   id: string;
+  name: string;
   label: ReactNode;
   className?: string;
   value?: string;
@@ -32,10 +35,12 @@ const BaseRadio = ({
       )}
       <input
         id={id}
+        name={name}
         type="radio"
         value={value}
         disabled={disabled}
         defaultChecked={checked}
+        onChange={(e) => onChange && onChange(e.target.value)}
         className="form-check-input"
       />
     </div>
