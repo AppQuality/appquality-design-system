@@ -1,3 +1,15 @@
+# v0.1.135 (Wed Oct 20 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): remove previous test and fix for real async initial options ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.134 (Wed Oct 20 2021)
 
 #### ⚠️ Pushed to `main`
