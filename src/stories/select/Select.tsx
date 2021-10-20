@@ -1,4 +1,5 @@
 import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
+import AsyncSelect from "react-select/async";
 import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
@@ -232,8 +233,10 @@ export const Select = ({
               });
             }}
           />
-        ) : (
+        ) : Array.isArray(options) ? (
           <ReactSelect {...args} />
+        ) : (
+          <AsyncSelect {...args} />
         )}
       </div>
     </>
