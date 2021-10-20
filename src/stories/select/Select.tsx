@@ -1,5 +1,4 @@
 import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
-import AsyncSelect from "react-select/async";
 import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
@@ -75,7 +74,6 @@ export const Select = ({
       setLoading(true);
       getAsyncRes(options, 0).then((res) => {
         setInitialOptions(res);
-        showInitialOptions();
         setLoading(false);
       });
     }
@@ -105,10 +103,10 @@ export const Select = ({
     setOptions({ type: type, payload: res.results });
   };
 
-  const showInitialOptions = () => {
+  useEffect(() => {
     setOptions({ type: "set", payload: initialOptions.results });
     setMore(initialOptions.more);
-  };
+  }, [initialOptions]);
 
   const handleInputChange = (value: string, actionMeta: InputActionMeta) => {
     if (options instanceof Function) {
@@ -122,7 +120,8 @@ export const Select = ({
             setLoading(false);
           });
         } else {
-          showInitialOptions();
+          setOptions({ type: "set", payload: initialOptions.results });
+          setMore(initialOptions.more);
         }
       }, 800);
     }
@@ -202,7 +201,6 @@ export const Select = ({
     placeholder: placeholder,
     isDisabled: isDisabled,
     isLoading: loading,
-    defaultOptions: true,
     isClearable: isClearable,
     isSearchable: isSearchable,
     styles: customStyle,
@@ -233,10 +231,8 @@ export const Select = ({
               });
             }}
           />
-        ) : Array.isArray(options) ? (
-          <ReactSelect {...args} />
         ) : (
-          <AsyncSelect {...args} />
+          <ReactSelect {...args} />
         )}
       </div>
     </>
