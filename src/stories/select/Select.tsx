@@ -201,6 +201,7 @@ export const Select = ({
     placeholder: placeholder,
     isDisabled: isDisabled,
     isLoading: loading,
+    defaultOptions: true,
     isClearable: isClearable,
     isSearchable: isSearchable,
     styles: customStyle,
