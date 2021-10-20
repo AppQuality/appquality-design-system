@@ -1,3 +1,17 @@
+# v0.1.134 (Wed Oct 20 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): useAsyncSelect component for async riproviamoci ([@iacopolea](https://github.com/iacopolea))
+- Merge remote-tracking branch 'origin/main' ([@iacopolea](https://github.com/iacopolea))
+- fix(select): useAsyncSelect component for async ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.133 (Wed Oct 20 2021)
 
 #### ⚠️ Pushed to `main`
