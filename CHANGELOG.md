@@ -1,3 +1,16 @@
+# v0.1.133 (Wed Oct 20 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(select): select defaultOptions default true ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.132 (Mon Oct 18 2021)
 
 #### ⚠️ Pushed to `main`
