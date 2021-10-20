@@ -1,3 +1,15 @@
+# v0.1.136 (Wed Oct 20 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): test value assignment ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.135 (Wed Oct 20 2021)
 
 #### ⚠️ Pushed to `main`
