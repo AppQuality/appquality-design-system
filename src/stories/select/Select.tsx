@@ -68,15 +68,13 @@ export const Select = ({
   }, [page]);
 
   useEffect(() => {
-    if (options instanceof Array) {
-      setOptions({ type: "set", payload: options });
-    } else {
-      setLoading(true);
-      getAsyncRes(options, 0).then((res) => {
-        setInitialOptions(res);
-        setLoading(false);
-      });
-    }
+    if (options instanceof Array) return;
+
+    setLoading(true);
+    getAsyncRes(options, 0).then((res) => {
+      setInitialOptions(res);
+      setLoading(false);
+    });
   }, [options]);
 
   const triggerUpdate = () => {
@@ -162,7 +160,8 @@ export const Select = ({
     if (thereIsMore) setPage((page) => page + 1); // this is not the updated value of thereIsMore untill rerender :((
   };
 
-  const optionsDropdown = [...optionsArray];
+  const optionsDropdown = Array.isArray(options) ? options : [...optionsArray];
+
   if (loading) {
     optionsDropdown.push({
       value: "loading-placeholder",
@@ -184,7 +183,12 @@ export const Select = ({
   const args = {
     id: name,
     name: name,
-    value: value,
+    value: optionsDropdown.filter((opt) => {
+      if (Array.isArray(value)) {
+        return value.filter((v) => v.value == opt.value).length > 0;
+      }
+      return opt.value === value.value;
+    }),
     menuPortalTarget: menuTargetQuery
       ? document.querySelector<HTMLElement>(menuTargetQuery)
       : undefined,
