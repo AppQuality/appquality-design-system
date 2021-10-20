@@ -184,12 +184,7 @@ export const Select = ({
   const args = {
     id: name,
     name: name,
-    value: optionsArray.filter((opt) => {
-      if (Array.isArray(value)) {
-        return value.filter((v) => v.value == opt.value).length > 0;
-      }
-      return opt.value === value.value;
-    }),
+    value: value,
     menuPortalTarget: menuTargetQuery
       ? document.querySelector<HTMLElement>(menuTargetQuery)
       : undefined,
