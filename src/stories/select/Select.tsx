@@ -2,6 +2,8 @@ import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
 import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+
 import {
   Option,
   GetOptionsAsync,
@@ -43,6 +45,8 @@ export const Select = ({
   isLoading,
   isClearable = true,
   isSearchable,
+  isPlaces,
+  placesOptions,
   menuTargetQuery,
   onCreate,
   formatCreateLabel,
@@ -211,14 +215,22 @@ export const Select = ({
     theme: aqTheme,
     ...customComponents,
   };
-
   return (
     <>
       {label && (
         <FormLabel isDisabled={isDisabled} htmlFor={name} label={label} />
       )}
       <div>
-        {onCreate ? (
+        {isPlaces ? (
+          <GooglePlacesAutocomplete
+            apiKey={"AIzaSyDJqenKVp22KCz9StLq31acTkWq-7eDD_w"}
+            selectProps={{
+              styles: args.styles,
+              theme: aqTheme,
+              ...customComponents,
+            }}
+          />
+        ) : onCreate ? (
           <Creatable
             {...args}
             formatCreateLabel={formatCreateLabel}
@@ -237,3 +249,12 @@ export const Select = ({
     </>
   );
 };
+
+// apiKey?: string;                               // default: ''
+// apiOptions?: ApiOptions;                       // default: { }
+// autocompletionRequest?: AutocompletionRequest; // default: { }
+// debounce?: number;                             // default: 300
+// minLengthAutocomplete?: number;                // default: 0
+// onLoadFailed?: (error: Error) => void;         // default: console.error
+// selectProps?: SelectProps;                     // default: { }
+// withSessionToken?: boolean;                    // default: false

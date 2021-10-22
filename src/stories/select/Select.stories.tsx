@@ -66,3 +66,10 @@ MultipleSelect.args = {
     { label: basicOptions[1].label, value: basicOptions[1].value },
   ],
 };
+
+export const PlacesAutocomplete = Template.bind({});
+PlacesAutocomplete.args = {
+  isPlaces: true,
+  options: basicOptions,
+  value: { label: "", value: "" },
+};

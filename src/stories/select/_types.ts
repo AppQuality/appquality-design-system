@@ -36,6 +36,8 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   isDisabled?: boolean;
   isLoading?: boolean;
   isSearchable?: boolean;
+  isPlaces?: boolean;
+  placesOptions?: object;
   menuTargetQuery?: string;
   formatCreateLabel?: (value: string) => React.ReactNode;
 }
