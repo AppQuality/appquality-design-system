@@ -184,15 +184,19 @@ export const Select = ({
     });
   }
 
-  const args = {
-    id: name,
-    name: name,
-    value: optionsDropdown.filter((opt) => {
+  const handleValue = (): Option[] | Option => {
+    return optionsDropdown.filter((opt) => {
       if (Array.isArray(value)) {
         return value.filter((v) => v.value == opt.value).length > 0;
       }
       return opt.value === value.value;
-    }),
+    });
+  };
+
+  const args = {
+    id: name,
+    name: name,
+    value: handleValue(),
     menuPortalTarget: menuTargetQuery
       ? document.querySelector<HTMLElement>(menuTargetQuery)
       : undefined,
@@ -225,10 +229,13 @@ export const Select = ({
           <GooglePlacesAutocomplete
             apiKey={"AIzaSyDJqenKVp22KCz9StLq31acTkWq-7eDD_w"}
             selectProps={{
+              value: value,
               styles: args.styles,
+              onChange: args.onChange,
               theme: aqTheme,
               ...customComponents,
             }}
+            apiOptions={placesOptions}
           />
         ) : onCreate ? (
           <Creatable

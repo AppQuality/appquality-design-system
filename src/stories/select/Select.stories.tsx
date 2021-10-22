@@ -2,6 +2,7 @@ import { Select } from "./Select";
 import { SelectProps } from "./_types";
 import { basicOptions, getAsyncOptions, groupedOptions } from "./_data";
 import { Story, Meta } from "@storybook/react";
+import { geocodeByPlaceId } from "react-google-places-autocomplete";
 
 export default {
   title: "Select",
@@ -72,4 +73,26 @@ PlacesAutocomplete.args = {
   isPlaces: true,
   options: basicOptions,
   value: { label: "", value: "" },
+  onChange: (value) => {
+    // @ts-ignore
+    geocodeByPlaceId(value?.value?.place_id)
+      .then((results) => console.log(results[0].address_components))
+      .catch((error) => console.error("error", error));
+  },
+};
+
+// city: "Riomaggiore"
+// cityCode: "19017"
+// country: "IT"
+// province: "SP"
+// street: "Via dell' Amore, 50"
+const testAddress = "Via Cenischia, pippo, topolinia, TO, IT";
+export const PlacesAutocompleteWithValue = Template.bind({});
+PlacesAutocompleteWithValue.args = {
+  isPlaces: true,
+  options: basicOptions,
+  value: {
+    label: testAddress,
+    value: testAddress,
+  },
 };
