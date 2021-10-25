@@ -1,5 +1,5 @@
-import { ActionMeta } from "react-select";
 import React, { ChangeEvent } from "react";
+import { ActionMeta } from "react-select";
 import { aqTheme, customComponents, customStyle } from "../select/_styles";
 import GooglePlacesAutocomplete, {
   geocodeByPlaceId,

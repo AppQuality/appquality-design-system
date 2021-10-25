@@ -1,5 +1,4 @@
 import { NamedProps } from "react-select/src/Select";
-import GeocoderResult = google.maps.GeocoderResult;
 import React from "react";
 
 interface ApiOptions {
@@ -37,6 +36,6 @@ interface GooglePlacesAutocompleteProps {
 
 export interface PlacesAutocompleteProps {
   placesProps: GooglePlacesAutocompleteProps;
-  onChange?: (getGeoCode: Promise<GeocoderResult[]>) => void;
+  onChange?: (getGeoCode: Promise<google.maps.GeocoderResult[]>) => void;
   onBlur?: (e: React.ChangeEvent) => void;
 }
