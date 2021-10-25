@@ -2,6 +2,7 @@ import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
 import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
+
 import {
   Option,
   GetOptionsAsync,
@@ -131,6 +132,7 @@ export const Select = ({
         resetOptions();
       }
     }
+    // usecase: select places autocomplete
     if (onChange) onChange(value);
   };
 
@@ -180,15 +182,19 @@ export const Select = ({
     });
   }
 
-  const args = {
-    id: name,
-    name: name,
-    value: optionsDropdown.filter((opt) => {
+  const handleValue = (): Option[] | Option => {
+    return optionsDropdown.filter((opt) => {
       if (Array.isArray(value)) {
         return value.filter((v) => v.value == opt.value).length > 0;
       }
       return opt.value === value.value;
-    }),
+    });
+  };
+
+  const args = {
+    id: name,
+    name: name,
+    value: handleValue(),
     menuPortalTarget: menuTargetQuery
       ? document.querySelector<HTMLElement>(menuTargetQuery)
       : undefined,
@@ -211,7 +217,6 @@ export const Select = ({
     theme: aqTheme,
     ...customComponents,
   };
-
   return (
     <>
       {label && (
