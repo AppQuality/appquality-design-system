@@ -4,7 +4,7 @@ import { aqTheme, customComponents, customStyle } from "../select/_styles";
 import GooglePlacesAutocomplete, {
   geocodeByPlaceId,
 } from "react-google-places-autocomplete";
-import { PlacesAutocompleteProps } from "./types";
+import { PlacesAutocompleteProps } from "./_types";
 
 export const PlacesAutocomplete = ({
   placesProps,

@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import { PlacesAutocompleteProps } from "./types";
+import { PlacesAutocompleteProps } from "./_types";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
 
 export default {
