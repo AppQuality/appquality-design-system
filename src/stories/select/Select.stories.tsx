@@ -2,7 +2,6 @@ import { Select } from "./Select";
 import { SelectProps } from "./_types";
 import { basicOptions, getAsyncOptions, groupedOptions } from "./_data";
 import { Story, Meta } from "@storybook/react";
-import { geocodeByPlaceId } from "react-google-places-autocomplete";
 
 export default {
   title: "Select",

@@ -2,9 +2,6 @@ import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
 import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
-import GooglePlacesAutocomplete, {
-  geocodeByPlaceId,
-} from "react-google-places-autocomplete";
 
 import {
   Option,
