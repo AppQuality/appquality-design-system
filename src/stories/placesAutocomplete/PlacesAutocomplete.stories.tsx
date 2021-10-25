@@ -14,10 +14,9 @@ const Template: Story<PlacesAutocompleteProps> = (args) => {
 export const PlacesAutocompleteBase = Template.bind({});
 PlacesAutocompleteBase.args = {
   placesProps: { apiKey: "AIzaSyDJqenKVp22KCz9StLq31acTkWq-7eDD_w" },
-  onChange: async (getGeoCode) => {
+  onChange: async (places) => {
     try {
-      const places = await getGeoCode;
-      console.log(places[0]);
+      console.log(places);
     } catch (e) {
       alert(e);
     }

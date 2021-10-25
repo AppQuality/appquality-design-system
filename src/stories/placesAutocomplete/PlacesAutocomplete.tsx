@@ -11,9 +11,10 @@ export const PlacesAutocomplete = ({
   onChange,
   onBlur,
 }: PlacesAutocompleteProps) => {
-  const handleChange = (value: any, actionMeta: ActionMeta<any>) => {
+  const handleChange = async (value: any, actionMeta: ActionMeta<any>) => {
     if (onChange) {
-      onChange(geocodeByPlaceId(value?.value?.place_id));
+      const places = await geocodeByPlaceId(value?.value?.place_id);
+      onChange(places);
     }
   };
 
