@@ -1,3 +1,15 @@
+# v0.1.141 (Mon Oct 25 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(places autocomplete): fix strange type filename bug ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.140 (Mon Oct 25 2021)
 
 #### ⚠️ Pushed to `main`
