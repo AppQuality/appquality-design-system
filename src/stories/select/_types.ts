@@ -1,4 +1,34 @@
-import { ChangeEvent } from "react";
+import React, { ChangeEvent } from "react";
+
+interface ApiOptions {
+  language?: string;
+  region?: string;
+}
+
+interface LatLng {
+  lat: number;
+  lng: number;
+}
+
+interface AutocompletionRequest {
+  bounds?: [LatLng, LatLng];
+  componentRestrictions?: { country: string | string[] };
+  location?: LatLng;
+  offset?: number;
+  radius?: number;
+  types?: string[];
+}
+
+interface GooglePlacesAutocompleteProps {
+  apiKey?: string; // default: ''
+  apiOptions?: ApiOptions; // default: { }
+  autocompletionRequest?: AutocompletionRequest; // default: { }
+  debounce?: number; // default: 300
+  minLengthAutocomplete?: number; // default: 0
+  onLoadFailed?: (error: Error) => void; // default: console.error
+  //selectProps?: SelectProps;                     // default: { }
+  withSessionToken?: boolean; // default: false
+}
 
 export interface Option {
   label: string;
@@ -21,6 +51,20 @@ export type GetOptionsAsync = (
 // () => { github.get('repositories').then( rep => rep.map(r => {r.id,r.name}))
 // () => { api.get('/api/users/me/bugs').then( bugs => bug.map( b => b.campaign_name).unique())
 
+interface AddressComponent {
+  long_name: string;
+  short_name: string;
+  types: string[];
+}
+
+interface GeocodeObjectInfo {
+  address_components: AddressComponent[];
+  formatted_address: string;
+  geometry: object;
+  place_id: string;
+  types: string[];
+}
+
 export interface SelectProps /*extends GenericFieldInterface*/ {
   name: string;
   label: string;
@@ -36,8 +80,6 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   isDisabled?: boolean;
   isLoading?: boolean;
   isSearchable?: boolean;
-  isPlaces?: boolean;
-  placesOptions?: object;
   menuTargetQuery?: string;
   formatCreateLabel?: (value: string) => React.ReactNode;
 }

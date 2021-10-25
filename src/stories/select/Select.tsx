@@ -2,7 +2,9 @@ import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
 import Creatable from "react-select/creatable";
 import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
-import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+import GooglePlacesAutocomplete, {
+  geocodeByPlaceId,
+} from "react-google-places-autocomplete";
 
 import {
   Option,
@@ -45,8 +47,6 @@ export const Select = ({
   isLoading,
   isClearable = true,
   isSearchable,
-  isPlaces,
-  placesOptions,
   menuTargetQuery,
   onCreate,
   formatCreateLabel,
@@ -135,6 +135,7 @@ export const Select = ({
         resetOptions();
       }
     }
+    // usecase: select places autocomplete
     if (onChange) onChange(value);
   };
 
@@ -225,19 +226,7 @@ export const Select = ({
         <FormLabel isDisabled={isDisabled} htmlFor={name} label={label} />
       )}
       <div>
-        {isPlaces ? (
-          <GooglePlacesAutocomplete
-            apiKey={"AIzaSyDJqenKVp22KCz9StLq31acTkWq-7eDD_w"}
-            selectProps={{
-              value: value,
-              styles: args.styles,
-              onChange: args.onChange,
-              theme: aqTheme,
-              ...customComponents,
-            }}
-            apiOptions={placesOptions}
-          />
-        ) : onCreate ? (
+        {onCreate ? (
           <Creatable
             {...args}
             formatCreateLabel={formatCreateLabel}
@@ -256,12 +245,3 @@ export const Select = ({
     </>
   );
 };
-
-// apiKey?: string;                               // default: ''
-// apiOptions?: ApiOptions;                       // default: { }
-// autocompletionRequest?: AutocompletionRequest; // default: { }
-// debounce?: number;                             // default: 300
-// minLengthAutocomplete?: number;                // default: 0
-// onLoadFailed?: (error: Error) => void;         // default: console.error
-// selectProps?: SelectProps;                     // default: { }
-// withSessionToken?: boolean;                    // default: false
