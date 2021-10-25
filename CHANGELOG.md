@@ -1,3 +1,16 @@
+# v0.1.138 (Mon Oct 25 2021)
+
+#### 🐛 Bug Fix
+
+- nuovo componente Places Autocomplete [#87](https://github.com/AppQuality/appquality-design-system/pull/87) (gianpaolo.sinatra@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Gianpaolo Sinatra (gianpaolo.sinatra@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.137 (Wed Oct 20 2021)
 
 #### ⚠️ Pushed to `main`
