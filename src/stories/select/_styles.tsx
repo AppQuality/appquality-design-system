@@ -22,7 +22,9 @@ const MultiValueContainer = (
 ) => {
   return (
     <components.MultiValueContainer {...props}>
-      <Pill type="info">{props.children}</Pill>
+      <Pill type="info">
+        <div style={{ display: "flex" }}>{props.children}</div>
+      </Pill>
     </components.MultiValueContainer>
   );
 };
@@ -194,6 +196,7 @@ const customStyle: Styles<any, any> = {
     const float = "right";
     const padding = "0";
     const margin = "0 0 0 10px";
+    const alignSelf = "center";
 
     return {
       ...provided,
@@ -201,6 +204,7 @@ const customStyle: Styles<any, any> = {
         ...provided[":hover"],
         backgroundColor,
       },
+      alignSelf,
       borderRadius,
       backgroundColor,
       float,
