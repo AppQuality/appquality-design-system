@@ -1,3 +1,15 @@
+# v0.1.143 (Wed Oct 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): Use ellipsis on pills on multi (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.142 (Wed Oct 27 2021)
 
 #### ⚠️ Pushed to `main`
