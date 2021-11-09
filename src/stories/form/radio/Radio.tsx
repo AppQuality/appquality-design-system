@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { ReactNode } from "react";
+import React, { ChangeEvent, ReactNode } from "react";
 
 const BaseRadio = ({
   id,
@@ -20,7 +20,7 @@ const BaseRadio = ({
   disabled?: boolean;
   isInvalid?: boolean;
   checked?: boolean;
-  onChange?: (val: string) => void;
+  onChange?: (val: string, e?: ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
     <div className={className}>
@@ -40,7 +40,7 @@ const BaseRadio = ({
         value={value}
         disabled={disabled}
         defaultChecked={checked}
-        onChange={(e) => onChange && onChange(e.target.value)}
+        onChange={(e) => onChange && onChange(e.target.value, e)}
         className="form-check-input"
       />
     </div>
