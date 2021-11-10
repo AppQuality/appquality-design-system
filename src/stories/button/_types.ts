@@ -44,5 +44,8 @@ export type ButtonProps = BaseProps & {
    */
   as?: React.ElementType | keyof JSX.IntrinsicElements;
   target?: string;
+  /*
+   * Optional form prop to submit a form somewhere else
+   */
   form?: string;
 };
