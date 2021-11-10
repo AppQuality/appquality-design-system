@@ -44,4 +44,5 @@ export type ButtonProps = BaseProps & {
    */
   as?: React.ElementType | keyof JSX.IntrinsicElements;
   target?: string;
+  form?: string;
 };
