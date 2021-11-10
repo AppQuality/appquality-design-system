@@ -1,3 +1,15 @@
+# v0.1.145 (Wed Nov 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(radio): Allow setting both checked and defaultchecked (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.144 (Tue Nov 09 2021)
 
 #### ⚠️ Pushed to `main`
