@@ -1,3 +1,15 @@
+# v0.1.147 (Thu Nov 11 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(label): Set fixed bottom padding (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.146 (Wed Nov 10 2021)
 
 #### ⚠️ Pushed to `main`
