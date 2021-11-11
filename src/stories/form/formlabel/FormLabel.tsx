@@ -21,7 +21,7 @@ const BaseFormLabel = ({
 const FormLabel = styled(BaseFormLabel)`
   order: -1;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: ${(props) => props.theme.grid.sizes[2]};
   ${(props) =>
     props.isDisabled ? `color: ${props.theme.colors.disabledFont};` : ""}
   .form-icon {
