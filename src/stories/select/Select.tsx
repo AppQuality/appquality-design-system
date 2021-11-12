@@ -167,29 +167,31 @@ export const Select = ({
     if (thereIsMore) setPage((page) => page + 1); // this is not the updated value of thereIsMore untill rerender :((
   };
 
-  if (loading) {
-    setOptions({
-      type: "add",
-      payload: {
-        value: "loading-placeholder",
-        label: "Loading data",
-        isDisabled: true,
-      },
-    });
-  } else if (
-    searching &&
-    typeof searching === "string" &&
-    searching.length < 2
-  ) {
-    setOptions({
-      type: "add",
-      payload: {
-        value: "search-placeholder",
-        label: "Please write at list 2 characters to load more results",
-        isDisabled: true,
-      },
-    });
-  }
+  useEffect(() => {
+    if (loading) {
+      setOptions({
+        type: "add",
+        payload: {
+          value: "loading-placeholder",
+          label: "Loading data",
+          isDisabled: true,
+        },
+      });
+    } else if (
+      searching &&
+      typeof searching === "string" &&
+      searching.length < 2
+    ) {
+      setOptions({
+        type: "add",
+        payload: {
+          value: "search-placeholder",
+          label: "Please write at list 2 characters to load more results",
+          isDisabled: true,
+        },
+      });
+    }
+  }, [isLoading, searching]);
 
   const handleValue = (): Option[] | Option => {
     return optionsArray.filter((opt) => {
