@@ -9,37 +9,37 @@ type IItem = {
 const items: Array<IItem> = [
   {
     name: "pt",
-    style: "padding-top: %val%;",
+    style: "padding-top: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "pb",
-    style: "padding-bottom: %val%;",
+    style: "padding-bottom: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "pl",
-    style: "padding-left: %val%;",
+    style: "padding-left: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "pr",
-    style: "padding-right: %val%;",
+    style: "padding-right: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "px",
-    style: "padding-left: %val%; padding-right: %val%;",
+    style: "padding-left: %val% !important; padding-right: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "py",
-    style: "padding-top: %val%; padding-bottom: %val%;",
+    style: "padding-top: %val% !important; padding-bottom: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "p",
-    style: "padding: %val%;",
+    style: "padding: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
 ];

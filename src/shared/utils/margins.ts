@@ -9,37 +9,37 @@ type IItem = {
 const items: Array<IItem> = [
   {
     name: "mt",
-    style: "margin-top: %val%;",
+    style: "margin-top: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "mb",
-    style: "margin-bottom: %val%;",
+    style: "margin-bottom: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "ml",
-    style: "margin-left: %val%;",
+    style: "margin-left: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "mr",
-    style: "margin-right: %val%;",
+    style: "margin-right: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "mx",
-    style: "margin-left: %val%; margin-right: %val%;",
+    style: "margin-left: %val% !important; margin-right: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "my",
-    style: "margin-top: %val%; margin-bottom: %val%;",
+    style: "margin-top: %val% !important; margin-bottom: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
   {
     name: "m",
-    style: "margin: %val%;",
+    style: "margin: %val% !important;",
     sizes: [1, 2, 3, 4],
   },
 ];
