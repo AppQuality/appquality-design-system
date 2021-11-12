@@ -1,3 +1,15 @@
+# v0.1.150 (Fri Nov 12 2021)
+
+#### 🐛 Bug Fix
+
+- creatable select [#88](https://github.com/AppQuality/appquality-design-system/pull/88) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.149 (Fri Nov 12 2021)
 
 #### ⚠️ Pushed to `main`
