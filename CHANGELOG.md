@@ -1,3 +1,15 @@
+# v0.1.151 (Fri Nov 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(formgroup): Set fixed bottom margin (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v0.1.150 (Fri Nov 12 2021)
 
 #### 🐛 Bug Fix
