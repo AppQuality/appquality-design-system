@@ -16,10 +16,12 @@ function updateOptions(state: Option[], action: OptionAction): Option[] {
   const { type, payload } = action;
   switch (type) {
     case "set": {
-      return payload;
+      return Array.isArray(payload) ? payload : [payload];
     }
     case "add": {
-      return [...state, ...payload];
+      return Array.isArray(payload)
+        ? [...state, ...payload]
+        : [...state, payload];
     }
     case "reset": {
       return [];
@@ -69,13 +71,15 @@ export const Select = ({
   }, [page]);
 
   useEffect(() => {
-    if (options instanceof Array) return;
-
-    setLoading(true);
-    getAsyncRes(options, 0).then((res) => {
-      setInitialOptions(res);
-      setLoading(false);
-    });
+    if (options instanceof Array) {
+      setOptions({ type: "set", payload: options });
+    } else {
+      setLoading(true);
+      getAsyncRes(options, 0).then((res) => {
+        setInitialOptions(res);
+        setLoading(false);
+      });
+    }
   }, [options]);
 
   const triggerUpdate = () => {
@@ -103,6 +107,7 @@ export const Select = ({
   };
 
   useEffect(() => {
+    if (!initialOptions.results.length) return;
     setOptions({ type: "set", payload: initialOptions.results });
     setMore(initialOptions.more);
   }, [initialOptions]);
@@ -162,28 +167,34 @@ export const Select = ({
     if (thereIsMore) setPage((page) => page + 1); // this is not the updated value of thereIsMore untill rerender :((
   };
 
-  const optionsDropdown = Array.isArray(options) ? options : [...optionsArray];
-
-  if (loading) {
-    optionsDropdown.push({
-      value: "loading-placeholder",
-      label: "Loading data",
-      isDisabled: true,
-    });
-  } else if (
-    searching &&
-    typeof searching === "string" &&
-    searching.length < 2
-  ) {
-    optionsDropdown.push({
-      value: "search-placeholder",
-      label: "Please write at list 2 characters to load more results",
-      isDisabled: true,
-    });
-  }
+  useEffect(() => {
+    if (loading) {
+      setOptions({
+        type: "add",
+        payload: {
+          value: "loading-placeholder",
+          label: "Loading data",
+          isDisabled: true,
+        },
+      });
+    } else if (
+      searching &&
+      typeof searching === "string" &&
+      searching.length < 2
+    ) {
+      setOptions({
+        type: "add",
+        payload: {
+          value: "search-placeholder",
+          label: "Please write at list 2 characters to load more results",
+          isDisabled: true,
+        },
+      });
+    }
+  }, [isLoading, searching]);
 
   const handleValue = (): Option[] | Option => {
-    return optionsDropdown.filter((opt) => {
+    return optionsArray.filter((opt) => {
       if (Array.isArray(value)) {
         return value.filter((v) => v.value == opt.value).length > 0;
       }
@@ -201,7 +212,7 @@ export const Select = ({
     onBlur: handleBlur,
     onChange: handleChange,
     onInputChange: handleInputChange,
-    options: optionsDropdown,
+    options: optionsArray,
     defaultValue: defaultValue,
     placeholder: placeholder,
     isDisabled: isDisabled,
