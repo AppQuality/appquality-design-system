@@ -22,14 +22,31 @@ const MultiValueContainer = (
 ) => {
   return (
     <components.MultiValueContainer {...props}>
-      <Pill type="info">{props.children}</Pill>
+      <Pill
+        type="info"
+        style={{
+          maxWidth: "100%",
+        }}
+      >
+        <div style={{ display: "flex" }}>{props.children}</div>
+      </Pill>
     </components.MultiValueContainer>
   );
 };
 const MultiValueLabel = (
   props: JSX.LibraryManagedAttributes<typeof components.MultiValueLabel, any>
 ) => {
-  return <>{props.children}</>;
+  return (
+    <span
+      style={{
+        overflow: "hidden",
+        whiteSpace: "nowrap",
+        textOverflow: "ellipsis",
+      }}
+    >
+      {props.children}
+    </span>
+  );
 };
 const DropdownIndicator = (
   props: JSX.LibraryManagedAttributes<typeof components.DropdownIndicator, any>
@@ -194,6 +211,7 @@ const customStyle: Styles<any, any> = {
     const float = "right";
     const padding = "0";
     const margin = "0 0 0 10px";
+    const alignSelf = "center";
 
     return {
       ...provided,
@@ -201,6 +219,7 @@ const customStyle: Styles<any, any> = {
         ...provided[":hover"],
         backgroundColor,
       },
+      alignSelf,
       borderRadius,
       backgroundColor,
       float,

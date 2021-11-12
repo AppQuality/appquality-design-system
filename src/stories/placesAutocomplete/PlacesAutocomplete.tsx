@@ -4,16 +4,17 @@ import { aqTheme, customComponents, customStyle } from "../select/_styles";
 import GooglePlacesAutocomplete, {
   geocodeByPlaceId,
 } from "react-google-places-autocomplete";
-import { PlacesAutocompleteProps } from "./types";
+import { PlacesAutocompleteProps } from "./_types";
 
 export const PlacesAutocomplete = ({
   placesProps,
   onChange,
   onBlur,
 }: PlacesAutocompleteProps) => {
-  const handleChange = (value: any, actionMeta: ActionMeta<any>) => {
+  const handleChange = async (value: any, actionMeta: ActionMeta<any>) => {
     if (onChange) {
-      onChange(geocodeByPlaceId(value?.value?.place_id));
+      const places = await geocodeByPlaceId(value?.value?.place_id);
+      onChange(places);
     }
   };
 

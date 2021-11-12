@@ -12,5 +12,5 @@ export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: ${(props) => props.theme.grid.spacing.default[3]}; ;
 `;

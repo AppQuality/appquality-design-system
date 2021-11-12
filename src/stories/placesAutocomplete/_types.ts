@@ -36,6 +36,6 @@ interface GooglePlacesAutocompleteProps {
 
 export interface PlacesAutocompleteProps {
   placesProps: GooglePlacesAutocompleteProps;
-  onChange?: (getGeoCode: Promise<google.maps.GeocoderResult[]>) => void;
+  onChange?: (places: google.maps.GeocoderResult[]) => void;
   onBlur?: (e: React.ChangeEvent) => void;
 }

@@ -10,6 +10,7 @@ const BaseRadio = ({
   value,
   isInvalid, // used by styled
   checked = false,
+  defaultChecked,
   onChange,
 }: {
   id: string;
@@ -19,6 +20,7 @@ const BaseRadio = ({
   value?: string;
   disabled?: boolean;
   isInvalid?: boolean;
+  defaultChecked?: boolean;
   checked?: boolean;
   onChange?: (val: string, e?: ChangeEvent<HTMLInputElement>) => void;
 }) => {
@@ -39,7 +41,8 @@ const BaseRadio = ({
         type="radio"
         value={value}
         disabled={disabled}
-        defaultChecked={checked}
+        checked={checked}
+        defaultChecked={defaultChecked}
         onChange={(e) => onChange && onChange(e.target.value, e)}
         className="form-check-input"
       />

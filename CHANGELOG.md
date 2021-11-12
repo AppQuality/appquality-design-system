@@ -1,3 +1,149 @@
+# v0.1.149 (Fri Nov 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(formgroup): Set fixed bottom margin (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.148 (Fri Nov 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(utils): Add important to padding margin utils (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.147 (Thu Nov 11 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(label): Set fixed bottom padding (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.146 (Wed Nov 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- chore(button): add comments ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.145 (Wed Nov 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat(radio): Allow setting both checked and defaultchecked (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.144 (Tue Nov 09 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(radio): pass event argument to onChange function ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.143 (Wed Oct 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): Use ellipsis on pills on multi (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.142 (Wed Oct 27 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(select): Use flex on pills on multi (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.141 (Mon Oct 25 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(places autocomplete): fix strange type filename bug ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.140 (Mon Oct 25 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(places autocomplete): fix onchange type ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.139 (Mon Oct 25 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge remote-tracking branch 'origin/main' ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.138 (Mon Oct 25 2021)
+
+#### 🐛 Bug Fix
+
+- nuovo componente Places Autocomplete [#87](https://github.com/AppQuality/appquality-design-system/pull/87) (gianpaolo.sinatra@app-quality.com [@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Gianpaolo Sinatra (gianpaolo.sinatra@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.137 (Wed Oct 20 2021)
 
 #### ⚠️ Pushed to `main`
