@@ -193,19 +193,10 @@ export const Select = ({
     }
   }, [isLoading, searching]);
 
-  const handleValue = (): Option[] | Option => {
-    return optionsArray.filter((opt) => {
-      if (Array.isArray(value)) {
-        return value.filter((v) => v.value == opt.value).length > 0;
-      }
-      return opt.value === value.value;
-    });
-  };
-
   const args = {
     id: name,
     name: name,
-    value: handleValue(),
+    value: value,
     menuPortalTarget: menuTargetQuery
       ? document.querySelector<HTMLElement>(menuTargetQuery)
       : undefined,
