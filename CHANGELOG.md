@@ -1,3 +1,21 @@
+# v0.1.152 (Wed Nov 17 2021)
+
+#### 🐛 Bug Fix
+
+- Merge pull request #88 from AppQuality/develop [#89](https://github.com/AppQuality/appquality-design-system/pull/89) ([@iacopolea](https://github.com/iacopolea))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(tab): preserve state between tab change ([@iacopolea](https://github.com/iacopolea))
+- feat(skeleton): add skeleton component ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.151 (Fri Nov 12 2021)
 
 #### ⚠️ Pushed to `main`
