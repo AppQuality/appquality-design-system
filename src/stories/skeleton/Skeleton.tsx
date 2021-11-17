@@ -1,30 +1,45 @@
-import styled, { DefaultTheme } from "styled-components";
+import styled, { StyledComponent } from "styled-components";
 
-export interface SkeletonProps {
-  theme: DefaultTheme;
-}
+type SkeletonItemProps = {
+  width?: string;
+  height?: string;
+  backgroundColor?: string;
+};
+const SkeletonItem = styled.div<SkeletonItemProps>`
+  ${(props) => props.width && `width: ${props.width}`};
+  ${(props) => props.height && `height: ${props.height}`};
+  background-color: ${(props) =>
+    props.backgroundColor || props.theme.colors.gray100};
+`;
 
-const SkeletonWrapper = styled.div(({ theme }: SkeletonProps) => {
-  return `
-      background-image: linear-gradient(90deg, ${theme.colors.gray100} 0px, #ffffff 40px, ${theme.colors.gray100} 80px);
-      background-size: 600px;
-      border-radius: 4px;
-      animation: active 1.6s infinite linear;
-      p {
-        min-width: 100px;
-      }
-      @keyframes active {
-       0% {background-position: -100px;}
-       40% {background-position: 140px;}
-       100% {background-position: 140px;}
-      }
-    `;
-});
+type SkeletonComponent = StyledComponent<"div", any> & {
+  Item: StyledComponent<"div", any, SkeletonItemProps>;
+};
 
-const Skeleton = () => (
-  <SkeletonWrapper data-testid="skeleton">
-    <p data-testid="skeleton-p" />
-  </SkeletonWrapper>
-);
+const Skeleton = styled.div`
+  ${SkeletonItem} {
+    background-image: linear-gradient(
+      90deg,
+      transparent 0px,
+      #fbfbfb 40px,
+      transparent 80px
+    );
+    background-size: 600px;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    animation: active 1.5s infinite linear;
+    animation-delay: 1s;
+  }
 
-export default Skeleton;
+  @keyframes active {
+    0% {
+      background-position: -600px 0;
+    }
+    100% {
+      background-position: 600px 0;
+    }
+  }
+` as SkeletonComponent;
+
+Skeleton.Item = SkeletonItem;
+export { Skeleton };

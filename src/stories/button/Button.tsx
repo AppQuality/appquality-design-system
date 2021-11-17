@@ -6,7 +6,7 @@ import styled from "styled-components";
  * Primary UI component for user interaction
  */
 export const Button = ({
-  htmlType,
+  htmlType = "button",
   type = "primary",
   size = "medium",
   className,

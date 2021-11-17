@@ -8,11 +8,20 @@ export default {
   component: Tabs,
 } as Meta;
 
+const Tab1 = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <div className="aq-m-3">
+      {count}: Lorem ipsum dolor sit amet{" "}
+      <button onClick={() => setCount(count + 1)}>+1</button>
+    </div>
+  );
+};
 const Template: Story<TabsProps> = (args) => {
   return (
     <Tabs {...args} active="tab1">
       <Tab id="tab1" title="Tab 1">
-        <div className="aq-m-3">Lorem ipsum dolor sit amet</div>
+        <Tab1 />
       </Tab>
       <Tab id="tab2" title="Tab 2">
         <div className="aq-m-3">numquam concupescendit elit</div>
