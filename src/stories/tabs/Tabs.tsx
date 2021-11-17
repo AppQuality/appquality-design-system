@@ -42,8 +42,9 @@ export const TabHead = styled(BasicTabHead)`
   }
 `;
 
-export const Tab = ({ id, active, children }: TabProps) =>
-  active ? <div>{children}</div> : null;
+export const Tab = ({ id, active, children }: TabProps) => (
+  <div style={!active ? { display: "none" } : {}}>{children}</div>
+);
 
 //() = setActive('asd')
 const BasicTabs = ({ active, children, className, setActive }: TabsProps) => {
