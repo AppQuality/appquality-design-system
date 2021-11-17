@@ -1,7 +1,6 @@
 import { BoxArrowRight } from "react-bootstrap-icons";
 import { Button } from "../button/Button";
 import { UserInfoProps } from "./_types";
-import Skeleton from "../skeleton/Skeleton";
 import { Text } from "../typography/Typography";
 
 export const UserInfo = ({
@@ -11,7 +10,6 @@ export const UserInfo = ({
   onLogin,
   onLogout,
 }: UserInfoProps) => {
-  if (isLoading) return <Skeleton />;
   return (
     <div className="user-info">
       {user ? (
