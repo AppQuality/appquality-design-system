@@ -1,3 +1,17 @@
+# v0.1.153 (Mon Nov 22 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- fix(layout): transform boolean attribute in string ([@iacopolea](https://github.com/iacopolea))
+- feat(select): multi pills cursor pointer ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.152 (Wed Nov 17 2021)
 
 #### 🐛 Bug Fix
