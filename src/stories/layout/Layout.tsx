@@ -21,7 +21,7 @@ export interface CSSGridProps {
   rowGap?: string;
   min: string;
   max?: string;
-  fill?: boolean;
+  fill?: string;
   maxWidth?: string;
 }
 
@@ -38,12 +38,12 @@ export const BSCol = ({ children, size = "col" }: LayoutProps) => {
 };
 
 export const CSSGrid = styled.div(
-  ({ gutter, rowGap, min, max, fill = false, maxWidth }: CSSGridProps) => {
+  ({ gutter, rowGap, min, max, fill = "false", maxWidth }: CSSGridProps) => {
     return `
   display: grid;
-	grid-template-columns: repeat(${fill ? "auto-fill" : "auto-fit"}, minmax(${
-      min || "1fr"
-    }, ${max || "1fr"}));
+	grid-template-columns: repeat(${
+    fill === "true" ? "auto-fill" : "auto-fit"
+  }, minmax(${min || "1fr"}, ${max || "1fr"}));
 	grid-gap: ${gutter || "1rem"};
 	${rowGap ? "row-gap: " + rowGap : ""};
 	${maxWidth ? "max-width: " + maxWidth : ""};
