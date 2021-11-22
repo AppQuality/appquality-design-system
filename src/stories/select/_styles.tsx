@@ -105,12 +105,13 @@ const customStyle: Styles<any, any> = {
         : `${aqBootstrapTheme.palette.primary}`;
     const fontSize = "20px";
     const transform = state.selectProps.menuIsOpen ? "rotate(180deg)" : "";
-
+    const cursor = "pointer";
     return {
       ...provided,
       color,
       fontSize,
       transform,
+      cursor,
     };
   },
   menu: (provided) => {
@@ -212,6 +213,7 @@ const customStyle: Styles<any, any> = {
     const padding = "0";
     const margin = "0 0 0 10px";
     const alignSelf = "center";
+    const cursor = "pointer";
 
     return {
       ...provided,
@@ -226,6 +228,7 @@ const customStyle: Styles<any, any> = {
       padding,
       margin,
       color,
+      cursor,
     };
   },
 };
