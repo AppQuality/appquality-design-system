@@ -1,3 +1,15 @@
+# v0.1.154 (Tue Nov 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix (header): skeleton in header loading [#90](https://github.com/AppQuality/appquality-design-system/pull/90) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.153 (Mon Nov 22 2021)
 
 #### ⚠️ Pushed to `main`
