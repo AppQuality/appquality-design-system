@@ -13,7 +13,10 @@ export const PlacesAutocomplete = ({
 }: PlacesAutocompleteProps) => {
   const handleChange = async (value: any, actionMeta: ActionMeta<any>) => {
     if (onChange) {
-      const places = await geocodeByPlaceId(value?.value?.place_id);
+      let places;
+      if (value) {
+        places = await geocodeByPlaceId(value?.value?.place_id);
+      }
       onChange(places);
     }
   };
