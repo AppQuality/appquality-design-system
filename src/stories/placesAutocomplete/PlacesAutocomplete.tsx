@@ -15,7 +15,7 @@ export const PlacesAutocomplete = ({
     if (onChange) {
       let places;
       if (value) {
-        places = await geocodeByPlaceId(value?.value?.place_id);
+        places = await geocodeByPlaceId(value.value?.place_id);
       }
       onChange(places);
     }
