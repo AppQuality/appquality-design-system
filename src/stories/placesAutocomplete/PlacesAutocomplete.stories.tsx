@@ -13,7 +13,12 @@ const Template: Story<PlacesAutocompleteProps> = (args) => {
 
 export const PlacesAutocompleteBase = Template.bind({});
 PlacesAutocompleteBase.args = {
-  placesProps: { apiKey: "AIzaSyDJqenKVp22KCz9StLq31acTkWq-7eDD_w" },
+  placesProps: {
+    apiKey: "AIzaSyDJqenKVp22KCz9StLq31acTkWq-7eDD_w",
+    selectProps: {
+      isClearable: true,
+    },
+  },
   onChange: async (places) => {
     try {
       console.log(places);
