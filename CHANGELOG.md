@@ -1,3 +1,15 @@
+# v0.1.155 (Thu Nov 25 2021)
+
+#### 🐛 Bug Fix
+
+- fix(places autocomplete): manage isClearable case [#91](https://github.com/AppQuality/appquality-design-system/pull/91) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.154 (Tue Nov 23 2021)
 
 #### 🐛 Bug Fix
