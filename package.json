@@ -58,6 +58,7 @@
   "devDependencies": {
     "@babel/cli": "^7.14.3",
     "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-image": "^2.1.1",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",

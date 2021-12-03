@@ -1,7 +1,7 @@
-import { PageTitleProps } from "./_types";
+import { ArrowLeftCircle } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Title, TitleProps } from "../typography/Typography";
-import { ArrowLeftCircle } from "react-bootstrap-icons";
+import { PageTitleProps } from "./_types";
 
 const NavigationAnchor = styled.a`
   text-decoration: none;
@@ -39,7 +39,7 @@ const PageTitle = ({
         as={typeof subtitle == "string" ? undefined : subtitle.as}
         className="aq-mt-2"
         size={subtitleSize}
-        color="secondary"
+        color="primaryVariant"
       >
         {typeof subtitle == "string" ? subtitle : subtitle.content}
       </Title>
@@ -58,9 +58,9 @@ const PageTitle = ({
   if (back) {
     backElement = (
       <div className="aq-mt-2">
-        <NavigationAnchor className="aq-text-info" href={back.navigation}>
+        <NavigationAnchor className="aq-text-secondary" href={back.navigation}>
           <ArrowLeftCircle className="aq-float-left" size={"1.3125rem"} />
-          <span className="aq-text-info aq-ml-2">{back.text}</span>
+          <span className="aq-text-secondary aq-ml-2">{back.text}</span>
         </NavigationAnchor>
       </div>
     );

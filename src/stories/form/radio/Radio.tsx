@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React, { ChangeEvent, ReactNode } from "react";
+import styled from "styled-components";
 
 const BaseRadio = ({
   id,
@@ -58,7 +58,7 @@ export const Radio = styled(BaseRadio)`
     order: 2;
     display: inline-block;
     &[aria-disabled="true"] {
-      color: ${(props) => props.theme.colors.disabled};
+      color: ${(props) => props.theme.colors.disabledFont};
       cursor: not-allowed;
     }
   }
@@ -76,25 +76,34 @@ export const Radio = styled(BaseRadio)`
     background-size: contain;
     border-style: solid;
     border-width: 1px;
+    border-width: 1px;
     border-color: ${(props) =>
-      props.isInvalid ? props.theme.palette.danger : props.theme.palette.info};
+      props.isInvalid
+        ? props.theme.palette.danger
+        : props.theme.palette.secondary};
     appearance: none;
     color-adjust: exact;
 
     &:checked {
       border-width: 3px;
+      background-color: ${(props) => props.theme.palette.secondary};
     }
     &:focus {
       border-color: ${(props) =>
         props.isInvalid
           ? props.theme.palette.danger
-          : props.theme.colors.blue700};
+          : props.theme.palette.secondary};
       outline: 0;
-      box-shadow: 0 0 0 0.25rem ${(props) => props.theme.colors.gray300};
+      box-shadow: 0 0 0 0.25rem ${(props) => props.theme.colors.purple100};
     }
     &[disabled] {
-      border-color: ${(props) => props.theme.colors.infoDisabled};
       cursor: not-allowed;
+      background-color: transparent;
+      border-color: ${(props) => props.theme.colors.disabledElement};
+      &:checked {
+        background-color: ${(props) => props.theme.colors.disabledElement};
+        border-color: transparent;
+      }
     }
   }
 `;

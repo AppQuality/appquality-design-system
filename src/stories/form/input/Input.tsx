@@ -56,6 +56,7 @@ const Input = styled(BaseInput)`
     position: absolute;
     right: 15px;
     top: 29%;
+    color: ${(props) => props.theme.palette.primaryVariant};
   }
   input[type="search"] {
     -webkit-appearance: none;
@@ -69,7 +70,7 @@ const Input = styled(BaseInput)`
     font-size: ${(props) => props.theme.typography.fontSize.base};
     background-color: ${(props) => props.theme.colors.white};
     background-clip: padding-box;
-    border: 1px solid ${(props) => props.theme.colors.disabled};
+    border: 1px solid ${(props) => props.theme.colors.elementGeneric};
     border-radius: 5px;
     line-height: 1.5;
     box-shadow: none;
@@ -80,7 +81,7 @@ const Input = styled(BaseInput)`
 	  &:focus-visible {
       color: ${(props) => props.theme.palette.primary};
       background-color: ${(props) => props.theme.colors.white};
-      border-color: ${(props) => props.theme.palette.primary};
+      border-color: ${(props) => props.theme.palette.secondaryVariant};
       outline: 0;
       box-shadow: inset 0 1px 2px ${(props) => props.theme.colors.gray100},
         0 0 0 0.25rem ${(props) => props.theme.colors.gray200};
@@ -89,7 +90,7 @@ const Input = styled(BaseInput)`
 
     // Placeholder
     &::placeholder {
-      color: ${(props) => props.theme.colors.disabled};
+      color: ${(props) => props.theme.colors.disabledFont};
       opacity: 1;
     }
 

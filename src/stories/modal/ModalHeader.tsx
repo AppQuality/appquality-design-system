@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { ModalHeaderProps } from "./_types";
 import { X } from "react-bootstrap-icons";
+import styled from "styled-components";
 import { Title } from "../typography/Typography";
+import { ModalHeaderProps } from "./_types";
 
 const BasicModalHeader = ({ title, onClose, className }: ModalHeaderProps) => (
   <div className={className}>
@@ -16,7 +16,7 @@ export const ModalHeader = styled(BasicModalHeader)`
   padding: ${(props) => props.theme.grid.spacing.default};
   display: grid;
   grid-template-columns: 1fr 24px;
-  border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
+  border-bottom: 1px solid ${(props) => props.theme.colors.elementGeneric};
 
   .modal-close {
     display: flex;

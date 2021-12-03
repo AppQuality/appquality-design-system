@@ -96,8 +96,8 @@ export const StyledStep = styled.div<{
   
   color: ${(props) =>
     props.status === "current" || props.status === "completed"
-      ? props.theme.palette.info
-      : props.theme.colors.infoDisabled};
+      ? props.theme.palette.secondary
+      : props.theme.colors.disabledElement};
 
   // progress bar general rules
   .step-status {
@@ -113,10 +113,10 @@ export const StyledStep = styled.div<{
     }
   }
   &:not(:first-child) .step-status:before {
-    background-color: ${(props) => props.theme.palette.info};
+    background-color: ${(props) => props.theme.palette.secondary};
   }
   &:not(:last-child) .step-status:after {
-    background-color: ${(props) => props.theme.palette.info};
+    background-color: ${(props) => props.theme.palette.secondary};
   }
   // now place the progress bar
   ${(props) =>

@@ -1,23 +1,23 @@
-import { SidebarProps } from "./SidebarProps";
-import styled, { DefaultTheme } from "styled-components";
-import { marginFromTop } from "./variables";
 import { BoxArrowRight } from "react-bootstrap-icons";
+import styled, { DefaultTheme } from "styled-components";
 import { LanguageIcons, LanguageIconWrapper } from "./LanguageIcons";
+import { SidebarProps } from "./SidebarProps";
+import { marginFromTop } from "./variables";
 
 const SidebarMobileWrapper = styled.div(
   ({ theme, hidden }: { theme: DefaultTheme; hidden: boolean }) => {
-    const { palette } = theme;
+    const { palette, colors } = theme;
     return `
     ${hidden ? "display:none" : ""}
     min-height: calc(100vh - ${marginFromTop}px);
-		background-color: ${palette.primary};
+		background-color: ${colors.white};
 		position:sticky;
 		width: 100%;
 		padding-top: 20px;
 		top: ${marginFromTop}px;
 		color:#fff;
 		button, a, svg {
-			color:#fff;
+			color:${palette.primaryVariant};
 			text-decoration: none;
 		}
     ${LanguageIconWrapper} {
@@ -26,8 +26,7 @@ const SidebarMobileWrapper = styled.div(
       justify-content: space-evenly;
       
       div, button {
-        color: ${palette.primary};
-        
+        font-weight: bold;
         &:after{
           content: " ";
           width: 2px;
@@ -44,9 +43,16 @@ const MobileSidebarItem = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  font-weight: bold;
 
   &.aq-last {
-    border-bottom: 3px solid rgba(41, 114, 168, 0.3);
+    border-bottom: 1px solid ${({ theme }) => theme.colors.elementGeneric};
+  }
+  &.aq-active {
+    a,
+    svg {
+      color: ${({ theme }) => theme.palette.secondary};
+    }
   }
   svg {
     width: 1.5em;
@@ -75,6 +81,7 @@ const LogoutButton = styled.button`
   text-transform: uppercase;
   svg {
     margin: 0 5px;
+    color: ${(props) => props.theme.palette.danger};
   }
 `;
 
@@ -90,8 +97,11 @@ export const MobileSidebar = ({
     <>
       <SidebarMobileWrapper hidden={!open}>
         {items.map((i, idx) => {
+          let classNames = [];
+          i.last && classNames.push("aq-last");
+          i.active && classNames.push("aq-active");
           return (
-            <MobileSidebarItem key={idx} className={i.last ? "aq-last" : ""}>
+            <MobileSidebarItem key={idx} className={classNames.join(" ")}>
               {i.icon}
               <a href={i.url}>{i.text}</a>
             </MobileSidebarItem>
