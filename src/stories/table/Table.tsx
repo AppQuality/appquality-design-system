@@ -184,7 +184,7 @@ export const Table = styled(BasicTable)`
         background-color: ${(props) => props.theme.colors.purple100};
       }
       tr:not(:last-child) td {
-        border-bottom: 1px solid ${(props) => props.theme.colors.purple100};
+        border-bottom: 1px solid ${(props) => props.theme.colors.elementGeneric};
       }
     }
     .aq-table-cell-ellipsis {
