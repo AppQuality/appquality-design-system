@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       font-size: ${props.theme.typography.fontSize.base};
       font-weight: ${props.theme.typography.fontWeight.normal};
       line-height: 1.5;
-      color:  ${props.theme.palette.primaryVariant};
+      color:  ${props.theme.variants.primary};
       background-color: ${props.theme.colors.gray100};
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
