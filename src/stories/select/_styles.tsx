@@ -161,8 +161,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   option: (provided, state) => {
-    console.log(state);
-    const activeColor = aqBootstrapTheme.palette.secondaryVariant;
+    const activeColor = aqBootstrapTheme.variants.secondary;
     const hoverColor = aqBootstrapTheme.colors.purple100;
     if (state.data.value === "loading-placeholder") {
       const color = `${aqBootstrapTheme.colors.disabledFont}`;
@@ -196,10 +195,10 @@ const customStyle: Styles<any, any> = {
     if (state.isSelected) {
       return {
         ...provided,
-        background: aqBootstrapTheme.palette.secondaryVariant,
+        background: aqBootstrapTheme.variants.secondary,
         color: aqBootstrapTheme.palette.secondary,
         ":hover": {
-          background: aqBootstrapTheme.palette.secondaryVariant,
+          background: aqBootstrapTheme.variants.secondary,
           color: aqBootstrapTheme.palette.secondary,
         },
       };
@@ -243,7 +242,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   multiValueRemove: (provided, state) => {
-    const backgroundColor = aqBootstrapTheme.palette.secondaryVariant;
+    const backgroundColor = aqBootstrapTheme.variants.secondary;
     const color = `${aqBootstrapTheme.colors.white}`;
     const borderRadius = `50%`;
     const float = "right";

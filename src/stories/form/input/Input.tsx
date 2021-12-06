@@ -56,7 +56,7 @@ const Input = styled(BaseInput)`
     position: absolute;
     right: 15px;
     top: 29%;
-    color: ${(props) => props.theme.palette.primaryVariant};
+    color: ${(props) => props.theme.variants.primary};
   }
   input[type="search"] {
     -webkit-appearance: none;
@@ -81,7 +81,7 @@ const Input = styled(BaseInput)`
 	  &:focus-visible {
       color: ${(props) => props.theme.palette.primary};
       background-color: ${(props) => props.theme.colors.white};
-      border-color: ${(props) => props.theme.palette.secondaryVariant};
+      border-color: ${(props) => props.theme.variants.secondary};
       outline: 0;
       box-shadow: inset 0 1px 2px ${(props) => props.theme.colors.gray100},
         0 0 0 0.25rem ${(props) => props.theme.colors.gray200};

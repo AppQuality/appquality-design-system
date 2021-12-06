@@ -7,7 +7,7 @@ export interface SidebarTextProps {
 }
 
 const SidebarTextDiv = styled.div(({ theme }: { theme: DefaultTheme }) => {
-  const { palette, colors } = theme;
+  const { palette, variants, colors } = theme;
   return `
   margin-bottom: ${itemsSpacing}px;
   
@@ -17,7 +17,7 @@ const SidebarTextDiv = styled.div(({ theme }: { theme: DefaultTheme }) => {
     line-height: 150%;
     padding: 6px 8px 5px;
     display:block;
-    color: ${palette.primaryVariant};
+    color: ${variants.primary};
     font-weight: bold;
     text-decoration: none;
     &:hover {
@@ -30,7 +30,7 @@ const SidebarTextDiv = styled.div(({ theme }: { theme: DefaultTheme }) => {
       background-color: ${colors.purple100};
       color: ${palette.secondary};
       &:hover {
-        background-color: ${palette.secondaryVariant};
+        background-color: ${variants.secondary};
       }
     }
   }

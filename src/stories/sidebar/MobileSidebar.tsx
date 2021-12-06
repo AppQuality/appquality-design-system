@@ -6,7 +6,7 @@ import { marginFromTop } from "./variables";
 
 const SidebarMobileWrapper = styled.div(
   ({ theme, hidden }: { theme: DefaultTheme; hidden: boolean }) => {
-    const { palette, colors } = theme;
+    const { palette, variants, colors } = theme;
     return `
     ${hidden ? "display:none" : ""}
     min-height: calc(100vh - ${marginFromTop}px);
@@ -17,7 +17,7 @@ const SidebarMobileWrapper = styled.div(
 		top: ${marginFromTop}px;
 		color:#fff;
 		button, a, svg {
-			color:${palette.primaryVariant};
+			color:${variants.primary};
 			text-decoration: none;
 		}
     ${LanguageIconWrapper} {

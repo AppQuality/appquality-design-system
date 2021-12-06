@@ -34,14 +34,19 @@ const aqBootstrapTheme = {
   colors: COLORS,
   palette: {
     primary: COLORS.gray900,
-    primaryVariant: COLORS.gray700,
     secondary: COLORS.indigo600,
-    secondaryVariant: COLORS.indigo100,
-    info: COLORS.blue500,
-    infoVariant: COLORS.blue200,
+    info: COLORS.blue800,
     success: COLORS.green800,
     warning: COLORS.orange800,
     danger: COLORS.red800,
+  },
+  variants: {
+    primary: COLORS.gray700,
+    secondary: COLORS.indigo100,
+    info: COLORS.blue400,
+    success: COLORS.green300,
+    warning: COLORS.yellow500,
+    danger: COLORS.red300,
   },
   grid: {
     breakpoints: {

@@ -12,6 +12,7 @@ export type ButtonProps = BaseProps & {
    * How large should the button be?
    */
   size?: "sm" | "medium" | "lg" | "block";
+  variant?: boolean;
   /**
    * Is flat?
    */

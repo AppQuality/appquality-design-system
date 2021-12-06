@@ -37,6 +37,6 @@ export const SidebarIcon = styled(SidebarIconBase)`
     color: ${(props) =>
       props.active
         ? props.theme.palette.secondary
-        : props.theme.palette.primaryVariant};
+        : props.theme.variants.primary};
   }
 `;

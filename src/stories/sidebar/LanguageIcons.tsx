@@ -25,7 +25,7 @@ export const LanguageIconWrapper = styled.div`
   button {
     cursor: pointer;
     background: ${(props) => props.theme.colors.white};
-    color: ${(props) => props.theme.palette.primaryVariant};
+    color: ${(props) => props.theme.variants.primary};
   }
 `;
 export const LanguageIcons = ({
