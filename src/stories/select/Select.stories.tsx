@@ -1,7 +1,7 @@
+import { Meta, Story } from "@storybook/react";
 import { Select } from "./Select";
-import { SelectProps } from "./_types";
 import { basicOptions, getAsyncOptions, groupedOptions } from "./_data";
-import { Story, Meta } from "@storybook/react";
+import { SelectProps } from "./_types";
 
 export default {
   title: "Select",
@@ -16,6 +16,12 @@ export const SelectBase = Template.bind({});
 SelectBase.args = {
   options: basicOptions,
   value: { label: "", value: "" },
+};
+
+export const SelectWithContent = Template.bind({});
+SelectWithContent.args = {
+  options: basicOptions,
+  value: basicOptions[0],
 };
 
 export const CreatableSelect = Template.bind({});

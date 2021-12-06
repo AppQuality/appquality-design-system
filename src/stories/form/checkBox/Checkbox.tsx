@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import React, { ChangeEventHandler, FocusEventHandler, ReactNode } from "react";
+import styled from "styled-components";
 
 const BaseCheckbox = ({
   id,
@@ -58,7 +58,7 @@ export const Checkbox = styled(BaseCheckbox)`
     order: 2;
     display: inline-block;
     &[aria-disabled="true"] {
-      color: ${(props) => props.theme.colors.disabled};
+      color: ${(props) => props.theme.colors.disabledFont};
       cursor: not-allowed;
     }
   }
@@ -77,27 +77,32 @@ export const Checkbox = styled(BaseCheckbox)`
     border-style: solid;
     border-width: 1px;
     border-color: ${(props) =>
-      props.isInvalid ? props.theme.palette.danger : "rgba(0, 0, 0, 0.25)"};
+      props.isInvalid
+        ? props.theme.palette.danger
+        : props.theme.palette.secondary};
     appearance: none;
     color-adjust: exact;
 
     &:checked {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3 6-6'/%3E%3C/svg%3E");
-      background-color: ${(props) => props.theme.colors.blue500};
-      border-color: ${(props) => props.theme.palette.primary};
+      background-color: ${(props) => props.theme.palette.secondary};
     }
     &:focus {
       border-color: ${(props) =>
         props.isInvalid
           ? props.theme.palette.danger
-          : props.theme.colors.blue700};
+          : props.theme.palette.secondary};
       outline: 0;
-      box-shadow: 0 0 0 0.25rem ${(props) => props.theme.colors.gray300};
+      box-shadow: 0 0 0 0.25rem ${(props) => props.theme.colors.purple100};
     }
     &[disabled] {
-      background-color: ${(props) => props.theme.colors.gray100};
-      border-color: transparent;
       cursor: not-allowed;
+      background-color: transparent;
+      border-color: ${(props) => props.theme.colors.disabledElement};
+      &:checked {
+        background-color: ${(props) => props.theme.colors.disabledElement};
+        border-color: transparent;
+      }
     }
   }
 `;

@@ -9,12 +9,18 @@ export const textColors = (theme: DefaultTheme) => {
       }`
     )
     .join("");
+
+  style += Object.entries(theme.variants)
+    .map(
+      ([key, value]) => `
+      .aq-text-${key}Variant {
+        color: ${value} !important;
+      }`
+    )
+    .join("");
   style += `
-    .aq-text-disabled {
-      color: ${theme.colors.disabled} !important;
-    }
-    .aq-text-disabled-dark {
-      color: ${theme.colors.disabledDark} !important;
+    .aq-text-disabled,.aq-text-disabled-dark {
+      color: ${theme.colors.disabledFont} !important;
     }
   `;
   return style;

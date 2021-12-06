@@ -1,11 +1,11 @@
 // globalStyles.js
 import { createGlobalStyle } from "styled-components";
-import { stickToHeader } from "./utils/stickToHeader";
-import { paddings } from "./utils/paddings";
+import { containers } from "./utils/containers";
+import { grid } from "./utils/grid";
 import { margins } from "./utils/margins";
 import { orders } from "./utils/orders";
-import { grid } from "./utils/grid";
-import { containers } from "./utils/containers";
+import { paddings } from "./utils/paddings";
+import { stickToHeader } from "./utils/stickToHeader";
 import { textColors } from "./utils/textColors";
 
 const GlobalStyle = createGlobalStyle`${(props) => {
@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       font: inherit;
     }
     a {
-      color: inherit;
+      color:  ${props.theme.palette.secondary};
       text-decoration: underline;
     }
     html {
@@ -41,11 +41,14 @@ const GlobalStyle = createGlobalStyle`${(props) => {
       font-size: ${props.theme.typography.fontSize.base};
       font-weight: ${props.theme.typography.fontWeight.normal};
       line-height: 1.5;
-      color:  ${props.theme.palette.primary};
+      color:  ${props.theme.variants.primary};
       background-color: ${props.theme.colors.gray100};
       -webkit-text-size-adjust: 100%;
       -webkit-tap-highlight-color: rgba(0,0,0,0);
       margin: 0;
+    }
+    button {
+      font-size: ${props.theme.typography.fontSize.base};
     }
     ul {
       list-style: none;

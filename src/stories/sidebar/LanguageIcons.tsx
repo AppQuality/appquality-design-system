@@ -7,22 +7,25 @@ export interface LanguageItem {
 
 export const LanguageIconWrapper = styled.div`
   display: flex;
-  button {
-    cursor: pointer;
-  }
   button,
   div {
     border: 0;
     padding: 0;
     text-decoration: none;
     display: block;
-    background: #fff;
+    background: ${(props) => props.theme.colors.gray100};
     width: 32px;
     height: 32px;
     text-align: center;
     line-height: 32px;
     border-radius: 50%;
     text-transform: uppercase;
+    color: ${(props) => props.theme.palette.secondary};
+  }
+  button {
+    cursor: pointer;
+    background: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.variants.primary};
   }
 `;
 export const LanguageIcons = ({

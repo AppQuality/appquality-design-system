@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
 import { useEffect } from "react";
+import { createGlobalStyle } from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
 
 function addOpacityToHex(hex: string, alpha: string) {
@@ -246,7 +246,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     font-size: 1rem;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid ${props.theme.colors.disabled};
+    border: 1px solid ${props.theme.colors.elementGeneric};
     line-height: 1.5;
   }
   
@@ -4355,7 +4355,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   }
 
   .mbsc-appquality.mbsc-hover .mbsc-calendar-cell-text {
-    background: ${addOpacityToHex(props.theme.palette.info, "0.2")};
+    background: ${props.theme.colors.gray100};
   }
 
   .mbsc-appquality.mbsc-range-hover:before {
@@ -4367,17 +4367,17 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   }
 
   .mbsc-appquality.mbsc-selected .mbsc-calendar-cell-text {
-    background: ${props.theme.palette.success};
-    border-color: ${props.theme.palette.success};
+    background: ${props.theme.palette.secondary};
+    border-color: ${props.theme.palette.secondary};
     color: ${props.theme.colors.white};
   }
 
   .mbsc-appquality.mbsc-calendar-mark {
-    background: ${props.theme.palette.success};
+    background: ${props.theme.palette.secondary};
   }
 
   .mbsc-appquality.mbsc-calendar-label {
-    color: ${props.theme.palette.success};
+    color: ${props.theme.palette.secondary};
   }
 
   .mbsc-appquality.mbsc-calendar-label-inner {
@@ -4427,7 +4427,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
 
   .mbsc-appquality.mbsc-range-control-wrapper
     .mbsc-appquality.mbsc-segmented-button.mbsc-selected {
-    border-bottom-color: ${props.theme.palette.success};
+    border-bottom-color: ${props.theme.palette.secondary};
   }
 
   .mbsc-appquality.mbsc-range-control-label.active {
@@ -4435,7 +4435,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
     font-weight: ${props.theme.typography.fontWeight.normal};
   }
   .mbsc-appquality.mbsc-range-control-value.active {
-    color: ${props.theme.palette.success};
+    color: ${props.theme.palette.secondary};
   }
 
   .mbsc-appquality.mbsc-range-control-text-empty,
@@ -4479,9 +4479,16 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   .mbsc-appquality.mbsc-button-flat.mbsc-hover,
   .mbsc-appquality.mbsc-button-outline.mbsc-active,
   .mbsc-appquality.mbsc-button-outline.mbsc-hover {
-    background: rgba(0, 0, 0, 0.2);
+    background: ${props.theme.colors.gray100};
   }
 
+  .mbsc-appquality.mbsc-button-flat.mbsc-popup-button-primary.mbsc-active,
+  .mbsc-appquality.mbsc-button-flat.mbsc-popup-button-primary.mbsc-hover,
+  .mbsc-appquality.mbsc-button-outline.mbsc-popup-button-primary.mbsc-active,
+  .mbsc-appquality.mbsc-button-outline.mbsc-popup-button-primary.mbsc-hover {
+    background: ${props.theme.colors.purple100};
+  }
+  
   .mbsc-appquality.mbsc-button-flat.mbsc-focus,
   .mbsc-appquality.mbsc-button-outline.mbsc-focus {
     background: rgba(0, 0, 0, 0.3);
@@ -4760,7 +4767,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   }
 
   .mbsc-appquality.mbsc-popup-button.mbsc-font {
-    color: ${props.theme.palette.success};
+    color: ${props.theme.palette.primary};
   }
 
   .mbsc-appquality.mbsc-popup-button.mbsc-font.mbsc-popup-button-close {
@@ -4768,7 +4775,7 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   }
 
   .mbsc-appquality.mbsc-scroller-wheel-cont {
-    border-color: ${props.theme.palette.success};
+    border-color: ${props.theme.palette.secondary};
   }
 
   .mbsc-appquality.mbsc-scroller-pointer
@@ -4781,17 +4788,17 @@ export const DatepickerGlobalStyle = createGlobalStyle`${(props) => {
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-active,
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-focus,
   .mbsc-appquality.mbsc-scroller-wheel-item.mbsc-hover {
-    background: ${addOpacityToHex(props.theme.palette.info, "0.2")};
+    background: ${addOpacityToHex(props.theme.colors.gray400, "0.2")};
   }
 
   .mbsc-appquality.mbsc-wheel-checkmark:after {
-    border-color: ${props.theme.palette.success};
+    border-color: ${props.theme.palette.secondary};
   }
 
   .mbsc-appquality.mbsc-scroller-pointer
     .mbsc-wheel-group-cont-single
     .mbsc-scroller-wheel-item.mbsc-selected {
-    color: ${props.theme.palette.success};
+    color: ${props.theme.palette.secondary};
     background: rgba(0, 0, 0, 0.15);
   }
   .mbsc-material.mbsc-textfield-box {

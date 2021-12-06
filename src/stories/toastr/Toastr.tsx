@@ -1,5 +1,3 @@
-import styled, { DefaultTheme } from "styled-components";
-import { BaseProps } from "../../shared/_types";
 import {
   CheckCircleFill,
   EmojiFrownFill,
@@ -7,6 +5,8 @@ import {
   InfoCircleFill,
   XCircleFill,
 } from "react-bootstrap-icons";
+import styled, { DefaultTheme } from "styled-components";
+import { BaseProps } from "../../shared/_types";
 
 export interface ToastrProps extends BaseProps {
   type: keyof DefaultTheme["palette"];
@@ -47,17 +47,25 @@ const BasicToastr = ({ type, className, onClose, children }: ToastrProps) => {
 };
 
 export const Toastr = styled(BasicToastr)(({ theme }: ToastrStyleProps) => {
-  const styleMap = Object.entries(theme.palette)
+  let styleMap = Object.entries(theme.palette)
     .map(
       ([key, value]) => `
         &.toastr-${key} {
           border: 2px solid ${value};
-          
-          .toastr-icon svg, .toastr-close svg {
-            fill: ${value} 
-          }
         }
       `
+    )
+    .join(" ");
+
+  styleMap += Object.entries(theme.variants)
+    .map(
+      ([key, value]) => `
+      &.toastr-${key} {
+        .toastr-icon svg, .toastr-close svg {
+          fill: ${value};
+        }
+      }
+    `
     )
     .join(" ");
 

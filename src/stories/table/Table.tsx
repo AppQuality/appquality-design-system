@@ -1,8 +1,8 @@
+import { Inboxes } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Spinner } from "../spinner/Spinner";
-import { Inboxes } from "react-bootstrap-icons";
-import { TableProps } from "./_types";
 import { ColumnSorter } from "./ColumnSorter";
+import { TableProps } from "./_types";
 
 const cellPadding = "10px 5px";
 
@@ -161,7 +161,7 @@ export const Table = styled(BasicTable)`
 
     thead {
       font-family: ${(props) => props.theme.typography.fontFamily.serif};
-      color: ${(props) => props.theme.colors.gray600};
+      color: ${(props) => props.theme.palette.primary};
 
       th {
         overflow-wrap: break-word;
@@ -181,10 +181,10 @@ export const Table = styled(BasicTable)`
         padding: ${cellPadding};
       }
       tr:hover:not(.aq-table-empty-placeholder) {
-        background-color: ${(props) => props.theme.colors.gray300};
+        background-color: ${(props) => props.theme.colors.purple100};
       }
       tr:not(:last-child) td {
-        border-bottom: 1px solid ${(props) => props.theme.colors.gray300};
+        border-bottom: 1px solid ${(props) => props.theme.colors.elementGeneric};
       }
     }
     .aq-table-cell-ellipsis {

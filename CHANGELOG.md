@@ -1,3 +1,83 @@
+# v0.1.155 (Thu Nov 25 2021)
+
+#### 🐛 Bug Fix
+
+- fix(places autocomplete): manage isClearable case [#91](https://github.com/AppQuality/appquality-design-system/pull/91) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.154 (Tue Nov 23 2021)
+
+#### 🐛 Bug Fix
+
+- fix (header): skeleton in header loading [#90](https://github.com/AppQuality/appquality-design-system/pull/90) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.153 (Mon Nov 22 2021)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- fix(layout): transform boolean attribute in string ([@iacopolea](https://github.com/iacopolea))
+- feat(select): multi pills cursor pointer ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.152 (Wed Nov 17 2021)
+
+#### 🐛 Bug Fix
+
+- Merge pull request #88 from AppQuality/develop [#89](https://github.com/AppQuality/appquality-design-system/pull/89) ([@iacopolea](https://github.com/iacopolea))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(tab): preserve state between tab change ([@iacopolea](https://github.com/iacopolea))
+- feat(skeleton): add skeleton component ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
+# v0.1.151 (Fri Nov 12 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix(formgroup): Set fixed bottom margin (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v0.1.150 (Fri Nov 12 2021)
+
+#### 🐛 Bug Fix
+
+- creatable select [#88](https://github.com/AppQuality/appquality-design-system/pull/88) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.149 (Fri Nov 12 2021)
 
 #### ⚠️ Pushed to `main`
