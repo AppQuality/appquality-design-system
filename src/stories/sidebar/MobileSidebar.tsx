@@ -6,7 +6,7 @@ import { marginFromTop } from "./variables";
 
 const SidebarMobileWrapper = styled.div(
   ({ theme, hidden }: { theme: DefaultTheme; hidden: boolean }) => {
-    const { palette, variants, colors } = theme;
+    const { variants, colors } = theme;
     return `
     ${hidden ? "display:none" : ""}
     min-height: calc(100vh - ${marginFromTop}px);

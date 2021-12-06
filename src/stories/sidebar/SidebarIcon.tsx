@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { BaseProps } from "../../shared/_types";
 import { Button } from "../button/Button";
 
-const SideBarIconButton = styled(Button)``;
 export interface SidebarIconProps extends BaseProps {
   url: string;
   icon: React.ReactNode;

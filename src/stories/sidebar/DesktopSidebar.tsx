@@ -1,5 +1,5 @@
 import styled, { DefaultTheme } from "styled-components";
-import { ButtonStyle } from "../button/_style";
+import { Button } from "../button/Button";
 import { LanguageIcons, LanguageIconWrapper } from "./LanguageIcons";
 import { SidebarIcon } from "./SidebarIcon";
 import { SidebarProps } from "./SidebarProps";
@@ -12,7 +12,7 @@ import {
 } from "./variables";
 
 const SidebarWrapper = styled.div(({ theme }: { theme: DefaultTheme }) => {
-  const { palette, colors } = theme;
+  const { colors } = theme;
   return `
    height:calc(100vh - ${marginFromTop}px);
    top:${marginFromTop}px;
@@ -39,7 +39,7 @@ const SidebarWrapper = styled.div(({ theme }: { theme: DefaultTheme }) => {
      top:0;
      background-color:${colors.gray50};
    }
-   ${ButtonStyle} {
+   ${Button} {
      margin-bottom: ${itemsSpacing}px;
      box-shadow: none;
      padding: 0;
@@ -49,7 +49,7 @@ const SidebarWrapper = styled.div(({ theme }: { theme: DefaultTheme }) => {
        box-shadow: none;
      }
    }
-   ${ButtonStyle} svg {
+   ${Button} svg {
      margin: 4px 0;
      font-size:18px;
    }
