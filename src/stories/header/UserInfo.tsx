@@ -1,8 +1,8 @@
 import { BoxArrowRight } from "react-bootstrap-icons";
 import { Button } from "../button/Button";
-import { UserInfoProps } from "./_types";
-import { Text } from "../typography/Typography";
 import { Skeleton } from "../skeleton/Skeleton";
+import { Text } from "../typography/Typography";
+import { UserInfoProps } from "./_types";
 
 export const UserInfo = ({
   loginText,
@@ -26,8 +26,8 @@ export const UserInfo = ({
           </div>
           <Text as="div" className="user-name">
             {user.name} {user.surname}{" "}
-            <Text as="span" small={true} className="user-id">
-              (T{user.id})
+            <Text as="span" className="aq-text-primaryVariant user-id">
+              <b>T{user.id}</b>
             </Text>
           </Text>
           <Button size="medium" type="link" onClick={onLogout}>

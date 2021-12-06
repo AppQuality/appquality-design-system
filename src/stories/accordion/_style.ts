@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { StyledItemHeadProps, StyledItemBodyProps } from "./_types";
+import { StyledItemBodyProps, StyledItemHeadProps } from "./_types";
 
 export const StyledAccordion = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.disabled};
+  border: 1px solid ${(props) => props.theme.colors.gray300};
   border-radius: ${(props) => props.theme.general.borderRadius};
 
   .accordion-item:not(:last-child) {
-    border-bottom: 1px solid ${(props) => props.theme.colors.disabled};
+    border-bottom: 1px solid ${(props) => props.theme.colors.gray300};
   }
   .accordion-body-enter {
     max-height: var(--accordion-element-height);
@@ -26,7 +26,7 @@ export const StyledItemHead = styled.div(
       ${!disabled ? `cursor: pointer;` : ""}
       color: ${
         active
-          ? theme.palette.success
+          ? theme.palette.secondary
           : disabled
           ? theme.colors.disabledDark
           : theme.palette.primary

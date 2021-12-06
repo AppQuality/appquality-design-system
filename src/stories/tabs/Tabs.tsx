@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { TabsProps, TabProps, TabHeadProps } from "./_types";
+import { TabHeadProps, TabProps, TabsProps } from "./_types";
 
 const TabHeadContainer = styled.div`
   display: flex;
   width: 100%;
-  box-shadow: inset 0px -1px 0 ${(props) => props.theme.colors.disabled};
+  box-shadow: inset 0px -1px 0 ${(props) => props.theme.colors.elementGeneric};
   overflow: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
@@ -32,13 +32,13 @@ export const TabHead = styled(BasicTabHead)`
       : ""}
   color: ${(props) =>
     props.active
-      ? props.theme.palette.success
+      ? props.theme.palette.secondary
       : props.disabled
       ? props.theme.colors.disabledDark
-      : props.theme.palette.secondary};
+      : props.theme.palette.primary};
   &:hover {
     ${(props) =>
-      !props.disabled ? ` background: ${props.theme.colors.gray200};` : ""}
+      props.disabled ? "" : ` background: ${props.theme.colors.purple100};`}
   }
 `;
 

@@ -1,8 +1,9 @@
-import { UserInfo } from "./UserInfo";
-import { HeaderProps } from "./_types";
+import styled from "styled-components";
+import tryberLogo from "../../shared/assets/logo.png";
 import { useWindowSize } from "../../shared/effects";
 import { Hamburger } from "../button/HamburgerButton";
-import styled from "styled-components";
+import { UserInfo } from "./UserInfo";
+import { HeaderProps } from "./_types";
 
 const headerHeight = 54;
 const contentHeight = 30;
@@ -27,6 +28,12 @@ const StyledHeader = styled.div`
   .brand-logo {
     flex: 0 1 150px;
     max-height: ${contentHeight}px;
+    a {
+      display: flex;
+      img {
+        height: 20px;
+      }
+    }
   }
   .user-info {
     display: flex;
@@ -95,10 +102,7 @@ export const Header = ({
             { logo }
           ) : (
             <a href={logoUrl}>
-              <img
-                alt="logo"
-                src="https://crowd.app-quality.com/wp-content/themes/crowdappquality/img/aq_vector_logo_light_crowd.svg"
-              />
+              <img alt="logo" src={tryberLogo} />
             </a>
           )}
         </div>

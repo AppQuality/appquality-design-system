@@ -105,7 +105,7 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
       box-shadow: none;
       border-color: transparent;
       background-color: transparent;
-      color: ${theme.palette.info};
+      color: ${theme.palette.secondary};
       text-decoration: underline;
       
       &:disabled, &.disabled {
@@ -131,14 +131,14 @@ export const ButtonStyle = styled.button(({ theme }: ButtonStyleProps) => {
       cursor: not-allowed;
       pointer-events: none;
       opacity: .65;
-      color: ${theme.colors.disabledDark};
-      background-color: ${theme.colors.disabled};
-      border-color: ${theme.colors.disabled};
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.elementGeneric};
+      border-color: ${theme.colors.elementGeneric};
       
       &.aq-btn-flat {
         background-color: transparent;
-        border-color: ${theme.colors.disabled};
-        color: ${theme.colors.disabledDark};
+        border-color: ${theme.colors.elementGeneric};
+        color: ${theme.colors.disabledFont};
       }
     }
 	`;

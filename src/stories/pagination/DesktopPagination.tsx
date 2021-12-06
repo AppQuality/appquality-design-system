@@ -1,9 +1,9 @@
-import { PaginationProps, PageItem } from "./PaginationProps";
-import { Button, ButtonGroup } from "../button/Button";
-import { generateShrinkedPages } from "./utils";
 import { MouseEventHandler } from "react";
-import { ChevronRight, ChevronLeft } from "react-bootstrap-icons";
+import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 import styled from "styled-components";
+import { Button, ButtonGroup } from "../button/Button";
+import { PageItem, PaginationProps } from "./PaginationProps";
+import { generateShrinkedPages } from "./utils";
 
 export const DesktopPagination = ({
   onPageChange,
@@ -35,6 +35,7 @@ export const DesktopPagination = ({
           squared={true}
           onClick={() => onPageChange(current - 1)}
           key="prev"
+          type="primary"
           disabled={current === 1}
           data-test-id="prev"
         >
@@ -43,7 +44,13 @@ export const DesktopPagination = ({
         {pages.map((i, idx) => {
           let onClick: MouseEventHandler | undefined = () => i.action(i.page);
           return (
-            <Button squared={true} flat={i.flat} onClick={onClick} key={idx}>
+            <Button
+              squared={true}
+              flat={i.flat}
+              onClick={onClick}
+              key={idx}
+              type="primary"
+            >
               {i.page}
             </Button>
           );
@@ -53,6 +60,7 @@ export const DesktopPagination = ({
           squared={true}
           onClick={() => onPageChange(current + 1)}
           key="next"
+          type="primary"
           disabled={current >= maxPages}
           data-test-id="next"
         >

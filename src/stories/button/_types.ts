@@ -1,24 +1,18 @@
 import { MouseEventHandler } from "react";
 import { BaseProps } from "../../shared/_types";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 export type ButtonProps = BaseProps & {
   htmlType?: "button" | "submit" | "reset";
   /**
    * Is this the principal call to action on the page?
    */
-  type?:
-    | "primary"
-    | "secondary"
-    | "link"
-    | "light"
-    | "success"
-    | "info"
-    | "warning"
-    | "danger";
+  type?: keyof typeof aqBootstrapTheme["palette"] | "link" | "light";
   /**
    * How large should the button be?
    */
   size?: "sm" | "medium" | "lg" | "block";
+  variant?: boolean;
   /**
    * Is flat?
    */

@@ -1,7 +1,7 @@
-import { components, Styles, Theme } from "react-select";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
 import { ChevronDown, X } from "react-bootstrap-icons";
+import { components, Styles, Theme } from "react-select";
 import { Pill } from "../pill/Pill";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 const aqTheme = (theme: Theme) => ({
   borderRadius: aqBootstrapTheme.general.borderRadiusNumber,
@@ -23,7 +23,8 @@ const MultiValueContainer = (
   return (
     <components.MultiValueContainer {...props}>
       <Pill
-        type="info"
+        type="secondary"
+        flat
         style={{
           maxWidth: "100%",
         }}
@@ -77,7 +78,7 @@ const customStyle: Styles<any, any> = {
     const borderColor =
       state.isDisabled && state.hasValue
         ? `${aqBootstrapTheme.colors.gray100}`
-        : `${aqBootstrapTheme.colors.disabled}`;
+        : `${aqBootstrapTheme.colors.elementGeneric}`;
     const boxShadow = "none";
     const lineHeight = "1.5";
     const minHeight = "39px";
@@ -115,7 +116,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   menu: (provided) => {
-    const borderColor = `${aqBootstrapTheme.colors.disabled}`;
+    const borderColor = `${aqBootstrapTheme.colors.elementGeneric}`;
     const borderWidth = "1px";
     const borderStyle = "solid";
     const borderRadius = `${aqBootstrapTheme.general.borderRadius}`;
@@ -152,7 +153,7 @@ const customStyle: Styles<any, any> = {
     };
   },
   noOptionsMessage: (provided) => {
-    const color = `${aqBootstrapTheme.colors.disabled}`;
+    const color = `${aqBootstrapTheme.colors.disabledFont}`;
 
     return {
       ...provided,
@@ -160,11 +161,12 @@ const customStyle: Styles<any, any> = {
     };
   },
   option: (provided, state) => {
+    const activeColor = aqBootstrapTheme.variants.secondary;
+    const hoverColor = aqBootstrapTheme.colors.purple100;
     if (state.data.value === "loading-placeholder") {
-      const color = `${aqBootstrapTheme.colors.disabled}`;
+      const color = `${aqBootstrapTheme.colors.disabledFont}`;
       const textAlign = "center";
       const background = "none";
-
       return {
         ...provided,
         color,
@@ -173,7 +175,41 @@ const customStyle: Styles<any, any> = {
       };
     }
 
-    return provided;
+    provided = {
+      ...provided,
+      ":hover": {
+        background: hoverColor,
+      },
+    };
+    // focused and not selected
+    if (state.isFocused && !state.isSelected) {
+      return {
+        ...provided,
+        background: hoverColor,
+        ":active": {
+          background: activeColor,
+        },
+      };
+    }
+    // selected
+    if (state.isSelected) {
+      return {
+        ...provided,
+        background: aqBootstrapTheme.variants.secondary,
+        color: aqBootstrapTheme.palette.secondary,
+        ":hover": {
+          background: aqBootstrapTheme.variants.secondary,
+          color: aqBootstrapTheme.palette.secondary,
+        },
+      };
+    }
+
+    return {
+      ...provided,
+      ":active": {
+        background: activeColor,
+      },
+    };
   },
   placeholder: (provided, state) => {
     const color = state.isDisabled
@@ -206,8 +242,8 @@ const customStyle: Styles<any, any> = {
     };
   },
   multiValueRemove: (provided, state) => {
-    const backgroundColor = `white`;
-    const color = `${aqBootstrapTheme.palette.info}`;
+    const backgroundColor = aqBootstrapTheme.variants.secondary;
+    const color = `${aqBootstrapTheme.colors.white}`;
     const borderRadius = `50%`;
     const float = "right";
     const padding = "0";
@@ -220,6 +256,7 @@ const customStyle: Styles<any, any> = {
       ":hover": {
         ...provided[":hover"],
         backgroundColor,
+        color: aqBootstrapTheme.palette.secondary,
       },
       alignSelf,
       borderRadius,
