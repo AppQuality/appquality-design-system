@@ -1,3 +1,16 @@
+# v1.0.1 (Mon Dec 06 2021)
+
+#### 🐛 Bug Fix
+
+- rework: Make button higher level styled component [#94](https://github.com/AppQuality/appquality-design-system/pull/94) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v1.0.0 (Mon Dec 06 2021)
 
 #### 💥 Breaking Change
