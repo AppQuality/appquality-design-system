@@ -1,10 +1,9 @@
-import { Button, ButtonGroup } from "./Button";
-import { ButtonProps } from "./_types";
-import { Story, Meta } from "@storybook/react";
-import { Search } from "react-bootstrap-icons";
+import { Meta, Story } from "@storybook/react";
+import { ChevronLeft, ChevronRight, Search } from "react-bootstrap-icons";
 import { ThemeProvider } from "styled-components";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
-import { ChevronRight, ChevronLeft } from "react-bootstrap-icons";
+import { Button, ButtonGroup } from "./Button";
+import { ButtonProps } from "./_types";
 
 export default {
   title: "Button",
@@ -39,8 +38,7 @@ Primary.args = {
 Primary.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
   },
 };
 
@@ -69,8 +67,7 @@ Large.args = {
 Large.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
   },
 };
 
@@ -83,8 +80,7 @@ Small.args = {
 Small.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
   },
 };
 
@@ -97,8 +93,7 @@ Squared.args = {
 Squared.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
   },
 };
 
@@ -112,8 +107,7 @@ SquaredLarge.args = {
 SquaredLarge.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
   },
 };
 
@@ -127,8 +121,7 @@ SquaredSmall.args = {
 SquaredSmall.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
   },
 };
 
