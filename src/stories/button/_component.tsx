@@ -5,33 +5,21 @@ import { ButtonProps } from "./_types";
  */
 export const ButtonComponent = ({
   htmlType = "button",
-  type = "primary",
-  size = "medium",
+  type,
+  size,
   className,
-  disabled,
-  flat = false,
-  squared = false,
-  variant = false,
+  disabled = false,
+  flat,
+  squared,
+  variant,
   children,
   ...props
 }: ButtonProps) => {
-  let classes = [`aq-btn-${size}`, `aq-btn-${type}`, className];
-  if (flat) {
-    classes.push("aq-btn-flat");
-  }
-  if (squared) {
-    classes.push("aq-btn-squared");
-  }
-  let disabled_attr = false;
-  if (disabled) {
-    disabled_attr = true;
-    classes.push("disabled");
-  }
   return (
     <button
-      disabled={disabled_attr}
+      disabled={disabled}
       type={htmlType}
-      className={`${classes.join(" ")}`}
+      className={className}
       {...props}
     >
       {children}
