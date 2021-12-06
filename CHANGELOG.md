@@ -1,3 +1,22 @@
+# v1.0.0 (Mon Dec 06 2021)
+
+#### 💥 Breaking Change
+
+- Rebranding to Tryber [#93](https://github.com/AppQuality/appquality-design-system/pull/93) (davide.bizzi@app-quality.com [@d-beezee](https://github.com/d-beezee))
+
+#### 🐛 Bug Fix
+
+- Rebranding [#92](https://github.com/AppQuality/appquality-design-system/pull/92) (it@app-quality.com davide.bizzi@app-quality.com [@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 4
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v0.1.155 (Thu Nov 25 2021)
 
 #### 🐛 Bug Fix
