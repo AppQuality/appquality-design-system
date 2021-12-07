@@ -1,3 +1,15 @@
+# v1.0.2 (Tue Dec 07 2021)
+
+#### ⚠️ Pushed to `main`
+
+- wip(button): Change type (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v1.0.1 (Mon Dec 06 2021)
 
 #### 🐛 Bug Fix
