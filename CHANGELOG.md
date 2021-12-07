@@ -1,3 +1,16 @@
+# v1.0.3 (Tue Dec 07 2021)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Add as to button component type (davide.bizzi@app-quality.com)
+- feat: Use forwardedAs for button (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v1.0.2 (Tue Dec 07 2021)
 
 #### ⚠️ Pushed to `main`
