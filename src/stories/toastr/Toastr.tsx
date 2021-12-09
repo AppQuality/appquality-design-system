@@ -1,8 +1,8 @@
 import {
-  CheckCircleFill,
-  EmojiFrownFill,
-  ExclamationTriangleFill,
-  InfoCircleFill,
+  CheckCircle,
+  EmojiFrown,
+  ExclamationTriangle,
+  InfoCircle,
   XCircleFill,
 } from "react-bootstrap-icons";
 import styled, { DefaultTheme } from "styled-components";
@@ -22,15 +22,15 @@ const BasicToastr = ({ type, className, onClose, children }: ToastrProps) => {
   const getIcon = () => {
     switch (type) {
       case "danger":
-        return <EmojiFrownFill />;
+        return <EmojiFrown />;
       case "info":
-        return <InfoCircleFill />;
+        return <InfoCircle />;
       case "success":
-        return <CheckCircleFill />;
+        return <CheckCircle />;
       case "warning":
-        return <ExclamationTriangleFill />;
+        return <ExclamationTriangle />;
       default:
-        return <InfoCircleFill />;
+        return <InfoCircle />;
     }
   };
   return (
@@ -52,20 +52,11 @@ export const Toastr = styled(BasicToastr)(({ theme }: ToastrStyleProps) => {
       ([key, value]) => `
         &.toastr-${key} {
           border: 2px solid ${value};
+          .toastr-icon svg, .toastr-close svg {
+            fill: ${value};
+          }
         }
       `
-    )
-    .join(" ");
-
-  styleMap += Object.entries(theme.variants)
-    .map(
-      ([key, value]) => `
-      &.toastr-${key} {
-        .toastr-icon svg, .toastr-close svg {
-          fill: ${value};
-        }
-      }
-    `
     )
     .join(" ");
 
