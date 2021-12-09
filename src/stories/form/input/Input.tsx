@@ -92,8 +92,7 @@ const Input = styled(BaseInput)`
       background-color: ${(props) => props.theme.colors.white};
       border-color: ${(props) => props.theme.variants.secondary};
       outline: 0;
-      box-shadow: inset 0 1px 2px ${(props) => props.theme.colors.gray100},
-        0 0 0 0.25rem ${(props) => props.theme.colors.gray200};
+      box-shadow: ${(props) => props.theme.general.boxShadow};
       ${(props) => (props.isInvalid ? InvalidFocusStyle : "")}
 
       &+.input-group-text {
