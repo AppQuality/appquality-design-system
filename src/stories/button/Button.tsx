@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 import getButtonSize from "./getButtonSize";
 import getButtonStyle from "./getButtonStyle";
 import { ButtonComponent } from "./_component";
+import { ButtonProps } from "./_types";
 
 export const Button = styled(ButtonComponent)(
   ({
@@ -12,7 +13,7 @@ export const Button = styled(ButtonComponent)(
     flat = false,
     squared = false,
     variant = false,
-  }) => {
+  }: ButtonProps & { theme: DefaultTheme }) => {
     const palette = variant ? theme.variants : theme.palette;
     let styles = getButtonStyle(type, flat, disabled, variant, theme);
     styles += getButtonSize(size, squared, theme);

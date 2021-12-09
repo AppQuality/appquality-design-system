@@ -38,7 +38,8 @@ Primary.args = {
 Primary.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
   },
 };
 
@@ -53,7 +54,7 @@ export const Link = Template.bind({});
 Link.args = {
   type: "link",
   children: "This render as an anchor tag, but looks like a Button!",
-  as: "a",
+  forwardedAs: "a",
   href: "#",
   target: "_blank",
 };
@@ -67,7 +68,8 @@ Large.args = {
 Large.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
   },
 };
 
@@ -80,7 +82,8 @@ Small.args = {
 Small.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
   },
 };
 
@@ -93,7 +96,8 @@ Squared.args = {
 Squared.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
   },
 };
 
@@ -107,7 +111,8 @@ SquaredLarge.args = {
 SquaredLarge.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
   },
 };
 
@@ -121,7 +126,8 @@ SquaredSmall.args = {
 SquaredSmall.parameters = {
   design: {
     type: "figma",
-    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
+    url:
+      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
   },
 };
 

@@ -36,6 +36,7 @@ export type ButtonProps = BaseProps & {
   /**
    * Optional as html tag
    */
+  forwardedAs?: React.ElementType | keyof JSX.IntrinsicElements;
   as?: React.ElementType | keyof JSX.IntrinsicElements;
   target?: string;
   /*

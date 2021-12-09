@@ -4,6 +4,7 @@ import { ButtonProps } from "./_types";
  * Primary UI component for user interaction
  */
 export const ButtonComponent = ({
+  as = "button",
   htmlType = "button",
   type,
   size,
@@ -15,14 +16,15 @@ export const ButtonComponent = ({
   children,
   ...props
 }: ButtonProps) => {
+  let Component = as;
   return (
-    <button
+    <Component
       disabled={disabled}
       type={htmlType}
       className={className}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
