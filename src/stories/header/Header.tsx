@@ -40,8 +40,8 @@ const StyledHeader = styled.div`
     align-items: center;
     position: relative;
   }
-  .user-id {
-    color: ${(props) => props.theme.colors.disabledDark};
+  .user-name {
+    color: ${(props) => props.theme.palette.primary};
   }
   .user-avatar {
     margin-right: 10px;

@@ -4,7 +4,7 @@ const aqBootstrapTheme = {
   general: {
     borderRadiusNumber: 4, // fix for react select
     borderRadius: "4px",
-    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)",
+    boxShadow: `none`,
   },
   typography: {
     fontFamily: {
@@ -43,7 +43,7 @@ const aqBootstrapTheme = {
   variants: {
     primary: COLORS.gray700,
     secondary: COLORS.indigo100,
-    info: COLORS.blue400,
+    info: COLORS.blue500,
     success: COLORS.green300,
     warning: COLORS.yellow500,
     danger: COLORS.red300,
@@ -72,5 +72,8 @@ const aqBootstrapTheme = {
     },
   },
 };
+
+aqBootstrapTheme.general.boxShadow = `inset 0 1px 2px ${aqBootstrapTheme.colors.gray100},
+0 0 0 0.25rem ${aqBootstrapTheme.colors.gray200};`;
 
 export { aqBootstrapTheme };

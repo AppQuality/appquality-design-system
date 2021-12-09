@@ -75,11 +75,16 @@ let customComponents = {
 
 const customStyle: Styles<any, any> = {
   control: (provided, state) => {
-    const borderColor =
-      state.isDisabled && state.hasValue
-        ? `${aqBootstrapTheme.colors.gray100}`
-        : `${aqBootstrapTheme.colors.elementGeneric}`;
-    const boxShadow = "none";
+    let borderColor = aqBootstrapTheme.colors.elementGeneric;
+    if (state.isFocused) {
+      borderColor = aqBootstrapTheme.variants.secondary;
+    }
+    if (state.isDisabled && state.hasValue) {
+      borderColor = aqBootstrapTheme.colors.gray100;
+    }
+    const boxShadow = state.isFocused
+      ? aqBootstrapTheme.general.boxShadow
+      : "none";
     const lineHeight = "1.5";
     const minHeight = "39px";
     const background =
@@ -100,10 +105,13 @@ const customStyle: Styles<any, any> = {
     };
   },
   dropdownIndicator: (provided, state) => {
-    const color =
-      state.isDisabled && !state.hasValue
-        ? `${aqBootstrapTheme.colors.disabledFont}`
-        : `${aqBootstrapTheme.palette.primary}`;
+    let color = aqBootstrapTheme.palette.primary;
+    if (state.isDisabled && !state.hasValue) {
+      color = aqBootstrapTheme.colors.disabledFont;
+    }
+    if (state.selectProps.menuIsOpen) {
+      color = aqBootstrapTheme.palette.secondary;
+    }
     const fontSize = "20px";
     const transform = state.selectProps.menuIsOpen ? "rotate(180deg)" : "";
     const cursor = "pointer";
@@ -142,7 +150,7 @@ const customStyle: Styles<any, any> = {
     const fontFamily = `${aqBootstrapTheme.typography.fontFamily.mono}`;
     const fontWeight = aqBootstrapTheme.typography.fontWeight.light;
     const fontSize = `${aqBootstrapTheme.typography.fontSize.small}`;
-    const color = `${aqBootstrapTheme.colors.disabledDark}`;
+    const color = `${aqBootstrapTheme.palette.secondary}`;
 
     return {
       ...provided,
@@ -226,8 +234,10 @@ const customStyle: Styles<any, any> = {
     };
   },
   singleValue: (provided, state) => {
-    const color = `${aqBootstrapTheme.palette.primary}`;
-
+    const color =
+      state.isDisabled && state.hasValue
+        ? aqBootstrapTheme.variants.primary
+        : aqBootstrapTheme.palette.primary;
     return {
       ...provided,
       color,

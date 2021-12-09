@@ -40,6 +40,7 @@ const PageTitle = ({
         className="aq-mt-2"
         size={subtitleSize}
         color="primary"
+        variant
       >
         {typeof subtitle == "string" ? subtitle : subtitle.content}
       </Title>

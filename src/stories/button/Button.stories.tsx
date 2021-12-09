@@ -59,6 +59,14 @@ Link.args = {
   target: "_blank",
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  type: "secondary",
+  children: "click",
+  disabled: true,
+  onClick: () => alert("clicked!"),
+};
+
 export const Large = Template.bind({});
 Large.args = {
   size: "lg",
