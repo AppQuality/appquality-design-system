@@ -76,15 +76,17 @@ export default (
         cursor: not-allowed;
         pointer-events: none;
         opacity: .65;
-        color: ${theme.colors.white};
-        background-color: ${theme.colors.elementGeneric};
+        background-color: ${theme.colors.gray100};
+        border-color: ${theme.colors.gray100};
+        color: ${theme.colors.disabledFont};
+        `;
+
+      if (flat) {
+        style += `
+        background-color: ${theme.colors.white};
         border-color: ${theme.colors.elementGeneric};
-        
-        &.aq-btn-flat {
-          background-color: transparent;
-          border-color: ${theme.colors.elementGeneric};
-          color: ${theme.colors.disabledFont};
-        }`;
+        `;
+      }
     }
 
     return style;
