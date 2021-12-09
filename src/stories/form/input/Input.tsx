@@ -113,6 +113,7 @@ const Input = styled(BaseInput)`
       border-color: transparent;
       cursor: not-allowed;
       opacity: 1;
+      color: ${(props) => props.theme.variants.primary};
     }
   }
 `;
