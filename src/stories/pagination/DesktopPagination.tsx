@@ -25,6 +25,10 @@ export const DesktopPagination = ({
   const DesktopPaginationWrapper = styled.div`
     margin-bottom: ${(props) => props.theme.grid.spacing.default};
     text-align: center;
+    ${Button}.hoverable:hover {
+      background: ${(props) => props.theme.colors.gray100};
+      color: ${(props) => props.theme.palette.secondary};
+    }
   `;
 
   return (
@@ -47,6 +51,7 @@ export const DesktopPagination = ({
             <Button
               squared={true}
               flat={i.flat}
+              className={i.flat ? "hoverable" : ""}
               onClick={onClick}
               key={idx}
               type="primary"
