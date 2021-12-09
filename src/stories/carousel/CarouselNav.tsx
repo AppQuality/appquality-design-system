@@ -1,10 +1,10 @@
-import { CarouselNavProps } from "./_types";
-import styled from "styled-components";
-import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
 import React from "react";
-import { getCurrentStep } from "./utils";
+import { ArrowLeftShort, ArrowRightShort } from "react-bootstrap-icons";
+import styled from "styled-components";
 import { useWindowSize } from "../../shared/effects";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
+import { getCurrentStep } from "./utils";
+import { CarouselNavProps } from "./_types";
 
 const BasicCarouselNav = ({
   dark,
@@ -77,7 +77,7 @@ export const CarouselNav = styled(BasicCarouselNav)`
     height: 15px;
     margin-right: 15px;
     background-color: ${(props) => props.theme.colors.white};
-    border: 1px solid ${(props) => props.theme.palette.primary};
+    border: 1px solid ${(props) => props.theme.palette.secondary};
     overflow: hidden;
     border-radius: 7.5px;
     transition: all 0.2s ease-in-out;
@@ -85,7 +85,7 @@ export const CarouselNav = styled(BasicCarouselNav)`
     &.active {
       cursor: initial;
       width: 45px;
-      background-color: ${(props) => props.theme.palette.primary};
+      background-color: ${(props) => props.theme.palette.secondary};
     }
     @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
       transition: all 0.2s ease-in-out 0.2s;
@@ -103,9 +103,9 @@ export const CarouselNav = styled(BasicCarouselNav)`
     margin-left: ${(props) => props.theme.grid.spacing.default};
     border: 1px solid;
     border-color: ${(props) =>
-      props.dark ? props.theme.colors.white : props.theme.palette.primary};
+      props.dark ? props.theme.colors.white : props.theme.palette.secondary};
     color: ${(props) =>
-      props.dark ? props.theme.colors.white : props.theme.palette.primary};
+      props.dark ? props.theme.colors.white : props.theme.palette.secondary};
     background-color: transparent;
     transition: all 0.15s ease-in-out;
 
@@ -123,16 +123,18 @@ export const CarouselNav = styled(BasicCarouselNav)`
     }
     &:not(.disabled):active {
       background-color: ${(props) =>
-        props.dark ? props.theme.colors.white : props.theme.palette.primary};
+        props.dark ? props.theme.colors.white : props.theme.palette.secondary};
       border-color: ${(props) =>
-        props.dark ? props.theme.colors.white : props.theme.palette.primary};
+        props.dark ? props.theme.colors.white : props.theme.palette.secondary};
       color: ${(props) =>
         props.dark ? props.theme.palette.primary : props.theme.colors.white};
     }
     @media (hover: hover) and (pointer: fine) {
       &:not(.disabled):hover {
         background-color: ${(props) =>
-          props.dark ? props.theme.colors.white : props.theme.palette.primary};
+          props.dark
+            ? props.theme.colors.white
+            : props.theme.palette.secondary};
         border-color: ${(props) =>
           props.dark ? props.theme.colors.white : props.theme.palette.primary};
         color: ${(props) =>

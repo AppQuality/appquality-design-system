@@ -43,7 +43,7 @@ const aqBootstrapTheme = {
   variants: {
     primary: COLORS.gray700,
     secondary: COLORS.indigo100,
-    info: COLORS.blue400,
+    info: COLORS.blue500,
     success: COLORS.green300,
     warning: COLORS.yellow500,
     danger: COLORS.red300,
