@@ -1,3 +1,15 @@
+# v1.0.5 (Fri Dec 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: Add link hover variant (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v1.0.4 (Thu Dec 09 2021)
 
 #### 🐛 Bug Fix
