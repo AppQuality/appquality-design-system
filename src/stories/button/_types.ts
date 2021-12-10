@@ -7,7 +7,11 @@ export type ButtonProps = BaseProps & {
   /**
    * Is this the principal call to action on the page?
    */
-  type?: keyof typeof aqBootstrapTheme["palette"] | "link" | "light";
+  type?:
+    | keyof typeof aqBootstrapTheme["palette"]
+    | "link"
+    | "light"
+    | "link-hover";
   /**
    * How large should the button be?
    */
