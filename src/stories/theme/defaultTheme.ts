@@ -35,7 +35,7 @@ const aqBootstrapTheme = {
   palette: {
     primary: COLORS.gray900,
     secondary: COLORS.indigo600,
-    info: COLORS.blue800,
+    info: COLORS.blue700,
     success: COLORS.green700,
     warning: COLORS.orange800,
     danger: COLORS.red800,
