@@ -1,3 +1,30 @@
+# v1.0.5 (Fri Dec 10 2021)
+
+#### ⚠️ Pushed to `main`
+
+- feat: Add link hover variant (davide.bizzi@app-quality.com)
+
+#### Authors: 1
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
+# v1.0.4 (Thu Dec 09 2021)
+
+#### 🐛 Bug Fix
+
+- Update tryber palette [#96](https://github.com/AppQuality/appquality-design-system/pull/96) ([@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Update from main [#95](https://github.com/AppQuality/appquality-design-system/pull/95) ([@d-beezee](https://github.com/d-beezee) it@app-quality.com davide.bizzi@app-quality.com)
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v1.0.3 (Tue Dec 07 2021)
 
 #### ⚠️ Pushed to `main`

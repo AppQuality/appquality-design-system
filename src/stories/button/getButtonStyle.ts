@@ -8,12 +8,23 @@ export default (
   variant: ButtonProps["variant"],
   theme: DefaultTheme
 ) => {
-  if (type === "link") {
+  if (type === "link" || type === "link-hover") {
     return `
         box-shadow: none;
         border-color: transparent;
         background-color: transparent;
-        color: ${theme.palette.secondary};
+        ${
+          type === "link-hover"
+            ? `
+          color: ${theme.palette.primary};
+          &:hover {
+            color: ${theme.palette.secondary};
+          }
+        `
+            : `
+          color: ${theme.palette.secondary};
+        `
+        }
         text-decoration: underline;
         ${
           disabled
