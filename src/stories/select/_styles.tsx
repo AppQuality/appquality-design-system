@@ -82,9 +82,7 @@ const customStyle: Styles<any, any> = {
     if (state.isDisabled && state.hasValue) {
       borderColor = aqBootstrapTheme.colors.gray100;
     }
-    const boxShadow = state.isFocused
-      ? aqBootstrapTheme.general.boxShadow
-      : "none";
+    const boxShadow = "none";
     const lineHeight = "1.5";
     const minHeight = "39px";
     const background =
