@@ -37,39 +37,41 @@ export const orange700 = "#ffc308";
 export const orange800 = "#ffaa00";
 export const orange900 = "#fe7f00";
 
-export const red = "#ff4928";
-export const red100 = "#ffcbbd";
-export const red200 = "#ffa893";
-export const red300 = "#ff8567";
-export const red400 = "#ff6847";
+export const red = "#FF6140";
+
+export const red100 = "#FECEC3";
+export const red200 = "#FEAF9D";
+export const red300 = "#FE9077";
+export const red400 = "#FF7859";
 export const red500 = red;
-export const red600 = "#fd4324";
-export const red700 = "#ef3c1f";
-export const red800 = "#e1351a";
-export const red900 = "#c82510";
+export const red600 = "#F55B3B";
+export const red700 = "#E65436";
+export const red800 = "#D84E32";
+export const red900 = "#BD432B";
 
-export const blue = "#3BADF7";
+export const blue = "#3199FF";
 
-export const blue100 = "#B7E6FE";
-export const blue200 = "#89D6FD";
-export const blue300 = "#5FC6FB";
-export const blue400 = "#46B9FA";
+export const blue100 = "#BDE0FF";
+export const blue200 = "#93CDFF";
+export const blue300 = "#68B9FF";
+export const blue400 = "#48A9FF";
 export const blue500 = blue;
-export const blue600 = "#389FE8";
-export const blue700 = "#348BD3";
-export const blue800 = "#2F7ABF";
-export const blue900 = "#285A9C";
+export const blue600 = "#338BFA";
+export const blue700 = "#3178E6";
+export const blue800 = "#3066D3";
+export const blue900 = "#2D46B3";
 
-export const green = "#51d31d";
-export const green100 = "#d1f3c3";
-export const green200 = "#b2ea9b";
-export const green300 = "#8fe26f";
-export const green400 = "#71da4a";
+export const green = "#3CAF4B";
+
+export const green100 = "#C5E6C8";
+export const green200 = "#A0D6A5";
+export const green300 = "#79C781";
+export const green400 = "#5BBB66";
 export const green500 = green;
-export const green600 = "#3ec213";
-export const green700 = "#1aae02";
-export const green800 = "#009900";
-export const green900 = "#007700";
+export const green600 = "#33A042";
+export const green700 = "#278E37";
+export const green800 = "#1C7D2C";
+export const green900 = "#015E19";
 
 export const yellow = "#FFEE8B";
 export const yellow100 = "#FFFCE7";
