@@ -1,3 +1,18 @@
+# v1.0.6 (Wed Dec 15 2021)
+
+#### 🐛 Bug Fix
+
+- Update colors [#98](https://github.com/AppQuality/appquality-design-system/pull/98) ([@d-beezee](https://github.com/d-beezee) davide.bizzi@app-quality.com)
+- Update from Main [#97](https://github.com/AppQuality/appquality-design-system/pull/97) ([@d-beezee](https://github.com/d-beezee) it@app-quality.com davide.bizzi@app-quality.com)
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- appquality (it@app-quality.com)
+- Davide Bizzi (davide.bizzi@app-quality.com)
+
+---
+
 # v1.0.5 (Fri Dec 10 2021)
 
 #### ⚠️ Pushed to `main`
