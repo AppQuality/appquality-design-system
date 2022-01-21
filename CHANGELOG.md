@@ -1,3 +1,17 @@
+# v1.0.7 (Fri Jan 21 2022)
+
+#### 🐛 Bug Fix
+
+- responsive rules for hero container [#100](https://github.com/AppQuality/appquality-design-system/pull/100) (davide.bizzi@app-quality.com [@iacopolea](https://github.com/iacopolea))
+- fix(hero): responsive rules for hero container [#99](https://github.com/AppQuality/appquality-design-system/pull/99) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 2
+
+- Davide Bizzi (davide.bizzi@app-quality.com)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.6 (Wed Dec 15 2021)
 
 #### 🐛 Bug Fix
