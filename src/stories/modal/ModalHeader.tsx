@@ -23,5 +23,6 @@ export const ModalHeader = styled(BasicModalHeader)`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: ${(props) => props.theme.palette.primary};
   }
 `;

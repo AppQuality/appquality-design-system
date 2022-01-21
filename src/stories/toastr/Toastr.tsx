@@ -1,8 +1,8 @@
 import {
-  CheckCircle,
-  EmojiFrown,
-  ExclamationTriangle,
-  InfoCircle,
+  CheckCircleFill,
+  EmojiFrownFill,
+  ExclamationTriangleFill,
+  InfoCircleFill,
   XCircleFill,
 } from "react-bootstrap-icons";
 import styled, { DefaultTheme } from "styled-components";
@@ -22,15 +22,15 @@ const BasicToastr = ({ type, className, onClose, children }: ToastrProps) => {
   const getIcon = () => {
     switch (type) {
       case "danger":
-        return <EmojiFrown />;
+        return <EmojiFrownFill />;
       case "info":
-        return <InfoCircle />;
+        return <InfoCircleFill />;
       case "success":
-        return <CheckCircle />;
+        return <CheckCircleFill />;
       case "warning":
-        return <ExclamationTriangle />;
+        return <ExclamationTriangleFill />;
       default:
-        return <InfoCircle />;
+        return <InfoCircleFill />;
     }
   };
   return (
