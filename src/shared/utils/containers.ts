@@ -7,7 +7,7 @@ export const containers = (theme: DefaultTheme) => {
     lg: "960px",
     md: "720px",
     sm: "540px",
-    xs: "540px",
+    xs: "100%",
   };
 
   let style = `
@@ -23,17 +23,25 @@ export const containers = (theme: DefaultTheme) => {
     .container .hero {
       margin-left: calc(-24px/2);
       margin-right: calc(-24px/2);
-      @media (min-width: 768px) {
-        margin-left: calc((720px - 100vw - 24px)/2);
-        margin-right: calc((720px - 100vw - 24px)/2);
+      @media (min-width: ${theme.grid.breakpoints.sm}) {
+        margin-left: calc((${responsiveWidth.sm} - 100vw - 24px)/2);
+        margin-right: calc((${responsiveWidth.sm} - 100vw - 24px)/2);
       }
-      @media (min-width: 1200px) {
-        margin-left: calc((1140px - 100vw - 24px)/2);
-        margin-right: calc((1140px - 100vw - 24px)/2);
+      @media (min-width: ${theme.grid.breakpoints.md}) {
+        margin-left: calc((${responsiveWidth.md} - 100vw - 24px)/2);
+        margin-right: calc((${responsiveWidth.md} - 100vw - 24px)/2);
       }
-      @media (min-width: 1400px) {
-        margin-left: calc((1320px - 100vw - 24px)/2);
-        margin-right: calc((1320px - 100vw - 24px)/2);
+      @media (min-width: ${theme.grid.breakpoints.lg}) {
+        margin-left: calc((${responsiveWidth.lg} - 100vw - 24px)/2);
+        margin-right: calc((${responsiveWidth.lg} - 100vw - 24px)/2);
+      }
+      @media (min-width: ${theme.grid.breakpoints.xl}) {
+        margin-left: calc((${responsiveWidth.xl} - 100vw - 24px)/2);
+        margin-right: calc((${responsiveWidth.xl} - 100vw - 24px)/2);
+      }
+      @media (min-width: ${theme.grid.breakpoints.xxl}) {
+        margin-left: calc((${responsiveWidth.xxl} - 100vw - 24px)/2);
+        margin-right: calc((${responsiveWidth.xxl} - 100vw - 24px)/2);
       }
     }
 	
