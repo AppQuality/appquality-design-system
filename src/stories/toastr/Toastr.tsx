@@ -53,7 +53,7 @@ export const Toastr = styled(BasicToastr)(({ theme }: ToastrStyleProps) => {
           border: 2px solid ${value};
           .toastr-icon svg, .toastr-close svg {
             fill: ${value};
-          },
+          };
           svg.toastr-tryber {color: ${value}};        }
       `
     )
