@@ -2,7 +2,7 @@ import { Inboxes } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Spinner } from "../spinner/Spinner";
 import { ColumnSorter } from "./ColumnSorter";
-import { TableProps } from "./_types";
+import { CardRole, Column, TableProps } from "./_types";
 
 const cellPadding = "10px 5px";
 
@@ -143,7 +143,7 @@ const BasicTable = ({
   );
 };
 
-export const Table = styled(BasicTable)`
+export const OldTable = styled(BasicTable)`
   position: relative;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -228,4 +228,74 @@ export const Table = styled(BasicTable)`
     align-items: center;
     justify-content: center;
   }
+`;
+
+interface GridProps {
+  readonly columns: Column[];
+}
+interface CellProps {
+  readonly role: CardRole;
+}
+const Grid = styled.div<GridProps>`
+  .rows {
+    display: grid;
+    grid-template-areas:
+      "overline overline"
+      "title cta";
+  }
+  .rows.heading {
+    display: none;
+  }
+  @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
+    .rows {
+      grid-template-columns: repeat(${(props) => props.columns.length}, auto);
+      grid-gap: ${(props) => props.theme.grid.sizes[3]};
+      grid-row-gap: 0;
+    }
+    .rows.heading {
+      display: grid;
+    }
+  }
+`;
+export const Table = ({
+  dataSource,
+  columns,
+  isLoading,
+  isStriped,
+  orderBy,
+  order,
+  className,
+  i18n = {
+    loading: "Loading Data",
+    empty: "There's no data here",
+  },
+}: TableProps) => {
+  return (
+    <Grid columns={columns}>
+      <div className="rows heading">
+        {columns.map((col) => (
+          <div key={`heading-${col.key}`} className="cell">
+            {col.title}
+          </div>
+        ))}
+      </div>
+      {dataSource.map((dataRow) => (
+        <div className="rows data">
+          {columns.map((col) => (
+            <Cell
+              key={`${dataRow.key}-${col.key}`}
+              className="cell"
+              role={col.role || "more"}
+            >
+              {dataRow[col.dataIndex]}
+            </Cell>
+          ))}
+        </div>
+      ))}
+    </Grid>
+  );
+};
+
+const Cell = styled.div<CellProps>`
+  grid-area: ${(props) => props.role || "more"};
 `;

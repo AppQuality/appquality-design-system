@@ -47,12 +47,14 @@ export const columns: Column[] = [
     title: "Id",
     dataIndex: "id",
     key: "id",
+    role: "overline",
   },
   {
     title: "Title",
     dataIndex: "title",
     key: "title",
     long: true,
+    role: "title",
   },
   {
     title: "Severity",
@@ -69,6 +71,7 @@ export const columns: Column[] = [
     dataIndex: "action",
     key: "action",
     width: "110px",
+    role: "cta",
   },
 ];
 

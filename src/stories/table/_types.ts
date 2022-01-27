@@ -1,5 +1,7 @@
 export type Order = "ASC" | "DESC";
 
+export type CardRole = "overline" | "cta" | "title" | "more";
+
 export interface Column {
   title: string;
   dataIndex: string;
@@ -9,6 +11,7 @@ export interface Column {
   isSortable?: boolean;
   onSort?: (orderBy: any) => void;
   align?: "left" | "center" | "right";
+  role?: CardRole;
 }
 
 export interface Row {
