@@ -1,3 +1,5 @@
+import { BaseProps } from "../../shared/_types";
+
 export type Order = "ASC" | "DESC";
 
 export type CardRole = "overline" | "cta" | "title" | "more";
@@ -25,7 +27,7 @@ export interface ColumnSorterProps {
   orderBy?: string;
 }
 
-export interface TableProps {
+export interface TableProps extends BaseProps {
   /**
    * Rows
    */
@@ -42,11 +44,15 @@ export interface TableProps {
    * striped theme
    */
   isStriped?: boolean;
-  className?: string;
   orderBy?: string;
   order?: Order;
   i18n?: {
     loading: string;
     empty: string;
   };
+}
+
+export interface TableRowProps extends BaseProps {
+  columns: Column[];
+  dataRow: Row;
 }

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Spinner } from "../spinner/Spinner";
 import { ColumnSorter } from "./ColumnSorter";
 import { CardRole, Column, TableProps } from "./_types";
+import { TableRow } from "./TableRow";
 
 const cellPadding = "10px 5px";
 
@@ -237,23 +238,17 @@ interface CellProps {
   readonly role: CardRole;
 }
 const Grid = styled.div<GridProps>`
-  .rows {
-    display: grid;
-    grid-template-areas:
-      "overline overline"
-      "title cta";
-  }
-  .rows.heading {
+  .header.cell {
     display: none;
   }
   @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
-    .rows {
-      grid-template-columns: repeat(${(props) => props.columns.length}, auto);
-      grid-gap: ${(props) => props.theme.grid.sizes[3]};
-      grid-row-gap: 0;
-    }
-    .rows.heading {
-      display: grid;
+    display: grid;
+    grid-template-columns: repeat(${(props) => props.columns.length}, auto);
+    grid-gap: ${(props) => props.theme.grid.sizes[3]};
+    grid-row-gap: 0;
+
+    .header.cell {
+      display: initial;
     }
   }
 `;
@@ -272,30 +267,16 @@ export const Table = ({
 }: TableProps) => {
   return (
     <Grid columns={columns}>
-      <div className="rows heading">
+      <>
         {columns.map((col) => (
-          <div key={`heading-${col.key}`} className="cell">
+          <div key={`heading-${col.key}`} className="header cell">
             {col.title}
           </div>
         ))}
-      </div>
+      </>
       {dataSource.map((dataRow) => (
-        <div className="rows data">
-          {columns.map((col) => (
-            <Cell
-              key={`${dataRow.key}-${col.key}`}
-              className="cell"
-              role={col.role || "more"}
-            >
-              {dataRow[col.dataIndex]}
-            </Cell>
-          ))}
-        </div>
+        <TableRow columns={columns} dataRow={dataRow} />
       ))}
     </Grid>
   );
 };
-
-const Cell = styled.div<CellProps>`
-  grid-area: ${(props) => props.role || "more"};
-`;
