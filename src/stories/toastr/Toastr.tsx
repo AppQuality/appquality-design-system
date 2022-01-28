@@ -1,12 +1,11 @@
-import {
-  CheckCircleFill,
-  EmojiFrownFill,
-  ExclamationTriangleFill,
-  InfoCircleFill,
-  XCircleFill,
-} from "react-bootstrap-icons";
+import { XCircleFill } from "react-bootstrap-icons";
 import styled, { DefaultTheme } from "styled-components";
+
 import { BaseProps } from "../../shared/_types";
+import { ReactComponent as Danger } from "./assets/danger.svg";
+import { ReactComponent as Info } from "./assets/info.svg";
+import { ReactComponent as Success } from "./assets/success.svg";
+import { ReactComponent as Warining } from "./assets/warning.svg";
 
 export interface ToastrProps extends BaseProps {
   type: keyof DefaultTheme["palette"];
@@ -22,15 +21,15 @@ const BasicToastr = ({ type, className, onClose, children }: ToastrProps) => {
   const getIcon = () => {
     switch (type) {
       case "danger":
-        return <EmojiFrownFill />;
+        return <Danger className="toastr-tryber" />;
       case "info":
-        return <InfoCircleFill />;
+        return <Info className="toastr-tryber" />;
       case "success":
-        return <CheckCircleFill />;
+        return <Success className="toastr-tryber" />;
       case "warning":
-        return <ExclamationTriangleFill />;
+        return <Warining className="toastr-tryber" />;
       default:
-        return <InfoCircleFill />;
+        return <Info className="toastr-tryber" />;
     }
   };
   return (
@@ -54,8 +53,8 @@ export const Toastr = styled(BasicToastr)(({ theme }: ToastrStyleProps) => {
           border: 2px solid ${value};
           .toastr-icon svg, .toastr-close svg {
             fill: ${value};
-          }
-        }
+          };
+          svg.toastr-tryber {color: ${value}};        }
       `
     )
     .join(" ");
