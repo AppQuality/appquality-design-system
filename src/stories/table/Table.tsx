@@ -234,9 +234,7 @@ export const OldTable = styled(BasicTable)`
 interface GridProps {
   readonly columns: Column[];
 }
-interface CellProps {
-  readonly role: CardRole;
-}
+
 const Grid = styled.div<GridProps>`
   .header.cell {
     display: none;
@@ -257,6 +255,7 @@ export const Table = ({
   columns,
   isLoading,
   isStriped,
+  isExpandable,
   orderBy,
   order,
   className,
@@ -275,7 +274,11 @@ export const Table = ({
         ))}
       </>
       {dataSource.map((dataRow) => (
-        <TableRow columns={columns} dataRow={dataRow} />
+        <TableRow
+          columns={columns}
+          dataRow={dataRow}
+          isExpandable={isExpandable}
+        />
       ))}
     </Grid>
   );

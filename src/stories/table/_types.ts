@@ -2,7 +2,7 @@ import { BaseProps } from "../../shared/_types";
 
 export type Order = "ASC" | "DESC";
 
-export type CardRole = "overline" | "cta" | "title" | "more";
+export type CardRole = "overline" | "cta" | "title";
 
 export interface Column {
   title: string;
@@ -44,6 +44,7 @@ export interface TableProps extends BaseProps {
    * striped theme
    */
   isStriped?: boolean;
+  isExpandable?: boolean;
   orderBy?: string;
   order?: Order;
   i18n?: {
@@ -55,4 +56,5 @@ export interface TableProps extends BaseProps {
 export interface TableRowProps extends BaseProps {
   columns: Column[];
   dataRow: Row;
+  isExpandable?: boolean;
 }

@@ -42,6 +42,7 @@ export const dataSource: Row[] = [
     ),
   },
 ];
+
 export const columns: Column[] = [
   {
     title: "Id",
@@ -80,3 +81,17 @@ columnsWithOrderBy[0].isSortable = true;
 columnsWithOrderBy[1].isSortable = true;
 columnsWithOrderBy[2].isSortable = true;
 export { columnsWithOrderBy };
+
+const dataSourceLong = dataSource.map((a) => ({ ...a }));
+dataSourceLong[0].date = "21/06/21";
+dataSourceLong[1].date = "25/06/21";
+dataSourceLong[2].date = "30/06/21";
+export { dataSourceLong };
+
+const columnsLong = [...columns];
+columnsLong.splice(2, 0, {
+  title: "Date",
+  dataIndex: "date",
+  key: "date",
+});
+export { columnsLong };
