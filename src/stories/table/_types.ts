@@ -1,6 +1,7 @@
 import { BaseProps } from "../../shared/_types";
 
 export type Order = "ASC" | "DESC";
+export type SortFunction = (orderBy: Order) => void;
 
 export type CardRole = "overline" | "cta" | "title";
 
@@ -8,10 +9,9 @@ export interface Column {
   title: string;
   dataIndex: string;
   key: string;
-  long?: boolean; // ellipsis with auto width
-  width?: string; // default 10ch
+  maxWidth?: string; // default auto
   isSortable?: boolean;
-  onSort?: (orderBy: any) => void;
+  onSort?: SortFunction;
   align?: "left" | "center" | "right";
   role?: CardRole;
 }

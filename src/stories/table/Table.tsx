@@ -2,7 +2,7 @@ import { Inboxes } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Spinner } from "../spinner/Spinner";
 import { ColumnSorter } from "./ColumnSorter";
-import { Column, TableProps } from "./_types";
+import { Column, Order, SortFunction, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
 
 const cellPadding = "10px 5px";
@@ -43,7 +43,7 @@ const BasicTable = ({
     onSort,
   }: {
     order?: "ASC" | "DESC";
-    onSort: (order: string) => void;
+    onSort: (order: Order) => void;
   }) => {
     order = order === "DESC" ? "ASC" : "DESC";
     onSort(order);
@@ -52,21 +52,6 @@ const BasicTable = ({
     <div className={className}>
       {isLoading && <LoadingStatus />}
       <table className={tableClass}>
-        <colgroup>
-          {columns.map((column, index) => {
-            return column.long ? (
-              <col key={index} style={{ width: "auto", minWidth: "auto" }} />
-            ) : (
-              <col
-                key={index}
-                style={{
-                  width: `${column.width || "10ch"}`,
-                  minWidth: `${column.width || "10ch"}`,
-                }}
-              />
-            );
-          })}
-        </colgroup>
         <thead>
           <tr>
             {columns.map((column) => {
@@ -115,7 +100,6 @@ const BasicTable = ({
               <tr key={index}>
                 {columns.map((column) => {
                   let className = "";
-                  if (column.long) className = "aq-table-cell-ellipsis";
                   if (column.align) className += ` aq-text-${column.align}`;
                   return (
                     <td
@@ -233,6 +217,7 @@ export const OldTable = styled(BasicTable)`
 
 interface GridProps {
   readonly columns: Column[];
+  readonly isStriped?: boolean;
 }
 
 const Grid = styled.div<GridProps>`
@@ -260,8 +245,15 @@ const Grid = styled.div<GridProps>`
     .tbody.cell:nth-last-child(1n + ${(p) => p.columns.length + 1}) {
       border-bottom: 1px solid rgb(216, 216, 216);
     }
+    ${(p) =>
+      p.isStriped &&
+      `
+      .tbody.cell.odd {
+        background-color: ${p.theme.colors.gray100}
+      }`};
     .thead.cell {
-      display: initial;
+      display: flex;
+      align-items: center;
     }
   }
 `;
@@ -292,24 +284,47 @@ export const Table = ({
       <div className="aq-mt-2">{i18n.empty}</div>
     </div>
   );
+
+  const handleSort = (order: Order, onSort: SortFunction) => {
+    if (order === "DESC") {
+      onSort("ASC");
+    } else if (order === "ASC") {
+      onSort("DESC");
+    }
+  };
   return (
-    <Grid columns={columns}>
+    <Grid columns={columns} isStriped={isStriped}>
       <>
-        {columns.map((col) => (
-          <div key={`heading-${col.key}`} className="thead cell">
-            {col.title}
-          </div>
-        ))}
+        {columns.map((col) => {
+          const sortTable = () => {
+            if (col.isSortable && order && col.onSort) {
+              handleSort(order, col.onSort);
+            }
+          };
+          return (
+            <div
+              key={`heading-${col.key}`}
+              className="thead cell"
+              onClick={sortTable}
+            >
+              {col.title}
+              {col.isSortable && (
+                <ColumnSorter column={col} orderBy={orderBy} order={order} />
+              )}
+            </div>
+          );
+        })}
       </>
 
       {isLoading ? (
         <LoadingStatus />
       ) : dataSource.length ? (
-        dataSource.map((dataRow) => (
+        dataSource.map((dataRow, index) => (
           <TableRow
             columns={columns}
             dataRow={dataRow}
             isExpandable={isExpandable}
+            className={index % 2 === 0 ? "odd" : "even"}
           />
         ))
       ) : (

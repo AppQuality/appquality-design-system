@@ -4,13 +4,21 @@ import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { useState } from "react";
 
-export const TableRow = ({ columns, dataRow, isExpandable }: TableRowProps) => {
+export const TableRow = ({
+  columns,
+  dataRow,
+  isExpandable,
+  className,
+}: TableRowProps) => {
   useWindowSize();
 
   const BasicRow = () => (
     <>
       {columns.map((col) => (
-        <div className="tbody cell" key={`${dataRow.key}-${col.key}`}>
+        <div
+          className={`${className} tbody cell`}
+          key={`${dataRow.key}-${col.key}`}
+        >
           {dataRow[col.dataIndex]}
         </div>
       ))}
