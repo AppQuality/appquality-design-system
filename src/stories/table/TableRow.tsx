@@ -105,15 +105,16 @@ interface ElementProps {
 }
 
 const Element = styled.div<ElementProps>`
-  grid-area: ${(props) => props.role};
-  ${(props) => (props.role === "title" ? `font-weight: 600;` : "")}
+  grid-area: ${(p) => p.role};
+  ${(p) => (p.role === "title" ? `font-weight: 600;` : "")}
+  ${(p) => p.role === "toggle-more" && `margin-top: 2px;`}
   &.more-info {
-    ${(props) =>
-      props.isCompact
+    ${(p) =>
+      p.isCompact
         ? `max-height: 0;
          overflow: hidden;`
         : `max-height: max-content;
-         padding-top: ${props.theme.grid.sizes[1]};
-         padding-bottom: ${props.theme.grid.sizes[1]};`}
+         padding-top: ${p.theme.grid.sizes[1]};
+         padding-bottom: ${p.theme.grid.sizes[1]};`}
   } ;
 `;
