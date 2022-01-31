@@ -38,6 +38,7 @@ TableEmpty.args = {
   dataSource: [],
   columns: columns,
   isLoading: false,
+  className: "pippo",
 };
 
 export const TableLoading = Template.bind({});

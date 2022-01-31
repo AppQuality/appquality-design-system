@@ -27,7 +27,7 @@ export const TableRow = ({
   );
 
   const TableCard = () => {
-    const [isCompact, setIsCompact] = useState(true);
+    const [isCompact, setIsCompact] = useState(isExpandable);
     const toggleCompact = () => {
       setIsCompact(!isCompact);
     };
@@ -48,7 +48,7 @@ export const TableRow = ({
                 key={`${dataRow.key}-${col.key}`}
                 role={col.role}
                 onClick={() => {
-                  if (col.role !== "cta") toggleCompact();
+                  if (col.role !== "cta" && isExpandable) toggleCompact();
                 }}
               >
                 {dataRow[col.dataIndex]}
@@ -92,6 +92,10 @@ const CardStyle = styled.div`
       "toggle-more overline overline"
       "toggle-more title cta"
       "more more more";
+    .more-info {
+      padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 2);
+      background-color: ${(p) => p.theme.colors.gray100};
+    }
   }
 `;
 
@@ -104,8 +108,6 @@ const Element = styled.div<ElementProps>`
   grid-area: ${(props) => props.role};
   ${(props) => (props.role === "title" ? `font-weight: 600;` : "")}
   &.more-info {
-    padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 2);
-    background-color: ${(p) => p.theme.colors.gray100};
     ${(props) =>
       props.isCompact
         ? `max-height: 0;
