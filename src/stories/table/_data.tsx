@@ -22,7 +22,7 @@ export const dataSource: Row[] = [
     title:
       "[registrazione/form] - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem error et illum ipsam iure",
     severity: "Normal",
-    state: "this is a Critical bug",
+    state: "this col has a max width of 10ch",
     action: (
       <Button type="link" size="sm">
         view more
@@ -54,7 +54,6 @@ export const columns: Column[] = [
     title: "Title",
     dataIndex: "title",
     key: "title",
-    long: true,
     role: "title",
   },
   {
@@ -66,12 +65,12 @@ export const columns: Column[] = [
     title: "State",
     dataIndex: "state",
     key: "state",
+    maxWidth: "110px",
   },
   {
     title: "Action",
     dataIndex: "action",
     key: "action",
-    width: "110px",
     role: "cta",
   },
 ];

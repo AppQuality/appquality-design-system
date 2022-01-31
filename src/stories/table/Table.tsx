@@ -172,46 +172,6 @@ export const OldTable = styled(BasicTable)`
         border-bottom: 1px solid ${(props) => props.theme.colors.elementGeneric};
       }
     }
-    .aq-table-cell-ellipsis {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      word-break: keep-all;
-      max-width: 100vw;
-    }
-    @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
-      .aq-table-cell-ellipsis {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-break: keep-all;
-        max-width: 0;
-      }
-    }
-  }
-  .aq-table-empty-placeholder {
-    height: 200px;
-    text-align: center;
-    color: ${(props) => props.theme.colors.gray600};
-    td {
-      vertical-align: middle;
-    }
-  }
-  .aq-table-placeholder-icon {
-    font-size: 40px;
-    margin-bottom: 1rem;
-  }
-  .aq-table-loading-placeholder {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
   }
 `;
 
@@ -230,7 +190,7 @@ const Grid = styled.div<GridProps>`
   }
 
   .thead.cell {
-    font-family: "IBM Plex Serif";
+    display: none;
   }
 
   @media (min-width: ${(p) => p.theme.grid.breakpoints.md}) {
@@ -252,6 +212,7 @@ const Grid = styled.div<GridProps>`
         background-color: ${p.theme.colors.gray100}
       }`};
     .thead.cell {
+      font-family: ${(p) => p.theme.typography.fontFamily.serif};
       display: flex;
       align-items: center;
     }
