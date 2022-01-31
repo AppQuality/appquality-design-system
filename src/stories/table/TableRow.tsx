@@ -3,7 +3,6 @@ import { useWindowSize } from "../../shared/effects/useWindowSize";
 import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { useState } from "react";
-import { set } from "husky";
 
 export const TableRow = ({ columns, dataRow, isExpandable }: TableRowProps) => {
   useWindowSize();
@@ -11,7 +10,9 @@ export const TableRow = ({ columns, dataRow, isExpandable }: TableRowProps) => {
   const BasicRow = () => (
     <>
       {columns.map((col) => (
-        <div key={`${dataRow.key}-${col.key}`}>{dataRow[col.dataIndex]}</div>
+        <div className="tbody cell" key={`${dataRow.key}-${col.key}`}>
+          {dataRow[col.dataIndex]}
+        </div>
       ))}
     </>
   );

@@ -2,7 +2,7 @@ import { Inboxes } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Spinner } from "../spinner/Spinner";
 import { ColumnSorter } from "./ColumnSorter";
-import { CardRole, Column, TableProps } from "./_types";
+import { Column, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
 
 const cellPadding = "10px 5px";
@@ -236,16 +236,31 @@ interface GridProps {
 }
 
 const Grid = styled.div<GridProps>`
-  .header.cell {
-    display: none;
+  .data-placeholder {
+    grid-column: span ${(p) => p.columns.length};
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
   }
-  @media (min-width: ${(props) => props.theme.grid.breakpoints.md}) {
-    display: grid;
-    grid-template-columns: repeat(${(props) => props.columns.length}, auto);
-    grid-gap: ${(props) => props.theme.grid.sizes[3]};
-    grid-row-gap: 0;
 
-    .header.cell {
+  .thead.cell {
+    font-family: "IBM Plex Serif";
+  }
+
+  @media (min-width: ${(p) => p.theme.grid.breakpoints.md}) {
+    display: grid;
+    grid-template-columns: repeat(${(p) => p.columns.length}, auto);
+    .cell {
+      overflow-wrap: break-word;
+      font-weight: 400;
+      padding: 10px 5px;
+    }
+    .thead.cell,
+    .tbody.cell:nth-last-child(1n + ${(p) => p.columns.length + 1}) {
+      border-bottom: 1px solid rgb(216, 216, 216);
+    }
+    .thead.cell {
       display: initial;
     }
   }
@@ -264,22 +279,42 @@ export const Table = ({
     empty: "There's no data here",
   },
 }: TableProps) => {
+  const LoadingStatus = () => (
+    <div className="data-placeholder -loading aq-mt-4">
+      <Spinner className="aq-ml-1" />
+      <div>{i18n.loading}</div>
+    </div>
+  );
+
+  const DataPlaceholder = () => (
+    <div className="data-placeholder -empty aq-mt-4">
+      <Inboxes className="aq-my-3" size={40} />
+      <div className="aq-mt-2">{i18n.empty}</div>
+    </div>
+  );
   return (
     <Grid columns={columns}>
       <>
         {columns.map((col) => (
-          <div key={`heading-${col.key}`} className="header cell">
+          <div key={`heading-${col.key}`} className="thead cell">
             {col.title}
           </div>
         ))}
       </>
-      {dataSource.map((dataRow) => (
-        <TableRow
-          columns={columns}
-          dataRow={dataRow}
-          isExpandable={isExpandable}
-        />
-      ))}
+
+      {isLoading ? (
+        <LoadingStatus />
+      ) : dataSource.length ? (
+        dataSource.map((dataRow) => (
+          <TableRow
+            columns={columns}
+            dataRow={dataRow}
+            isExpandable={isExpandable}
+          />
+        ))
+      ) : (
+        <DataPlaceholder />
+      )}
     </Grid>
   );
 };
