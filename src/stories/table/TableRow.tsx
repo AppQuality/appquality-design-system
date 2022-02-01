@@ -49,6 +49,26 @@ export const TableRow = ({
     </>
   );
 
+  const CardStyle = styled.div`
+    display: grid;
+    grid-column-gap: ${(p) => p.theme.grid.sizes[2]};
+    grid-template-areas:
+      "overline overline"
+      "title cta"
+      "more more";
+    border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
+    &.expandable {
+      grid-template-areas:
+        "toggle-more overline overline"
+        "toggle-more title cta"
+        "more more more";
+      .more-info {
+        padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 2);
+        background-color: ${(p) => p.theme.colors.gray100};
+      }
+    }
+  `;
+
   const TableCard = () => {
     const [isCompact, setIsCompact] = useState(isExpandable);
     const toggleCompact = () => {
@@ -109,23 +129,3 @@ export const TableRow = ({
     <TableCard />
   );
 };
-
-const CardStyle = styled.div`
-  display: grid;
-  grid-column-gap: ${(p) => p.theme.grid.sizes[2]};
-  grid-template-areas:
-    "overline overline"
-    "title cta"
-    "more more";
-  border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
-  &.expandable {
-    grid-template-areas:
-      "toggle-more overline overline"
-      "toggle-more title cta"
-      "more more more";
-    .more-info {
-      padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 2);
-      background-color: ${(p) => p.theme.colors.gray100};
-    }
-  }
-`;
