@@ -68,16 +68,18 @@ export const Table = ({
   },
 }: TableProps) => {
   const LoadingStatus = () => (
-    <div className="data-placeholder -loading aq-mt-4">
+    <div className="data-placeholder -loading aq-mt-4 aq-text-primaryVariant">
       <Spinner className="aq-ml-1" />
       <div>{i18n.loading}</div>
     </div>
   );
 
   const DataPlaceholder = () => (
-    <div className="data-placeholder -empty aq-mt-4">
+    <div className="data-placeholder -empty aq-mt-4 aq-text-primaryVariant">
       <Inboxes className="aq-my-3" size={iconSize} />
-      <div className="aq-mt-2">{i18n.empty}</div>
+      <div className="aq-mt-2 aq-text aq-text-primary-variant">
+        {i18n.empty}
+      </div>
     </div>
   );
 
