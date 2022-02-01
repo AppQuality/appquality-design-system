@@ -114,7 +114,10 @@ interface ElementProps {
 
 const Element = styled.div<ElementProps>`
   grid-area: ${(p) => p.role};
-  ${(p) => (p.role === "title" ? `font-weight: 600;` : "")}
+  ${(p) =>
+    p.role === "title"
+      ? `font-weight: ${p.theme.typography.fontWeight.medium};`
+      : ""}
   ${(p) => (p.role === "overline" ? `color: ${p.theme.variants.primary};` : "")}
   &.more-info {
     ${(p) =>
@@ -122,7 +125,7 @@ const Element = styled.div<ElementProps>`
         ? `max-height: 0;
          overflow: hidden;`
         : `max-height: max-content;
-         padding-top: ${p.theme.grid.sizes[1]};
-         padding-bottom: ${p.theme.grid.sizes[1]};`}
+         padding-top: ${p.theme.grid.sizes[2]};
+         padding-bottom: ${p.theme.grid.sizes[2]};`}
   } ;
 `;
