@@ -44,9 +44,10 @@ export const TableRow = ({
         <div
           className={`${className} tbody cell`}
           key={`${dataRow.key}-${col.key}`}
-          style={{ maxWidth: col.maxWidth || "auto" }}
         >
-          {dataRow[col.dataIndex]}
+          <div style={{ maxWidth: col.maxWidth || "auto" }}>
+            {dataRow[col.dataIndex]}
+          </div>
         </div>
       ))}
     </>
