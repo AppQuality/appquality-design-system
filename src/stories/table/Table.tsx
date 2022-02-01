@@ -119,6 +119,7 @@ export const Table = ({
           <TableRow
             columns={columns}
             dataRow={dataRow}
+            key={dataRow.key}
             isExpandable={isExpandable}
             className={index % 2 === 0 ? "odd" : "even"}
           />
