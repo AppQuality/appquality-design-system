@@ -1,9 +1,32 @@
 import { CardRole, TableRowProps } from "./_types";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
-import { ChevronDown, ChevronUp, CaretDownFill } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { useState } from "react";
 import caret from "../../shared/assets/caret-up.svg";
+
+interface ElementProps {
+  readonly role?: CardRole | "more" | "toggle-more";
+  readonly isCompact?: boolean;
+}
+
+const Element = styled.div<ElementProps>`
+  grid-area: ${(p) => p.role};
+  ${(p) =>
+    p.role === "title"
+      ? `font-weight: ${p.theme.typography.fontWeight.medium};`
+      : ""}
+  ${(p) => (p.role === "overline" ? `color: ${p.theme.variants.primary};` : "")}
+  &.more-info {
+    ${(p) =>
+      p.isCompact
+        ? `max-height: 0;
+         overflow: hidden;`
+        : `max-height: max-content;
+         padding-top: ${p.theme.grid.sizes[2]};
+         padding-bottom: ${p.theme.grid.sizes[2]};`}
+  } ;
+`;
+
 export const TableRow = ({
   columns,
   dataRow,
@@ -105,27 +128,4 @@ const CardStyle = styled.div`
       background-color: ${(p) => p.theme.colors.gray100};
     }
   }
-`;
-
-interface ElementProps {
-  readonly role?: CardRole | "more" | "toggle-more";
-  readonly isCompact?: boolean;
-}
-
-const Element = styled.div<ElementProps>`
-  grid-area: ${(p) => p.role};
-  ${(p) =>
-    p.role === "title"
-      ? `font-weight: ${p.theme.typography.fontWeight.medium};`
-      : ""}
-  ${(p) => (p.role === "overline" ? `color: ${p.theme.variants.primary};` : "")}
-  &.more-info {
-    ${(p) =>
-      p.isCompact
-        ? `max-height: 0;
-         overflow: hidden;`
-        : `max-height: max-content;
-         padding-top: ${p.theme.grid.sizes[2]};
-         padding-bottom: ${p.theme.grid.sizes[2]};`}
-  } ;
 `;

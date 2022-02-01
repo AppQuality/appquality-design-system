@@ -6,6 +6,7 @@ import { Column, Order, SortFunction, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
 
 const cellPadding = "10px 5px";
+const iconSize = 40;
 
 interface GridProps {
   readonly columns: Column[];
@@ -75,7 +76,7 @@ export const Table = ({
 
   const DataPlaceholder = () => (
     <div className="data-placeholder -empty aq-mt-4">
-      <Inboxes className="aq-my-3" size={40} />
+      <Inboxes className="aq-my-3" size={iconSize} />
       <div className="aq-mt-2">{i18n.empty}</div>
     </div>
   );
