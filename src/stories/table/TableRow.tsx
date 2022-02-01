@@ -70,6 +70,9 @@ export const TableRow = ({
         background-color: ${(p) => p.theme.colors.gray100};
       }
     }
+    .data-index {
+      text-transform: capitalize;
+    }
   `;
 
   const TableCard = () => {
@@ -101,7 +104,14 @@ export const TableRow = ({
                   if (col.role !== "cta" && isExpandable) toggleCompact();
                 }}
               >
-                {dataRow[col.dataIndex]}
+                {col.hideIndex ? (
+                  <span>{dataRow[col.dataIndex]}</span>
+                ) : (
+                  <>
+                    <span className="data-index">{col.dataIndex}</span>:{" "}
+                    <strong>{dataRow[col.dataIndex]}</strong>
+                  </>
+                )}
               </Element>
             )
         )}
@@ -113,7 +123,14 @@ export const TableRow = ({
                   key={`${dataRow.key}-${col.key}`}
                   style={{ gridArea: col.role }}
                 >
-                  {col.dataIndex}: <strong>{dataRow[col.dataIndex]}</strong>
+                  {col.hideIndex ? (
+                    <span>{dataRow[col.dataIndex]}</span>
+                  ) : (
+                    <>
+                      <span className="data-index">{col.dataIndex}</span>:{" "}
+                      <strong>{dataRow[col.dataIndex]}</strong>
+                    </>
+                  )}
                 </div>
               )
           )}

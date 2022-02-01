@@ -14,6 +14,7 @@ export interface Column {
   onSort?: SortFunction;
   align?: "left" | "center" | "right";
   role?: CardRole;
+  hideIndex?: boolean;
 }
 
 export interface Row {

@@ -55,6 +55,7 @@ export const columns: Column[] = [
     dataIndex: "title",
     key: "title",
     role: "title",
+    hideIndex: true,
   },
   {
     title: "Severity",
@@ -72,6 +73,7 @@ export const columns: Column[] = [
     dataIndex: "action",
     key: "action",
     role: "cta",
+    hideIndex: true,
   },
 ];
 
