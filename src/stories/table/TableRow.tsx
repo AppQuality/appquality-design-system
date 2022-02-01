@@ -2,12 +2,14 @@ import { CardRole, TableRowProps } from "./_types";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 import styled from "styled-components";
 import { useState } from "react";
-import caret from "../../shared/assets/caret-up.svg";
+import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
 
 interface ElementProps {
   readonly role?: CardRole | "more" | "toggle-more";
   readonly isCompact?: boolean;
 }
+
+const iconSize = 24;
 
 const Element = styled.div<ElementProps>`
   grid-area: ${(p) => p.role};
@@ -23,7 +25,8 @@ const Element = styled.div<ElementProps>`
          overflow: hidden;`
         : `max-height: max-content;
          padding-top: ${p.theme.grid.sizes[2]};
-         padding-bottom: ${p.theme.grid.sizes[2]};`}
+         padding-bottom: ${p.theme.grid.sizes[2]};
+         padding-right: ${p.theme.grid.sizes[2]};`}
   } ;
 `;
 
@@ -63,7 +66,7 @@ export const TableRow = ({
         "toggle-more title cta"
         "more more more";
       .more-info {
-        padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 2);
+        padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 3);
         background-color: ${(p) => p.theme.colors.gray100};
       }
     }
@@ -77,13 +80,9 @@ export const TableRow = ({
     const ExpandButton = () => (
       <Element role="toggle-more" onClick={toggleCompact}>
         {isCompact ? (
-          <img
-            src={caret}
-            width="20px"
-            style={{ transform: "rotate(180deg)" }}
-          />
+          <ChevronDown size={iconSize} />
         ) : (
-          <img src={caret} width="20px" />
+          <ChevronUp size={iconSize} />
         )}
       </Element>
     );
