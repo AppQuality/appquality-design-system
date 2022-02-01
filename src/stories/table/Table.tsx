@@ -13,6 +13,8 @@ interface GridProps {
 }
 
 const Grid = styled.div<GridProps>`
+  color: ${(p) => p.theme.palette.primary};
+
   .data-placeholder {
     grid-column: span ${(p) => p.columns.length};
     display: flex;
@@ -31,7 +33,7 @@ const Grid = styled.div<GridProps>`
     .cell {
       overflow-wrap: break-word;
       font-weight: 400;
-      padding: 10px 5px;
+      padding: ${cellPadding};
     }
     .thead.cell,
     .tbody.cell:nth-last-child(1n + ${(p) => p.columns.length + 1}) {

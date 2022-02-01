@@ -1,9 +1,9 @@
 import { CardRole, TableRowProps } from "./_types";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
-import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
+import { ChevronDown, ChevronUp, CaretDownFill } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { useState } from "react";
-
+import caret from "../../shared/assets/caret-up.svg";
 export const TableRow = ({
   columns,
   dataRow,
@@ -33,7 +33,15 @@ export const TableRow = ({
     };
     const ExpandButton = () => (
       <Element role="toggle-more" onClick={toggleCompact}>
-        {isCompact ? <ChevronDown /> : <ChevronUp />}
+        {isCompact ? (
+          <img
+            src={caret}
+            width="20px"
+            style={{ transform: "rotate(180deg)" }}
+          />
+        ) : (
+          <img src={caret} width="20px" />
+        )}
       </Element>
     );
     let cardClasses = "aq-mb-3 aq-pb-3";
@@ -63,7 +71,7 @@ export const TableRow = ({
                   key={`${dataRow.key}-${col.key}`}
                   style={{ gridArea: col.role }}
                 >
-                  {col.dataIndex}: {dataRow[col.dataIndex]}
+                  {col.dataIndex}: <strong>{dataRow[col.dataIndex]}</strong>
                 </div>
               )
           )}
@@ -81,7 +89,7 @@ export const TableRow = ({
 
 const CardStyle = styled.div`
   display: grid;
-  grid-column-gap: ${(p) => p.theme.grid.sizes[1]};
+  grid-column-gap: ${(p) => p.theme.grid.sizes[2]};
   grid-template-areas:
     "overline overline"
     "title cta"
@@ -107,7 +115,7 @@ interface ElementProps {
 const Element = styled.div<ElementProps>`
   grid-area: ${(p) => p.role};
   ${(p) => (p.role === "title" ? `font-weight: 600;` : "")}
-  ${(p) => p.role === "toggle-more" && `margin-top: 2px;`}
+  ${(p) => (p.role === "overline" ? `color: ${p.theme.variants.primary};` : "")}
   &.more-info {
     ${(p) =>
       p.isCompact
