@@ -1,7 +1,7 @@
-import { CardRole, TableRowProps } from "./_types";
+import { CardRole, Column, Data, TableRowProps } from "./_types";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 import styled from "styled-components";
-import { useState } from "react";
+import { ReactElement, useState, isValidElement } from "react";
 import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
 
 interface ElementProps {
@@ -10,6 +10,34 @@ interface ElementProps {
 }
 
 const iconSize = 24;
+
+interface CellProps {
+  data?: Data;
+  col: Column;
+}
+const Cell = ({ data, col }: CellProps) => {
+  const content =
+    typeof data === "object" && "content" in data ? data.content : data;
+  return (
+    <div
+      style={{ maxWidth: col.maxWidth || "auto" }}
+      title={
+        typeof data === "object" && "title" in data
+          ? data.title
+          : data?.toString()
+      }
+    >
+      {col.hideIndex ? (
+        <span>{content}</span>
+      ) : (
+        <>
+          <span className="data-index">{col.dataIndex}</span>:{" "}
+          <strong>{content}</strong>
+        </>
+      )}
+    </div>
+  );
+};
 
 const Element = styled.div<ElementProps>`
   grid-area: ${(p) => p.role};
@@ -45,9 +73,7 @@ export const TableRow = ({
           className={`${className} tbody cell`}
           key={`${dataRow.key}-${col.key}`}
         >
-          <div style={{ maxWidth: col.maxWidth || "auto" }}>
-            {dataRow[col.dataIndex]}
-          </div>
+          <Cell data={dataRow[col.dataIndex]} col={col} />
         </div>
       ))}
     </>

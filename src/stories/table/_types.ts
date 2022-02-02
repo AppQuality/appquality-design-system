@@ -1,4 +1,5 @@
 import { BaseProps } from "../../shared/_types";
+import { ReactElement } from "react";
 
 export type Order = "ASC" | "DESC";
 export type SortFunction = (orderBy: Order) => void;
@@ -17,9 +18,15 @@ export interface Column {
   hideIndex?: boolean;
 }
 
+export type Data = ObjectData | JSX.Element | string | number;
+interface ObjectData {
+  title?: string;
+  content?: Data;
+}
+
 export interface Row {
   key: string | number;
-  [index: string]: any;
+  [index: string]: Data;
 }
 
 export interface ColumnSorterProps {
