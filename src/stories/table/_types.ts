@@ -18,7 +18,7 @@ export interface Column {
   hideIndex?: boolean;
 }
 
-export type Data = ObjectData | JSX.Element | string | number;
+export type Data = ObjectData | JSX.Element | string | number | undefined;
 interface ObjectData {
   title?: string;
   content?: Data;

@@ -131,14 +131,7 @@ export const TableRow = ({
                   if (col.role !== "cta" && isExpandable) toggleCompact();
                 }}
               >
-                {col.hideIndex ? (
-                  <span>{dataRow[col.dataIndex]}</span>
-                ) : (
-                  <>
-                    <span className="data-index">{col.dataIndex}</span>:{" "}
-                    <strong>{dataRow[col.dataIndex]}</strong>
-                  </>
-                )}
+                <Cell data={dataRow[col.dataIndex]} col={col} />
               </Element>
             )
         )}
@@ -150,14 +143,7 @@ export const TableRow = ({
                   key={`${dataRow.key}-${col.key}`}
                   style={{ gridArea: col.role }}
                 >
-                  {col.hideIndex ? (
-                    <span>{dataRow[col.dataIndex]}</span>
-                  ) : (
-                    <>
-                      <span className="data-index">{col.dataIndex}</span>:{" "}
-                      <strong>{dataRow[col.dataIndex]}</strong>
-                    </>
-                  )}
+                  <Cell data={dataRow[col.dataIndex]} col={col} />
                 </div>
               )
           )}
