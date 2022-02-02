@@ -1,7 +1,7 @@
 import { CardRole, Column, Data, TableRowProps } from "./_types";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
 import styled from "styled-components";
-import { ReactElement, useState, isValidElement } from "react";
+import { useState } from "react";
 import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
 
 interface ElementProps {

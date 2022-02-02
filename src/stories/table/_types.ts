@@ -1,5 +1,4 @@
 import { BaseProps } from "../../shared/_types";
-import { ReactElement } from "react";
 
 export type Order = "ASC" | "DESC";
 export type SortFunction = (orderBy: Order) => void;
