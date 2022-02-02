@@ -105,10 +105,12 @@ export const Table = ({
               className="thead cell"
               onClick={sortTable}
             >
-              {col.title}
-              {col.isSortable && (
-                <ColumnSorter column={col} orderBy={orderBy} order={order} />
-              )}
+              <div style={{ maxWidth: col.maxWidth || "auto" }}>
+                {col.title}
+                {col.isSortable && (
+                  <ColumnSorter column={col} orderBy={orderBy} order={order} />
+                )}
+              </div>
             </div>
           );
         })}
