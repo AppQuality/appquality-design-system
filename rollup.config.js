@@ -1,5 +1,6 @@
 // rollup.config.js
 import image from "@rollup/plugin-image";
+import svgr from "@svgr/rollup";
 import typescript from "rollup-plugin-typescript2";
 
 export default {
@@ -8,6 +9,6 @@ export default {
     dir: "dist",
     format: "cjs",
   },
-  plugins: [typescript(), image()],
+  plugins: [image(), svgr(), typescript()],
   external: ["react", "react-dom", "styled-components"],
 };
