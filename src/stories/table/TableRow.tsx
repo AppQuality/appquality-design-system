@@ -18,15 +18,10 @@ interface CellProps {
 const Cell = ({ data, col }: CellProps) => {
   const content =
     typeof data === "object" && "content" in data ? data.content : data;
+  const title =
+    typeof data === "object" && "title" in data ? data.title : data?.toString();
   return (
-    <div
-      style={{ maxWidth: col.maxWidth || "auto" }}
-      title={
-        typeof data === "object" && "title" in data
-          ? data.title
-          : data?.toString()
-      }
-    >
+    <div style={{ maxWidth: col.maxWidth || "auto" }} title={title}>
       {col.hideIndex ? (
         <span>{content}</span>
       ) : (

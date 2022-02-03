@@ -17,11 +17,11 @@ export interface Column {
   hideIndex?: boolean;
 }
 
-export type Data = ObjectData | JSX.Element | string | number | undefined;
 interface ObjectData {
   title?: string;
   content?: Data;
 }
+export type Data = ObjectData | JSX.Element | string | number | undefined;
 
 export interface Row {
   key: string | number;
