@@ -1,19 +1,31 @@
+import { BaseProps } from "../../shared/_types";
+
 export type Order = "ASC" | "DESC";
+export type SortFunction = (orderBy: Order) => void;
+
+export type CardRole = "overline" | "cta" | "title";
 
 export interface Column {
   title: string;
   dataIndex: string;
   key: string;
-  long?: boolean; // ellipsis with auto width
-  width?: string; // default 10ch
+  maxWidth?: string; // default auto
   isSortable?: boolean;
-  onSort?: (orderBy: any) => void;
+  onSort?: SortFunction;
   align?: "left" | "center" | "right";
+  role?: CardRole;
+  hideIndex?: boolean;
 }
+
+interface ObjectData {
+  title?: string;
+  content?: Data;
+}
+export type Data = ObjectData | JSX.Element | string | number | undefined;
 
 export interface Row {
   key: string | number;
-  [index: string]: any;
+  [index: string]: Data;
 }
 
 export interface ColumnSorterProps {
@@ -22,7 +34,7 @@ export interface ColumnSorterProps {
   orderBy?: string;
 }
 
-export interface TableProps {
+export interface TableProps extends BaseProps {
   /**
    * Rows
    */
@@ -39,11 +51,17 @@ export interface TableProps {
    * striped theme
    */
   isStriped?: boolean;
-  className?: string;
+  isExpandable?: boolean;
   orderBy?: string;
   order?: Order;
   i18n?: {
     loading: string;
     empty: string;
   };
+}
+
+export interface TableRowProps extends BaseProps {
+  columns: Column[];
+  dataRow: Row;
+  isExpandable?: boolean;
 }

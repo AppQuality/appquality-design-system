@@ -22,7 +22,7 @@ export const dataSource: Row[] = [
     title:
       "[registrazione/form] - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem error et illum ipsam iure",
     severity: "Normal",
-    state: "this is a Critical bug",
+    state: "this col has a max width of 10ch",
     action: (
       <Button type="link" size="sm">
         view more
@@ -42,17 +42,20 @@ export const dataSource: Row[] = [
     ),
   },
 ];
+
 export const columns: Column[] = [
   {
     title: "Id",
     dataIndex: "id",
     key: "id",
+    role: "overline",
   },
   {
     title: "Title",
     dataIndex: "title",
     key: "title",
-    long: true,
+    role: "title",
+    hideIndex: true,
   },
   {
     title: "Severity",
@@ -63,12 +66,14 @@ export const columns: Column[] = [
     title: "State",
     dataIndex: "state",
     key: "state",
+    maxWidth: "110px",
   },
   {
     title: "Action",
     dataIndex: "action",
     key: "action",
-    width: "110px",
+    role: "cta",
+    hideIndex: true,
   },
 ];
 
@@ -77,3 +82,17 @@ columnsWithOrderBy[0].isSortable = true;
 columnsWithOrderBy[1].isSortable = true;
 columnsWithOrderBy[2].isSortable = true;
 export { columnsWithOrderBy };
+
+const dataSourceLong = dataSource.map((a) => ({ ...a }));
+dataSourceLong[0].date = "21/06/21";
+dataSourceLong[1].date = "25/06/21";
+dataSourceLong[2].date = "30/06/21";
+export { dataSourceLong };
+
+const columnsLong = [...columns];
+columnsLong.splice(2, 0, {
+  title: "Date",
+  dataIndex: "date",
+  key: "date",
+});
+export { columnsLong };

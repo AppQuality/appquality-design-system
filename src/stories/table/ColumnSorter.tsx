@@ -4,19 +4,15 @@ import { ColumnSorterProps } from "./_types";
 export const ColumnSorter = ({ column, orderBy, order }: ColumnSorterProps) => {
   return (
     <>
-      {
-        <span className="aq-ml-2 aq-text-secondary" style={{ display: "flex" }}>
-          {orderBy === column.key ? (
-            order === "ASC" ? (
-              <SortUp />
-            ) : (
-              <SortDown />
-            )
-          ) : (
-            <Dash />
-          )}
-        </span>
-      }
+      {orderBy === column.key ? (
+        order === "ASC" ? (
+          <SortUp className="aq-ml-2" />
+        ) : (
+          <SortDown className="aq-ml-2" />
+        )
+      ) : (
+        <Dash className="aq-ml-2" />
+      )}
     </>
   );
 };

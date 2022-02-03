@@ -1,7 +1,13 @@
 import { TableProps } from "./_types";
 import { Table } from "./Table";
 import { Story, Meta } from "@storybook/react";
-import { dataSource, columns, columnsWithOrderBy } from "./_data";
+import {
+  dataSource,
+  columns,
+  columnsWithOrderBy,
+  dataSourceLong,
+  columnsLong,
+} from "./_data";
 
 export default {
   title: "Table",
@@ -19,11 +25,20 @@ TableWithData.args = {
   isLoading: false,
 };
 
+export const ExpandableTable = Template.bind({});
+ExpandableTable.args = {
+  dataSource: dataSourceLong,
+  columns: columnsLong,
+  isLoading: false,
+  isExpandable: true,
+};
+
 export const TableEmpty = Template.bind({});
 TableEmpty.args = {
   dataSource: [],
   columns: columns,
   isLoading: false,
+  className: "pippo",
 };
 
 export const TableLoading = Template.bind({});
