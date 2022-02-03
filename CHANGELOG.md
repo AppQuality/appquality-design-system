@@ -1,3 +1,20 @@
+# v1.0.8 (Thu Feb 03 2022)
+
+#### 🐛 Bug Fix
+
+- fix: install svgr module for rollup [#104](https://github.com/AppQuality/appquality-design-system/pull/104) ([@iacopolea](https://github.com/iacopolea))
+- Table rework and mobile responsive Card [#103](https://github.com/AppQuality/appquality-design-system/pull/103) (gianpaolo.sinatra@app-quality.com [@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- table rework and mobile responsive Card [#102](https://github.com/AppQuality/appquality-design-system/pull/102) ([@iacopolea](https://github.com/iacopolea))
+- feat: use trybers inside toastr [#101](https://github.com/AppQuality/appquality-design-system/pull/101) (gianpaolo.sinatra@app-quality.com)
+
+#### Authors: 3
+
+- [@d-beezee](https://github.com/d-beezee)
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.7 (Fri Jan 21 2022)
 
 #### 🐛 Bug Fix
