@@ -3,6 +3,7 @@ import { useWindowSize } from "../../shared/effects/useWindowSize";
 import styled from "styled-components";
 import { useState } from "react";
 import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 interface ElementProps {
   readonly role?: CardRole | "more" | "toggle-more";
@@ -147,7 +148,9 @@ export const TableRow = ({
     );
   };
 
-  return window.matchMedia("only screen and (min-width: 768px)").matches ? (
+  return window.matchMedia(
+    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
+  ).matches ? (
     <BasicRow />
   ) : (
     <TableCard />
