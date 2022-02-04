@@ -23,7 +23,6 @@ export const DesktopPagination = ({
   }
 
   const DesktopPaginationWrapper = styled.div`
-    margin-bottom: ${(props) => props.theme.grid.spacing.default};
     text-align: center;
     ${Button}.hoverable:hover {
       background: ${(props) => props.theme.colors.gray100};
