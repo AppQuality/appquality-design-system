@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "dependencies": {
     "@appquality/mobiscroll": "^5.10.1",
     "formik": "^2.2.9",
