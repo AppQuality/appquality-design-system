@@ -28,7 +28,7 @@ const Grid = styled.div<GridProps>`
     display: none;
   }
 
-  @media (min-width: ${(p) => p.theme.grid.breakpoints.md}) {
+  @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
     display: grid;
     grid-template-columns: repeat(${(p) => p.columns.length}, auto);
     .cell {
