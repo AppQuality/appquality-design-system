@@ -88,6 +88,12 @@ const GlobalStyle = createGlobalStyle`${(props) => {
     .capitalize-first:first-letter {
       text-transform: capitalize;
     }
+    .aq-nopadding {
+      padding: 0 !important;
+    }
+    .aq-nomargin {
+      margin: 0 !important;
+    }
   `;
   style += base;
 
