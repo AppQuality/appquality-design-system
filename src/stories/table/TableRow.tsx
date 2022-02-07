@@ -31,7 +31,7 @@ const Cell = ({ data, col }: CellProps) => {
         <span>{content}</span>
       ) : (
         <>
-          <span className="data-index">{col.dataIndex}</span>:{" "}
+          <span className="data-index">{col.title}</span>:{" "}
           <strong>{content}</strong>
         </>
       )}
@@ -81,14 +81,15 @@ export const TableRow = ({
 
   const CardStyle = styled.div`
     display: grid;
-    grid-column-gap: ${(p) => p.theme.grid.sizes[2]};
+    grid-column-gap: ${(p) => p.theme.grid.sizes[3]};
     grid-template-areas:
       "overline overline"
       "title cta"
-      "more more";
+      "more -";
     grid-template-columns: 1fr auto;
     border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
     &.expandable {
+      grid-template-columns: auto 1fr auto;
       grid-template-areas:
         "toggle-more overline overline"
         "toggle-more title cta"
