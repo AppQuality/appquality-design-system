@@ -1,3 +1,16 @@
+# v1.0.11 (Mon Feb 07 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- fix(pagination): remove default margin ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.10 (Fri Feb 04 2022)
 
 #### ⚠️ Pushed to `main`
