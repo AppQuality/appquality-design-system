@@ -14,7 +14,6 @@ export const Button = styled(ButtonComponent)(
     squared = false,
     variant = false,
   }: ButtonProps & { theme: DefaultTheme }) => {
-    const palette = variant ? theme.variants : theme.palette;
     let styles = getButtonStyle(type, flat, disabled, variant, theme);
     styles += getButtonSize(size, squared, theme);
 
