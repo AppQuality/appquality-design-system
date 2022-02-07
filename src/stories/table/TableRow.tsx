@@ -86,6 +86,7 @@ export const TableRow = ({
       "overline overline"
       "title cta"
       "more more";
+    grid-template-columns: 1fr auto;
     border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
     &.expandable {
       grid-template-areas:
