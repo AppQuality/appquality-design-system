@@ -28,7 +28,7 @@ const Cell = ({ data, col }: CellProps) => {
   return (
     <div style={{ maxWidth: col.maxWidth || "auto" }} title={title}>
       {col.hideIndex || isDesktop ? (
-        <span>{content}</span>
+        <div>{content}</div>
       ) : (
         <>
           <span className="data-index">{col.title}</span>:{" "}
@@ -85,7 +85,7 @@ export const TableRow = ({
     grid-template-areas:
       "overline overline"
       "title cta"
-      "more -";
+      "more cta";
     grid-template-columns: 1fr auto;
     border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
     &.expandable {
