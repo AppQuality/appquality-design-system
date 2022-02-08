@@ -1,4 +1,6 @@
-export interface PaginationProps {
+import { BaseProps } from "../../shared/_types";
+
+export interface PaginationProps extends BaseProps {
   onPageChange: (page: number) => void;
   current: number;
   maxPages: number;
