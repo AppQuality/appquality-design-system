@@ -5,7 +5,7 @@ import { ColumnSorter } from "./ColumnSorter";
 import { Column, Order, SortFunction, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
 
-const cellPadding = "10px 5px";
+const cellPadding = "12px 8px";
 const iconSize = 40;
 
 interface GridProps {
@@ -105,7 +105,13 @@ export const Table = ({
               className="thead cell"
               onClick={sortTable}
             >
-              <div style={{ maxWidth: col.maxWidth || "auto" }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  maxWidth: col.maxWidth || "auto",
+                }}
+              >
                 {col.title}
                 {col.isSortable && (
                   <ColumnSorter column={col} orderBy={orderBy} order={order} />

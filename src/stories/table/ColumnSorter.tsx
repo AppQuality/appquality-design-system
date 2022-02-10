@@ -1,17 +1,24 @@
 import { Dash, SortDown, SortUp } from "react-bootstrap-icons";
 import { ColumnSorterProps } from "./_types";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 export const ColumnSorter = ({ column, orderBy, order }: ColumnSorterProps) => {
   return (
     <>
       {orderBy === column.key ? (
         order === "ASC" ? (
-          <SortUp className="aq-ml-2" />
+          <SortUp
+            className="aq-ml-2"
+            color={aqBootstrapTheme.palette.secondary}
+          />
         ) : (
-          <SortDown className="aq-ml-2" />
+          <SortDown
+            className="aq-ml-2"
+            color={aqBootstrapTheme.palette.secondary}
+          />
         )
       ) : (
-        <Dash className="aq-ml-2" />
+        <Dash className="aq-ml-2" color={aqBootstrapTheme.palette.secondary} />
       )}
     </>
   );

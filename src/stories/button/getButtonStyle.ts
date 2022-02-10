@@ -16,10 +16,13 @@ export default (
         ${
           type === "link-hover"
             ? `
-          color: ${theme.palette.primary};
-          &:hover {
             color: ${theme.palette.secondary};
-          }
+            @media (min-width: ${theme.grid.breakpoints.lg}) {
+              color: ${theme.palette.primary};
+              &:hover {
+                color: ${theme.palette.secondary};
+              }
+            }
         `
             : `
           color: ${theme.palette.secondary};

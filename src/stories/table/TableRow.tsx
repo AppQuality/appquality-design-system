@@ -8,6 +8,7 @@ import { aqBootstrapTheme } from "../theme/defaultTheme";
 interface ElementProps {
   readonly role?: CardRole | "more" | "toggle-more";
   readonly isCompact?: boolean;
+  readonly isExpandable?: boolean;
 }
 
 const iconSize = 24;
@@ -137,19 +138,33 @@ export const TableRow = ({
               </Element>
             )
         )}
-        <Element role="more" className="more-info" isCompact={isCompact}>
-          {columns.map(
-            (col) =>
-              !col.role && (
-                <div
-                  key={`${dataRow.key}-${col.key}`}
-                  style={{ gridArea: col.role }}
-                >
-                  <Cell data={dataRow[col.dataIndex]} col={col} />
-                </div>
-              )
-          )}
-        </Element>
+        {isExpandable ? (
+          <Element role="more" className="more-info" isCompact={isCompact}>
+            {columns.map(
+              (col) =>
+                !col.role && (
+                  <Cell
+                    key={`${dataRow.key}-${col.key}`}
+                    data={dataRow[col.dataIndex]}
+                    col={col}
+                  />
+                )
+            )}
+          </Element>
+        ) : (
+          <>
+            {columns.map(
+              (col) =>
+                !col.role && (
+                  <Cell
+                    key={`${dataRow.key}-${col.key}`}
+                    data={dataRow[col.dataIndex]}
+                    col={col}
+                  />
+                )
+            )}
+          </>
+        )}
       </CardStyle>
     );
   };
