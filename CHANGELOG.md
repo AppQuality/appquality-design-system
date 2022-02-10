@@ -1,3 +1,16 @@
+# v1.0.14 (Thu Feb 10 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- fix(table): various fixes for tables and sorting ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.13 (Tue Feb 08 2022)
 
 #### ⚠️ Pushed to `main`
