@@ -1,3 +1,16 @@
+# v1.0.15 (Fri Feb 11 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- feat(table): add sorter select for mobile ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.14 (Thu Feb 10 2022)
 
 #### ⚠️ Pushed to `main`
