@@ -4,6 +4,11 @@ import { Spinner } from "../spinner/Spinner";
 import { ColumnSorter } from "./ColumnSorter";
 import { Column, Order, SortFunction, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
+import { useEffect, useState } from "react";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
+import { Select } from "../select/Select";
+import { useWindowSize } from "../../shared/effects";
+import { Option } from "../select/_types";
 
 const cellPadding = "12px 8px";
 const iconSize = 40;
@@ -138,5 +143,63 @@ export const Table = ({
         <DataPlaceholder />
       )}
     </Grid>
+  );
+};
+
+export interface SortTableSelectProps<T> {
+  order: "ASC" | "DESC";
+  orderBy: T;
+  columns: Column[];
+  label?: string;
+}
+
+export const SortTableSelect = ({
+  order,
+  orderBy,
+  columns,
+  label = "Order By",
+}: SortTableSelectProps<string>) => {
+  useWindowSize();
+  const [orderByValue, setOrderByValue] = useState<Option>();
+  const orderByOptions: Option[] = [];
+  const orderByCols = columns.filter((col) => col.isSortable);
+  orderByCols.forEach((col) => {
+    orderByOptions.push({
+      label: `${col.title} ASC`,
+      value: `${col.dataIndex} ASC`,
+      order: "ASC",
+      orderBy: col.dataIndex,
+    });
+    orderByOptions.push({
+      label: `${col.title} DESC`,
+      value: `${col.dataIndex} DESC`,
+      order: "DESC",
+      orderBy: col.dataIndex,
+    });
+  });
+  const sortTable = (value: Option) => {
+    const column = columns.find((col) => col.dataIndex === value.orderBy);
+    if (column?.onSort) column.onSort(value.order);
+  };
+  useEffect(() => {
+    const val = orderByOptions.find(
+      (opt) => opt.value === `${orderBy} ${order}`
+    );
+    setOrderByValue(val);
+  }, [orderBy, order]);
+  return window.matchMedia(
+    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
+  ).matches ? null : (
+    <div className="aq-mb-3">
+      <Select
+        label={label}
+        onChange={sortTable}
+        name="orderby"
+        options={orderByOptions}
+        value={orderByValue || { label: "", value: "" }}
+        isSearchable={false}
+        isClearable={false}
+      />
+    </div>
   );
 };
