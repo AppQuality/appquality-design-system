@@ -10,6 +10,7 @@ export const DesktopPagination = ({
   current,
   maxPages,
   size = 3,
+  className,
 }: PaginationProps) => {
   let pages: Array<PageItem> = [];
   if (maxPages <= 5) {
@@ -31,7 +32,7 @@ export const DesktopPagination = ({
   `;
 
   return (
-    <DesktopPaginationWrapper>
+    <DesktopPaginationWrapper className={className}>
       <ButtonGroup>
         <Button
           flat={true}

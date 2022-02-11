@@ -53,9 +53,7 @@ const Element = styled.div<ElementProps>`
         ? `max-height: 0;
          overflow: hidden;`
         : `max-height: max-content;
-         padding-top: ${p.theme.grid.sizes[2]};
-         padding-bottom: ${p.theme.grid.sizes[2]};
-         padding-right: ${p.theme.grid.sizes[2]};`}
+    `}
   } ;
 `;
 
@@ -88,7 +86,11 @@ export const TableRow = ({
       "title cta"
       "more cta";
     grid-template-columns: 1fr auto;
-    border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
+    &:not(:last-child) {
+      border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
+      padding-bottom: ${(p) => p.theme.grid.sizes[3]};
+      margin-bottom: ${(p) => p.theme.grid.sizes[3]};
+    }
     &.expandable {
       grid-template-columns: auto 1fr auto;
       grid-template-areas:
@@ -98,6 +100,9 @@ export const TableRow = ({
       .more-info {
         padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 3);
         background-color: ${(p) => p.theme.colors.gray100};
+        padding-top: ${(p) => p.theme.grid.sizes[2]};
+        padding-bottom: ${(p) => p.theme.grid.sizes[2]};
+        padding-right: ${(p) => p.theme.grid.sizes[2]};
       }
     }
     .data-index {
@@ -119,7 +124,7 @@ export const TableRow = ({
         )}
       </Element>
     );
-    let cardClasses = "aq-mb-3 aq-pb-3";
+    let cardClasses = "table-card";
     if (isExpandable) cardClasses += " expandable";
     return (
       <CardStyle className={cardClasses}>
@@ -138,33 +143,18 @@ export const TableRow = ({
               </Element>
             )
         )}
-        {isExpandable ? (
-          <Element role="more" className="more-info" isCompact={isCompact}>
-            {columns.map(
-              (col) =>
-                !col.role && (
-                  <Cell
-                    key={`${dataRow.key}-${col.key}`}
-                    data={dataRow[col.dataIndex]}
-                    col={col}
-                  />
-                )
-            )}
-          </Element>
-        ) : (
-          <>
-            {columns.map(
-              (col) =>
-                !col.role && (
-                  <Cell
-                    key={`${dataRow.key}-${col.key}`}
-                    data={dataRow[col.dataIndex]}
-                    col={col}
-                  />
-                )
-            )}
-          </>
-        )}
+        <Element role="more" className="more-info" isCompact={isCompact}>
+          {columns.map(
+            (col) =>
+              !col.role && (
+                <Cell
+                  key={`${dataRow.key}-${col.key}`}
+                  data={dataRow[col.dataIndex]}
+                  col={col}
+                />
+              )
+          )}
+        </Element>
       </CardStyle>
     );
   };

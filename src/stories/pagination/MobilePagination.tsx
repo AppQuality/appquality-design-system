@@ -18,9 +18,10 @@ export const MobilePagination = ({
   current,
   maxPages,
   mobileText = (current, total) => `Page ${current} / ${total}`,
+  className,
 }: PaginationProps) => {
   return (
-    <MobilePaginationWrapper>
+    <MobilePaginationWrapper className={className}>
       <Button
         disabled={current <= 1}
         squared={true}
