@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
 import styled from "styled-components";
+import { BaseProps } from "../../shared/_types";
 
-export interface LayoutProps {
+export interface LayoutProps extends BaseProps {
   /**
    * contents
    */
@@ -25,16 +26,21 @@ export interface CSSGridProps {
   maxWidth?: string;
 }
 
-export const BSGrid = ({ children, gutter }: LayoutProps) => {
-  let className = "row";
+export const BSGrid = ({ children, gutter, className = "" }: LayoutProps) => {
+  className += " row";
   if (typeof gutter != "undefined") {
     className += ` g-${gutter}`;
   }
   return <div className={className}>{children}</div>;
 };
 
-export const BSCol = ({ children, size = "col" }: LayoutProps) => {
-  return <div className={`${size}`}>{children}</div>;
+export const BSCol = ({
+  children,
+  size = "col",
+  className = "",
+}: LayoutProps) => {
+  className += ` ${size}`;
+  return <div className={className}>{children}</div>;
 };
 
 export const CSSGrid = styled.div(
