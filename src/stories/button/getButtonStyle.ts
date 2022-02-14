@@ -18,7 +18,7 @@ export default (
             ? `
             color: ${theme.palette.secondary};
             @media (min-width: ${theme.grid.breakpoints.lg}) {
-              color: ${theme.palette.primary};
+              color: ${!disabled && theme.palette.primary};
               &:hover {
                 color: ${theme.palette.secondary};
               }

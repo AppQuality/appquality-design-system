@@ -4,7 +4,7 @@ import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 export const ColumnSorter = ({ column, orderBy, order }: ColumnSorterProps) => {
   return (
-    <>
+    <div style={{ cursor: "pointer" }}>
       {orderBy === column.key ? (
         order === "ASC" ? (
           <SortUp
@@ -20,6 +20,6 @@ export const ColumnSorter = ({ column, orderBy, order }: ColumnSorterProps) => {
       ) : (
         <Dash className="aq-ml-2" color={aqBootstrapTheme.palette.secondary} />
       )}
-    </>
+    </div>
   );
 };
