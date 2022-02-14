@@ -165,13 +165,13 @@ export const SortTableSelect = ({
   const orderByCols = columns.filter((col) => col.isSortable);
   orderByCols.forEach((col) => {
     orderByOptions.push({
-      label: `${col.title} ASC`,
+      label: `${col.title} ↑`,
       value: `${col.dataIndex} ASC`,
       order: "ASC",
       orderBy: col.dataIndex,
     });
     orderByOptions.push({
-      label: `${col.title} DESC`,
+      label: `${col.title} ↓`,
       value: `${col.dataIndex} DESC`,
       order: "DESC",
       orderBy: col.dataIndex,
