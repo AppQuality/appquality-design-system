@@ -1,3 +1,17 @@
+# v1.0.20 (Tue Feb 22 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+- ci: Disable remove viewbox from rollup config ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.19 (Mon Feb 14 2022)
 
 #### ⚠️ Pushed to `main`
