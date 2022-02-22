@@ -9,6 +9,19 @@ export default {
     dir: "dist",
     format: "cjs",
   },
-  plugins: [image(), svgr(), typescript()],
+  plugins: [
+    image(),
+    svgr({
+      svgoConfig: {
+        plugins: [
+          {
+            active: false,
+            name: "removeDimensions",
+          },
+        ],
+      },
+    }),
+    typescript(),
+  ],
   external: ["react", "react-dom", "styled-components"],
 };
