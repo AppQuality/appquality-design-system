@@ -57,6 +57,38 @@ const Element = styled.div<ElementProps>`
   } ;
 `;
 
+const CardStyle = styled.div`
+  display: grid;
+  grid-column-gap: ${(p) => p.theme.grid.sizes[3]};
+  grid-template-areas:
+    "overline overline"
+    "title cta"
+    "more cta";
+  grid-template-columns: 1fr auto;
+  &:not(:last-child) {
+    border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
+    padding-bottom: ${(p) => p.theme.grid.sizes[3]};
+    margin-bottom: ${(p) => p.theme.grid.sizes[3]};
+  }
+  &.expandable {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "toggle-more overline overline"
+      "toggle-more title cta"
+      "more more more";
+    .more-info {
+      padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 3);
+      background-color: ${(p) => p.theme.colors.gray100};
+      padding-top: ${(p) => p.theme.grid.sizes[2]};
+      padding-bottom: ${(p) => p.theme.grid.sizes[2]};
+      padding-right: ${(p) => p.theme.grid.sizes[2]};
+    }
+  }
+  .data-index {
+    text-transform: capitalize;
+  }
+`;
+
 export const TableRow = ({
   columns,
   dataRow,
@@ -77,38 +109,6 @@ export const TableRow = ({
       ))}
     </>
   );
-
-  const CardStyle = styled.div`
-    display: grid;
-    grid-column-gap: ${(p) => p.theme.grid.sizes[3]};
-    grid-template-areas:
-      "overline overline"
-      "title cta"
-      "more cta";
-    grid-template-columns: 1fr auto;
-    &:not(:last-child) {
-      border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
-      padding-bottom: ${(p) => p.theme.grid.sizes[3]};
-      margin-bottom: ${(p) => p.theme.grid.sizes[3]};
-    }
-    &.expandable {
-      grid-template-columns: auto 1fr auto;
-      grid-template-areas:
-        "toggle-more overline overline"
-        "toggle-more title cta"
-        "more more more";
-      .more-info {
-        padding-left: calc(${(p) => p.theme.grid.sizes[3]} * 3);
-        background-color: ${(p) => p.theme.colors.gray100};
-        padding-top: ${(p) => p.theme.grid.sizes[2]};
-        padding-bottom: ${(p) => p.theme.grid.sizes[2]};
-        padding-right: ${(p) => p.theme.grid.sizes[2]};
-      }
-    }
-    .data-index {
-      text-transform: capitalize;
-    }
-  `;
 
   const TableCard = () => {
     const [isCompact, setIsCompact] = useState(isExpandable);
