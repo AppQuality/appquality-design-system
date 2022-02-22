@@ -35,7 +35,8 @@ const Grid = styled.div<GridProps>`
 
   @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
     display: grid;
-    grid-template-columns: repeat(${(p) => p.columns.length}, auto);
+    grid-template-columns: ${(p) =>
+      p.columns.map((col) => `${col.maxWidth || "auto"} `)};
     .cell {
       overflow-wrap: break-word;
       font-weight: 400;
@@ -114,7 +115,6 @@ export const Table = ({
                 style={{
                   display: "flex",
                   alignItems: "center",
-                  maxWidth: col.maxWidth || "auto",
                 }}
               >
                 {col.title}
