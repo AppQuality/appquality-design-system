@@ -10,7 +10,7 @@ export interface Column {
   dataIndex: string;
   key: string;
   maxWidth?: string; // default auto
-  isSortable?: boolean;
+  isSortable?: boolean | "reverse";
   onSort?: SortFunction;
   align?: "left" | "center" | "right";
   role?: CardRole;
