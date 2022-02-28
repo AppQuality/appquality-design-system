@@ -7,6 +7,18 @@ export const ColumnSorter = ({ column, orderBy, order }: ColumnSorterProps) => {
     <div style={{ cursor: "pointer" }}>
       {orderBy === column.key ? (
         order === "ASC" ? (
+          column.isSortable === "reverse" ? (
+            <SortDown
+              className="aq-ml-2"
+              color={aqBootstrapTheme.palette.secondary}
+            />
+          ) : (
+            <SortUp
+              className="aq-ml-2"
+              color={aqBootstrapTheme.palette.secondary}
+            />
+          )
+        ) : column.isSortable === "reverse" ? (
           <SortUp
             className="aq-ml-2"
             color={aqBootstrapTheme.palette.secondary}
