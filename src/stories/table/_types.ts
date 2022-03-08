@@ -1,4 +1,5 @@
 import { BaseProps } from "../../shared/_types";
+import { ReactNode } from "react";
 
 export type Order = "ASC" | "DESC";
 export type SortFunction = (orderBy: Order) => void;
@@ -6,7 +7,7 @@ export type SortFunction = (orderBy: Order) => void;
 export type CardRole = "overline" | "cta" | "title";
 
 export interface Column {
-  title: string;
+  title: ReactNode;
   dataIndex: string;
   key: string;
   maxWidth?: string; // default auto
