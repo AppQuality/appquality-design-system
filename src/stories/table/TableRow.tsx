@@ -47,7 +47,10 @@ const Element = styled.div<ElementProps>`
     p.role === "title"
       ? `font-weight: ${p.theme.typography.fontWeight.medium};`
       : ""}
-  ${(p) => (p.role === "overline" ? `color: ${p.theme.variants.primary};` : "")}
+  ${(p) =>
+    p.role === "overline"
+      ? `color: ${p.theme.variants.primary}; margin-bottom: ${p.theme.grid.sizes[1]}`
+      : ""}
   &.more-info {
     ${(p) =>
       p.isCompact
