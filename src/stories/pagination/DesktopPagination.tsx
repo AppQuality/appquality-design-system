@@ -5,6 +5,14 @@ import { Button, ButtonGroup } from "../button/Button";
 import { PageItem, PaginationProps } from "./PaginationProps";
 import { generateShrinkedPages } from "./utils";
 
+const DesktopPaginationWrapper = styled.div`
+  text-align: center;
+  ${Button}.hoverable:hover {
+    background: ${(props) => props.theme.colors.gray100};
+    color: ${(props) => props.theme.palette.secondary};
+  }
+`;
+
 export const DesktopPagination = ({
   onPageChange,
   current,
@@ -22,14 +30,6 @@ export const DesktopPagination = ({
   } else {
     pages = generateShrinkedPages(current, maxPages, size, onPageChange);
   }
-
-  const DesktopPaginationWrapper = styled.div`
-    text-align: center;
-    ${Button}.hoverable:hover {
-      background: ${(props) => props.theme.colors.gray100};
-      color: ${(props) => props.theme.palette.secondary};
-    }
-  `;
 
   return (
     <DesktopPaginationWrapper className={className}>
