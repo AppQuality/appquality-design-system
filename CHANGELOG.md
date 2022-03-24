@@ -1,3 +1,15 @@
+# v1.0.23 (Thu Mar 24 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.22 (Tue Mar 08 2022)
 
 #### ⚠️ Pushed to `main`
