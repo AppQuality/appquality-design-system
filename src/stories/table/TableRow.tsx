@@ -42,7 +42,7 @@ const Cell = ({ data, col }: CellProps) => {
 
 const Element = styled.div<ElementProps>`
   grid-area: ${(p) => p.role};
-  max-width: calc(100% - 1em);
+  overflow: auto;
   ${(p) =>
     p.role === "title"
       ? `font-weight: ${p.theme.typography.fontWeight.medium};`
