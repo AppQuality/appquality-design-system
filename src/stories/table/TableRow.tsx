@@ -49,7 +49,7 @@ const Element = styled.div<ElementProps>`
       : ""}
   ${(p) =>
     p.role === "overline"
-      ? `color: ${p.theme.variants.primary}; margin-bottom: ${p.theme.grid.sizes[1]}`
+      ? `color: ${p.theme.variants.primary}; margin-bottom: ${p.theme.grid.sizes[1]};`
       : ""}
   &.more-info {
     ${(p) =>
