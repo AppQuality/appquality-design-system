@@ -57,6 +57,7 @@ const Element = styled.div<ElementProps>`
         ? `max-height: 0;
          overflow: hidden;`
         : `max-height: max-content;
+          height: 100%;
     `}
   } ;
 `;
