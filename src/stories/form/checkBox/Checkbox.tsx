@@ -65,9 +65,9 @@ export const Checkbox = styled(BaseCheckbox)`
   .form-check-input {
     order: 1;
     border-radius: ${(props) => props.theme.general.borderRadius};
-    width: 1em;
-    height: 1em;
-    flex: 0 0 1em;
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 1rem;
     margin-right: 0.5em;
     margin-top: 0.33em;
     background-color: #fff;
