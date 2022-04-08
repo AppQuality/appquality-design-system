@@ -37,13 +37,12 @@ DatepickerInputWithMinimum.args = {
   minDate: new Date("01-01-2020"),
 };
 
-const now = new Date();
 export const DatepickerInputWithMaximum = DatepickerTemplate.bind({});
 DatepickerInputWithMaximum.args = {
   onChange: ({ value }: { value: Date }) => {
     console.log(value);
   },
-  maxDate: new Date(now.getFullYear() - 18, now.getMonth(), now.getDate()),
+  maxDate: new Date("04-01-2022"),
 };
 
 export const DatePickerWithValue = DatepickerTemplate.bind({});
@@ -51,5 +50,5 @@ DatePickerWithValue.args = {
   onChange: ({ value }: { value: Date }) => {
     console.log(value);
   },
-  value: now,
+  value: new Date("04-01-2022"),
 };
