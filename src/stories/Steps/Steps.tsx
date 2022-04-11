@@ -60,8 +60,12 @@ const StyledSteps = styled.div<{ direction: StepsProps["direction"] }>`
 
     .step {
       flex: 1 1 100%;
+      ${(props) => props.direction === "horizontal" && "text-align: center;"};
+    }
+    .step:first-child,
+    .step:last-child {
       ${(props) =>
-        props.direction === "horizontal" ? "text-align: center;" : ""};
+        props.direction === "horizontal" && "flex: 1 0 max-content;"};
     }
   }
 `;
