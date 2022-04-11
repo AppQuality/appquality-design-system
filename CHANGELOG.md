@@ -1,3 +1,19 @@
+# v1.0.30 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- fix(steps): fix steps width and margin [#108](https://github.com/AppQuality/appquality-design-system/pull/108) ([@iacopolea](https://github.com/iacopolea))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.29 (Mon Apr 11 2022)
 
 #### 🐛 Bug Fix
