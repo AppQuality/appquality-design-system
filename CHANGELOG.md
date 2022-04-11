@@ -1,3 +1,21 @@
+# v1.0.29 (Mon Apr 11 2022)
+
+#### 🐛 Bug Fix
+
+- fix(select): custom text when there are no options [#106](https://github.com/AppQuality/appquality-design-system/pull/106) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.28 (Fri Apr 08 2022)
 
 #### 🐛 Bug Fix
