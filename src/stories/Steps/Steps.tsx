@@ -43,21 +43,35 @@ const Steps = ({
     }
     return null;
   });
+  // get middle items
+  function getMiddleSteps() {
+    return Array.isArray(children) && children.length > 2
+      ? children.length - 2
+      : 0;
+  }
+
   return (
-    <StyledSteps className={className} direction={direction}>
+    <StyledSteps
+      className={className}
+      direction={direction}
+      middleSteps={getMiddleSteps()}
+    >
       <div className="steps">{items}</div>
     </StyledSteps>
   );
 };
 
-const StyledSteps = styled.div<{ direction: StepsProps["direction"] }>`
+const StyledSteps = styled.div<{
+  direction: StepsProps["direction"];
+  middleSteps: number;
+}>`
   display: flex;
   flex-flow: ${(props) => (props.direction === "vertical" ? "row" : "column")};
   .steps {
-    display: flex;
-    flex-flow: ${(props) =>
-      props.direction === "vertical" ? "column" : "row"};
-
+    ${(props) =>
+      props.direction === "vertical"
+        ? `display: flex; flex-flow: column;`
+        : `display: grid; grid-template-columns: max-content repeat(${props.middleSteps}, minmax(min-content, auto)) max-content;`};
     .step {
       flex: 1 1 100%;
       ${(props) =>
