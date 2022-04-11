@@ -49,6 +49,7 @@ export const Select = ({
   menuTargetQuery,
   onCreate,
   formatCreateLabel,
+  noOptionsMessage,
 }: SelectProps) => {
   const [loading, setLoading] = useState(isLoading);
   const [searching, setSearching] = useState<string | false>(false);
@@ -226,6 +227,7 @@ export const Select = ({
     onMenuScrollToBottom: onMenuScrollToBottom,
     menuShouldScrollIntoView: true,
     theme: aqTheme,
+    noOptionsMessage,
     ...customComponents,
   };
   return (

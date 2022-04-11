@@ -72,3 +72,10 @@ MultipleSelect.args = {
     { label: basicOptions[1].label, value: basicOptions[1].value },
   ],
 };
+
+export const SelectWithCustomMessageForNoOptions = Template.bind({});
+SelectWithCustomMessageForNoOptions.args = {
+  options: [],
+  value: { label: "", value: "" },
+  noOptionsMessage: () => "No options available",
+};
