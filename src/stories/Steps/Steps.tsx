@@ -70,13 +70,18 @@ const StyledSteps = styled.div<{
   .steps {
     ${(props) =>
       props.direction === "vertical"
-        ? `display: flex; flex-flow: column;`
-        : `display: grid; grid-template-columns: max-content repeat(${props.middleSteps}, minmax(min-content, auto)) max-content;`};
-    .step {
-      flex: 1 1 100%;
-      ${(props) =>
-        props.direction === "horizontal" ? "text-align: center;" : ""};
-    }
+        ? `display: flex;
+          flex-flow: column;`
+        : props.middleSteps > 0
+        ? `display: grid;
+            grid-template-columns: max-content repeat(${props.middleSteps}, minmax(min-content, auto)) max-content;`
+        : `display: grid;
+            grid-template-columns: 1fr 1fr;`}
+  }
+  .step {
+    flex: 1 1 100%;
+    ${(props) =>
+      props.direction === "horizontal" ? "text-align: center;" : ""};
   }
 `;
 
