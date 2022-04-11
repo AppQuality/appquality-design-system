@@ -12,7 +12,9 @@ const horizontalGrid = css`
     "title";
   grid-row-gap: calc(${spacingUnit} / 2);
   grid-template-rows: ${mobileSize} auto;
-  margin-right: ${spacingUnit};
+  &:not(:last-child) {
+    margin-right: ${spacingUnit};
+  }
 
   @media (min-width: ${(props) => props.theme.grid.breakpoints.lg}) {
     grid-template-rows: ${desktopSize} auto;
