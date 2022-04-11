@@ -36,6 +36,7 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   isSearchable?: boolean;
   menuTargetQuery?: string;
   formatCreateLabel?: (value: string) => React.ReactNode;
+  noOptionsMessage?: () => string;
 }
 
 export type OptionActionType = "add" | "reset" | "set";
