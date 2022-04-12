@@ -226,6 +226,7 @@ export const Select = ({
     captureMenuScroll: true,
     onMenuScrollToBottom: onMenuScrollToBottom,
     menuShouldScrollIntoView: true,
+    menuShouldBlockScroll: true,
     theme: aqTheme,
     noOptionsMessage,
     ...customComponents,
