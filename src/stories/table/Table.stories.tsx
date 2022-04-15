@@ -53,3 +53,22 @@ TableWithOrderBy.args = {
   dataSource: dataSource,
   columns: columnsWithOrderBy,
 };
+
+// TODO in progress
+export const TableWithLeftBorder = Template.bind({});
+TableWithLeftBorder.args = {
+  dataSource: dataSource,
+  columns: [
+    {
+      title: "",
+      dataIndex: "borderedCell",
+      key: "id",
+      borderedCell: true,
+      maxWidth: "9px",
+      hideIndex: true,
+      role: "border",
+    },
+    ...columns,
+  ],
+  isLoading: false,
+};

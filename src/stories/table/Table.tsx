@@ -33,6 +33,15 @@ const Grid = styled.div<GridProps>`
     display: none;
   }
 
+  .thead.cell.borderedCell,
+  .tbody.cell.borderedCell {
+    padding: 0;
+  }
+
+  .tbody.cell.borderedCell {
+    background: #6a27b8;
+  }
+
   @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
     display: grid;
     grid-template-columns: ${(p) =>
@@ -108,7 +117,7 @@ export const Table = ({
           return (
             <div
               key={`heading-${col.key}`}
-              className="thead cell"
+              className={`thead cell ${col.borderedCell ? "borderedCell" : ""}`}
               onClick={sortTable}
             >
               <div

@@ -106,7 +106,9 @@ export const TableRow = ({
     <>
       {columns.map((col) => (
         <div
-          className={`${className} tbody cell`}
+          className={`${className} tbody cell ${
+            col.borderedCell ? "borderedCell" : ""
+          }`}
           key={`${dataRow.key}-${col.key}`}
         >
           <Cell data={dataRow[col.dataIndex]} col={col} />
@@ -136,7 +138,8 @@ export const TableRow = ({
         {isExpandable && <ExpandButton />}
         {columns.map(
           (col) =>
-            col.role && (
+            col.role &&
+            col.role !== "border" && (
               <Element
                 key={`${dataRow.key}-${col.key}`}
                 role={col.role}

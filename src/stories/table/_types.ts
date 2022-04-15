@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 export type Order = "ASC" | "DESC";
 export type SortFunction = (orderBy: Order) => void;
 
-export type CardRole = "overline" | "cta" | "title";
+export type CardRole = "overline" | "cta" | "title" | "border";
 
 export interface Column {
   title: ReactNode;
@@ -16,6 +16,7 @@ export interface Column {
   align?: "left" | "center" | "right";
   role?: CardRole;
   hideIndex?: boolean;
+  borderedCell?: boolean;
 }
 
 interface ObjectData {
