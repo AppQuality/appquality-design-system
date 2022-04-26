@@ -17,6 +17,7 @@ interface GridProps {
   readonly columns: Column[];
   readonly isStriped?: boolean;
   readonly borderedCellColor?: string;
+  readonly highlightedColor?: string;
 }
 
 const Grid = styled.div<GridProps>`
@@ -41,6 +42,10 @@ const Grid = styled.div<GridProps>`
 
   .tbody.cell.borderedCell {
     background: ${(p) => p.borderedCellColor};
+  }
+
+  .tbody.cell.highlighted {
+    background: ${(p) => p.highlightedColor};
   }
 
   @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
@@ -84,6 +89,7 @@ export const Table = ({
   },
   borderedCellColor,
   mobileAlternative,
+  highlightedColor,
 }: TableProps) => {
   const LoadingStatus = () => (
     <div className="data-placeholder -loading aq-mt-4 aq-text-primaryVariant">
@@ -114,6 +120,7 @@ export const Table = ({
       isStriped={isStriped}
       className={className}
       borderedCellColor={borderedCellColor}
+      highlightedColor={highlightedColor}
     >
       <>
         {columns.map((col) => {

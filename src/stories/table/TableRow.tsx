@@ -145,7 +145,8 @@ export const TableRow = ({
         <div
           className={`${className} tbody cell ${
             col.borderedCell ? "borderedCell" : ""
-          }`}
+          } ${dataRow.highlighted && !col.borderedCell ? "highlighted" : ""}
+          `}
           key={`${dataRow.key}-${col.key}`}
         >
           <Cell data={dataRow[col.dataIndex]} col={col} />

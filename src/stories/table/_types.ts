@@ -29,7 +29,13 @@ interface ObjectData {
   title?: string;
   content?: Data;
 }
-export type Data = ObjectData | JSX.Element | string | number | undefined;
+export type Data =
+  | ObjectData
+  | JSX.Element
+  | string
+  | number
+  | boolean
+  | undefined;
 
 export interface Row {
   key: string | number;
@@ -68,6 +74,7 @@ export interface TableProps extends BaseProps {
   };
   borderedCellColor?: string;
   mobileAlternative?: boolean;
+  highlightedColor?: string;
 }
 
 export interface TableRowProps extends BaseProps {
@@ -76,4 +83,5 @@ export interface TableRowProps extends BaseProps {
   isExpandable?: boolean;
   mobileAlternative?: boolean;
   borderedCellColor?: string;
+  highlighted?: boolean;
 }

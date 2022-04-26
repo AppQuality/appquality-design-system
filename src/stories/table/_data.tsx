@@ -121,6 +121,7 @@ export const dataSourceAlternative: Row[] = [
     ),
     name: "Name Surname",
     exp: "45000",
+    highlighted: "true",
   },
 ];
 

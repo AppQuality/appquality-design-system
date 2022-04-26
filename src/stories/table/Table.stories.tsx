@@ -61,6 +61,7 @@ TableWithLeftBorder.args = {
   dataSource: dataSourceAlternative,
   columns: columnsAlternative,
   isLoading: false,
-  borderedCellColor: "#6a27b8",
+  borderedCellColor: "#7986D8",
   mobileAlternative: true,
+  highlightedColor: "#7986D81A",
 };
