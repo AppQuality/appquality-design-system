@@ -9,6 +9,11 @@ interface ElementProps {
   readonly role?: CardRole | "more" | "toggle-more";
   readonly isCompact?: boolean;
   readonly isExpandable?: boolean;
+  readonly borderedCellColor?: string;
+}
+
+interface ElementAlternativeProps {
+  readonly borderedCellColor?: string;
 }
 
 const iconSize = 24;
@@ -94,11 +99,43 @@ const CardStyle = styled.div`
   }
 `;
 
+const CardAlternativeStyle = styled.div`
+  display: grid;
+  grid-column-gap: ${(p) => p.theme.grid.sizes[3]};
+  grid-template-columns: 6px auto max-content auto auto;
+  border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
+`;
+
+const ElementAlternative = styled.div<ElementAlternativeProps>`
+  overflow: auto;
+  background: ${(p) => p.borderedCellColor};
+  padding-top: ${(p) => p.theme.grid.sizes[4]};
+  padding-bottom: ${(p) => p.theme.grid.sizes[4]};
+  font-weight: ${(p) => p.theme.typography.fontWeight.medium};
+  display: flex;
+  align-items: center;
+`;
+
+const ElementsContainer = styled.div`
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  div:first-child {
+    color: ${(p) => p.theme.variants.primary};
+  }
+  div:not(:first-child) {
+    font-weight: ${(p) => p.theme.typography.fontWeight.medium};
+  }
+`;
+
 export const TableRow = ({
   columns,
   dataRow,
   isExpandable,
   className,
+  mobileAlternative,
+  borderedCellColor,
 }: TableRowProps) => {
   useWindowSize();
 
@@ -167,11 +204,52 @@ export const TableRow = ({
     );
   };
 
+  const TableCardAlternative = () => {
+    let cardClasses = "table-card";
+    return (
+      <CardAlternativeStyle className={cardClasses}>
+        {columns.map(
+          (col) =>
+            (col.role === "border" || col.role === "left") && (
+              <ElementAlternative
+                key={`${dataRow.key}-${col.key}`}
+                borderedCellColor={
+                  col.role === "border" ? borderedCellColor : undefined
+                }
+              >
+                <Cell data={dataRow[col.dataIndex]} col={col} />
+              </ElementAlternative>
+            )
+        )}
+        <ElementsContainer>
+          {columns.map(
+            (col) =>
+              !col.role && (
+                <div key={`${dataRow.key}-${col.key}`}>
+                  {dataRow[col.dataIndex]}
+                </div>
+              )
+          )}
+        </ElementsContainer>
+        {columns.map(
+          (col) =>
+            col.role === "right" && (
+              <ElementAlternative key={`${dataRow.key}-${col.key}`}>
+                <Cell data={dataRow[col.dataIndex]} col={col} />
+              </ElementAlternative>
+            )
+        )}
+      </CardAlternativeStyle>
+    );
+  };
+
   return window.matchMedia(
     `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
   ).matches ? (
     <BasicRow />
-  ) : (
+  ) : !mobileAlternative ? (
     <TableCard />
+  ) : (
+    <TableCardAlternative />
   );
 };

@@ -4,7 +4,13 @@ import { ReactNode } from "react";
 export type Order = "ASC" | "DESC";
 export type SortFunction = (orderBy: Order) => void;
 
-export type CardRole = "overline" | "cta" | "title" | "border";
+export type CardRole =
+  | "overline"
+  | "cta"
+  | "title"
+  | "border"
+  | "left"
+  | "right";
 
 export interface Column {
   title: ReactNode;
@@ -61,10 +67,13 @@ export interface TableProps extends BaseProps {
     empty: string;
   };
   borderedCellColor?: string;
+  mobileAlternative?: boolean;
 }
 
 export interface TableRowProps extends BaseProps {
   columns: Column[];
   dataRow: Row;
   isExpandable?: boolean;
+  mobileAlternative?: boolean;
+  borderedCellColor?: string;
 }

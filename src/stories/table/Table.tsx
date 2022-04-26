@@ -83,6 +83,7 @@ export const Table = ({
     empty: "There's no data here",
   },
   borderedCellColor,
+  mobileAlternative,
 }: TableProps) => {
   const LoadingStatus = () => (
     <div className="data-placeholder -loading aq-mt-4 aq-text-primaryVariant">
@@ -153,6 +154,8 @@ export const Table = ({
             key={dataRow.key}
             isExpandable={isExpandable}
             className={index % 2 === 0 ? "odd" : "even"}
+            mobileAlternative={mobileAlternative}
+            borderedCellColor={borderedCellColor}
           />
         ))
       ) : (

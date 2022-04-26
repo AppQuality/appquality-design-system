@@ -7,6 +7,8 @@ import {
   columnsWithOrderBy,
   dataSourceLong,
   columnsLong,
+  dataSourceAlternative,
+  columnsAlternative,
 } from "./_data";
 
 export default {
@@ -54,22 +56,11 @@ TableWithOrderBy.args = {
   columns: columnsWithOrderBy,
 };
 
-// TODO in progress
 export const TableWithLeftBorder = Template.bind({});
 TableWithLeftBorder.args = {
-  dataSource: dataSource,
-  columns: [
-    {
-      title: "",
-      dataIndex: "borderedCell",
-      key: "id",
-      borderedCell: true,
-      maxWidth: "9px",
-      hideIndex: true,
-      role: "border",
-    },
-    ...columns,
-  ],
+  dataSource: dataSourceAlternative,
+  columns: columnsAlternative,
   isLoading: false,
   borderedCellColor: "#6a27b8",
+  mobileAlternative: true,
 };
