@@ -60,6 +60,7 @@ export interface TableProps extends BaseProps {
     loading: string;
     empty: string;
   };
+  borderedCellColor?: string;
 }
 
 export interface TableRowProps extends BaseProps {

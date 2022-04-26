@@ -71,4 +71,5 @@ TableWithLeftBorder.args = {
     ...columns,
   ],
   isLoading: false,
+  borderedCellColor: "#6a27b8",
 };

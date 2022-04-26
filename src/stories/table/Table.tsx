@@ -16,6 +16,7 @@ const iconSize = 40;
 interface GridProps {
   readonly columns: Column[];
   readonly isStriped?: boolean;
+  readonly borderedCellColor?: string;
 }
 
 const Grid = styled.div<GridProps>`
@@ -39,7 +40,7 @@ const Grid = styled.div<GridProps>`
   }
 
   .tbody.cell.borderedCell {
-    background: #6a27b8;
+    background: ${(p) => p.borderedCellColor};
   }
 
   @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
@@ -81,6 +82,7 @@ export const Table = ({
     loading: "Loading Data",
     empty: "There's no data here",
   },
+  borderedCellColor,
 }: TableProps) => {
   const LoadingStatus = () => (
     <div className="data-placeholder -loading aq-mt-4 aq-text-primaryVariant">
@@ -106,7 +108,12 @@ export const Table = ({
     }
   };
   return (
-    <Grid columns={columns} isStriped={isStriped} className={className}>
+    <Grid
+      columns={columns}
+      isStriped={isStriped}
+      className={className}
+      borderedCellColor={borderedCellColor}
+    >
       <>
         {columns.map((col) => {
           const sortTable = () => {
