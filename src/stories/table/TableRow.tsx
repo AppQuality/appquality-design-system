@@ -16,6 +16,10 @@ interface ElementAlternativeProps {
   readonly borderedCellColor?: string;
 }
 
+interface CardAlternativeProps {
+  readonly highlightedColor?: string;
+}
+
 const iconSize = 24;
 
 interface CellProps {
@@ -99,11 +103,14 @@ const CardStyle = styled.div`
   }
 `;
 
-const CardAlternativeStyle = styled.div`
+const CardAlternativeStyle = styled.div<CardAlternativeProps>`
   display: grid;
   grid-column-gap: ${(p) => p.theme.grid.sizes[3]};
   grid-template-columns: 6px auto max-content auto auto;
   border-bottom: 1px solid ${(p) => p.theme.colors.gray300};
+  &.highlighted {
+    background: ${(p) => p.highlightedColor};
+  }
 `;
 
 const ElementAlternative = styled.div<ElementAlternativeProps>`
@@ -114,6 +121,8 @@ const ElementAlternative = styled.div<ElementAlternativeProps>`
   font-weight: ${(p) => p.theme.typography.fontWeight.medium};
   display: flex;
   align-items: center;
+  ${(p) =>
+    p.borderedCellColor ? `box-shadow: 0 1px 0 ${p.theme.colors.white};` : ""};
 `;
 
 const ElementsContainer = styled.div`
@@ -136,6 +145,7 @@ export const TableRow = ({
   className,
   mobileAlternative,
   borderedCellColor,
+  highlightedColor,
 }: TableRowProps) => {
   useWindowSize();
 
@@ -207,8 +217,12 @@ export const TableRow = ({
 
   const TableCardAlternative = () => {
     let cardClasses = "table-card";
+    if (dataRow.highlighted) cardClasses += " highlighted";
     return (
-      <CardAlternativeStyle className={cardClasses}>
+      <CardAlternativeStyle
+        className={cardClasses}
+        highlightedColor={highlightedColor}
+      >
         {columns.map(
           (col) =>
             (col.role === "border" || col.role === "left") && (

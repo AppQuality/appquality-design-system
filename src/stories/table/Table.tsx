@@ -18,6 +18,7 @@ interface GridProps {
   readonly isStriped?: boolean;
   readonly borderedCellColor?: string;
   readonly highlightedColor?: string;
+  readonly alternative?: boolean;
 }
 
 const Grid = styled.div<GridProps>`
@@ -41,6 +42,10 @@ const Grid = styled.div<GridProps>`
   }
 
   .tbody.cell.borderedCell {
+    border-bottom: 1px solid ${(p) => p.theme.colors.white};
+  }
+
+  .tbody.cell.borderedCell {
     background: ${(p) => p.borderedCellColor};
   }
 
@@ -58,7 +63,8 @@ const Grid = styled.div<GridProps>`
       padding: ${cellPadding};
     }
     .thead.cell,
-    .tbody.cell:nth-last-child(1n + ${(p) => p.columns.length + 1}) {
+    .tbody.cell${(p) =>
+        !p.alternative ? `:nth-last-child(1n + ${p.columns.length + 1})` : ""} {
       border-bottom: 1px solid rgb(216, 216, 216);
     }
     ${(p) =>
@@ -121,6 +127,7 @@ export const Table = ({
       className={className}
       borderedCellColor={borderedCellColor}
       highlightedColor={highlightedColor}
+      alternative={mobileAlternative}
     >
       <>
         {columns.map((col) => {
@@ -163,6 +170,7 @@ export const Table = ({
             className={index % 2 === 0 ? "odd" : "even"}
             mobileAlternative={mobileAlternative}
             borderedCellColor={borderedCellColor}
+            highlightedColor={highlightedColor}
           />
         ))
       ) : (

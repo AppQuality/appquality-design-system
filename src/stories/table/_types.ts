@@ -84,4 +84,5 @@ export interface TableRowProps extends BaseProps {
   mobileAlternative?: boolean;
   borderedCellColor?: string;
   highlighted?: boolean;
+  highlightedColor?: string;
 }
