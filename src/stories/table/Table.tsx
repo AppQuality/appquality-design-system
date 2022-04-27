@@ -19,6 +19,7 @@ interface GridProps {
   readonly borderedCellColor?: string;
   readonly highlightedColor?: string;
   readonly alternative?: boolean;
+  readonly hideHeader?: boolean;
 }
 
 const Grid = styled.div<GridProps>`
@@ -52,6 +53,13 @@ const Grid = styled.div<GridProps>`
   .tbody.cell.highlighted {
     background: ${(p) => p.highlightedColor};
   }
+
+  ${(p) =>
+    p.hideHeader &&
+    `
+    .thead.cell {
+      display: none !important;
+    }`};
 
   @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
     display: grid;
@@ -96,6 +104,7 @@ export const Table = ({
   borderedCellColor,
   mobileAlternative,
   highlightedColor,
+  hideHeader,
 }: TableProps) => {
   const LoadingStatus = () => (
     <div className="data-placeholder -loading aq-mt-4 aq-text-primaryVariant">
@@ -128,6 +137,7 @@ export const Table = ({
       borderedCellColor={borderedCellColor}
       highlightedColor={highlightedColor}
       alternative={mobileAlternative}
+      hideHeader={hideHeader}
     >
       <>
         {columns.map((col) => {

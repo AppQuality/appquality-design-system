@@ -75,6 +75,7 @@ export interface TableProps extends BaseProps {
   borderedCellColor?: string;
   mobileAlternative?: boolean;
   highlightedColor?: string;
+  hideHeader?: boolean;
 }
 
 export interface TableRowProps extends BaseProps {
