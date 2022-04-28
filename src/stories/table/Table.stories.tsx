@@ -7,6 +7,8 @@ import {
   columnsWithOrderBy,
   dataSourceLong,
   columnsLong,
+  dataSourceAlternative,
+  columnsAlternative,
 } from "./_data";
 
 export default {
@@ -52,4 +54,15 @@ export const TableWithOrderBy = Template.bind({});
 TableWithOrderBy.args = {
   dataSource: dataSource,
   columns: columnsWithOrderBy,
+};
+
+export const TableAlternative = Template.bind({});
+TableAlternative.args = {
+  dataSource: dataSourceAlternative,
+  columns: columnsAlternative,
+  isLoading: false,
+  borderedCellColor: "#7986D8",
+  mobileAlternative: true,
+  highlightedColor: "#7986D81A",
+  hideHeader: false,
 };
