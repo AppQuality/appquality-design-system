@@ -16,6 +16,10 @@ const iconSize = 40;
 interface GridProps {
   readonly columns: Column[];
   readonly isStriped?: boolean;
+  readonly borderedCellColor?: string;
+  readonly highlightedColor?: string;
+  readonly alternative?: boolean;
+  readonly hideHeader?: boolean;
 }
 
 const Grid = styled.div<GridProps>`
@@ -33,6 +37,30 @@ const Grid = styled.div<GridProps>`
     display: none;
   }
 
+  .thead.cell.borderedCell,
+  .tbody.cell.borderedCell {
+    padding: 0;
+  }
+
+  .tbody.cell.borderedCell {
+    border-bottom: 1px solid ${(p) => p.theme.colors.white};
+  }
+
+  .tbody.cell.borderedCell {
+    background: ${(p) => p.borderedCellColor};
+  }
+
+  .tbody.cell.highlighted {
+    background: ${(p) => p.highlightedColor};
+  }
+
+  ${(p) =>
+    p.hideHeader &&
+    `
+    .thead.cell {
+      display: none !important;
+    }`};
+
   @media (min-width: ${(p) => p.theme.grid.breakpoints.lg}) {
     display: grid;
     grid-template-columns: ${(p) =>
@@ -43,7 +71,8 @@ const Grid = styled.div<GridProps>`
       padding: ${cellPadding};
     }
     .thead.cell,
-    .tbody.cell:nth-last-child(1n + ${(p) => p.columns.length + 1}) {
+    .tbody.cell${(p) =>
+        !p.alternative ? `:nth-last-child(1n + ${p.columns.length + 1})` : ""} {
       border-bottom: 1px solid rgb(216, 216, 216);
     }
     ${(p) =>
@@ -72,6 +101,10 @@ export const Table = ({
     loading: "Loading Data",
     empty: "There's no data here",
   },
+  borderedCellColor,
+  mobileAlternative,
+  highlightedColor,
+  hideHeader,
 }: TableProps) => {
   const LoadingStatus = () => (
     <div className="data-placeholder -loading aq-mt-4 aq-text-primaryVariant">
@@ -97,7 +130,15 @@ export const Table = ({
     }
   };
   return (
-    <Grid columns={columns} isStriped={isStriped} className={className}>
+    <Grid
+      columns={columns}
+      isStriped={isStriped}
+      className={className}
+      borderedCellColor={borderedCellColor}
+      highlightedColor={highlightedColor}
+      alternative={mobileAlternative}
+      hideHeader={hideHeader}
+    >
       <>
         {columns.map((col) => {
           const sortTable = () => {
@@ -108,7 +149,7 @@ export const Table = ({
           return (
             <div
               key={`heading-${col.key}`}
-              className="thead cell"
+              className={`thead cell ${col.borderedCell ? "borderedCell" : ""}`}
               onClick={sortTable}
             >
               <div
@@ -137,6 +178,9 @@ export const Table = ({
             key={dataRow.key}
             isExpandable={isExpandable}
             className={index % 2 === 0 ? "odd" : "even"}
+            mobileAlternative={mobileAlternative}
+            borderedCellColor={borderedCellColor}
+            highlightedColor={highlightedColor}
           />
         ))
       ) : (

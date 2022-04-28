@@ -77,6 +77,99 @@ export const columns: Column[] = [
   },
 ];
 
+export const dataSourceAlternative: Row[] = [
+  {
+    key: 1,
+    id: "T9090",
+    position: 1,
+    avatar: (
+      <div
+        style={{
+          width: "2rem",
+          height: "2rem",
+          borderRadius: "50%",
+          background: "lightgray",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        NS
+      </div>
+    ),
+    name: "Name Surname",
+    exp: "50000",
+  },
+  {
+    key: 2,
+    id: "T9091",
+    position: 2,
+    avatar: (
+      <div
+        style={{
+          width: "2rem",
+          height: "2rem",
+          borderRadius: "50%",
+          background: "lightgray",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        NS
+      </div>
+    ),
+    name: "Name Surname",
+    exp: "45000",
+    highlighted: "true",
+  },
+];
+
+export const columnsAlternative: Column[] = [
+  {
+    title: "",
+    dataIndex: "borderedCell",
+    key: "border",
+    maxWidth: "6px",
+    borderedCell: true,
+    hideIndex: true,
+    role: "border",
+  },
+  {
+    title: "Position",
+    dataIndex: "position",
+    key: "position",
+    hideIndex: true,
+    role: "left",
+  },
+  {
+    title: "",
+    dataIndex: "avatar",
+    key: "avatar",
+    hideIndex: true,
+    role: "left",
+  },
+  {
+    title: "Id",
+    dataIndex: "id",
+    key: "id",
+    hideIndex: true,
+  },
+  {
+    title: "Name",
+    dataIndex: "name",
+    key: "name",
+    hideIndex: true,
+  },
+  {
+    title: "Exp",
+    dataIndex: "exp",
+    key: "exp",
+    hideIndex: true,
+    role: "right",
+  },
+];
+
 const columnsWithOrderBy: Column[] = columns.map((a) => ({ ...a }));
 columnsWithOrderBy[0].isSortable = true;
 columnsWithOrderBy[1].isSortable = true;

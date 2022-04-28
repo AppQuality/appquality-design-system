@@ -4,7 +4,13 @@ import { ReactNode } from "react";
 export type Order = "ASC" | "DESC";
 export type SortFunction = (orderBy: Order) => void;
 
-export type CardRole = "overline" | "cta" | "title";
+export type CardRole =
+  | "overline"
+  | "cta"
+  | "title"
+  | "border"
+  | "left"
+  | "right";
 
 export interface Column {
   title: ReactNode;
@@ -16,13 +22,20 @@ export interface Column {
   align?: "left" | "center" | "right";
   role?: CardRole;
   hideIndex?: boolean;
+  borderedCell?: boolean;
 }
 
 interface ObjectData {
   title?: string;
   content?: Data;
 }
-export type Data = ObjectData | JSX.Element | string | number | undefined;
+export type Data =
+  | ObjectData
+  | JSX.Element
+  | string
+  | number
+  | boolean
+  | undefined;
 
 export interface Row {
   key: string | number;
@@ -59,10 +72,18 @@ export interface TableProps extends BaseProps {
     loading: string;
     empty: string;
   };
+  borderedCellColor?: string;
+  mobileAlternative?: boolean;
+  highlightedColor?: string;
+  hideHeader?: boolean;
 }
 
 export interface TableRowProps extends BaseProps {
   columns: Column[];
   dataRow: Row;
   isExpandable?: boolean;
+  mobileAlternative?: boolean;
+  borderedCellColor?: string;
+  highlighted?: boolean;
+  highlightedColor?: string;
 }
