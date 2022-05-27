@@ -9,61 +9,47 @@ export const Dropzone = ({
   text,
   accept,
   maxFiles,
-  onUpload,
-  onDelete,
+  minSize,
+  maxSize,
+  onAccepted: onAccepted,
+  onRejected: onRejected,
 }: DropzoneProps) => {
-  const [files, setFiles] = useState<File[]>([]);
   const [dragStyle, setDragStyle] = useState<boolean>(false);
-  const { acceptedFiles, getRootProps, getInputProps } = useDropzone({
+  const {
+    acceptedFiles,
+    fileRejections,
+    getRootProps,
+    getInputProps,
+  } = useDropzone({
     accept,
     maxFiles,
+    minSize,
+    maxSize,
   });
 
-  // const fileLists = files.length ? files.map(file => (
-  //     <li key={file.name}>
-  //         {file.name} - {file.size} bytes
-  //         <div onClick={() => removeFile(file)} style={{ cursor: "pointer", marginLeft: "6px", textAlign: "center" }}>X</div>
-  //     </li>
-  // )) : <></>;
-
-  const removeFile = (file: File) => {
-    const newFiles = [...files];
-    newFiles.splice(newFiles.indexOf(file), 1);
-    setFiles(newFiles);
-    onDelete(file);
-  };
+  useEffect(() => {
+    fileRejections.length && onRejected(fileRejections);
+  }, [fileRejections]);
 
   useEffect(() => {
-    const isOverThreshold =
-      maxFiles && files.length + acceptedFiles.length <= maxFiles;
-
-    if (!maxFiles || isOverThreshold) {
-      setFiles([...files, ...acceptedFiles]);
-      onUpload(acceptedFiles);
-    }
+    acceptedFiles.length && onAccepted(acceptedFiles);
   }, [acceptedFiles]);
 
   return (
-    <>
-      <StyledDropzone
-        className={`dropzone ${dragStyle ? "dropzone-hover" : ""}`}
-        onDragOver={() => setDragStyle(true)}
-        onDragLeave={() => setDragStyle(false)}
-        onDrop={() => setDragStyle(false)}
-      >
-        <div {...getRootProps({ className: "dropzone-area" })}>
-          <input {...getInputProps()} />
-          <div className="dropzone-content">
-            <UploadIcon />
-            <Text className="dropzone-text aq-mt-2">{text}</Text>
-          </div>
+    <StyledDropzone
+      className={`dropzone ${dragStyle ? "dropzone-hover" : ""}`}
+      onDragOver={() => setDragStyle(true)}
+      onDragLeave={() => setDragStyle(false)}
+      onDrop={() => setDragStyle(false)}
+    >
+      <div {...getRootProps({ className: "dropzone-area" })}>
+        <input {...getInputProps()} />
+        <div className="dropzone-content">
+          <UploadIcon />
+          <Text className="dropzone-text aq-mt-2">{text}</Text>
         </div>
-      </StyledDropzone>
-      {/* <div>
-                <h4>Files</h4>
-                <ul>{fileLists}</ul>
-            </div> */}
-    </>
+      </div>
+    </StyledDropzone>
   );
 };
 

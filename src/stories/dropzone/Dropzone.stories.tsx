@@ -11,11 +11,13 @@ const Template: Story<DropzoneProps> = (args) => {
   return <Dropzone {...args} />;
 };
 
-export const BasicDropzone = Template.bind({});
-BasicDropzone.args = {
-  text: "Clicca qui per caricare i tuoi file oppure trascina!",
+export const DropzoneArea = Template.bind({});
+DropzoneArea.args = {
+  text: "Click here to upload your files or drag and drop!",
   accept: { "image/*": [] },
   maxFiles: 5,
-  onUpload: (files) => console.log(files),
-  onDelete: (file) => console.log(file),
+  minSize: undefined,
+  maxSize: undefined,
+  onAccepted: (fileList) => console.info("acceptedFiles", fileList),
+  onRejected: (fileList) => console.error("fileRejections", fileList),
 };
