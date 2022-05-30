@@ -4,17 +4,18 @@ import styled from "styled-components";
 import { DropzoneProps } from "./_types";
 import { Text } from "../typography/Typography";
 import { ReactComponent as UploadIcon } from "./assets/uploadIcon.svg";
+import { ReactComponent as MaxFilesIcon } from "./assets/maxFilesIcon.svg";
 
 export const Dropzone = ({
-  text,
+  description,
   accept,
   maxFiles,
-  minSize,
-  maxSize,
-  onAccepted: onAccepted,
-  onRejected: onRejected,
+  maxFilesText,
+  disabled,
+  onAccepted,
+  onRejected,
 }: DropzoneProps) => {
-  const [dragStyle, setDragStyle] = useState<boolean>(false);
+  const [hoverStyle, setHoverStyle] = useState<boolean>(false);
   const {
     acceptedFiles,
     fileRejections,
@@ -23,8 +24,7 @@ export const Dropzone = ({
   } = useDropzone({
     accept,
     maxFiles,
-    minSize,
-    maxSize,
+    disabled: disabled || maxFiles === 0,
   });
 
   useEffect(() => {
@@ -37,16 +37,29 @@ export const Dropzone = ({
 
   return (
     <StyledDropzone
-      className={`dropzone ${dragStyle ? "dropzone-hover" : ""}`}
-      onDragOver={() => setDragStyle(true)}
-      onDragLeave={() => setDragStyle(false)}
-      onDrop={() => setDragStyle(false)}
+      className={`dropzone ${hoverStyle ? "dropzone-hover" : ""} ${
+        disabled || maxFiles === 0 ? "disabled" : ""
+      }`}
+      onDragOver={() => setHoverStyle(true)}
+      onDragLeave={() => setHoverStyle(false)}
+      onDrop={() => setHoverStyle(false)}
     >
       <div {...getRootProps({ className: "dropzone-area" })}>
         <input {...getInputProps()} />
         <div className="dropzone-content">
-          <UploadIcon />
-          <Text className="dropzone-text aq-mt-2">{text}</Text>
+          {maxFiles === 0 && maxFilesText ? (
+            <>
+              <MaxFilesIcon />
+              <Text className="dropzone-text aq-mt-2">{maxFilesText}</Text>
+            </>
+          ) : (
+            <>
+              <UploadIcon />
+              <Text className="dropzone-text text-underline aq-mt-2">
+                {description}
+              </Text>
+            </>
+          )}
         </div>
       </div>
     </StyledDropzone>
@@ -55,18 +68,20 @@ export const Dropzone = ({
 
 const StyledDropzone = styled.div`
   height: 8em;
-  border-width: 1px;
+  border: 1px dashed ${(p) => p.theme.variants.primary};
   border-radius: 8px;
-  border-color: black;
-  border-style: dashed;
   outline: none;
   transition: border 0.24s ease-in-out;
-  margin: 0.5em 0 1.5em;
+  padding: 0.5em 1em;
+
+  .text-underline {
+    text-decoration: underline;
+  }
 
   &:focus,
-  &:active {
-    border: none;
-    box-shadow: inset 0 0 1em 0 ${(p) => p.theme.colors.purple100};
+  &:active,
+  &.disabled,
+  &.dropzone-hover {
     .dropzone-area {
       .dropzone-content {
         color: ${(p) => p.theme.colors.gray400} !important;
@@ -77,9 +92,21 @@ const StyledDropzone = styled.div`
     }
   }
 
+  &:focus:not(.disabled),
+  &:active:not(.disabled),
+  &.dropzone-hover:not(.disabled) {
+    border: none;
+    box-shadow: inset 2px 4px 18px 2px ${(p) => p.theme.colors.purple100};
+  }
+
+  &.disabled {
+    border: 1px solid ${(p) => p.theme.colors.purple100};
+  }
+
   .dropzone-area {
     width: 100%;
     height: 100%;
+    outline: none;
 
     .dropzone-content {
       width: 100%;
@@ -92,21 +119,7 @@ const StyledDropzone = styled.div`
 
       .dropzone-text {
         color: ${(p) => p.theme.palette.secondary};
-        text-decoration: underline;
-      }
-    }
-  }
-
-  &.dropzone-hover {
-    border: none;
-    box-shadow: inset 0px 0px 16px 0px ${(p) => p.theme.colors.purple100};
-
-    .dropzone-area {
-      .dropzone-content {
-        color: ${(p) => p.theme.colors.gray400} !important;
-      }
-      .dropzone-text {
-        color: ${(p) => p.theme.colors.gray400} !important;
+        text-align: center;
       }
     }
   }
