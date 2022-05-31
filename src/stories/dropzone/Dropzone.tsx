@@ -42,7 +42,10 @@ export const Dropzone = ({
       }`}
       onDragOver={() => setHoverStyle(true)}
       onDragLeave={() => setHoverStyle(false)}
-      onDrop={() => setHoverStyle(false)}
+      onDrop={(e) => {
+        e.preventDefault();
+        setHoverStyle(false);
+      }}
     >
       <div {...getRootProps({ className: "dropzone-area" })}>
         <input {...getInputProps()} />
