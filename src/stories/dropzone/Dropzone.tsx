@@ -84,10 +84,10 @@ const StyledDropzone = styled.div`
   &.dropzone-hover {
     .dropzone-area {
       .dropzone-content {
-        color: ${(p) => p.theme.colors.gray400} !important;
+        color: ${(p) => p.theme.colors.elementGeneric} !important;
       }
       .dropzone-text {
-        color: ${(p) => p.theme.colors.gray400} !important;
+        color: ${(p) => p.theme.colors.disabledFont} !important;
       }
     }
   }
@@ -100,7 +100,7 @@ const StyledDropzone = styled.div`
   }
 
   &.disabled {
-    border: 1px solid ${(p) => p.theme.colors.purple100};
+    border: 1px dashed ${(p) => p.theme.colors.elementGeneric};
   }
 
   .dropzone-area {
@@ -115,7 +115,7 @@ const StyledDropzone = styled.div`
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: ${(p) => p.theme.variants.primary};
+      color: ${(p) => p.theme.palette.secondary};
 
       .dropzone-text {
         color: ${(p) => p.theme.palette.secondary};
