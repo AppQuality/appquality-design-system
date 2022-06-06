@@ -50,3 +50,4 @@ export * from "./stories/progress-bar/ProgressBar";
 export * from "./stories/Steps/Steps";
 export * from "./stories/toastr/Toastr";
 export * from "./stories/placesAutocomplete/PlacesAutocomplete";
+export * from "./stories/dropzone/Dropzone";
