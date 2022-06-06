@@ -1,3 +1,21 @@
+# v1.0.32 (Mon Jun 06 2022)
+
+#### 🐛 Bug Fix
+
+- CP-2078 [#111](https://github.com/AppQuality/appquality-design-system/pull/111) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'develop' ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 3
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.31 (Thu Apr 28 2022)
 
 #### 🐛 Bug Fix
