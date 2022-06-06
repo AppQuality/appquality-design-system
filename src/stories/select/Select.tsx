@@ -203,6 +203,9 @@ export const Select = ({
     });
   };
 
+  const isMobile = window.matchMedia("only screen and (max-width: 768px)")
+    .matches;
+
   const args = {
     id: name,
     name: name,
@@ -226,6 +229,7 @@ export const Select = ({
     captureMenuScroll: true,
     onMenuScrollToBottom: onMenuScrollToBottom,
     menuShouldScrollIntoView: true,
+    menuShouldBlockScroll: isMobile,
     theme: aqTheme,
     noOptionsMessage,
     ...customComponents,
@@ -249,7 +253,10 @@ export const Select = ({
             }}
           />
         ) : (
-          <ReactSelect {...args} />
+          <ReactSelect
+            menuPosition={isMobile ? "fixed" : undefined}
+            {...args}
+          />
         )}
       </div>
     </>
