@@ -1,8 +1,8 @@
-import { Accept, FileRejection } from "react-dropzone";
+import { FileRejection } from "react-dropzone";
 
 export interface DropzoneProps {
   description: string;
-  accept?: Accept;
+  accept?: string | string[];
   maxFiles?: number;
   maxFilesText?: string;
   disabled?: boolean;

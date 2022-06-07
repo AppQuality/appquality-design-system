@@ -14,9 +14,9 @@ const Template: Story<DropzoneProps> = (args) => {
 export const DropzoneArea = Template.bind({});
 DropzoneArea.args = {
   description: "Click here to upload your files or drag and drop!",
-  accept: { "image/*": [] },
+  accept: ["image/jpeg", "image/png"],
   disabled: false,
-  maxFiles: 5,
+  maxFiles: undefined,
   maxFilesText: "You have reached the maximum number of files you can upload",
   onAccepted: (fileList) => console.info("acceptedFiles", fileList),
   onRejected: (fileList) => console.error("fileRejections", fileList),
