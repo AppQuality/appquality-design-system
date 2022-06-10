@@ -16,16 +16,13 @@ export const Dropzone = ({
   onRejected,
 }: DropzoneProps) => {
   const [hoverStyle, setHoverStyle] = useState<boolean>(false);
-  const {
-    acceptedFiles,
-    fileRejections,
-    getRootProps,
-    getInputProps,
-  } = useDropzone({
-    accept,
-    maxFiles,
-    disabled: disabled || maxFiles === 0,
-  });
+  const { acceptedFiles, fileRejections, getRootProps, getInputProps } =
+    useDropzone({
+      accept,
+      maxFiles,
+      disabled: disabled || maxFiles === 0,
+      useFsAccessApi: false,
+    });
 
   useEffect(() => {
     fileRejections.length && onRejected(fileRejections);
