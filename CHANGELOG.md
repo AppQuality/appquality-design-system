@@ -1,3 +1,18 @@
+# v1.0.34 (Mon Jun 13 2022)
+
+#### 🐛 Bug Fix
+
+- CP-2141 [#115](https://github.com/AppQuality/appquality-design-system/pull/115) (alex1984@hotmail.it [@iacopolea](https://github.com/iacopolea))
+- CP-2141 [#114](https://github.com/AppQuality/appquality-design-system/pull/114) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### Authors: 3
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.33 (Thu Jun 09 2022)
 
 #### 🐛 Bug Fix
