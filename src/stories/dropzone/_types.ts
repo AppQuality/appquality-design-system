@@ -6,6 +6,7 @@ export interface DropzoneProps {
   maxFiles?: number;
   maxFilesText?: string;
   disabled?: boolean;
+  danger?: boolean;
   onAccepted: (files: File[]) => void;
   onRejected: (files: FileRejection[]) => void;
 }
