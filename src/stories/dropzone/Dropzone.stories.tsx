@@ -16,6 +16,7 @@ DropzoneArea.args = {
   description: "Click here to upload your files or drag and drop!",
   accept: ["image/jpeg", "image/png"],
   disabled: false,
+  danger: false,
   maxFiles: undefined,
   maxFilesText: "You have reached the maximum number of files you can upload",
   onAccepted: (fileList) => console.info("acceptedFiles", fileList),
