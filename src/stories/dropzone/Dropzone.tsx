@@ -12,6 +12,7 @@ export const Dropzone = ({
   maxFiles,
   maxFilesText,
   disabled,
+  danger,
   onAccepted,
   onRejected,
 }: DropzoneProps) => {
@@ -36,7 +37,7 @@ export const Dropzone = ({
     <StyledDropzone
       className={`dropzone ${hoverStyle ? "dropzone-hover" : ""} ${
         disabled || maxFiles === 0 ? "disabled" : ""
-      }`}
+      } ${danger ? "danger" : ""}`}
       onDragOver={() => setHoverStyle(true)}
       onDragLeave={() => setHoverStyle(false)}
       onDrop={(e) => {
@@ -101,6 +102,19 @@ const StyledDropzone = styled.div`
 
   &.disabled {
     border: 1px dashed ${(p) => p.theme.colors.elementGeneric};
+  }
+
+  &.danger:not(.disabled):not(.dropzone-hover):not(:active):not(:focus) {
+    border: 1px dashed ${(p) => p.theme.palette.danger};
+    .dropzone-area {
+      .dropzone-content {
+        color: ${(p) => p.theme.palette.danger};
+
+        .dropzone-text {
+          color: ${(p) => p.theme.palette.danger};
+        }
+      }
+    }
   }
 
   .dropzone-area {
