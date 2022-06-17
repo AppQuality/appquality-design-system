@@ -1,3 +1,18 @@
+# v1.0.35 (Fri Jun 17 2022)
+
+#### 🐛 Bug Fix
+
+- dropzone danger style [#117](https://github.com/AppQuality/appquality-design-system/pull/117) (alex1984@hotmail.it [@iacopolea](https://github.com/iacopolea))
+- CP-2156 [#116](https://github.com/AppQuality/appquality-design-system/pull/116) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### Authors: 3
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.34 (Mon Jun 13 2022)
 
 #### 🐛 Bug Fix
