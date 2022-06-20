@@ -52,3 +52,11 @@ DatePickerWithValue.args = {
   },
   value: new Date("04-01-2022"),
 };
+
+export const DatepickerTime = DatepickerTemplate.bind({});
+DatepickerTime.args = {
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+  control: "time",
+};
