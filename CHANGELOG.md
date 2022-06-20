@@ -1,3 +1,18 @@
+# v1.0.36 (Mon Jun 20 2022)
+
+#### 🐛 Bug Fix
+
+- Timepicker [#119](https://github.com/AppQuality/appquality-design-system/pull/119) (alex1984@hotmail.it [@iacopolea](https://github.com/iacopolea) [@alexSp84](https://github.com/alexSp84))
+- CP-2157 [#118](https://github.com/AppQuality/appquality-design-system/pull/118) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### Authors: 3
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.35 (Fri Jun 17 2022)
 
 #### 🐛 Bug Fix
