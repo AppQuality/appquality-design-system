@@ -9,7 +9,7 @@ export interface DatepickerProps {
   onCancel?: ({ value, valueText }: { value: Date; valueText: string }) => void;
   onChange?: ({ value, valueText }: { value: Date; valueText: string }) => void;
   placeholder?: string;
-  control?: "date" | "calendar";
+  control?: "date" | "calendar" | "time";
   setText?: string;
   cancelText?: string;
   dateFormat?: string;
