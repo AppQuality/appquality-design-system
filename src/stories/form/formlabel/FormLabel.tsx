@@ -7,7 +7,7 @@ const BaseFormLabel = ({
   isDisabled,
 }: {
   htmlFor: string;
-  label: string;
+  label: string | React.ReactNode;
   className?: string;
   isDisabled?: boolean;
 }) => {

@@ -3,7 +3,7 @@ import { ChangeEventHandler } from "react";
 
 export interface GenericFieldInterface {
   name: string;
-  label?: string;
+  label?: string | React.ReactNode;
   onChange?: ChangeEventHandler;
   disabled?: boolean;
 }
