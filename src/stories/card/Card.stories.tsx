@@ -32,3 +32,14 @@ CardWithTitle.args = {
   children: "Lorem ipsum dolor sit amet numquam concupescendit elit",
   title: "My title",
 };
+
+export const CardWithCustomTitle = Template.bind({});
+CardWithCustomTitle.args = {
+  children: "Lorem ipsum dolor sit amet numquam concupescendit elit",
+  title: (
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div>My title</div>
+      <div style={{ cursor: "pointer" }}>?</div>
+    </div>
+  ),
+};

@@ -79,3 +79,15 @@ SelectWithCustomMessageForNoOptions.args = {
   value: { label: "", value: "" },
   noOptionsMessage: () => "No options available",
 };
+
+export const SelectWithCustomLabel = Template.bind({});
+SelectWithCustomLabel.args = {
+  label: (
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div>My title</div>
+      <div style={{ cursor: "pointer" }}>?</div>
+    </div>
+  ),
+  options: basicOptions,
+  value: { label: "", value: "" },
+};
