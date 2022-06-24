@@ -5,7 +5,7 @@ export interface CardProps {
    * contents
    */
   children?: ReactNode;
-  title?: String | React.ReactNode;
+  title?: React.ReactNode;
   className?: string;
   bodyClass?: string;
   shadow?: boolean;
