@@ -21,7 +21,7 @@ export type GetOptionsAsync = (
 
 export interface SelectProps /*extends GenericFieldInterface*/ {
   name: string;
-  label: string;
+  label: React.ReactNode;
   onBlur?: (e: ChangeEvent) => void;
   onChange?: (value: Option) => void;
   onCreate?: (value: string) => void;
