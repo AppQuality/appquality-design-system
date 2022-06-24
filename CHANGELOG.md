@@ -1,3 +1,17 @@
+# v1.0.37 (Fri Jun 24 2022)
+
+#### 🐛 Bug Fix
+
+- Card title and input/select label accepts ReactNode element [#121](https://github.com/AppQuality/appquality-design-system/pull/121) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+- CP-2168 [#120](https://github.com/AppQuality/appquality-design-system/pull/120) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### Authors: 2
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+
+---
+
 # v1.0.36 (Mon Jun 20 2022)
 
 #### 🐛 Bug Fix
