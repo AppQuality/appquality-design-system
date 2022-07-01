@@ -1,3 +1,16 @@
+# v1.0.38 (Fri Jul 01 2022)
+
+#### 🐛 Bug Fix
+
+- Prevent rerendering of sidebar resize [#123](https://github.com/AppQuality/appquality-design-system/pull/123) ([@d-beezee](https://github.com/d-beezee))
+- feat: Prevent rerendering sidebar content on resize [#122](https://github.com/AppQuality/appquality-design-system/pull/122) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.37 (Fri Jun 24 2022)
 
 #### 🐛 Bug Fix
