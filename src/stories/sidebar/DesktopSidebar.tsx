@@ -16,7 +16,7 @@ const SidebarWrapper = styled.div(({ theme }: { theme: DefaultTheme }) => {
   return `
    height:calc(100vh - ${marginFromTop}px);
    top:${marginFromTop}px;
-   position:sticky;
+   position:fixed;
    float:left;
    left:0;
    width: ${sidebarWidth}px;
@@ -74,12 +74,6 @@ const SidebarItems = styled.div(({ open = false }: { open: boolean }) => {
 `;
 });
 
-const NavigationContainer = styled.div`
-  width: calc(100% - ${sidebarWidth}px);
-  float: right;
-  z-index: 0;
-  position: relative;
-`;
 export const DesktopSidebar = ({
   children,
   items,
@@ -120,8 +114,6 @@ export const DesktopSidebar = ({
           </div>
         </SidebarItems>
       </SidebarWrapper>
-      <NavigationContainer>{children}</NavigationContainer>
-      <div style={{ clear: "both" }} />
     </>
   );
 };
