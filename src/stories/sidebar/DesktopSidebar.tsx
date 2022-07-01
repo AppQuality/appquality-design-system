@@ -18,7 +18,7 @@ const SidebarWrapper = styled.div(({ theme }: { theme: DefaultTheme }) => {
    top:${marginFromTop}px;
    position:fixed;
    float:left;
-   left:0;
+   left: auto;
    width: ${sidebarWidth}px;
    z-index: 1;
    
