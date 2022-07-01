@@ -65,9 +65,6 @@ const MobileSidebarItem = styled.div`
   }
 `;
 
-const ContentWrapper = styled.div`
-  ${(props) => (props.hidden ? "display: none" : "")};
-`;
 const LogoutButton = styled.button`
   width: 100%;
   display: flex;
@@ -116,7 +113,6 @@ export const MobileSidebar = ({
           Logout <BoxArrowRight />
         </LogoutButton>
       </SidebarMobileWrapper>
-      <ContentWrapper hidden={open}>{children}</ContentWrapper>
     </>
   );
 };
