@@ -1,3 +1,18 @@
+# v1.0.39 (Thu Sep 22 2022)
+
+#### 🐛 Bug Fix
+
+- feat: add size 0 [#124](https://github.com/AppQuality/appquality-design-system/pull/124) ([@iacopolea](https://github.com/iacopolea) alex1984@hotmail.it)
+- TextareaField [#125](https://github.com/AppQuality/appquality-design-system/pull/125) (alex1984@hotmail.it [@alexSp84](https://github.com/alexSp84))
+
+#### Authors: 3
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+- alexSp84 (alex1984@hotmail.it)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.38 (Fri Jul 01 2022)
 
 #### 🐛 Bug Fix
