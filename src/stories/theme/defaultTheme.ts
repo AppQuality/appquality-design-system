@@ -61,6 +61,7 @@ const aqBootstrapTheme = {
       default: "16px",
     },
     sizes: {
+      0: "0",
       1: "4px",
       2: "8px",
       3: "16px",
