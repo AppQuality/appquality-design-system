@@ -11,6 +11,7 @@ const BaseCheckbox = ({
   onChange,
   onBlur,
   isInvalid, // used by styled
+  defaultChecked = false,
   checked = false,
 }: {
   id?: string;
@@ -21,6 +22,7 @@ const BaseCheckbox = ({
   disabled?: boolean;
   isInvalid?: boolean;
   checked?: boolean;
+  defaultChecked?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement>;
   onBlur?: FocusEventHandler<HTMLInputElement>;
 }) => {
@@ -41,7 +43,7 @@ const BaseCheckbox = ({
         type="checkbox"
         value={value}
         disabled={disabled}
-        defaultChecked={checked}
+        defaultChecked={defaultChecked}
         onChange={onChange}
         onBlur={onBlur}
         className="form-check-input"
