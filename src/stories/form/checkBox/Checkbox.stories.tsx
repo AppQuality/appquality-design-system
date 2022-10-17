@@ -17,7 +17,7 @@ export const CheckboxStates: Story = () => (
     <Checkbox
       id="simple2"
       disabled={false}
-      checked
+      defaultChecked
       label={<span>checked checkbox with ReactNode as label</span>}
       className="aq-mb-2"
     />
@@ -40,7 +40,7 @@ export const CheckboxStates: Story = () => (
       id="disabled checked"
       label="default checked checkbox"
       value="My value"
-      checked={true}
+      defaultChecked
       disabled={true}
     />
     <Checkbox
