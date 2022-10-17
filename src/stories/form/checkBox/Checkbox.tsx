@@ -44,6 +44,7 @@ const BaseCheckbox = ({
         value={value}
         disabled={disabled}
         defaultChecked={defaultChecked}
+        checked={checked}
         onChange={onChange}
         onBlur={onBlur}
         className="form-check-input"
