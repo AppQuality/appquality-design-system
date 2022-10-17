@@ -11,8 +11,8 @@ const BaseCheckbox = ({
   onChange,
   onBlur,
   isInvalid, // used by styled
-  defaultChecked = false,
-  checked = false,
+  defaultChecked,
+  checked,
 }: {
   id?: string;
   name?: string;
