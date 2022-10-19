@@ -5,6 +5,7 @@ const aqBootstrapTheme = {
     borderRadiusNumber: 4, // fix for react select
     borderRadius: "4px",
     boxShadow: `none`,
+    checkboxSize: "16px",
   },
   typography: {
     fontFamily: {
