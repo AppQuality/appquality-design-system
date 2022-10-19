@@ -60,7 +60,7 @@ export const Checkbox = styled(BaseCheckbox)`
   .form-check-label {
     order: 2;
     display: inline-block;
-    margin-top: 1px;
+    margin-top: calc(${(p) => p.theme.general.checkboxSize} - 1rem);
     &[aria-disabled="true"] {
       color: ${(props) => props.theme.colors.disabledFont};
       cursor: not-allowed;
