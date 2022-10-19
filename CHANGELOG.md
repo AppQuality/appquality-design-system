@@ -1,3 +1,15 @@
+# v1.0.43 (Wed Oct 19 2022)
+
+#### 🐛 Bug Fix
+
+- Checkbox e build problems [#130](https://github.com/AppQuality/appquality-design-system/pull/130) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.42 (Mon Oct 17 2022)
 
 #### 🐛 Bug Fix
