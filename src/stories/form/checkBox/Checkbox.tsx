@@ -60,6 +60,7 @@ export const Checkbox = styled(BaseCheckbox)`
   .form-check-label {
     order: 2;
     display: inline-block;
+    margin-top: calc(${(p) => p.theme.general.checkboxSize} - 1rem);
     &[aria-disabled="true"] {
       color: ${(props) => props.theme.colors.disabledFont};
       cursor: not-allowed;
@@ -68,8 +69,9 @@ export const Checkbox = styled(BaseCheckbox)`
   .form-check-input {
     order: 1;
     border-radius: ${(props) => props.theme.general.borderRadius};
-    width: 1rem;
-    height: 1rem;
+    min-width: ${(p) => p.theme.general.checkboxSize};
+    min-height: ${(p) => p.theme.general.checkboxSize};
+    cursor: pointer;
     flex: 0 0 1rem;
     margin-right: 0.5em;
     margin-top: 0.33em;

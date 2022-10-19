@@ -80,7 +80,7 @@ const Accordion = ({ initialActive, children }: AccordionProps) => {
   items = React.Children.map(children, (child) => {
     if (React.isValidElement(child) && child.type === Item) {
       const { id, disabled } = child.props;
-      return React.cloneElement(child, {
+      return React.cloneElement(child as React.ReactElement, {
         disabled: disabled,
         active: id === current,
         id: id,

@@ -68,7 +68,9 @@ const BasicTabs = ({ active, children, className, setActive }: TabsProps) => {
           />
         </>
       );
-      return React.cloneElement(child, { active: active === child.props.id });
+      return React.cloneElement(child as React.ReactElement, {
+        active: active === child.props.id,
+      });
     }
     return null;
   });
