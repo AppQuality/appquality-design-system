@@ -1,3 +1,15 @@
+# v1.0.44 (Fri Oct 21 2022)
+
+#### 🐛 Bug Fix
+
+- table: class added to the cells of the last column [#131](https://github.com/AppQuality/appquality-design-system/pull/131) ([@alexSp84](https://github.com/alexSp84))
+
+#### Authors: 1
+
+- Alessandro ([@alexSp84](https://github.com/alexSp84))
+
+---
+
 # v1.0.43 (Wed Oct 19 2022)
 
 #### 🐛 Bug Fix
