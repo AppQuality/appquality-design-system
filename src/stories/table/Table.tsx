@@ -140,7 +140,7 @@ export const Table = ({
       hideHeader={hideHeader}
     >
       <>
-        {columns.map((col) => {
+        {columns.map((col, i) => {
           const sortTable = () => {
             if (col.isSortable && order && col.onSort) {
               handleSort(order, col.onSort);
@@ -149,7 +149,9 @@ export const Table = ({
           return (
             <div
               key={`heading-${col.key}`}
-              className={`thead cell ${col.borderedCell ? "borderedCell" : ""}`}
+              className={`thead cell ${
+                col.borderedCell ? "borderedCell" : ""
+              } ${columns.length - 1 === i ? "lastHeadCell" : ""}`}
               onClick={sortTable}
             >
               <div
