@@ -151,18 +151,24 @@ export const TableRow = ({
 
   const BasicRow = () => (
     <>
-      {columns.map((col, i) => (
-        <div
-          className={`${className} tbody cell ${
-            col.borderedCell ? "borderedCell" : ""
-          } ${dataRow.highlighted && !col.borderedCell ? "highlighted" : ""}
+      {columns.map((col, i) => {
+        const data = dataRow[col.dataIndex];
+        const style =
+          typeof data === "object" && "style" in data ? data.style : {};
+        return (
+          <div
+            className={`${className} tbody cell ${
+              col.borderedCell ? "borderedCell" : ""
+            } ${dataRow.highlighted && !col.borderedCell ? "highlighted" : ""}
             ${columns.length - 1 === i ? "lastRowCell" : ""}
-          `}
-          key={`${dataRow.key}-${col.key}`}
-        >
-          <Cell data={dataRow[col.dataIndex]} col={col} />
-        </div>
-      ))}
+            `}
+            style={style}
+            key={`${dataRow.key}-${col.key}`}
+          >
+            <Cell data={dataRow[col.dataIndex]} col={col} />
+          </div>
+        );
+      })}
     </>
   );
 

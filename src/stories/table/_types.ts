@@ -28,6 +28,7 @@ export interface Column {
 interface ObjectData {
   title?: string;
   content?: Data;
+  style?: React.CSSProperties;
 }
 export type Data =
   | ObjectData
