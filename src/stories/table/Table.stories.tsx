@@ -66,3 +66,40 @@ TableAlternative.args = {
   highlightedColor: "#7986D81A",
   hideHeader: false,
 };
+
+export const TemplateWithCustomStyle = Template.bind({});
+TemplateWithCustomStyle.args = {
+  dataSource: [
+    {
+      key: "1",
+      cell1: {
+        title: "Cell 1",
+        content: "Cell 1",
+        style: { backgroundColor: "red" },
+      },
+      cell2: "Cell 2",
+    },
+    {
+      key: "1",
+      cell1: "Cell 1",
+      cell2: {
+        title: "Cell 2",
+        content: "Cell 2",
+        style: { backgroundColor: "red", color: "white" },
+      },
+    },
+  ],
+  columns: [
+    {
+      title: "Cell 1",
+      dataIndex: "cell1",
+      key: "cell1",
+    },
+    {
+      title: "Cell 2",
+      dataIndex: "cell2",
+      key: "cell2",
+    },
+  ],
+  isLoading: false,
+};
