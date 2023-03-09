@@ -1,3 +1,15 @@
+# v1.0.45 (Thu Mar 09 2023)
+
+#### 🐛 Bug Fix
+
+- feat(table): Allow custom style for cell [#132](https://github.com/AppQuality/appquality-design-system/pull/132) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.44 (Fri Oct 21 2022)
 
 #### 🐛 Bug Fix
