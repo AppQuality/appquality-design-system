@@ -1,3 +1,16 @@
+# v1.0.46 (Tue Aug 22 2023)
+
+#### 🐛 Bug Fix
+
+- update version [#135](https://github.com/AppQuality/appquality-design-system/pull/135) ([@iacopolea](https://github.com/iacopolea))
+- feat(qa): add extra props to some component [#134](https://github.com/AppQuality/appquality-design-system/pull/134) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.45 (Thu Mar 09 2023)
 
 #### 🐛 Bug Fix
