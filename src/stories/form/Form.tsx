@@ -37,6 +37,7 @@ export const Field = ({
   onChange,
   disabled,
   label,
+  ...props
 }: FieldInterface) => {
   return (
     <FormikField name={name}>
@@ -49,7 +50,7 @@ export const Field = ({
         if (status && status.id) fieldId = `${status.id}-${name}`;
         let className = "aq-mb-3";
         return (
-          <FormGroup className={className}>
+          <FormGroup className={className} {...props}>
             {label && <FormLabel htmlFor={fieldId} label={label} />}
             <div className="input-group">
               <Input

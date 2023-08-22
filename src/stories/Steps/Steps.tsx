@@ -17,6 +17,7 @@ const Steps = ({
   direction = "horizontal",
   clickHandler,
   className,
+  ...props
 }: StepsProps) => {
   let items: ReactNode = null;
   items = React.Children.map(children, (child, index) => {
@@ -44,7 +45,7 @@ const Steps = ({
     return null;
   });
   return (
-    <StyledSteps className={className} direction={direction}>
+    <StyledSteps className={className} direction={direction} {...props}>
       <div className="steps">{items}</div>
     </StyledSteps>
   );
