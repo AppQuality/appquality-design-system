@@ -8,6 +8,7 @@ const BasicCard = ({
   shadow = false,
   bodyClass = "aq-m-3",
   className,
+  ...props
 }: CardProps) => {
   let cardHeader = null;
   if (title) {
@@ -20,7 +21,10 @@ const BasicCard = ({
     );
   }
   return (
-    <div className={`${className}${shadow ? " aq-card-shadow" : ""}`}>
+    <div
+      {...props}
+      className={`${className}${shadow ? " aq-card-shadow" : ""}`}
+    >
       {cardHeader}
       <div className={`${bodyClass} aq-card-body`}>{children}</div>
     </div>
