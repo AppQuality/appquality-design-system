@@ -50,6 +50,7 @@ export const Select = ({
   onCreate,
   formatCreateLabel,
   noOptionsMessage,
+  ...props
 }: SelectProps) => {
   const [loading, setLoading] = useState(isLoading);
   const [searching, setSearching] = useState<string | false>(false);
@@ -235,7 +236,7 @@ export const Select = ({
       {label && (
         <FormLabel isDisabled={isDisabled} htmlFor={name} label={label} />
       )}
-      <div>
+      <div {...props}>
         {onCreate ? (
           <Creatable
             {...args}
