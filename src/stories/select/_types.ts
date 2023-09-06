@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from "react";
+import { MenuPlacement } from "react-select";
 
 export type Option = {
   label: string;
@@ -35,6 +36,7 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   isLoading?: boolean;
   isSearchable?: boolean;
   menuTargetQuery?: string;
+  menuPlacement?: MenuPlacement;
   formatCreateLabel?: (value: string) => React.ReactNode;
   noOptionsMessage?: () => string;
 }

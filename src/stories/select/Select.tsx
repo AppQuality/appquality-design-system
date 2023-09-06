@@ -48,6 +48,7 @@ export const Select = ({
   isSearchable,
   menuTargetQuery,
   onCreate,
+  menuPlacement,
   formatCreateLabel,
   noOptionsMessage,
   ...props
@@ -225,6 +226,7 @@ export const Select = ({
     isMulti: isMulti,
     maxMenuHeight: 200,
     captureMenuScroll: true,
+    menuPlacement: menuPlacement,
     onMenuScrollToBottom: onMenuScrollToBottom,
     menuShouldScrollIntoView: true,
     theme: aqTheme,
