@@ -57,7 +57,7 @@ export const TextareaField = ({
               {counterMax && (
                 <Counter
                   isFocus={isFocus}
-                  isInvalid={meta.touched && typeof meta.error == "string"}
+                  isInvalid={field.value?.length > counterMax}
                 >
                   <span>{field.value?.length || 0}</span>/{counterMax}
                 </Counter>
