@@ -1,3 +1,18 @@
+# v1.0.47 (Thu Sep 07 2023)
+
+#### 🐛 Bug Fix
+
+- new version [#139](https://github.com/AppQuality/appquality-design-system/pull/139) ([@iacopolea](https://github.com/iacopolea))
+- feat(textarea): add counter [#136](https://github.com/AppQuality/appquality-design-system/pull/136) ([@iacopolea](https://github.com/iacopolea))
+- feat(select): add menu placement option [#138](https://github.com/AppQuality/appquality-design-system/pull/138) ([@iacopolea](https://github.com/iacopolea))
+- feat(pagetitle): add target option [#137](https://github.com/AppQuality/appquality-design-system/pull/137) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.46 (Tue Aug 22 2023)
 
 #### 🐛 Bug Fix
