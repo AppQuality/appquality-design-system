@@ -8,6 +8,7 @@ import { Text } from "../typography/Typography";
 import { Datepicker } from "./datepicker/Datepicker";
 import { DatepickerGlobalStyle } from "./datepicker/_style";
 import FormLabel from "./formlabel/FormLabel";
+import { Select } from "../select/Select";
 
 export default {
   title: "Forms",
@@ -48,6 +49,22 @@ export const Template: Story = () => (
           <div className="aq-mb-3">
             <FormLabel htmlFor="range1" label="Date Range" />
             <Datepicker id="range1" select="range" control="calendar" />
+          </div>
+          <div className="aq-mb-3">
+            <Select
+              name="select"
+              label="Select"
+              menuPlacement="top"
+              value={{ value: "1", label: "Option 1" }}
+              options={[
+                { label: "Option 1", value: "1" },
+                { label: "Option 2", value: "2" },
+                { label: "Option 3", value: "3" },
+                { label: "Option 4", value: "4" },
+                { label: "Option 5", value: "5" },
+                { label: "Option 6", value: "6" },
+              ]}
+            />
           </div>
         </Form>
       )}
