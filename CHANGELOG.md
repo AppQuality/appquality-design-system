@@ -1,3 +1,15 @@
+# v1.0.48 (Thu Sep 07 2023)
+
+#### 🐛 Bug Fix
+
+- fix(textarea): field value could be undefined [#140](https://github.com/AppQuality/appquality-design-system/pull/140) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.47 (Thu Sep 07 2023)
 
 #### 🐛 Bug Fix
