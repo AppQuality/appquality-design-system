@@ -18,5 +18,6 @@ export interface PageTitleProps extends BaseProps {
   back?: {
     text: string;
     navigation: string;
+    target?: string;
   };
 }
