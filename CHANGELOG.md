@@ -1,3 +1,15 @@
+# v1.0.49 (Thu Sep 07 2023)
+
+#### 🐛 Bug Fix
+
+- fix(textarea): counter validation [#141](https://github.com/AppQuality/appquality-design-system/pull/141) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.48 (Thu Sep 07 2023)
 
 #### 🐛 Bug Fix
