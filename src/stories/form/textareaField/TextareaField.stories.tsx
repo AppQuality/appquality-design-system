@@ -1,5 +1,5 @@
 import { Story, Meta } from "@storybook/react";
-import { Form, Formik, FormikProps } from "formik";
+import { Formik, FormikProps } from "formik";
 import { TextareaField } from "./TextareaField";
 import {
   initialTextareaFormValues,
@@ -21,14 +21,12 @@ export const Simple: Story = () => (
     }}
   >
     {(props: FormikProps<any>) => (
-      <Form id="textareaForm">
-        <TextareaField
-          className="aq-mb-3"
-          name="description"
-          label="Description"
-          placeholder="Enter description"
-        />
-      </Form>
+      <TextareaField
+        className="aq-mb-3"
+        name="description"
+        label="Description"
+        placeholder="Enter description"
+      />
     )}
   </Formik>
 );
@@ -42,16 +40,14 @@ export const Autoresize: Story = () => (
     }}
   >
     {(props: FormikProps<any>) => (
-      <Form id="textareaForm">
-        <TextareaField
-          className="aq-mb-3"
-          name="description"
-          label="Description"
-          placeholder="Enter description"
-          height="2.55rem"
-          autoResize={true}
-        />
-      </Form>
+      <TextareaField
+        className="aq-mb-3"
+        name="description"
+        label="Description"
+        placeholder="Enter description"
+        height="2.55rem"
+        autoResize={true}
+      />
     )}
   </Formik>
 );
@@ -65,16 +61,45 @@ export const Disabled: Story = () => (
     }}
   >
     {(props: FormikProps<any>) => (
-      <Form id="textareaForm">
+      <TextareaField
+        className="aq-mb-3"
+        name="description"
+        label="Description"
+        placeholder="Enter description"
+        height="2.55rem"
+        disabled
+      />
+    )}
+  </Formik>
+);
+
+export const CounterMax: Story = () => (
+  <Formik
+    initialValues={initialTextareaFormValues}
+    validationSchema={yup.object({
+      description: yup
+        .string()
+        .max(100, "Max 100 characters")
+        .required("mandatory field"),
+    })}
+    onSubmit={(data) => {
+      console.log(data);
+    }}
+  >
+    {(props: FormikProps<any>) => (
+      <div style={{ padding: "20px" }}>
         <TextareaField
           className="aq-mb-3"
           name="description"
-          label="Description"
+          label={
+            <div>
+              <span style={{ fontWeight: "600" }}>this is</span> a Description
+            </div>
+          }
           placeholder="Enter description"
-          height="2.55rem"
-          disabled
+          counterMax={100}
         />
-      </Form>
+      </div>
     )}
   </Formik>
 );

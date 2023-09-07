@@ -9,18 +9,39 @@ const InvalidTextareaFocusStyle = css`
   box-shadow: 0 0 0 0.25rem ${(p) => p.theme.colors.red100};
 `;
 
+export const Counter = styled.div<{ isInvalid?: boolean; isFocus?: boolean }>`
+  position: absolute;
+  text-align: right;
+  bottom: 3px;
+  right: 4px;
+  pointer-events: none;
+  font-size: 12px;
+  line-height: 1;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  span {
+    color: ${(p) =>
+      p.isInvalid ? p.theme.palette.danger : p.theme.palette.secondary};
+  }
+  transition: opacity 0.2s ease-in-out;
+  ${(p) => (p.isFocus ? "opacity: 1;" : "opacity: 0;")}
+`;
+
 export const StyledTextareaField = styled.div<{
   resize?: string;
   isInvalid?: boolean;
   height?: string;
   autoResize?: boolean;
 }>`
+  position: relative;
+
   textarea {
+    display: block;
     width: 100%;
     min-height: ${(p) => (p.height ? p.height : "5.715rem")};
     height: ${(p) => (p.height ? p.height : "5.715rem")};
     resize: ${(p) => (p.resize ? p.resize : "none")};
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.75rem 14px;
     color: ${(p) => p.theme.palette.primary};
     font-family: inherit;
     font-size: ${(p) => p.theme.typography.fontSize.base};
@@ -32,7 +53,7 @@ export const StyledTextareaField = styled.div<{
     box-shadow: none;
     ${(props) => (props.isInvalid ? InvalidTextareaStyle : "")}
     ${(p) => (p.autoResize ? "overflow: hidden;" : "")}
-
+    
     &:focus,
     &:focus-visible {
       color: ${(p) => p.theme.palette.primary};

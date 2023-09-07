@@ -19,7 +19,7 @@ const BasicErrorMessage = ({
   className?: string;
 }) => (
   <div className={className}>
-    <FormikErrorMessage name={name} />{" "}
+    <FormikErrorMessage name={name} />
   </div>
 );
 
@@ -28,6 +28,9 @@ export const ErrorMessage = styled(BasicErrorMessage)`
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;
+  &:empty {
+    display: none;
+  }
 `;
 
 export const Field = ({
