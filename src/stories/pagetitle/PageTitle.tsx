@@ -20,7 +20,6 @@ const PageTitle = ({
   back,
   children,
   as,
-  target,
 }: PageTitleProps) => {
   let titleSize: TitleProps["size"] = "xl";
   let subtitleSize: TitleProps["size"] = "mt";
@@ -63,7 +62,7 @@ const PageTitle = ({
         <NavigationAnchor
           className="aq-text-secondary"
           href={back.navigation}
-          target={target}
+          target={back.target}
         >
           <ArrowLeftCircle className="aq-float-left" size={"1.3125rem"} />
           <span className="aq-text-secondary aq-ml-2">{back.text}</span>
