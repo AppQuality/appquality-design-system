@@ -1,3 +1,18 @@
+# v1.0.50 (Wed Oct 11 2023)
+
+#### 🐛 Bug Fix
+
+- new version [#143](https://github.com/AppQuality/appquality-design-system/pull/143) ([@iacopolea](https://github.com/iacopolea) [@cannarocks](https://github.com/cannarocks))
+- chore: remove yarn lock [#142](https://github.com/AppQuality/appquality-design-system/pull/142) ([@iacopolea](https://github.com/iacopolea))
+- chore(google): update api key [#133](https://github.com/AppQuality/appquality-design-system/pull/133) ([@cannarocks](https://github.com/cannarocks))
+
+#### Authors: 2
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+- Luca Cannarozzo ([@cannarocks](https://github.com/cannarocks))
+
+---
+
 # v1.0.49 (Thu Sep 07 2023)
 
 #### 🐛 Bug Fix
