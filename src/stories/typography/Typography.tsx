@@ -99,8 +99,7 @@ export const Text = styled.div(
   
   ul {
     list-style: disc;
-    padding: 1em;
-    margin: 1em;
+    padding-left: 1em;
   }
 `;
   }
