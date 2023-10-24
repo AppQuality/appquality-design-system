@@ -96,6 +96,12 @@ export const Text = styled.div(
   };
   ${small ? `line-height: 1.2` : `line-height: 1.5`};
   ${small ? `font-size: .875rem` : `font-size: 1rem`};
+  
+  ul {
+    list-style: disc;
+    padding: 1em;
+    margin: 1em;
+  }
 `;
   }
 );
