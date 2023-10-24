@@ -1,3 +1,15 @@
+# v1.0.52 (Tue Oct 24 2023)
+
+#### 🐛 Bug Fix
+
+- fix(Text): style for ul li [#146](https://github.com/AppQuality/appquality-design-system/pull/146) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.51 (Tue Oct 24 2023)
 
 #### 🐛 Bug Fix
