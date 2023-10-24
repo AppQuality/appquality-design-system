@@ -1,3 +1,15 @@
+# v1.0.51 (Tue Oct 24 2023)
+
+#### 🐛 Bug Fix
+
+- new version [#145](https://github.com/AppQuality/appquality-design-system/pull/145) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.50 (Wed Oct 11 2023)
 
 #### 🐛 Bug Fix
