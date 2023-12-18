@@ -27,3 +27,11 @@ yarn-error.log*
 dist
 .env
 build-storybook.log
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
