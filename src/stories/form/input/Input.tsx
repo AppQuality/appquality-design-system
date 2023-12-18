@@ -2,7 +2,7 @@ import { Search } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
 
-const BaseInput = ({
+const Input = ({
   id,
   type,
   className,
@@ -26,7 +26,7 @@ const BaseInput = ({
   onChange?: (val: string) => void;
 }) => {
   return (
-    <div className={className}>
+    <StyledInput type={type} isInvalid={isInvalid} className={className}>
       <input
         id={id}
         type={type}
@@ -42,11 +42,11 @@ const BaseInput = ({
           <Search />
         </span>
       )}
-    </div>
+    </StyledInput>
   );
 };
 
-const Input = styled(BaseInput)`
+export const StyledInput = styled.div<{ type: string; isInvalid?: boolean }>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
