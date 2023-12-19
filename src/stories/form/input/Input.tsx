@@ -1,6 +1,8 @@
-import { Search } from "react-bootstrap-icons";
+import { useState } from "react";
 import styled from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
+import PasswordIcon from "./inputIcons/PasswordIcon";
+import SearchIcon from "./inputIcons/SearchIcon";
 
 const Input = ({
   id,
@@ -13,6 +15,7 @@ const Input = ({
   extra,
   onChange,
   autocomplete = true,
+  i18n,
 }: {
   id: string;
   type: string;
@@ -24,12 +27,17 @@ const Input = ({
   isInvalid?: boolean;
   extra?: any;
   onChange?: (val: string) => void;
+  i18n?: {
+    showPassword?: string;
+    hidePassword?: string;
+  };
 }) => {
+  const [currentType, setType] = useState(type);
   return (
     <StyledInput type={type} isInvalid={isInvalid} className={className}>
       <input
         id={id}
-        type={type}
+        type={currentType}
         placeholder={placeholder}
         disabled={disabled}
         value={value}
@@ -37,10 +45,9 @@ const Input = ({
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
-      {type === "search" && (
-        <span className="input-group-text">
-          <Search />
-        </span>
+      {type === "search" && <SearchIcon />}
+      {type === "password" && (
+        <PasswordIcon i18n={i18n} type={currentType} setType={setType} />
       )}
     </StyledInput>
   );
@@ -52,11 +59,17 @@ export const StyledInput = styled.div<{ type: string; isInvalid?: boolean }>`
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
-  .input-group-text {
+  .input-group-text,
+  .input-group-button {
     position: absolute;
     right: 15px;
-    top: 29%;
+    display: flex;
+    align-items: center;
+    height: 100%;
     color: ${(props) => props.theme.variants.primary};
+  }
+  .input-group-text {
+    top: 29%;
   }
   input[type="search"] {
     -webkit-appearance: none;
