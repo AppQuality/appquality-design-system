@@ -47,5 +47,5 @@ export type ButtonProps = BaseProps & {
    * Optional form prop to submit a form somewhere else
    */
   form?: string;
-  alt?: string;
+  title?: string;
 };

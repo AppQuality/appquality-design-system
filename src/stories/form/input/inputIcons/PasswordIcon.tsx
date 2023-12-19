@@ -17,7 +17,9 @@ const PasswordIcon = ({
     <span className={`input-group-button`}>
       {type === "text" ? (
         <Button
-          alt={i18n && i18n.hidePassword ? i18n.hidePassword : "Hide password"}
+          title={
+            i18n && i18n.hidePassword ? i18n.hidePassword : "Hide password"
+          }
           size="sm"
           htmlType="button"
           type="light"
@@ -27,7 +29,9 @@ const PasswordIcon = ({
         </Button>
       ) : (
         <Button
-          alt={i18n && i18n.showPassword ? i18n.showPassword : "Show password"}
+          title={
+            i18n && i18n.showPassword ? i18n.showPassword : "Show password"
+          }
           size="sm"
           htmlType="button"
           type="light"
