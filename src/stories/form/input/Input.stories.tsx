@@ -1,5 +1,5 @@
+import { Meta, Story } from "@storybook/react";
 import Input from "./Input";
-import { Story, Meta } from "@storybook/react";
 
 export default {
   title: "Inputs",
@@ -28,5 +28,14 @@ export const ReadonlyInput: Story = () => (
     placeholder="Placeholder"
     value="My value"
     disabled={true}
+  />
+);
+
+export const PasswordInput: Story = () => (
+  <Input
+    id="input"
+    type="password"
+    placeholder="Placeholder"
+    disabled={false}
   />
 );

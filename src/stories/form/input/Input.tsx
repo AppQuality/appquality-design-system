@@ -1,6 +1,8 @@
-import { Search } from "react-bootstrap-icons";
+import { useState } from "react";
 import styled from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
+import PasswordIcon from "./inputIcons/PasswordIcon";
+import SearchIcon from "./inputIcons/SearchIcon";
 
 const Input = ({
   id,
@@ -25,11 +27,12 @@ const Input = ({
   extra?: any;
   onChange?: (val: string) => void;
 }) => {
+  const [currentType, setType] = useState(type);
   return (
     <StyledInput type={type} isInvalid={isInvalid} className={className}>
       <input
         id={id}
-        type={type}
+        type={currentType}
         placeholder={placeholder}
         disabled={disabled}
         value={value}
@@ -37,10 +40,9 @@ const Input = ({
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
-      {type === "search" && (
-        <span className="input-group-text">
-          <Search />
-        </span>
+      {type === "search" && <SearchIcon />}
+      {type === "password" && (
+        <PasswordIcon type={currentType} setType={setType} />
       )}
     </StyledInput>
   );
