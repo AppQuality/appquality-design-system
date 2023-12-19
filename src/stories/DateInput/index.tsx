@@ -4,68 +4,66 @@ import {
   localeEn,
   localeEs,
 } from "@appquality/mobiscroll";
-import { useState } from "react";
+import { ChangeEventHandler, useState } from "react";
 import { Calendar } from "react-bootstrap-icons";
-import styled from "styled-components";
 import { Button } from "../button/Button";
-import { StyledInput } from "../form/input/Input";
+import { StyledInput as FormInput } from "../form/input/Input";
+import styled from "styled-components";
 
-const StyledWrapper = styled.div`
-  position: relative;
-
+const StyledInput = styled(FormInput)`
   .mbsc-appquality.mbsc-textfield {
-    width: 0 !important;
-    border: none;
+    width: 0;
     height: 0px;
+    border: none;
     padding: 0px;
   }
-  ${Button} {
-    position: absolute;
-    top: 2px;
-    right: 2px;
-  }
 `;
-
 export interface DatepickerProps {
   id: string;
+  name?: string;
   value?: string;
   minDate?: Date;
   maxDate?: Date;
-  locale?: string;
   onOpen?: () => void;
   onCancel?: ({ value, valueText }: { value: Date; valueText: string }) => void;
-  onChange?: ({ value, valueText }: { value: Date; valueText: string }) => void;
-  placeholder?: string;
+  onChange?: ChangeEventHandler<HTMLInputElement>;
   controls?: Array<"date" | "calendar">;
-  setText?: string;
-  cancelText?: string;
-  dateFormat?: string;
-  inputTitle?: string;
-  datePattern?: string;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+  i18n?: {
+    locale?: string;
+    dateFormat?: string;
+    placeholder?: string;
+    setText?: string;
+    cancelText?: string;
+    buttonTitle?: string;
+  };
 }
 
 const DateInput = ({
+  id,
+  name,
   value,
   minDate,
   maxDate,
   onChange,
   onOpen,
   onCancel,
-  locale,
   controls = ["date"],
-  placeholder,
-  setText = "Set",
-  cancelText = "Cancel",
-  dateFormat = "DD-MM-YYYY",
-  inputTitle = "Date in the format DD-MM-YYYY",
-  datePattern = "d{2}-d{2}-d{4}",
+  inputProps,
+  i18n: {
+    locale = "en",
+    placeholder,
+    setText = "Set",
+    cancelText = "Cancel",
+    dateFormat = "DD-MM-YYYY",
+    buttonTitle = "Open datepicker",
+  } = {},
 }: DatepickerProps) => {
   let currentLocale = localeEn;
   if (locale === "it") currentLocale = localeIt;
   if (locale === "es") currentLocale = localeEs;
   const [openPicker, setOpenPicker] = useState(false);
-  const [pickerValue, setPickerValue] = useState<Date>();
-  const [textValue, setTextValue] = useState<string>(value || "");
+  const [inputValue, setInputValue] = useState<string>(value || "");
 
   const show = () => {
     setOpenPicker(true);
@@ -73,21 +71,25 @@ const DateInput = ({
   const onClose = () => {
     setOpenPicker(false);
   };
-  const onDatePick = (v: { value: Date; textValue: string }) => {
-    setTextValue(textValue);
-    setOpenPicker(false);
+  const onDatePick = (v: { value: Date; valueText: string }) => {
+    setInputValue(v.valueText);
+    onClose();
+  };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+    onChange && onChange(e);
   };
   return (
-    <StyledWrapper>
-      <StyledInput type="">
-        <input
-          type="text"
-          pattern={datePattern}
-          title={`Date in the format ${dateFormat}`}
-          onClick={(e) => e.preventDefault()}
-          placeholder={placeholder}
-        />
-      </StyledInput>
+    <StyledInput type="text">
+      <input
+        id={id}
+        name={name}
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder={placeholder}
+        {...inputProps}
+      />
       <MobiScrollDatePicker
         defaultValue={value}
         select="date"
@@ -109,11 +111,23 @@ const DateInput = ({
         showOnClick={false}
         isOpen={openPicker}
         onClose={onClose}
+        inputProps={{
+          "aria-hidden": "true",
+          tabIndex: -1,
+        }}
       />
-      <Button size="sm" htmlType="button" squared type="light" onClick={show}>
-        <Calendar />
-      </Button>
-    </StyledWrapper>
+      <span className="input-group-button">
+        <Button
+          title={buttonTitle}
+          size="sm"
+          htmlType="button"
+          type="light"
+          onClick={show}
+        >
+          <Calendar />
+        </Button>
+      </span>
+    </StyledInput>
   );
 };
 
