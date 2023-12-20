@@ -13,7 +13,6 @@ export const Button = styled(ButtonComponent)(
     flat = false,
     squared = false,
     variant = false,
-    alt,
   }: ButtonProps & { theme: DefaultTheme }) => {
     let styles = getButtonStyle(type, flat, disabled, variant, theme);
     styles += getButtonSize(size, squared, theme);
