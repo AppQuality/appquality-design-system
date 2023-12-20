@@ -22,7 +22,7 @@ const PasswordIcon = ({
           }
           size="sm"
           htmlType="button"
-          type="light"
+          type="transparent"
           onClick={() => setType("password")}
         >
           <EyeSlash />
@@ -34,7 +34,7 @@ const PasswordIcon = ({
           }
           size="sm"
           htmlType="button"
-          type="light"
+          type="transparent"
           onClick={() => setType("text")}
         >
           <EyeFill />

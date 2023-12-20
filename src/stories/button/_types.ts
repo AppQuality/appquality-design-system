@@ -11,7 +11,8 @@ export type ButtonProps = BaseProps & {
     | keyof typeof aqBootstrapTheme["palette"]
     | "link"
     | "light"
-    | "link-hover";
+    | "link-hover"
+    | "transparent";
   /**
    * How large should the button be?
    */
