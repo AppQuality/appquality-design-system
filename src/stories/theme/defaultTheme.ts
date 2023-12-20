@@ -9,8 +9,7 @@ const aqBootstrapTheme = {
   },
   typography: {
     fontFamily: {
-      base:
-        'Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
+      base: 'Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
       serif: "IBM Plex Serif",
       mono: "'IBM Plex Mono', monospace;",
     },
@@ -36,10 +35,10 @@ const aqBootstrapTheme = {
   palette: {
     primary: COLORS.gray900,
     secondary: COLORS.indigo600,
-    info: COLORS.blue700,
-    success: COLORS.green700,
-    warning: COLORS.orange800,
-    danger: COLORS.red800,
+    info: COLORS.blue800,
+    success: COLORS.green800,
+    warning: COLORS.yellow600,
+    danger: COLORS.red900,
   },
   variants: {
     primary: COLORS.gray700,
