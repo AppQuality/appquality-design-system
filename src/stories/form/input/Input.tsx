@@ -68,9 +68,6 @@ export const StyledInput = styled.div<{ type: string; isInvalid?: boolean }>`
     height: 100%;
     color: ${(props) => props.theme.variants.primary};
   }
-  .input-group-text {
-    top: 29%;
-  }
   input[type="search"] {
     -webkit-appearance: none;
 
