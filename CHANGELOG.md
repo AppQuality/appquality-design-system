@@ -1,3 +1,15 @@
+# v1.0.56 (Thu Dec 21 2023)
+
+#### 🐛 Bug Fix
+
+- fix: export DateInput [#153](https://github.com/AppQuality/appquality-design-system/pull/153) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.55 (Thu Dec 21 2023)
 
 #### 🐛 Bug Fix
