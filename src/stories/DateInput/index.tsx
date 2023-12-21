@@ -1,14 +1,14 @@
 import {
   Datepicker as MobiScrollDatePicker,
-  localeIt,
   localeEn,
   localeEs,
+  localeIt,
 } from "@appquality/mobiscroll";
 import { ChangeEventHandler, useState } from "react";
 import { Calendar } from "react-bootstrap-icons";
+import styled from "styled-components";
 import { Button } from "../button/Button";
 import { StyledInput as FormInput } from "../form/input/Input";
-import styled from "styled-components";
 
 const StyledInput = styled(FormInput)`
   .mbsc-appquality.mbsc-textfield {
@@ -121,7 +121,7 @@ const DateInput = ({
           title={buttonTitle}
           size="sm"
           htmlType="button"
-          type="light"
+          type="transparent"
           onClick={show}
         >
           <Calendar />

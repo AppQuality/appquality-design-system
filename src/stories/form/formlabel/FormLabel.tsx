@@ -21,6 +21,7 @@ const BaseFormLabel = ({
 const FormLabel = styled(BaseFormLabel)`
   order: -1;
   display: block;
+  font-weight: ${(props) => props.theme.typography.fontWeight.medium};
   margin-bottom: ${(props) => props.theme.grid.sizes[2]};
   color: ${(props) => props.theme.variants.primary};
   ${(props) =>

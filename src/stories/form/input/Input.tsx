@@ -112,8 +112,10 @@ export const StyledInput = styled.div<{ type: string; isInvalid?: boolean }>`
 
     // Placeholder
     &::placeholder {
-      color: ${(props) => props.theme.colors.disabledFont};
+      color: ${(props) => props.theme.variants.primary};
       opacity: 1;
+      font-weight: ${(props) => props.theme.typography.fontWeight.light};
+      font-family: ${(props) => props.theme.typography.fontFamily.base};
     }
 
     &:disabled,
