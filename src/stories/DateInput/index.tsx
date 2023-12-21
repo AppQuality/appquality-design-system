@@ -39,7 +39,7 @@ export interface DatepickerProps {
   };
 }
 
-const DateInput = ({
+export const DateInput = ({
   id,
   name,
   value,
@@ -130,5 +130,3 @@ const DateInput = ({
     </StyledInput>
   );
 };
-
-export default DateInput;
