@@ -13,12 +13,14 @@ export const ButtonComponent = ({
   flat,
   squared,
   variant,
+  title,
   children,
   ...props
 }: ButtonProps) => {
   let Component = as;
   return (
     <Component
+      title={title}
       disabled={disabled}
       type={htmlType}
       className={className}

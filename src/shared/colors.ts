@@ -73,16 +73,16 @@ export const green700 = "#278E37";
 export const green800 = "#1C7D2C";
 export const green900 = "#015E19";
 
-export const yellow = "#FFEE8B";
-export const yellow100 = "#FFFCE7";
-export const yellow200 = "#FFF8D1";
-export const yellow300 = "#FFF5B9";
-export const yellow400 = "#FFF2A2";
+export const yellow = "#FFB65A";
+export const yellow100 = "#FFF7EE";
+export const yellow200 = "#FFE7C9";
+export const yellow300 = "#FFD7A4";
+export const yellow400 = "#FFC67F";
 export const yellow500 = yellow;
-export const yellow600 = "#FFEB74";
-export const yellow700 = "#FFE85D";
-export const yellow800 = "#FFE545";
-export const yellow900 = "#FFE12F";
+export const yellow600 = "#C57F12";
+export const yellow700 = "#955f1b";
+export const yellow800 = "#845418";
+export const yellow900 = "#734A15";
 
 export const purple = "#D599F1";
 export const purple100 = "#F6EAFC";

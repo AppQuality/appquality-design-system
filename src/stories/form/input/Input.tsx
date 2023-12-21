@@ -1,8 +1,10 @@
-import { Search } from "react-bootstrap-icons";
+import { useState } from "react";
 import styled from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
+import PasswordIcon from "./inputIcons/PasswordIcon";
+import SearchIcon from "./inputIcons/SearchIcon";
 
-const BaseInput = ({
+const Input = ({
   id,
   type,
   className,
@@ -13,6 +15,7 @@ const BaseInput = ({
   extra,
   onChange,
   autocomplete = true,
+  i18n,
 }: {
   id: string;
   type: string;
@@ -24,12 +27,17 @@ const BaseInput = ({
   isInvalid?: boolean;
   extra?: any;
   onChange?: (val: string) => void;
+  i18n?: {
+    showPassword?: string;
+    hidePassword?: string;
+  };
 }) => {
+  const [currentType, setType] = useState(type);
   return (
-    <div className={className}>
+    <StyledInput type={type} isInvalid={isInvalid} className={className}>
       <input
         id={id}
-        type={type}
+        type={currentType}
         placeholder={placeholder}
         disabled={disabled}
         value={value}
@@ -37,25 +45,27 @@ const BaseInput = ({
         onChange={(e) => onChange && onChange(e.target.value)}
         {...extra}
       />
-      {type === "search" && (
-        <span className="input-group-text">
-          <Search />
-        </span>
+      {type === "search" && <SearchIcon />}
+      {type === "password" && (
+        <PasswordIcon i18n={i18n} type={currentType} setType={setType} />
       )}
-    </div>
+    </StyledInput>
   );
 };
 
-const Input = styled(BaseInput)`
+export const StyledInput = styled.div<{ type: string; isInvalid?: boolean }>`
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
-  .input-group-text {
+  .input-group-text,
+  .input-group-button {
     position: absolute;
     right: 15px;
-    top: 29%;
+    display: flex;
+    align-items: center;
+    height: 100%;
     color: ${(props) => props.theme.variants.primary};
   }
   input[type="search"] {
@@ -102,8 +112,10 @@ const Input = styled(BaseInput)`
 
     // Placeholder
     &::placeholder {
-      color: ${(props) => props.theme.colors.disabledFont};
+      color: ${(props) => props.theme.variants.primary};
       opacity: 1;
+      font-weight: ${(props) => props.theme.typography.fontWeight.light};
+      font-family: ${(props) => props.theme.typography.fontFamily.base};
     }
 
     &:disabled,

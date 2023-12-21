@@ -1,15 +1,22 @@
 import {
-  Field as FormikField,
   FieldProps,
   ErrorMessage as FormikErrorMessage,
+  Field as FormikField,
 } from "formik";
+import { ExclamationCircle } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { FormGroup } from "./_style";
 import { FieldInterface } from "./_types";
+import { Checkbox } from "./checkBox/Checkbox";
 import FormLabel from "./formlabel/FormLabel";
 import Input from "./input/Input";
-import { Checkbox } from "./checkBox/Checkbox";
 import { Radio } from "./radio/Radio";
+
+const ErrorMessageWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: ${(props) => props.theme.grid.sizes[2]};
+`;
 
 const BasicErrorMessage = ({
   name,
@@ -19,7 +26,14 @@ const BasicErrorMessage = ({
   className?: string;
 }) => (
   <div className={className}>
-    <FormikErrorMessage name={name} />
+    <FormikErrorMessage name={name}>
+      {(msg) => (
+        <ErrorMessageWrapper>
+          <ExclamationCircle title="Error" size={16} />
+          {msg}
+        </ErrorMessageWrapper>
+      )}
+    </FormikErrorMessage>
   </div>
 );
 
@@ -73,4 +87,4 @@ export const Field = ({
   );
 };
 
-export { FormGroup, Checkbox, FormLabel, Input, Radio };
+export { Checkbox, FormGroup, FormLabel, Input, Radio };

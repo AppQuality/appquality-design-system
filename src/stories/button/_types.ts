@@ -11,7 +11,8 @@ export type ButtonProps = BaseProps & {
     | keyof typeof aqBootstrapTheme["palette"]
     | "link"
     | "light"
-    | "link-hover";
+    | "link-hover"
+    | "transparent";
   /**
    * How large should the button be?
    */
@@ -47,4 +48,5 @@ export type ButtonProps = BaseProps & {
    * Optional form prop to submit a form somewhere else
    */
   form?: string;
+  title?: string;
 };

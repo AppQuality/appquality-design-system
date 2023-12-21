@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 import { ButtonProps } from "./_types";
 
-export default (
+const getButtonStyle = (
   type: ButtonProps["type"],
   flat: ButtonProps["flat"],
   disabled: ButtonProps["disabled"],
@@ -42,16 +42,23 @@ export default (
             : ``
         }
       `;
-  } else if (type === "light") {
+  }
+  if (type === "light") {
     return `
       border-color: transparent;
       background-color: ${theme.colors.white};
       `;
-  } else {
-    const color = type || "primary";
-    const colorStyle = variant ? theme.variants[color] : theme.palette[color];
+  }
+  if (type === "transparent") {
+    return `
+      border-color: transparent;
+      background-color: transparent;
+      `;
+  }
+  const color = type || "primary";
+  const colorStyle = variant ? theme.variants[color] : theme.palette[color];
 
-    let style = `
+  let style = `
     border: 1px solid ${colorStyle};
           background-color: ${colorStyle};
           color: ${theme.colors.white};
@@ -65,8 +72,8 @@ export default (
       }
     }`;
 
-    if (flat) {
-      style += `background-color: ${theme.colors.white};
+  if (flat) {
+    style += `background-color: ${theme.colors.white};
         color: ${colorStyle};
         
         &:active {
@@ -83,7 +90,6 @@ export default (
             color: ${theme.colors.white};
           }
         }`;
-    }
 
     if (disabled) {
       style += `
@@ -106,3 +112,5 @@ export default (
     return style;
   }
 };
+
+export default getButtonStyle;

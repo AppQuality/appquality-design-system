@@ -1,8 +1,8 @@
 import styled, { DefaultTheme } from "styled-components";
-import getButtonSize from "./getButtonSize";
-import getButtonStyle from "./getButtonStyle";
 import { ButtonComponent } from "./_component";
 import { ButtonProps } from "./_types";
+import getButtonSize from "./getButtonSize";
+import getButtonStyle from "./getButtonStyle";
 
 export const Button = styled(ButtonComponent)(
   ({
