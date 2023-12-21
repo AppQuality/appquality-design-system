@@ -1,3 +1,15 @@
+# v1.0.54 (Thu Dec 21 2023)
+
+#### 🐛 Bug Fix
+
+- fix: Restore buttons [#151](https://github.com/AppQuality/appquality-design-system/pull/151) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.53 (Thu Dec 21 2023)
 
 #### 🐛 Bug Fix
