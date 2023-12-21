@@ -90,9 +90,10 @@ const getButtonStyle = (
             color: ${theme.colors.white};
           }
         }`;
+  }
 
-    if (disabled) {
-      style += `
+  if (disabled) {
+    style += `
         cursor: not-allowed;
         pointer-events: none;
         opacity: .65;
@@ -101,16 +102,15 @@ const getButtonStyle = (
         color: ${theme.colors.disabledFont};
         `;
 
-      if (flat) {
-        style += `
+    if (flat) {
+      style += `
         background-color: ${theme.colors.white};
         border-color: ${theme.colors.elementGeneric};
         `;
-      }
     }
-
-    return style;
   }
+
+  return style;
 };
 
 export default getButtonStyle;
