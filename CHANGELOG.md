@@ -1,3 +1,19 @@
+# v1.0.53 (Thu Dec 21 2023)
+
+#### 🐛 Bug Fix
+
+- new release [#150](https://github.com/AppQuality/appquality-design-system/pull/150) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- Improve readability [#149](https://github.com/AppQuality/appquality-design-system/pull/149) ([@d-beezee](https://github.com/d-beezee))
+- New datepicker [#148](https://github.com/AppQuality/appquality-design-system/pull/148) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- feat: Handle password input [#147](https://github.com/AppQuality/appquality-design-system/pull/147) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.52 (Tue Oct 24 2023)
 
 #### 🐛 Bug Fix
