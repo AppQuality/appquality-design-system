@@ -1,4 +1,4 @@
-import DateInput from ".";
+import { DateInput } from ".";
 import { Story, Meta } from "@storybook/react";
 import { DatepickerGlobalStyle } from "./_style";
 
