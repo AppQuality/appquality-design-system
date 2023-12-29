@@ -2,19 +2,19 @@ import { DefaultTheme } from "styled-components";
 import { ButtonProps } from "./_types";
 
 const getButtonStyle = (
-  type: ButtonProps["type"],
+  kind: ButtonProps["kind"],
   flat: ButtonProps["flat"],
   disabled: ButtonProps["disabled"],
   variant: ButtonProps["variant"],
   theme: DefaultTheme
 ) => {
-  if (type === "link" || type === "link-hover") {
+  if (kind === "link" || kind === "link-hover") {
     return `
         box-shadow: none;
         border-color: transparent;
         background-color: transparent;
         ${
-          type === "link-hover"
+          kind === "link-hover"
             ? `
             color: ${theme.palette.secondary};
             @media (min-width: ${theme.grid.breakpoints.lg}) {
@@ -43,19 +43,19 @@ const getButtonStyle = (
         }
       `;
   }
-  if (type === "light") {
+  if (kind === "light") {
     return `
       border-color: transparent;
       background-color: ${theme.colors.white};
       `;
   }
-  if (type === "transparent") {
+  if (kind === "transparent") {
     return `
       border-color: transparent;
       background-color: transparent;
       `;
   }
-  const color = type || "primary";
+  const color = kind || "primary";
   const colorStyle = variant ? theme.variants[color] : theme.palette[color];
 
   let style = `

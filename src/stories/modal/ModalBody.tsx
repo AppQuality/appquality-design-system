@@ -8,8 +8,8 @@ export interface ModalBodyProps extends BaseProps {
   onShow?: () => void;
   prevText?: string;
   nextText?: string;
-  prevButtonStyle?: ButtonProps["type"];
-  nextButtonStyle?: ButtonProps["type"];
+  prevButtonStyle?: ButtonProps["kind"];
+  nextButtonStyle?: ButtonProps["kind"];
 }
 
 const BasicModalBody = ({ children, className }: ModalBodyProps) => (

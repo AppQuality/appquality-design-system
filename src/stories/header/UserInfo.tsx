@@ -30,7 +30,7 @@ export const UserInfo = ({
               <b>T{user.id}</b>
             </Text>
           </Text>
-          <Button size="medium" type="link" onClick={onLogout}>
+          <Button size="medium" kind="link" onClick={onLogout}>
             <span className="aq-text-danger">
               <BoxArrowRight />
             </span>
@@ -40,7 +40,7 @@ export const UserInfo = ({
         <Button
           className="capitalize-first"
           size="medium"
-          type="link"
+          kind="link"
           onClick={onLogin}
         >
           {loginText}

@@ -13,7 +13,7 @@ const BaseFormLabel = ({
 }) => {
   return (
     <label htmlFor={htmlFor} className={className}>
-      {label}
+      <strong>{label}</strong>
     </label>
   );
 };

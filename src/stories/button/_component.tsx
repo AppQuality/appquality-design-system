@@ -5,28 +5,14 @@ import { ButtonProps } from "./_types";
  */
 export const ButtonComponent = ({
   as = "button",
-  htmlType = "button",
-  type,
+  type = "button",
+  kind,
   size,
-  className,
-  disabled = false,
   flat,
   squared,
   variant,
-  title,
-  children,
   ...props
 }: ButtonProps) => {
   let Component = as;
-  return (
-    <Component
-      title={title}
-      disabled={disabled}
-      type={htmlType}
-      className={className}
-      {...props}
-    >
-      {children}
-    </Component>
-  );
+  return <Component {...props} />;
 };

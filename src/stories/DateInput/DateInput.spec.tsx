@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/experimental-ct-react17";
-import DateInput from ".";
+import { DateInput } from ".";
 
 test.describe("DateInput", () => {
   test("should render an input tag and a button to open a datepicker", async ({
