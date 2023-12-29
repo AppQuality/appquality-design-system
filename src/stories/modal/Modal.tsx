@@ -71,7 +71,7 @@ const BasicModal = ({
                 <Button
                   size="block"
                   flat
-                  type={
+                  kind={
                     prevError
                       ? "danger"
                       : bodyData[current].prevButtonStyle
@@ -97,7 +97,7 @@ const BasicModal = ({
                 <Button
                   size="block"
                   flat
-                  type={
+                  kind={
                     nextError
                       ? "danger"
                       : bodyData[current].nextButtonStyle

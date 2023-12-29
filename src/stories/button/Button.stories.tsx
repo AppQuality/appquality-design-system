@@ -31,28 +31,27 @@ const GroupTemplate: Story<ButtonProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  type: "primary",
+  kind: "primary",
   children: "click",
   onClick: () => alert("clicked!"),
 };
 Primary.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A9",
   },
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  type: "secondary",
+  kind: "secondary",
   children: "click",
   onClick: () => alert("clicked!"),
 };
 
 export const Link = Template.bind({});
 Link.args = {
-  type: "link",
+  kind: "link",
   children: "This render as an anchor tag, but looks like a Button!",
   forwardedAs: "a",
   href: "#",
@@ -61,7 +60,7 @@ Link.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-  type: "secondary",
+  kind: "secondary",
   children: "click",
   disabled: true,
   onClick: () => alert("clicked!"),
@@ -76,8 +75,7 @@ Large.args = {
 Large.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A10",
   },
 };
 
@@ -90,8 +88,7 @@ Small.args = {
 Small.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=3%3A8",
   },
 };
 
@@ -104,8 +101,7 @@ Squared.args = {
 Squared.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A8",
   },
 };
 
@@ -119,8 +115,7 @@ SquaredLarge.args = {
 SquaredLarge.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A14",
   },
 };
 
@@ -134,8 +129,7 @@ SquaredSmall.args = {
 SquaredSmall.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=13%3A0",
   },
 };
 

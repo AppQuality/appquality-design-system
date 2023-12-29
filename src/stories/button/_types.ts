@@ -1,13 +1,10 @@
-import { MouseEventHandler } from "react";
-import { BaseProps } from "../../shared/_types";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 
-export type ButtonProps = BaseProps & {
-  htmlType?: "button" | "submit" | "reset";
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   /**
    * Is this the principal call to action on the page?
    */
-  type?:
+  kind?:
     | keyof typeof aqBootstrapTheme["palette"]
     | "link"
     | "light"
@@ -23,17 +20,9 @@ export type ButtonProps = BaseProps & {
    */
   flat?: boolean;
   /**
-   * Optional is disabled?
-   */
-  disabled?: boolean;
-  /**
    * Optional is squared?
    */
   squared?: boolean;
-  /**
-   * Optional click handler
-   */
-  onClick?: MouseEventHandler;
   /**
    * Optional href for anchor
    */
@@ -44,9 +33,4 @@ export type ButtonProps = BaseProps & {
   forwardedAs?: React.ElementType | keyof JSX.IntrinsicElements;
   as?: React.ElementType | keyof JSX.IntrinsicElements;
   target?: string;
-  /*
-   * Optional form prop to submit a form somewhere else
-   */
-  form?: string;
-  title?: string;
 };

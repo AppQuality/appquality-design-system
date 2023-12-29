@@ -39,7 +39,7 @@ export const DesktopPagination = ({
           squared={true}
           onClick={() => onPageChange(current - 1)}
           key="prev"
-          type="primary"
+          kind="primary"
           disabled={current === 1}
           data-test-id="prev"
         >
@@ -54,7 +54,7 @@ export const DesktopPagination = ({
               className={i.flat ? "hoverable" : ""}
               onClick={onClick}
               key={idx}
-              type="primary"
+              kind="primary"
             >
               {i.page}
             </Button>
@@ -65,7 +65,7 @@ export const DesktopPagination = ({
           squared={true}
           onClick={() => onPageChange(current + 1)}
           key="next"
-          type="primary"
+          kind="primary"
           disabled={current >= maxPages}
           data-test-id="next"
         >

@@ -21,8 +21,8 @@ const PasswordIcon = ({
             i18n && i18n.hidePassword ? i18n.hidePassword : "Hide password"
           }
           size="sm"
-          htmlType="button"
-          type="transparent"
+          type="button"
+          kind="transparent"
           onClick={() => setType("password")}
         >
           <EyeSlash />
@@ -33,8 +33,8 @@ const PasswordIcon = ({
             i18n && i18n.showPassword ? i18n.showPassword : "Show password"
           }
           size="sm"
-          htmlType="button"
-          type="transparent"
+          type="button"
+          kind="transparent"
           onClick={() => setType("text")}
         >
           <EyeFill />

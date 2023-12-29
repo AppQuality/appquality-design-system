@@ -6,7 +6,7 @@ import getButtonStyle from "./getButtonStyle";
 
 export const Button = styled(ButtonComponent)(
   ({
-    type = "primary",
+    kind = "primary",
     size = "medium",
     disabled = false,
     theme,
@@ -14,7 +14,7 @@ export const Button = styled(ButtonComponent)(
     squared = false,
     variant = false,
   }: ButtonProps & { theme: DefaultTheme }) => {
-    let styles = getButtonStyle(type, flat, disabled, variant, theme);
+    let styles = getButtonStyle(kind, flat, disabled, variant, theme);
     styles += getButtonSize(size, squared, theme);
 
     return `
