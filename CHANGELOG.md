@@ -1,3 +1,16 @@
+# v1.0.57 (Fri Dec 29 2023)
+
+#### 🐛 Bug Fix
+
+- new version [#155](https://github.com/AppQuality/appquality-design-system/pull/155) ([@iacopolea](https://github.com/iacopolea))
+- Refactor button [#154](https://github.com/AppQuality/appquality-design-system/pull/154) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.56 (Thu Dec 21 2023)
 
 #### 🐛 Bug Fix
