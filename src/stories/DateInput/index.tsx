@@ -120,8 +120,8 @@ export const DateInput = ({
         <Button
           title={buttonTitle}
           size="sm"
-          htmlType="button"
-          type="transparent"
+          type="button"
+          kind="transparent"
           onClick={show}
         >
           <Calendar />

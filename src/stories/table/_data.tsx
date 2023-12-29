@@ -11,7 +11,7 @@ export const dataSource: Row[] = [
     severity: "High",
     state: "Critical",
     action: (
-      <Button type="link" size="sm">
+      <Button kind="link" size="sm">
         view more
       </Button>
     ),
@@ -24,7 +24,7 @@ export const dataSource: Row[] = [
     severity: "Normal",
     state: "this col has a max width of 10ch",
     action: (
-      <Button type="link" size="sm">
+      <Button kind="link" size="sm">
         view more
       </Button>
     ),
@@ -36,7 +36,7 @@ export const dataSource: Row[] = [
     severity: "Normal",
     state: "Critical",
     action: (
-      <Button type="link" size="sm">
+      <Button kind="link" size="sm">
         view more
       </Button>
     ),

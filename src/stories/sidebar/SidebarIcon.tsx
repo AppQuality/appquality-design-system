@@ -19,7 +19,7 @@ const SidebarIconBase = ({
       className={className}
       onClick={() => (window.location.href = url)}
       size="sm"
-      type={"light"}
+      kind={"light"}
       data-testid="icon-button"
     >
       {icon}
