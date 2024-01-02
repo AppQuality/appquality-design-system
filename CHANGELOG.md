@@ -1,3 +1,15 @@
+# v1.0.58 (Tue Jan 02 2024)
+
+#### 🐛 Bug Fix
+
+- fix(Button): add props [#156](https://github.com/AppQuality/appquality-design-system/pull/156) (gianpaolo.sinatra@app-quality.com)
+
+#### Authors: 1
+
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+---
+
 # v1.0.57 (Fri Dec 29 2023)
 
 #### 🐛 Bug Fix
