@@ -6,13 +6,8 @@ import { ButtonProps } from "./_types";
 export const ButtonComponent = ({
   as = "button",
   type = "button",
-  kind,
-  size,
-  flat,
-  squared,
-  variant,
   ...props
 }: ButtonProps) => {
   let Component = as;
-  return <Component {...props} />;
+  return <Component type={type} {...props} />;
 };
