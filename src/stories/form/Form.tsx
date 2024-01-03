@@ -1,4 +1,5 @@
 import {
+  ErrorMessageProps,
   FieldProps,
   ErrorMessage as FormikErrorMessage,
   Field as FormikField,
@@ -12,32 +13,21 @@ import FormLabel from "./formlabel/FormLabel";
 import Input from "./input/Input";
 import { Radio } from "./radio/Radio";
 
-const ErrorMessageWrapper = styled.div`
+export const ErrorMessageWrapper = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => (
+  <StyledErrorMessage>
+    <ExclamationCircle title="Error" size={16} />
+    {children}
+  </StyledErrorMessage>
+);
+
+const StyledErrorMessage = styled.div`
   display: flex;
   align-items: center;
   gap: ${(props) => props.theme.grid.sizes[2]};
-`;
-
-const BasicErrorMessage = ({
-  name,
-  className,
-}: {
-  name: string;
-  className?: string;
-}) => (
-  <div className={className}>
-    <FormikErrorMessage name={name}>
-      {(msg) => (
-        <ErrorMessageWrapper>
-          <ExclamationCircle title="Error" size={16} />
-          {msg}
-        </ErrorMessageWrapper>
-      )}
-    </FormikErrorMessage>
-  </div>
-);
-
-export const ErrorMessage = styled(BasicErrorMessage)`
   color: ${(props) => props.theme.palette.danger};
   width: 100%;
   margin-top: 0.25rem;
@@ -46,6 +36,12 @@ export const ErrorMessage = styled(BasicErrorMessage)`
     display: none;
   }
 `;
+
+export const ErrorMessage = ({ ...props }: ErrorMessageProps) => (
+  <FormikErrorMessage {...props}>
+    {(msg) => <ErrorMessageWrapper>{msg}</ErrorMessageWrapper>}
+  </FormikErrorMessage>
+);
 
 export const Field = ({
   type = "text",
