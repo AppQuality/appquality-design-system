@@ -1,4 +1,4 @@
-import { Field } from "./Form";
+import { ErrorMessageWrapper, Field } from "./Form";
 import { Checkbox } from "./checkBox/Checkbox";
 import { Story, Meta } from "@storybook/react";
 import { Formik, Form, FormikProps } from "formik";
@@ -69,5 +69,8 @@ export const Template: Story = () => (
         </Form>
       )}
     </Formik>
+    <div className="aq-mb-3">
+      <ErrorMessageWrapper>Generic Error outside Formik</ErrorMessageWrapper>
+    </div>
   </>
 );
