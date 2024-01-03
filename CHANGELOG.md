@@ -1,3 +1,15 @@
+# v1.0.60 (Wed Jan 03 2024)
+
+#### 🐛 Bug Fix
+
+- Update error message icon styling in Form component [#158](https://github.com/AppQuality/appquality-design-system/pull/158) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.59 (Wed Jan 03 2024)
 
 #### 🐛 Bug Fix
