@@ -19,19 +19,23 @@ export const ErrorMessageWrapper = ({
   children: React.ReactNode;
 }) => (
   <StyledErrorMessage>
-    <ExclamationCircle title="Error" size={16} />
+    <ExclamationCircle className="error-message-icon" title="Error" size={16} />
     {children}
   </StyledErrorMessage>
 );
 
 const StyledErrorMessage = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: ${(props) => props.theme.grid.sizes[2]};
   color: ${(props) => props.theme.palette.danger};
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.875em;
+  .error-message-icon {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
   &:empty {
     display: none;
   }
