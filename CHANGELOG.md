@@ -1,3 +1,15 @@
+# v1.0.59 (Wed Jan 03 2024)
+
+#### 🐛 Bug Fix
+
+- Add ErrorMessageWrapper component and update Form.stories.tsx [#157](https://github.com/AppQuality/appquality-design-system/pull/157) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.58 (Tue Jan 02 2024)
 
 #### 🐛 Bug Fix
