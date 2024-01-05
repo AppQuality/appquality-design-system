@@ -1,3 +1,15 @@
+# v1.0.61 (Fri Jan 05 2024)
+
+#### 🐛 Bug Fix
+
+- Add onChange event to DateInput component [#159](https://github.com/AppQuality/appquality-design-system/pull/159) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.60 (Wed Jan 03 2024)
 
 #### 🐛 Bug Fix
