@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Datepicker as MobiScrollDatePicker,
   localeEn,
@@ -60,6 +61,7 @@ export const DateInput = ({
   } = {},
 }: DatepickerProps) => {
   let currentLocale = localeEn;
+  const ref = React.useRef<HTMLInputElement>(null);
   if (locale === "it") currentLocale = localeIt;
   if (locale === "es") currentLocale = localeEs;
   const [openPicker, setOpenPicker] = useState(false);
@@ -73,6 +75,10 @@ export const DateInput = ({
   };
   const onDatePick = (v: { value: Date; valueText: string }) => {
     setInputValue(v.valueText);
+    if (ref.current) {
+      ref.current.value = v.valueText;
+      ref.current.dispatchEvent(new Event("input", { bubbles: true }));
+    }
     onClose();
   };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,8 +92,9 @@ export const DateInput = ({
         name={name}
         type="text"
         value={inputValue}
-        onChange={handleInputChange}
+        onInput={handleInputChange}
         placeholder={placeholder}
+        ref={ref}
         {...inputProps}
       />
       <MobiScrollDatePicker
