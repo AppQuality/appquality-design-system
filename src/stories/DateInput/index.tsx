@@ -6,7 +6,7 @@ import {
   localeIt,
 } from "@appquality/mobiscroll";
 import { ChangeEventHandler, useState } from "react";
-import { Calendar } from "react-bootstrap-icons";
+import { CalendarEventFill as CalendarIcon } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Button } from "../button/Button";
 import { StyledInput as FormInput } from "../form/input/Input";
@@ -130,7 +130,7 @@ export const DateInput = ({
           kind="transparent"
           onClick={show}
         >
-          <Calendar />
+          <CalendarIcon />
         </Button>
       </span>
     </StyledInput>
