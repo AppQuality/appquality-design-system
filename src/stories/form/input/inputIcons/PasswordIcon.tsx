@@ -1,5 +1,6 @@
 import { EyeFill, EyeSlash } from "react-bootstrap-icons";
 import { Button } from "../../../button/Button";
+import { aqBootstrapTheme } from "../../../theme/defaultTheme";
 
 const PasswordIcon = ({
   type,
@@ -25,7 +26,7 @@ const PasswordIcon = ({
           kind="transparent"
           onClick={() => setType("password")}
         >
-          <EyeSlash />
+          <EyeSlash color={aqBootstrapTheme.variants.primary} />
         </Button>
       ) : (
         <Button
@@ -37,7 +38,7 @@ const PasswordIcon = ({
           kind="transparent"
           onClick={() => setType("text")}
         >
-          <EyeFill />
+          <EyeFill color={aqBootstrapTheme.variants.primary} />
         </Button>
       )}
     </span>

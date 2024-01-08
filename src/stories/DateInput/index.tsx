@@ -10,6 +10,7 @@ import { CalendarEventFill as CalendarIcon } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Button } from "../button/Button";
 import { StyledInput as FormInput } from "../form/input/Input";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 const StyledInput = styled(FormInput)`
   .mbsc-appquality.mbsc-textfield {
@@ -130,7 +131,7 @@ export const DateInput = ({
           kind="transparent"
           onClick={show}
         >
-          <CalendarIcon />
+          <CalendarIcon color={aqBootstrapTheme.variants.primary} />
         </Button>
       </span>
     </StyledInput>
