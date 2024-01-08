@@ -24,6 +24,7 @@ export interface DatepickerProps {
   id: string;
   name?: string;
   value?: string;
+  isInvalid?: boolean;
   minDate?: Date;
   maxDate?: Date;
   onOpen?: () => void;
