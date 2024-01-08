@@ -52,6 +52,7 @@ export const DateInput = ({
   onCancel,
   controls = ["date"],
   inputProps,
+  isInvalid,
   i18n: {
     locale = "en",
     placeholder,
@@ -87,7 +88,7 @@ export const DateInput = ({
     onChange && onChange(e);
   };
   return (
-    <StyledInput type="text">
+    <StyledInput type="text" isInvalid={isInvalid}>
       <input
         id={id}
         name={name}
