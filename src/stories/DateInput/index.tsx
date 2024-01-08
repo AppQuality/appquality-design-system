@@ -6,10 +6,11 @@ import {
   localeIt,
 } from "@appquality/mobiscroll";
 import { ChangeEventHandler, useState } from "react";
-import { Calendar } from "react-bootstrap-icons";
+import { CalendarEventFill as CalendarIcon } from "react-bootstrap-icons";
 import styled from "styled-components";
 import { Button } from "../button/Button";
 import { StyledInput as FormInput } from "../form/input/Input";
+import { aqBootstrapTheme } from "../theme/defaultTheme";
 
 const StyledInput = styled(FormInput)`
   .mbsc-appquality.mbsc-textfield {
@@ -23,6 +24,7 @@ export interface DatepickerProps {
   id: string;
   name?: string;
   value?: string;
+  isInvalid?: boolean;
   minDate?: Date;
   maxDate?: Date;
   onOpen?: () => void;
@@ -51,6 +53,7 @@ export const DateInput = ({
   onCancel,
   controls = ["date"],
   inputProps,
+  isInvalid,
   i18n: {
     locale = "en",
     placeholder,
@@ -86,7 +89,7 @@ export const DateInput = ({
     onChange && onChange(e);
   };
   return (
-    <StyledInput type="text">
+    <StyledInput type="text" isInvalid={isInvalid}>
       <input
         id={id}
         name={name}
@@ -130,7 +133,7 @@ export const DateInput = ({
           kind="transparent"
           onClick={show}
         >
-          <Calendar />
+          <CalendarIcon color={aqBootstrapTheme.variants.primary} />
         </Button>
       </span>
     </StyledInput>
