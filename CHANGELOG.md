@@ -1,3 +1,15 @@
+# v1.0.63 (Mon Jan 08 2024)
+
+#### 🐛 Bug Fix
+
+- new icons and colors [#161](https://github.com/AppQuality/appquality-design-system/pull/161) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.62 (Mon Jan 08 2024)
 
 #### 🐛 Bug Fix
