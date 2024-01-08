@@ -98,7 +98,6 @@ export const DateInput = ({
         {...inputProps}
       />
       <MobiScrollDatePicker
-        defaultValue={value}
         select="date"
         min={minDate}
         max={maxDate}
