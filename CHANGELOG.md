@@ -1,3 +1,15 @@
+# v1.0.62 (Mon Jan 08 2024)
+
+#### 🐛 Bug Fix
+
+- test dateinput fix [#160](https://github.com/AppQuality/appquality-design-system/pull/160) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.61 (Fri Jan 05 2024)
 
 #### 🐛 Bug Fix
