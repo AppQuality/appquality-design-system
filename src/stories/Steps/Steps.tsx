@@ -46,7 +46,7 @@ const Steps = ({
   });
   return (
     <StyledSteps className={className} direction={direction} {...props}>
-      <div className="steps">{items}</div>
+      <ul className="steps">{items}</ul>
     </StyledSteps>
   );
 };
