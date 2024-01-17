@@ -56,7 +56,11 @@ export const Step = ({
       <div className="step-status">
         <TransitionGroup className="step-status-icon">
           {status === "current" && (
-            <CSSTransition classNames="status-icon" timeout={animationTimeout}>
+            <CSSTransition
+              aria-hidden="true"
+              classNames="status-icon"
+              timeout={animationTimeout}
+            >
               {direction === "vertical" ? (
                 <ArrowRightCircle />
               ) : (
@@ -65,12 +69,20 @@ export const Step = ({
             </CSSTransition>
           )}
           {status === "completed" && (
-            <CSSTransition classNames="status-icon" timeout={animationTimeout}>
+            <CSSTransition
+              aria-hidden="true"
+              classNames="status-icon"
+              timeout={animationTimeout}
+            >
               <CheckCircleFill />
             </CSSTransition>
           )}
           {status === "inactive" && (
-            <CSSTransition classNames="status-icon" timeout={animationTimeout}>
+            <CSSTransition
+              aria-hidden="true"
+              classNames="status-icon"
+              timeout={animationTimeout}
+            >
               <Circle />
             </CSSTransition>
           )}

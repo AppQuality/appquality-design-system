@@ -84,7 +84,7 @@ const verticalProgressBar = css`
   }
 `;
 
-export const StyledStep = styled.div<{
+export const StyledStep = styled.li<{
   status: StepProps["status"];
   direction: StepProps["direction"];
   clickable: boolean;
