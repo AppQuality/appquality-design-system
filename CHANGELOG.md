@@ -1,3 +1,15 @@
+# v1.0.65 (Wed Jan 17 2024)
+
+#### 🐛 Bug Fix
+
+- Add sr-only class for screen reader accessibility [#163](https://github.com/AppQuality/appquality-design-system/pull/163) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.64 (Wed Jan 17 2024)
 
 #### 🐛 Bug Fix
