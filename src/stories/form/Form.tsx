@@ -1,5 +1,4 @@
 import {
-  ErrorMessageProps,
   FieldProps,
   ErrorMessage as FormikErrorMessage,
   Field as FormikField,
@@ -14,13 +13,11 @@ import Input from "./input/Input";
 import { Radio } from "./radio/Radio";
 
 export const ErrorMessageWrapper = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => (
-  <StyledErrorMessage>
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <StyledErrorMessage {...props}>
     <ExclamationCircle className="error-message-icon" title="Error" size={16} />
-    {children}
+    {props.children}
   </StyledErrorMessage>
 );
 
@@ -41,9 +38,11 @@ const StyledErrorMessage = styled.div`
   }
 `;
 
-export const ErrorMessage = ({ ...props }: ErrorMessageProps) => (
-  <FormikErrorMessage {...props}>
-    {(msg) => <ErrorMessageWrapper>{msg}</ErrorMessageWrapper>}
+export const ErrorMessage = ({
+  ...props
+}: { name: string } & React.HTMLAttributes<HTMLDivElement>) => (
+  <FormikErrorMessage name={props.name}>
+    {(msg) => <ErrorMessageWrapper {...props}>{msg}</ErrorMessageWrapper>}
   </FormikErrorMessage>
 );
 
