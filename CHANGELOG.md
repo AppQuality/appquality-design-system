@@ -1,3 +1,15 @@
+# v1.0.67 (Wed Jan 17 2024)
+
+#### 🐛 Bug Fix
+
+- Add accessibility support to Toastr component [#165](https://github.com/AppQuality/appquality-design-system/pull/165) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.66 (Wed Jan 17 2024)
 
 #### 🐛 Bug Fix
