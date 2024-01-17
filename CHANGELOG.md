@@ -1,3 +1,15 @@
+# v1.0.66 (Wed Jan 17 2024)
+
+#### 🐛 Bug Fix
+
+- refactor(steps): components to be list and aria-hide icons [#164](https://github.com/AppQuality/appquality-design-system/pull/164) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.65 (Wed Jan 17 2024)
 
 #### 🐛 Bug Fix
