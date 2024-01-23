@@ -1,3 +1,17 @@
+# v1.0.68 (Tue Jan 23 2024)
+
+#### 🐛 Bug Fix
+
+- data tracking in header [#167](https://github.com/AppQuality/appquality-design-system/pull/167) ([@iacopolea](https://github.com/iacopolea) gianpaolo.sinatra@app-quality.com)
+- Update UserInfo component with data-tracking attributes [#166](https://github.com/AppQuality/appquality-design-system/pull/166) (gianpaolo.sinatra@app-quality.com)
+
+#### Authors: 2
+
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.67 (Wed Jan 17 2024)
 
 #### 🐛 Bug Fix
