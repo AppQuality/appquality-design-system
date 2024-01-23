@@ -22,17 +22,28 @@ export const UserInfo = ({
       {user ? (
         <>
           <div className={`user-avatar ${user.verified ? "verified" : ""}`}>
-            <img alt={user.name + " " + user.surname} src={user.image} />
+            <img
+              aria-hidden="true"
+              alt={user.name + " " + user.surname}
+              src={user.image}
+            />
           </div>
           <Text as="div" className="user-name">
             {user.name} {user.surname}{" "}
             <Text as="span" className="aq-text-primaryVariant user-id">
+              <span className="sr-only">Tester ID: </span>
               <b>T{user.id}</b>
             </Text>
           </Text>
-          <Button size="medium" kind="link" onClick={onLogout}>
+          <Button
+            size="medium"
+            kind="link"
+            onClick={onLogout}
+            data-tracking="logout-cta"
+          >
+            <span className="sr-only">Logout</span>
             <span className="aq-text-danger">
-              <BoxArrowRight />
+              <BoxArrowRight aria-hidden="true" />
             </span>
           </Button>
         </>
@@ -42,6 +53,7 @@ export const UserInfo = ({
           size="medium"
           kind="link"
           onClick={onLogin}
+          data-tracking="header-login-link"
         >
           {loginText}
         </Button>
