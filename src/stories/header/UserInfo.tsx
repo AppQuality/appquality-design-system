@@ -35,7 +35,12 @@ export const UserInfo = ({
               <b>T{user.id}</b>
             </Text>
           </Text>
-          <Button size="medium" kind="link" onClick={onLogout}>
+          <Button
+            size="medium"
+            kind="link"
+            onClick={onLogout}
+            data-tracking="logout-cta"
+          >
             <span className="sr-only">Logout</span>
             <span className="aq-text-danger">
               <BoxArrowRight aria-hidden="true" />
@@ -48,6 +53,7 @@ export const UserInfo = ({
           size="medium"
           kind="link"
           onClick={onLogin}
+          data-tracking="header-login-link"
         >
           {loginText}
         </Button>
