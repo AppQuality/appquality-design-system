@@ -1,3 +1,15 @@
+# v1.0.70 (Mon Feb 12 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Import correct type ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.69 (Mon Feb 12 2024)
 
 #### 🐛 Bug Fix
