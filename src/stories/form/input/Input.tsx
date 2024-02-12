@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
+import { InputArgs } from "./_types";
 import PasswordIcon from "./inputIcons/PasswordIcon";
 import SearchIcon from "./inputIcons/SearchIcon";
-import { InputArgs } from "./types";
 
 const Input = ({
   id,

@@ -1,7 +1,7 @@
 import { EyeFill, EyeSlash } from "react-bootstrap-icons";
 import { Button } from "../../../button/Button";
 import { aqBootstrapTheme } from "../../../theme/defaultTheme";
-import { InputArgs } from "../types";
+import { InputArgs } from "../_types";
 
 const PasswordIcon = ({
   type,
