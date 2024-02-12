@@ -1,14 +1,13 @@
-import { ErrorMessageWrapper, Field } from "./Form";
-import { Checkbox } from "./checkBox/Checkbox";
-import { Story, Meta } from "@storybook/react";
-import { Formik, Form, FormikProps } from "formik";
-import { validationSchema, initialValues } from "./_data";
+import { Meta, Story } from "@storybook/react";
+import { Form, Formik, FormikProps } from "formik";
 import * as yup from "yup";
-import { Text } from "../typography/Typography";
-import { Datepicker } from "./datepicker/Datepicker";
-import { DatepickerGlobalStyle } from "./datepicker/_style";
-import FormLabel from "./formlabel/FormLabel";
 import { Select } from "../select/Select";
+import { Text } from "../typography/Typography";
+import { ErrorMessageWrapper, Field } from "./Form";
+import { initialValues, validationSchema } from "./_data";
+import { Checkbox } from "./checkBox/Checkbox";
+import { Datepicker } from "./datepicker/Datepicker";
+import FormLabel from "./formlabel/FormLabel";
 
 export default {
   title: "Forms",
@@ -17,7 +16,6 @@ export default {
 
 export const Template: Story = () => (
   <>
-    <DatepickerGlobalStyle />
     <Formik
       initialValues={initialValues}
       validationSchema={yup.object(validationSchema)}
