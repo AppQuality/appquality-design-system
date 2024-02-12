@@ -1,12 +1,9 @@
-import {
-  Datepicker as MobiScrollDatePicker,
-  localeIt,
-  localeEn,
-  localeEs,
-} from "@appquality/mobiscroll";
+import { DateInput } from "../../DateInput";
 import { DatepickerProps } from "./_types";
 
 export const Datepicker = ({
+  id,
+  name,
   select,
   value,
   minDate,
@@ -21,29 +18,31 @@ export const Datepicker = ({
   cancelText = "Cancel",
   dateFormat = "DD/MM/YYYY",
 }: DatepickerProps) => {
-  let currentLocale = localeEn;
-  if (locale === "it") currentLocale = localeIt;
-  if (locale === "es") currentLocale = localeEs;
   return (
-    <>
-      <MobiScrollDatePicker
-        defaultValue={value}
-        select={select}
-        min={minDate}
-        max={maxDate}
-        locale={currentLocale}
-        onOpen={onOpen}
-        onCancel={onCancel}
-        onChange={onChange}
-        placeholder={placeholder}
-        dateFormat={dateFormat}
-        setText={setText}
-        cancelText={cancelText}
-        buttons={["cancel", "set"]}
-        theme="appquality"
-        controls={[control]}
-        themeVariant="light"
-      />
-    </>
+    <DateInput
+      id={id}
+      name={name}
+      minDate={minDate}
+      maxDate={maxDate}
+      onChange={(e) => {
+        if (!onChange) return;
+
+        const date = new Date(e.target.value);
+
+        const day = ("0" + date.getDate()).slice(-2);
+        const month = ("0" + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear().toString();
+
+        const formattedDate = dateFormat
+          .replace("DD", day)
+          .replace("MM", month)
+          .replace("YYYY", year);
+
+        onChange({
+          value: date,
+          valueText: formattedDate,
+        });
+      }}
+    />
   );
 };
