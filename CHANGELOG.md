@@ -1,3 +1,15 @@
+# v1.0.71 (Mon Feb 12 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Rename typefile ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.70 (Mon Feb 12 2024)
 
 #### ⚠️ Pushed to `main`
