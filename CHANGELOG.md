@@ -1,3 +1,15 @@
+# v1.0.72 (Mon Feb 12 2024)
+
+#### ⚠️ Pushed to `main`
+
+- fix: Rename types file ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.71 (Mon Feb 12 2024)
 
 #### ⚠️ Pushed to `main`
