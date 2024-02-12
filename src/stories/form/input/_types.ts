@@ -1,6 +1,6 @@
 import { ChangeEventHandler } from "react";
 
-type InputArgs = {
+export type InputArgs = {
   id: string;
   name?: string;
   className?: string;
@@ -50,5 +50,3 @@ type InputArgs = {
       onChange?: (val: string) => void;
     }
 );
-
-export { InputArgs };
