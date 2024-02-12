@@ -1,3 +1,16 @@
+# v1.0.69 (Mon Feb 12 2024)
+
+#### 🐛 Bug Fix
+
+- Remove mobiscroll [#170](https://github.com/AppQuality/appquality-design-system/pull/170) ([@d-beezee](https://github.com/d-beezee))
+- Remove mobiscrol [#169](https://github.com/AppQuality/appquality-design-system/pull/169) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.68 (Tue Jan 23 2024)
 
 #### 🐛 Bug Fix
