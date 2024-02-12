@@ -1,6 +1,7 @@
 import { EyeFill, EyeSlash } from "react-bootstrap-icons";
 import { Button } from "../../../button/Button";
 import { aqBootstrapTheme } from "../../../theme/defaultTheme";
+import { InputArgs } from "../types";
 
 const PasswordIcon = ({
   type,
@@ -8,7 +9,7 @@ const PasswordIcon = ({
   i18n,
 }: {
   type: string;
-  setType: (value: string) => void;
+  setType: (value: InputArgs["type"]) => void;
   i18n?: {
     showPassword?: string;
     hidePassword?: string;
