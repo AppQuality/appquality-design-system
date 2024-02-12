@@ -35,6 +35,18 @@ type InputArgs = {
       type: "number";
       onChange?: (val: string) => void;
     }
+  | {
+      type: "tel";
+      onChange?: (val: string) => void;
+    }
+  | {
+      type: "url";
+      onChange?: (val: string) => void;
+    }
+  | {
+      type: "email";
+      onChange?: (val: string) => void;
+    }
 );
 
 export { InputArgs };
