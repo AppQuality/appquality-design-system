@@ -1,3 +1,5 @@
+import { ChangeEventHandler } from "react";
+
 type InputArgs = {
   id: string;
   name?: string;
