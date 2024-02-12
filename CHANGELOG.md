@@ -1,3 +1,15 @@
+# v1.0.73 (Mon Feb 12 2024)
+
+#### ⚠️ Pushed to `main`
+
+- chore: Revert mobiscroll updates ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.68 (Tue Jan 23 2024)
 
 #### 🐛 Bug Fix
