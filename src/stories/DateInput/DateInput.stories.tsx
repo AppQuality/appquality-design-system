@@ -2,7 +2,6 @@ import { DateInput } from ".";
 import { Story, Meta } from "@storybook/react";
 import { DatepickerGlobalStyle } from "./_style";
 import { useState } from "react";
-import { ErrorMessage } from "formik";
 import { ErrorMessageWrapper } from "../form/Form";
 
 export default {
