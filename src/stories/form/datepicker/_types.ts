@@ -2,6 +2,7 @@ export interface DatepickerProps {
   select?: "date" | "range";
   value?: Date;
   id: string;
+  name?: string;
   minDate?: Date;
   maxDate?: Date;
   locale?: string;

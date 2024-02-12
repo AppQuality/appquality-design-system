@@ -3,9 +3,11 @@ import styled from "styled-components";
 import { InvalidFocusStyle, InvalidInputStyle } from "../_style";
 import PasswordIcon from "./inputIcons/PasswordIcon";
 import SearchIcon from "./inputIcons/SearchIcon";
+import { InputArgs } from "./types";
 
 const Input = ({
   id,
+  name,
   type,
   className,
   placeholder,
@@ -16,33 +18,25 @@ const Input = ({
   onChange,
   autocomplete = true,
   i18n,
-}: {
-  id: string;
-  type: string;
-  className?: string;
-  placeholder?: string;
-  value?: string;
-  disabled?: boolean;
-  autocomplete?: boolean;
-  isInvalid?: boolean;
-  extra?: any;
-  onChange?: (val: string) => void;
-  i18n?: {
-    showPassword?: string;
-    hidePassword?: string;
-  };
-}) => {
-  const [currentType, setType] = useState(type);
+  ...props
+}: InputArgs) => {
+  const [currentType, setType] = useState<InputArgs["type"]>(type);
   return (
     <StyledInput type={type} isInvalid={isInvalid} className={className}>
       <input
         id={id}
+        name={name}
         type={currentType}
         placeholder={placeholder}
         disabled={disabled}
         value={value}
         autoComplete={autocomplete ? null : "off"}
-        onChange={(e) => onChange && onChange(e.target.value)}
+        max={"max" in props ? props.max : undefined}
+        min={"min" in props ? props.min : undefined}
+        onChange={(e) => {
+          onChange &&
+            (type === "date" ? onChange(e) : onChange(e.target.value));
+        }}
         {...extra}
       />
       {type === "search" && <SearchIcon />}

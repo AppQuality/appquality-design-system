@@ -1,25 +1,6 @@
-import React from "react";
-import {
-  Datepicker as MobiScrollDatePicker,
-  localeEn,
-  localeEs,
-  localeIt,
-} from "@appquality/mobiscroll";
-import { ChangeEventHandler, useState } from "react";
-import { CalendarEventFill as CalendarIcon } from "react-bootstrap-icons";
-import styled from "styled-components";
-import { Button } from "../button/Button";
-import { StyledInput as FormInput } from "../form/input/Input";
-import { aqBootstrapTheme } from "../theme/defaultTheme";
+import React, { ChangeEventHandler } from "react";
+import Input from "../form/input/Input";
 
-const StyledInput = styled(FormInput)`
-  .mbsc-appquality.mbsc-textfield {
-    width: 0;
-    height: 0px;
-    border: none;
-    padding: 0px;
-  }
-`;
 export interface DatepickerProps {
   id: string;
   name?: string;
@@ -42,6 +23,13 @@ export interface DatepickerProps {
   };
 }
 
+const mapDate = (date: Date) => {
+  const year = date.getFullYear();
+  const month = ("0" + (date.getMonth() + 1)).slice(-2); // Months are 0 based, so +1 and pad with 0
+  const day = ("0" + date.getDate()).slice(-2);
+  return `${year}-${month}-${day}`;
+};
+
 export const DateInput = ({
   id,
   name,
@@ -62,80 +50,22 @@ export const DateInput = ({
     dateFormat = "DD-MM-YYYY",
     buttonTitle = "Open datepicker",
   } = {},
-}: DatepickerProps) => {
-  let currentLocale = localeEn;
-  const ref = React.useRef<HTMLInputElement>(null);
-  if (locale === "it") currentLocale = localeIt;
-  if (locale === "es") currentLocale = localeEs;
-  const [openPicker, setOpenPicker] = useState(false);
-  const [inputValue, setInputValue] = useState<string>(value || "");
-
-  const show = () => {
-    setOpenPicker(true);
-  };
-  const onClose = () => {
-    setOpenPicker(false);
-  };
-  const onDatePick = (v: { value: Date; valueText: string }) => {
-    setInputValue(v.valueText);
-    if (ref.current) {
-      ref.current.value = v.valueText;
-      ref.current.dispatchEvent(new Event("input", { bubbles: true }));
-    }
-    onClose();
-  };
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-    onChange && onChange(e);
-  };
+  ...props
+}: DatepickerProps &
+  Omit<
+    React.InputHTMLAttributes<HTMLInputElement>,
+    "type" | "min" | "max" | "onChange"
+  >) => {
   return (
-    <StyledInput type="text" isInvalid={isInvalid}>
-      <input
-        id={id}
-        name={name}
-        type="text"
-        value={inputValue}
-        onInput={handleInputChange}
-        placeholder={placeholder}
-        ref={ref}
-        {...inputProps}
-      />
-      <MobiScrollDatePicker
-        select="date"
-        min={minDate}
-        max={maxDate}
-        locale={currentLocale}
-        onOpen={onOpen}
-        onCancel={onCancel}
-        onChange={onDatePick}
-        placeholder={placeholder}
-        dateFormat={dateFormat}
-        setText={setText}
-        cancelText={cancelText}
-        buttons={["cancel", "set"]}
-        theme="appquality"
-        controls={controls}
-        themeVariant="light"
-        showOnFocus={false}
-        showOnClick={false}
-        isOpen={openPicker}
-        onClose={onClose}
-        inputProps={{
-          "aria-hidden": "true",
-          tabIndex: -1,
-        }}
-      />
-      <span className="input-group-button">
-        <Button
-          title={buttonTitle}
-          size="sm"
-          type="button"
-          kind="transparent"
-          onClick={show}
-        >
-          <CalendarIcon color={aqBootstrapTheme.variants.primary} />
-        </Button>
-      </span>
-    </StyledInput>
+    <Input
+      id={id}
+      name={name}
+      isInvalid={isInvalid}
+      onChange={onChange}
+      max={maxDate ? mapDate(maxDate) : undefined}
+      min={minDate ? mapDate(minDate) : undefined}
+      type="date"
+      {...props}
+    />
   );
 };
