@@ -60,6 +60,9 @@ export const containers = (theme: DefaultTheme) => {
             max-width: ${responsiveWidth[key]}
           }
         }
+        .container.container-fluid {
+          max-width: 100%};
+        }
         `;
       }
       return "";
