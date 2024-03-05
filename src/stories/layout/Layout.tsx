@@ -60,9 +60,16 @@ export const CSSGrid = styled.div(
 
 interface ContainerProps extends LayoutProps {
   className?: string;
+  isFluid?: boolean;
 }
-export const Container = ({ children, className }: ContainerProps) => {
+export const Container = ({ children, className, isFluid }: ContainerProps) => {
   return (
-    <div className={`container ${className ? className : ""}`}>{children}</div>
+    <div
+      className={`container${isFluid ? " container-fluid" : ""} ${
+        className ? className : ""
+      }`}
+    >
+      {children}
+    </div>
   );
 };
