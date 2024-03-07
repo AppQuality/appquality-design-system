@@ -1,3 +1,23 @@
+# v1.0.76 (Thu Mar 07 2024)
+
+#### 🐛 Bug Fix
+
+- chore: update auto [#175](https://github.com/AppQuality/appquality-design-system/pull/175) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- update auto package [#174](https://github.com/AppQuality/appquality-design-system/pull/174) ([@iacopolea](https://github.com/iacopolea))
+- Refactor container class names in Layout component [#173](https://github.com/AppQuality/appquality-design-system/pull/173) ([@iacopolea](https://github.com/iacopolea))
+- feat: Add fluid container support to Container component [#171](https://github.com/AppQuality/appquality-design-system/pull/171) ([@iacopolea](https://github.com/iacopolea))
+
+#### ⚠️ Pushed to `main`
+
+- Test release ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.75 (Tue Feb 13 2024)
 
 
