@@ -30,7 +30,7 @@ build-storybook.log
 /test-results/
 /playwright-report/
 /blob-report/
-/playwright/.cache/
+/playwright/.cache/ 
 /test-results/
 /playwright-report/
 /blob-report/
