@@ -1,5 +1,5 @@
-import { PillProps } from "./_types";
 import { Text } from "../typography/Typography";
+import { PillProps } from "./_types";
 
 export const BasicPill = ({
   className,
@@ -7,9 +7,10 @@ export const BasicPill = ({
   type,
   flat = false,
   style,
+  title,
 }: PillProps) => {
   return (
-    <Text as="span" small className={className} style={style}>
+    <Text title={title} as="span" small className={className} style={style}>
       {children}
     </Text>
   );
