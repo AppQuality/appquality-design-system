@@ -1,3 +1,15 @@
+# v1.0.77 (Wed Mar 20 2024)
+
+#### 🐛 Bug Fix
+
+- feat: Add title to multiselect pill [#176](https://github.com/AppQuality/appquality-design-system/pull/176) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v1.0.76 (Thu Mar 07 2024)
 
 #### 🐛 Bug Fix
