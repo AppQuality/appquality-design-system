@@ -1,5 +1,5 @@
 import { ChevronDown, X } from "react-bootstrap-icons";
-import { components, Styles, Theme } from "react-select";
+import { Styles, Theme, components } from "react-select";
 import { Pill } from "../pill/Pill";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 
@@ -24,6 +24,7 @@ const MultiValueContainer = (
     <components.MultiValueContainer {...props}>
       <Pill
         type="secondary"
+        title={props.data.label}
         flat
         style={{
           maxWidth: "100%",
