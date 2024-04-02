@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { useState } from "react";
 import { DateInput } from ".";
 import { ErrorMessageWrapper } from "../form/Form";
@@ -8,7 +8,7 @@ export default {
   component: DateInput,
 } as Meta;
 
-const DatepickerTemplate: Story = (args) => {
+const DatepickerTemplate: StoryFn = (args) => {
   function getEighteenYearsAgo(): string {
     const date = new Date();
     date.setFullYear(date.getFullYear() - 18);

@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Select } from "./Select";
 import { basicOptions, getAsyncOptions, groupedOptions } from "./_data";
 import { SelectProps } from "./_types";
@@ -8,7 +8,7 @@ export default {
   component: Select,
 } as Meta;
 
-const Template: Story<SelectProps> = (args) => {
+const Template: StoryFn<SelectProps> = (args) => {
   return <Select {...args} />;
 };
 

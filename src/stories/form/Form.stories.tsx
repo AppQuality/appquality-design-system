@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Form, Formik, FormikProps } from "formik";
 import * as yup from "yup";
 import { Select } from "../select/Select";
@@ -14,7 +14,7 @@ export default {
   component: Field,
 } as Meta;
 
-export const Template: Story = () => (
+export const Template: StoryFn = () => (
   <>
     <Formik
       initialValues={initialValues}

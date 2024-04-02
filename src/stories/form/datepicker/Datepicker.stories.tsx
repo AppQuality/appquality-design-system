@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Datepicker } from "./Datepicker";
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: Datepicker,
 } as Meta;
 
-const DatepickerTemplate: Story = (args) => (
+const DatepickerTemplate: StoryFn = (args) => (
   <>
     <h2>Seleziona una data</h2>
     <Datepicker {...args} id="test1" placeholder="Select a date... " />

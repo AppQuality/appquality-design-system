@@ -1,13 +1,13 @@
-import { Story, Meta } from "@storybook/react";
-import { PageTitleProps } from "./_types";
+import { Meta, StoryFn } from "@storybook/react";
 import { PageTitle } from "./PageTitle";
+import { PageTitleProps } from "./_types";
 
 export default {
   title: "Page Title",
   component: PageTitle,
 } as Meta;
 
-const Template: Story<PageTitleProps> = (args) => (
+const Template: StoryFn<PageTitleProps> = (args) => (
   <PageTitle {...args}>Header</PageTitle>
 );
 

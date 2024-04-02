@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ChevronLeft, ChevronRight, Search } from "react-bootstrap-icons";
 import { ThemeProvider } from "styled-components";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
@@ -10,12 +10,12 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => (
+const Template: StoryFn<ButtonProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <Button {...args} />
   </ThemeProvider>
 );
-const GroupTemplate: Story<ButtonProps> = (args) => (
+const GroupTemplate: StoryFn<ButtonProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <ButtonGroup>
       <Button flat={true}>

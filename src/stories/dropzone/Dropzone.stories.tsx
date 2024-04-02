@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Dropzone } from "./Dropzone";
 import { DropzoneProps } from "./_types";
 
@@ -7,7 +7,7 @@ export default {
   component: Dropzone,
 } as Meta;
 
-const Template: Story<DropzoneProps> = (args) => {
+const Template: StoryFn<DropzoneProps> = (args) => {
   return <Dropzone {...args} />;
 };
 

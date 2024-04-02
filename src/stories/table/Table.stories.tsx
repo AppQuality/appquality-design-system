@@ -1,22 +1,22 @@
-import { TableProps } from "./_types";
+import { Meta, StoryFn } from "@storybook/react";
 import { Table } from "./Table";
-import { Story, Meta } from "@storybook/react";
 import {
-  dataSource,
   columns,
-  columnsWithOrderBy,
-  dataSourceLong,
-  columnsLong,
-  dataSourceAlternative,
   columnsAlternative,
+  columnsLong,
+  columnsWithOrderBy,
+  dataSource,
+  dataSourceAlternative,
+  dataSourceLong,
 } from "./_data";
+import { TableProps } from "./_types";
 
 export default {
   title: "Table",
   component: Table,
 } as Meta;
 
-const Template: Story<TableProps> = (args) => {
+const Template: StoryFn<TableProps> = (args) => {
   return <Table {...args} />;
 };
 

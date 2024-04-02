@@ -1,6 +1,6 @@
-import { Story, Meta } from "@storybook/react";
-import { Steps, StepsProps } from "./Steps";
+import { Meta, StoryFn } from "@storybook/react";
 import { useState } from "react";
+import { Steps, StepsProps } from "./Steps";
 
 export default {
   title: "Steps",
@@ -28,7 +28,7 @@ const data = [
   },
 ];
 
-const Template: Story<StepsProps> = (args) => {
+const Template: StoryFn<StepsProps> = (args) => {
   return (
     <Steps {...args} className="aq-m-3">
       {data.map((item, index) => (
@@ -42,7 +42,7 @@ const Template: Story<StepsProps> = (args) => {
     </Steps>
   );
 };
-const TemplateClickable: Story<StepsProps> = (args) => {
+const TemplateClickable: StoryFn<StepsProps> = (args) => {
   const [active, setActive] = useState(0);
   return (
     <Steps
@@ -63,7 +63,7 @@ const TemplateClickable: Story<StepsProps> = (args) => {
   );
 };
 
-const TemplateClickableControl: Story<StepsProps> = (args) => {
+const TemplateClickableControl: StoryFn<StepsProps> = (args) => {
   const [active, setActive] = useState(1);
 
   const handleChange = (index: number, current: number) => {
