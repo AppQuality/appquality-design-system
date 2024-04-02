@@ -35,6 +35,6 @@ jobs:
           #👇 npm token, see https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/ to obtain it
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm ci
-          npm run build
-          npm run release
+          yarn --frozen-lockfile
+          yarn run build
+          yarn run release
