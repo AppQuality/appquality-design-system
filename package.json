@@ -96,7 +96,7 @@
     "react-scripts": "^5",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.1",
-    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "storybook": "^8.0.5",
     "styled-components": "^6",
     "tslib": "^2.3.0",

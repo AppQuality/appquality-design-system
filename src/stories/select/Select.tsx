@@ -1,16 +1,16 @@
+import { ChangeEvent, useEffect, useReducer, useState } from "react";
 import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
 import Creatable from "react-select/creatable";
-import React, { ChangeEvent, useEffect, useReducer, useState } from "react";
 import { aqTheme, customComponents, customStyle } from "./_styles";
 
+import FormLabel from "../form/formlabel/FormLabel";
 import {
-  Option,
   GetOptionsAsync,
+  Option,
   OptionAction,
   OptionActionType,
   SelectProps,
 } from "./_types";
-import FormLabel from "../form/formlabel/FormLabel";
 
 function updateOptions(state: Option[], action: OptionAction): Option[] {
   const { type, payload } = action;
@@ -30,7 +30,6 @@ function updateOptions(state: Option[], action: OptionAction): Option[] {
 }
 
 let searchBuffer = "";
-let timer: NodeJS.Timeout | false = false;
 
 export const Select = ({
   label,
@@ -102,7 +101,7 @@ export const Select = ({
     type: OptionActionType,
     fn: GetOptionsAsync,
     start: number,
-    search?: string
+    search?: string,
   ) => {
     const res = await fn(start, search);
     setMore(res.more);
@@ -117,10 +116,9 @@ export const Select = ({
 
   const handleInputChange = (value: string, actionMeta: InputActionMeta) => {
     if (options instanceof Function) {
-      timer = false;
       searchBuffer = value;
       setSearching(value);
-      timer = setTimeout(function () {
+      setTimeout(function () {
         if (searchBuffer.length >= 2) {
           setLoading(true);
           setAsyncRes("set", options, 0, searchBuffer).finally(() => {
