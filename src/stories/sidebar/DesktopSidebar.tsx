@@ -61,8 +61,9 @@ const SidebarWrapper = styled.div(({ theme }: { theme: DefaultTheme }) => {
 });
 
 const SidebarIcons = styled.div``;
-const SidebarItems = styled.div(({ open = false }: { open: boolean }) => {
-  return `
+const SidebarItems = styled.div<{ open: boolean }>(
+  ({ open = false }: { open: boolean }) => {
+    return `
     transition: transform .2s ease;
     width: ${sidebarItemsWidth}px;
     transform: translate3d(${open ? `${sidebarWidth}px` : "-100%"} ,0,0);
@@ -72,7 +73,8 @@ const SidebarItems = styled.div(({ open = false }: { open: boolean }) => {
   		margin: 0 8px;
     }
 `;
-});
+  }
+);
 
 export const DesktopSidebar = ({
   children,

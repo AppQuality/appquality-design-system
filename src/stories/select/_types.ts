@@ -37,7 +37,7 @@ export interface SelectProps /*extends GenericFieldInterface*/ {
   isSearchable?: boolean;
   menuTargetQuery?: string;
   menuPlacement?: MenuPlacement;
-  formatCreateLabel?: (value: string) => React.ReactNode;
+  formatCreateLabel?: (inputValue: string) => React.ReactNode;
   noOptionsMessage?: () => string;
 }
 

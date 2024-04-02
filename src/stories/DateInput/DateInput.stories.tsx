@@ -1,7 +1,6 @@
-import { DateInput } from ".";
-import { Story, Meta } from "@storybook/react";
-import { DatepickerGlobalStyle } from "./_style";
+import { Meta, Story } from "@storybook/react";
 import { useState } from "react";
+import { DateInput } from ".";
 import { ErrorMessageWrapper } from "../form/Form";
 
 export default {
@@ -24,7 +23,6 @@ const DatepickerTemplate: Story = (args) => {
   const [isInvalid, setIsInvalid] = useState(false);
   return (
     <>
-      <DatepickerGlobalStyle />
       <label htmlFor="test1">
         Birthdate - min 18 years old (example events in console log)
       </label>
