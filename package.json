@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "1.0.50-canary",
+  "version": "1.0.51-canary",
   "dependencies": {
     "formik": "^2.2.9",
     "react-bootstrap-icons": "^1.5.0",
