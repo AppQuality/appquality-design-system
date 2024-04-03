@@ -44,7 +44,7 @@ export const Datepicker = ({
   dateFormat = "DD/MM/YYYY",
 }: DatepickerProps) => {
   const [currentDate, setCurrentDate] = useState(
-    value ? formatDate(value) : ""
+    value ? (typeof value === "string" ? value : formatDate(value)) : "",
   );
   if (control === "time") {
     return (
