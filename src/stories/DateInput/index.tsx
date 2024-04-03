@@ -10,14 +10,36 @@ const StyledInput = styled(FormInput)`
     padding: 0px;
   }
 `;
+function formatDate(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
 
 export const DateInput = ({
   isInvalid,
+  maxDate,
+  minDate,
+  inputProps,
   ...props
-}: { isInvalid?: boolean } & React.InputHTMLAttributes<HTMLInputElement>) => {
+}: {
+  isInvalid?: boolean;
+  maxDate?: Date;
+  minDate?: Date;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+} & React.InputHTMLAttributes<HTMLInputElement>) => {
   return (
     <StyledInput type="text" isInvalid={isInvalid}>
-      <input id={props.id} name={props.name} type="date" {...props} />
+      <input
+        id={props.id}
+        name={props.name}
+        type="date"
+        max={maxDate ? formatDate(maxDate) : undefined}
+        min={minDate ? formatDate(minDate) : undefined}
+        {...props}
+        {...inputProps}
+      />
     </StyledInput>
   );
 };

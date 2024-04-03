@@ -9,15 +9,10 @@ export default {
 } as Meta;
 
 const DatepickerTemplate: StoryFn = (args) => {
-  function getEighteenYearsAgo(): string {
+  function getEighteenYearsAgo() {
     const date = new Date();
     date.setFullYear(date.getFullYear() - 18);
-
-    const year = date.getFullYear();
-    const month = ("0" + (date.getMonth() + 1)).slice(-2); // Months are 0 based, so +1 and pad with 0
-    const day = ("0" + date.getDate()).slice(-2);
-
-    return `${year}-${month}-${day}`;
+    return date;
   }
   const [value, setValue] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
@@ -31,7 +26,7 @@ const DatepickerTemplate: StoryFn = (args) => {
         isInvalid={isInvalid}
         id="test1"
         value={value}
-        max={getEighteenYearsAgo()}
+        maxDate={getEighteenYearsAgo()}
         onChange={(e) => setValue(e.target.value)}
         onBlur={(e) => {
           setIsInvalid(!value);
