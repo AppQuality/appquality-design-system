@@ -30,7 +30,9 @@ const TimePicker = ({
   value: DatepickerProps["value"];
   onChange: DatepickerProps["onChange"];
 }) => {
-  const [time, setTime] = useState(value ? formatTime(value) : "");
+  const [time, setTime] = useState(
+    value ? (typeof value === "string" ? value : formatTime(value)) : "",
+  );
   return (
     <StyledInput type="text">
       <InputMask
