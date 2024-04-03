@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InputMask from "react-input-mask";
+import InputMask, { InputState } from "react-input-mask";
 import { StyledInput } from "../input/Input";
 import { DatepickerProps } from "./_types";
 
@@ -36,7 +36,27 @@ const TimePicker = ({
   return (
     <StyledInput type="text">
       <InputMask
-        mask="99:99"
+        mask="19:59"
+        //@ts-ignore
+        formatChars={{
+          5: "[0-5]",
+          9: "[0-9]",
+          1: "[0-2]",
+        }}
+        beforeMaskedValueChange={(state: InputState) => {
+          const { value } = state;
+          const [hours, minutes] = value.split(":");
+          const validHours = Math.min(Number(hours), 23)
+            .toString()
+            .padStart(2, "0");
+          const validMinutes = Math.min(Number(minutes), 59)
+            .toString()
+            .padStart(2, "0");
+          return {
+            ...state,
+            value: `${validHours}:${validMinutes}`,
+          };
+        }}
         maskChar="0"
         value={time}
         onChange={(event) => {
