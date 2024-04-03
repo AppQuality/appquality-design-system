@@ -15,7 +15,7 @@ function parseDate(time: string): Date {
   currentDate.setSeconds(0);
   currentDate.setMilliseconds(0);
   currentDate.setFullYear(year);
-  currentDate.setMonth(month);
+  currentDate.setMonth(month - 1);
   currentDate.setDate(day);
 
   return currentDate;
