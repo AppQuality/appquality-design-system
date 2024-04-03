@@ -3,11 +3,8 @@ import styled from "styled-components";
 import { StyledInput as FormInput } from "../form/input/Input";
 
 const StyledInput = styled(FormInput)`
-  .mbsc-appquality.mbsc-textfield {
-    width: 0;
-    height: 0px;
-    border: none;
-    padding: 0px;
+  input[type="date"] {
+    font-family: ${(props) => props.theme.typography.fontFamily.base};
   }
 `;
 function formatDate(date: Date): string {
