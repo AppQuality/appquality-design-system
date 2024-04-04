@@ -1,4 +1,4 @@
-import styled, { StyledComponent } from "styled-components";
+import styled from "styled-components";
 
 type SkeletonItemProps = {
   width?: string;
@@ -12,11 +12,11 @@ const SkeletonItem = styled.div<SkeletonItemProps>`
     props.backgroundColor || props.theme.colors.gray100};
 `;
 
-type SkeletonComponent = StyledComponent<"div", any> & {
-  Item: StyledComponent<"div", any, SkeletonItemProps>;
+const Skeleton = (props: React.HTMLAttributes<HTMLDivElement>) => {
+  return <StyledSkeleton {...props} />;
 };
 
-const Skeleton = styled.div`
+const StyledSkeleton = styled.div`
   ${SkeletonItem} {
     background-image: linear-gradient(
       90deg,
@@ -39,7 +39,7 @@ const Skeleton = styled.div`
       background-position: 600px 0;
     }
   }
-` as SkeletonComponent;
+`;
 
 Skeleton.Item = SkeletonItem;
 export { Skeleton };

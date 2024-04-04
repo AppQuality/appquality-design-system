@@ -1,15 +1,15 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
+import { useState } from "react";
 import { Carousel, CarouselNav } from "./Carousel";
 import { CarouselSlide } from "./CarouselSlide";
 import { CarouselProps } from "./_types";
-import { useState } from "react";
 
 export default {
   title: "Carousel",
   component: Carousel,
 } as Meta;
 
-const Template: Story<CarouselProps> = (args) => {
+const Template: StoryFn<CarouselProps> = (args) => {
   const [current, setCurrent] = useState(0);
   return (
     <div>

@@ -49,7 +49,7 @@ export const containers = (theme: DefaultTheme) => {
 
   let breakpoints = Object.entries(theme.grid.breakpoints) as [
     keyof DefaultTheme["grid"]["breakpoints"],
-    string
+    string,
   ][];
   style += breakpoints
     .map(([key, value]) => {
@@ -57,11 +57,11 @@ export const containers = (theme: DefaultTheme) => {
         return `
         @media (min-width: ${value}) {
           .container {
-            max-width: ${responsiveWidth[key]}
+            max-width: ${responsiveWidth[key]};
           }
         }
         .container.container-fluid {
-          max-width: 100%};
+          max-width: 100%;
         }
         `;
       }

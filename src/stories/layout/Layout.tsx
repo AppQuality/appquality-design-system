@@ -43,7 +43,7 @@ export const BSCol = ({
   return <div className={className}>{children}</div>;
 };
 
-export const CSSGrid = styled.div(
+export const CSSGrid = styled.div<CSSGridProps>(
   ({ gutter, rowGap, min, max, fill = "false", maxWidth }: CSSGridProps) => {
     return `
   display: grid;

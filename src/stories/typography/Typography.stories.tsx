@@ -1,12 +1,12 @@
-import { Story, Meta } from "@storybook/react";
-import { TextProps, Title, Text } from "./Typography";
+import { Meta, StoryFn } from "@storybook/react";
+import { Text, TextProps, Title } from "./Typography";
 
 export default {
   title: "Typography",
   component: Text,
 } as Meta;
 
-const ParagraphTemplate: Story<TextProps> = (args) => {
+const ParagraphTemplate: StoryFn<TextProps> = (args) => {
   return <Text {...args}>Lorem ipsum dolor sit amet </Text>;
 };
 

@@ -1,13 +1,13 @@
-import { Story, Meta } from "@storybook/react";
-import { Toastr, ToastrProps } from "./Toastr";
+import { Meta, StoryFn } from "@storybook/react";
 import { Text } from "../typography/Typography";
+import { Toastr, ToastrProps } from "./Toastr";
 
 export default {
   title: "Toastr",
   component: Toastr,
 } as Meta;
 
-const Template: Story<ToastrProps> = (args) => (
+const Template: StoryFn<ToastrProps> = (args) => (
   <div>
     <Toastr type="success" className="aq-mb-2">
       <div>{args.children}</div>
