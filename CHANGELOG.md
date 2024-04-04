@@ -1,3 +1,16 @@
+# v1.0.79 (Thu Apr 04 2024)
+
+#### 🐛 Bug Fix
+
+- Rework datepicker [#178](https://github.com/AppQuality/appquality-design-system/pull/178) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v1.0.77 (Wed Mar 20 2024)
 
 #### 🐛 Bug Fix
