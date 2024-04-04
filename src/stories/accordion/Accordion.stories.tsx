@@ -1,13 +1,13 @@
+import { Meta, StoryFn } from "@storybook/react";
 import { Accordion } from "./Accordion";
 import { AccordionProps } from "./_types";
-import { Story, Meta } from "@storybook/react";
 
 export default {
   title: "Accordion",
   component: Accordion,
 } as Meta;
 
-const Template: Story<AccordionProps> = (args) => {
+const Template: StoryFn<AccordionProps> = (args) => {
   return (
     <Accordion {...args} initialActive="item1">
       <Accordion.Item id="item1" title={<h4>Item 1 title is an h4</h4>}>

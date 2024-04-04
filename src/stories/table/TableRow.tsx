@@ -1,9 +1,9 @@
-import { CardRole, Column, Data, TableRowProps } from "./_types";
-import { useWindowSize } from "../../shared/effects/useWindowSize";
-import styled from "styled-components";
 import { useState } from "react";
-import { ChevronUp, ChevronDown } from "react-bootstrap-icons";
+import { ChevronDown, ChevronUp } from "react-bootstrap-icons";
+import styled from "styled-components";
+import { useWindowSize } from "../../shared/effects/useWindowSize";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
+import { CardRole, Column, Data, TableRowProps } from "./_types";
 
 interface ElementProps {
   readonly role?: CardRole | "more" | "toggle-more";
@@ -32,7 +32,9 @@ const Cell = ({ data, col }: CellProps) => {
     `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
   ).matches;
   const content =
-    typeof data === "object" && "content" in data ? data.content : data;
+    typeof data === "object" && "content" in data
+      ? (data.content as React.ReactNode)
+      : (data as React.ReactNode);
   const title =
     typeof data === "object" && "title" in data ? data.title : data?.toString();
   return (
@@ -248,7 +250,7 @@ export const TableRow = ({
             (col) =>
               !col.role && (
                 <div key={`${dataRow.key}-${col.key}`}>
-                  {dataRow[col.dataIndex]}
+                  {dataRow[col.dataIndex] as React.ReactNode}
                 </div>
               )
           )}

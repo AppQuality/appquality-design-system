@@ -90,8 +90,9 @@ export const Header = ({
       });
   };
 
-  const showMobile = window.matchMedia("only screen and (max-width: 768px)")
-    .matches;
+  const showMobile = window.matchMedia(
+    "only screen and (max-width: 768px)"
+  ).matches;
 
   return (
     <>
@@ -99,7 +100,7 @@ export const Header = ({
       <StyledHeader className={className}>
         <div className="brand-logo">
           {logo ? (
-            { logo }
+            <>{logo}</>
           ) : (
             <a href={logoUrl}>
               <img alt="logo" src={tryberLogo} />

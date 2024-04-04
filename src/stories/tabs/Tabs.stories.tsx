@@ -1,7 +1,7 @@
+import { Meta, StoryFn } from "@storybook/react";
 import { useState } from "react";
-import { Tabs, Tab, TabsProps } from "./Tabs";
 import { Card } from "../card/Card";
-import { Story, Meta } from "@storybook/react";
+import { Tab, Tabs, TabsProps } from "./Tabs";
 
 export default {
   title: "Tabs",
@@ -17,7 +17,7 @@ const Tab1 = () => {
     </div>
   );
 };
-const Template: Story<TabsProps> = (args) => {
+const Template: StoryFn<TabsProps> = (args) => {
   return (
     <Tabs {...args} active="tab1">
       <Tab id="tab1" title="Tab 1">
@@ -40,8 +40,7 @@ BasicTabs.args = {};
 BasicTabs.parameters = {
   design: {
     type: "figma",
-    url:
-      "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=74%3A136",
+    url: "https://www.figma.com/file/G3V1VENAN7iLSB4PtHmWr8/Storybook-reference?node-id=74%3A136",
   },
 };
 
