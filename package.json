@@ -2,12 +2,12 @@
   "name": "@appquality/appquality-design-system",
   "version": "1.0.77",
   "dependencies": {
-    "@appquality/mobiscroll": "^5.10.1",
     "formik": "^2.2.9",
     "react-bootstrap-icons": "^1.5.0",
     "react-cool-onclickoutside": "^1.6.2",
     "react-dropzone": "^12.1.0",
     "react-google-places-autocomplete": "^3.3.2",
+    "react-input-mask": "^2.0.4",
     "react-select": "^4.3.1",
     "use-places-autocomplete": "^1.9.3",
     "web-vitals": "^1.0.1",
@@ -19,10 +19,11 @@
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.css src/**/*.scss src/**/*.d.ts src/*.d.ts  dist/",
     "build": "npm run clean && rollup -c",
     "release": "npx auto shipit --base-branch=main",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
+    "storybook": "storybook dev",
+    "build-storybook": "storybook build",
     "test": "react-scripts test",
-    "test-ct": "playwright test -c playwright-ct.config.ts"
+    "test-ct": "playwright test -c playwright-ct.config.ts",
+    "tsc": "tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -53,9 +54,9 @@
     ]
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "^5.3.0"
+    "react": "^18",
+    "react-dom": "^18",
+    "styled-components": "^6"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
@@ -63,12 +64,14 @@
     "@playwright/experimental-ct-react17": "^1.40.1",
     "@playwright/test": "^1.40.1",
     "@rollup/plugin-image": "^2.1.1",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/node-logger": "^6.2.9",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.2.9",
+    "@storybook/addon-actions": "^8.0.5",
+    "@storybook/addon-essentials": "^8.0.5",
+    "@storybook/addon-links": "^8.0.5",
+    "@storybook/addon-mdx-gfm": "^8.0.5",
+    "@storybook/node-logger": "^8.0.5",
+    "@storybook/preset-create-react-app": "^8.0.5",
+    "@storybook/react": "^8.0.5",
+    "@storybook/react-webpack5": "^8.0.5",
     "@svgr/rollup": "^6.2.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -76,28 +79,28 @@
     "@types/googlemaps": "^3.43.3",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
-    "@types/react": "^17.0.9",
-    "@types/react-dom": "^17.0.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-input-mask": "^3.0.5",
     "@types/react-select": "^4.0.18",
     "@types/react-transition-group": "^4.4.1",
-    "@types/styled-components": "^5.1.10",
     "auto": "^11.1.1",
     "babel-loader": "^8.1.0",
-    "chromatic": "^5.9.0",
+    "chromatic": "^11.3.0",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "husky": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^18.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5",
     "rimraf": "^3.0.2",
     "rollup": "^2.53.1",
-    "rollup-plugin-typescript2": "^0.30.0",
-    "storybook-addon-designs": "^6.0.0",
-    "styled-components": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "storybook": "^8.0.5",
+    "styled-components": "^6",
     "tslib": "^2.3.0",
-    "typed-scss-modules": "^4.1.1",
+    "typed-scss-modules": "^8.0.1",
     "typescript": "^4.2.2"
   },
   "babel": {
@@ -123,5 +126,9 @@
   "bugs": {
     "url": "https://github.com/AppQuality/appquality-design-system/issues"
   },
-  "homepage": "https://github.com/AppQuality/appquality-design-system#readme"
+  "homepage": "https://github.com/AppQuality/appquality-design-system#readme",
+  "resolutions": {
+    "jackspeak": "2.1.1",
+    "@types/mime": "3.0.4"
+  }
 }

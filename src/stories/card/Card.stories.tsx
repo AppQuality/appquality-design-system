@@ -1,15 +1,15 @@
-import { Card } from "./Card";
-import { CardProps } from "./CardProps";
-import { Story, Meta } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
+import { Card } from "./Card";
+import { CardProps } from "./CardProps";
 
 export default {
   title: "Card",
   component: Card,
 } as Meta;
 
-const Template: Story<CardProps> = (args) => (
+const Template: StoryFn<CardProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <Card {...args} />
   </ThemeProvider>

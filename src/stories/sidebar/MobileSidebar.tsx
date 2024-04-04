@@ -4,7 +4,7 @@ import { LanguageIcons, LanguageIconWrapper } from "./LanguageIcons";
 import { SidebarProps } from "./SidebarProps";
 import { marginFromTop } from "./variables";
 
-const SidebarMobileWrapper = styled.div(
+const SidebarMobileWrapper = styled.div<{ hidden: boolean }>(
   ({ theme, hidden }: { theme: DefaultTheme; hidden: boolean }) => {
     const { variants, colors } = theme;
     return `

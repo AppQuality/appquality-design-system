@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import Input from "./Input";
 
 export default {
@@ -6,13 +6,13 @@ export default {
   component: Input,
 } as Meta;
 
-export const SimpleInput: Story = () => (
+export const SimpleInput: StoryFn = () => (
   <Input id="input" type="text" placeholder="Placeholder" disabled={false} />
 );
-export const SearchInput: Story = () => (
+export const SearchInput: StoryFn = () => (
   <Input id="input" type="search" placeholder="Placeholder" disabled={false} />
 );
-export const InvalidInput: Story = () => (
+export const InvalidInput: StoryFn = () => (
   <Input
     id="input"
     type="text"
@@ -21,7 +21,7 @@ export const InvalidInput: Story = () => (
     disabled={false}
   />
 );
-export const ReadonlyInput: Story = () => (
+export const ReadonlyInput: StoryFn = () => (
   <Input
     id="input"
     type="text"
@@ -31,7 +31,7 @@ export const ReadonlyInput: Story = () => (
   />
 );
 
-export const PasswordInput: Story = () => (
+export const PasswordInput: StoryFn = () => (
   <Input
     id="input"
     type="password"

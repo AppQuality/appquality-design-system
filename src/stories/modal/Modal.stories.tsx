@@ -1,18 +1,18 @@
-import { Story, Meta } from "@storybook/react";
-import { ModalProps } from "./_types";
+import { Meta, StoryFn } from "@storybook/react";
 import { Modal, ModalBody } from "./Modal";
+import { ModalProps } from "./_types";
 
 export default {
   title: "Modal",
   component: Modal,
 } as Meta;
 
-const Template: Story<ModalProps> = (args) => (
+const Template: StoryFn<ModalProps> = (args) => (
   <Modal {...args}>
     <div>This is a modal content</div>
   </Modal>
 );
-const TemplateLong: Story<ModalProps> = (args) => (
+const TemplateLong: StoryFn<ModalProps> = (args) => (
   <Modal {...args}>
     <div>
       This is a long modal content. "Lorem ipsum dolor sit amet, consectetur
@@ -66,7 +66,7 @@ const TemplateLong: Story<ModalProps> = (args) => (
     </div>
   </Modal>
 );
-const TemplateMulti: Story<ModalProps> = (args) => (
+const TemplateMulti: StoryFn<ModalProps> = (args) => (
   <Modal {...args}>
     <ModalBody>This is the first modal content</ModalBody>
     <ModalBody>This is the second modal content</ModalBody>
@@ -116,7 +116,7 @@ ModalWithMultipleBodies.args = {
   isOpen: true,
 };
 
-const TemplateMultiValidate: Story<ModalProps> = (args) => (
+const TemplateMultiValidate: StoryFn<ModalProps> = (args) => (
   <Modal {...args}>
     <ModalBody nextButtonStyle="warning">
       This is the first modal content
@@ -135,7 +135,7 @@ const TemplateMultiValidate: Story<ModalProps> = (args) => (
 );
 
 export const ModalWithMultipleBodiesAndValidation = TemplateMultiValidate.bind(
-  {}
+  {},
 );
 ModalWithMultipleBodiesAndValidation.args = {
   isOpen: true,

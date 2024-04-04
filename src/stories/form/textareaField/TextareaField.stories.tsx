@@ -1,18 +1,18 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Formik, FormikProps } from "formik";
+import * as yup from "yup";
 import { TextareaField } from "./TextareaField";
 import {
   initialTextareaFormValues,
   textareaFormValidationSchema,
 } from "./_data";
-import * as yup from "yup";
 
 export default {
   title: "Textarea Field",
   component: TextareaField,
 } as Meta;
 
-export const Simple: Story = () => (
+export const Simple: StoryFn = () => (
   <Formik
     initialValues={initialTextareaFormValues}
     validationSchema={yup.object(textareaFormValidationSchema)}
@@ -31,7 +31,7 @@ export const Simple: Story = () => (
   </Formik>
 );
 
-export const Autoresize: Story = () => (
+export const Autoresize: StoryFn = () => (
   <Formik
     initialValues={initialTextareaFormValues}
     validationSchema={yup.object(textareaFormValidationSchema)}
@@ -52,7 +52,7 @@ export const Autoresize: Story = () => (
   </Formik>
 );
 
-export const Disabled: Story = () => (
+export const Disabled: StoryFn = () => (
   <Formik
     initialValues={initialTextareaFormValues}
     validationSchema={yup.object(textareaFormValidationSchema)}
@@ -73,7 +73,7 @@ export const Disabled: Story = () => (
   </Formik>
 );
 
-export const CounterMax: Story = () => (
+export const CounterMax: StoryFn = () => (
   <Formik
     initialValues={initialTextareaFormValues}
     validationSchema={yup.object({

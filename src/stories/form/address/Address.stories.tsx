@@ -1,12 +1,12 @@
+import { Meta, StoryFn } from "@storybook/react";
 import Address from "./Address";
-import { Story, Meta } from "@storybook/react";
 
 export default {
   title: "Address",
   component: Address,
 } as Meta;
 
-export const SimpleAddress: Story = () => (
+export const SimpleAddress: StoryFn = () => (
   <Address
     id="address"
     onChange={(data) => {
@@ -16,7 +16,7 @@ export const SimpleAddress: Story = () => (
   />
 );
 
-export const PrefilledAddress: Story = () => (
+export const PrefilledAddress: StoryFn = () => (
   <Address
     id="address"
     initialValue="Via dell'Innovazione Digitale, 3, Cremona, CR, Italia"

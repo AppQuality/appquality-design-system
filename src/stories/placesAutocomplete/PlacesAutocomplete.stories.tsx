@@ -1,13 +1,13 @@
-import { Story, Meta } from "@storybook/react";
-import { PlacesAutocompleteProps } from "./_types";
+import { Meta, StoryFn } from "@storybook/react";
 import { PlacesAutocomplete } from "./PlacesAutocomplete";
+import { PlacesAutocompleteProps } from "./_types";
 
 export default {
   title: "PlacesAutocomplete",
   component: PlacesAutocomplete,
 } as Meta;
 
-const Template: Story<PlacesAutocompleteProps> = (args) => {
+const Template: StoryFn<PlacesAutocompleteProps> = (args) => {
   return <PlacesAutocomplete {...args} />;
 };
 

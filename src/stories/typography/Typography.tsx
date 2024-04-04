@@ -16,7 +16,7 @@ export interface TextProps extends TypographyProps {
 const generateResponsiveRule = (
   type: string,
   size: { desktop: string; mobile: string | boolean },
-  breakpoint: string
+  breakpoint: string,
 ) => {
   let rule = `${type}: ${size.desktop};`;
   if (size.mobile) {
@@ -28,7 +28,7 @@ const generateResponsiveRule = (
   return rule;
 };
 
-export const Title = styled.div(
+export const Title = styled.div<TitleProps>(
   ({ theme, size, color, variant = false }: TitleProps) => {
     const { palette, typography, grid, variants } = theme;
 
@@ -60,14 +60,14 @@ export const Title = styled.div(
       fontSize = generateResponsiveRule(
         "font-size",
         titleSizes[size],
-        grid.breakpoints.lg
+        grid.breakpoints.lg,
       );
     }
     if (Object.keys(titleWeight).includes(size)) {
       fontWeight = generateResponsiveRule(
         "font-weight",
         titleWeight[size],
-        grid.breakpoints.lg
+        grid.breakpoints.lg,
       );
     }
 
@@ -80,10 +80,10 @@ export const Title = styled.div(
   ${fontSize}
   ${fontWeight}
 `;
-  }
+  },
 );
 
-export const Text = styled.div(
+export const Text = styled.div<TextProps>(
   ({ theme, small, color, variant = true }: TextProps) => {
     const { palette, variants, typography } = theme;
     const colors = variant ? variants : palette;
@@ -102,5 +102,5 @@ export const Text = styled.div(
     padding-left: 1em;
   }
 `;
-  }
+  },
 );

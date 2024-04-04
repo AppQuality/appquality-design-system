@@ -36,7 +36,7 @@ EOF
 }
 generate_stories() {
 	cat << EOF
-import { Story, Meta } from "@storybook/react";
+import { StoryFn, Meta } from "@storybook/react";
 import { ${STORY_NAME}Props } from "./_types";
 import { ${STORY_NAME} } from "./${STORY_NAME}";
 
@@ -45,7 +45,7 @@ export default {
   component: ${STORY_NAME},
 } as Meta;
 
-const Template: Story<${STORY_NAME}Props> = (args) => <${STORY_NAME} {...args} />;
+const Template: StoryFn<${STORY_NAME}Props> = (args) => <${STORY_NAME} {...args} />;
 
 export const ${STORY_NAME}Base = Template.bind({});
 ${STORY_NAME}Base.args = {};
