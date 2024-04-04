@@ -1,4 +1,4 @@
-import { Story, Meta } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { Radio } from "./Radio";
 
 export default {
@@ -6,7 +6,7 @@ export default {
   component: Radio,
 } as Meta;
 
-export const RadioStates: Story = () => (
+export const RadioStates: StoryFn = () => (
   <>
     <Radio
       id="simple"

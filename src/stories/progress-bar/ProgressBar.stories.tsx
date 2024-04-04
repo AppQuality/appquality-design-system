@@ -1,5 +1,5 @@
+import { Meta, StoryFn } from "@storybook/react";
 import { ProgressBar } from "./ProgressBar";
-import { Meta, Story } from "@storybook/react";
 import { ProgressBarProps, ProgressBarType } from "./_types";
 
 const { DANGER, INFO, WARNING, SUCCESS } = ProgressBarType;
@@ -17,8 +17,8 @@ export default {
   },
 } as Meta;
 
-const ProgressBarTemplate: Story<ProgressBarProps> = (
-  props: ProgressBarProps
+const ProgressBarTemplate: StoryFn<ProgressBarProps> = (
+  props: ProgressBarProps,
 ) => {
   return <ProgressBar {...props} />;
 };

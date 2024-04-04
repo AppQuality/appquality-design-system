@@ -1,14 +1,14 @@
-import { Skeleton } from "./Skeleton";
-import { Story, Meta } from "@storybook/react";
-import { BSCol, BSGrid, CSSGrid } from "../layout/Layout";
+import { Meta, StoryFn } from "@storybook/react";
 import { Card } from "../card/Card";
+import { BSCol, BSGrid, CSSGrid } from "../layout/Layout";
+import { Skeleton } from "./Skeleton";
 
 export default {
   title: "Skeleton",
   component: Skeleton,
 } as Meta;
 
-const SkeletonTemplate: Story = (props) => (
+const SkeletonTemplate: StoryFn = (props) => (
   <div style={{ backgroundColor: "#f0f5f7", minHeight: "100vh" }}>
     <BSGrid>
       <BSCol size="col-lg-9 aq-order-1 aq-order-0-lg">

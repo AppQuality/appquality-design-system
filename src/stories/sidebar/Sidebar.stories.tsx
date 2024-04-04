@@ -1,16 +1,16 @@
-import { Sidebar } from "./Sidebar";
-import { SidebarProps } from "./SidebarProps";
-import { Story, Meta } from "@storybook/react";
+import { Meta, StoryFn } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
+import { Sidebar } from "./Sidebar";
 import { BasicSidebarArgs } from "./Sidebar.stories.args";
+import { SidebarProps } from "./SidebarProps";
 
 export default {
   title: "Sidebar",
   component: Sidebar,
 } as Meta;
 
-const Template: Story<SidebarProps> = (args) => (
+const Template: StoryFn<SidebarProps> = (args) => (
   <ThemeProvider theme={aqBootstrapTheme}>
     <Sidebar {...args}>
       <div>

@@ -20,7 +20,7 @@ export const StyledAccordion = styled.div`
   }
 `;
 
-export const StyledItemHead = styled.div(
+export const StyledItemHead = styled.div<StyledItemHeadProps>(
   ({ theme, active, disabled }: StyledItemHeadProps) => {
     return `
       ${!disabled ? `cursor: pointer;` : ""}
@@ -53,7 +53,7 @@ export const StyledItemHead = styled.div(
   }
 );
 
-export const StyledItemBody = styled.div(
+export const StyledItemBody = styled.div<StyledItemBodyProps>(
   ({ theme, height, active }: StyledItemBodyProps) => `
     --accordion-element-height: ${height}px;
     background-color: #fff;

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { CarouselSlide } from "./CarouselSlide";
-import { CarouselNav } from "./CarouselNav";
-import { CarouselProps } from "./_types";
-import { SlidesContainer } from "./SlidesContainer";
+import styled from "styled-components";
 import { useWindowSize } from "../../shared/effects/useWindowSize";
-import { withTheme } from "styled-components";
+import { CarouselNav } from "./CarouselNav";
+import { CarouselSlide } from "./CarouselSlide";
+import { SlidesContainer } from "./SlidesContainer";
+import { CarouselProps } from "./_types";
 import { getCurrentStep } from "./utils";
 
 const BasicCarousel = ({
@@ -65,5 +65,5 @@ const BasicCarousel = ({
   );
 };
 
-const Carousel = withTheme(BasicCarousel);
-export { Carousel, CarouselSlide, CarouselNav };
+const Carousel = styled(BasicCarousel)``;
+export { Carousel, CarouselNav, CarouselSlide };

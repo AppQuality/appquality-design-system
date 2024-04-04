@@ -1,5 +1,5 @@
-import { NamedProps } from "react-select/src/Select";
 import React from "react";
+import { Props } from "react-select";
 
 interface ApiOptions {
   language?: string;
@@ -30,7 +30,7 @@ interface GooglePlacesAutocompleteProps {
   debounce?: number; // default: 300
   minLengthAutocomplete?: number; // default: 0
   onLoadFailed?: (error: Error) => void; // default: console.error
-  selectProps?: NamedProps<PlacesOptionType, false>; // default: { }
+  selectProps?: Props<PlacesOptionType, false>; // default: { }
   withSessionToken?: boolean; // default: false
 }
 
