@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "1.0.77",
+  "version": "1.0.79",
   "dependencies": {
     "formik": "^2.2.9",
     "react-bootstrap-icons": "^1.5.0",
