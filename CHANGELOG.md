@@ -1,3 +1,15 @@
+# v2.0.1 (Tue Apr 09 2024)
+
+#### 🐛 Bug Fix
+
+- fix: Reset appearance for ios [#182](https://github.com/AppQuality/appquality-design-system/pull/182) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.0 (Thu Apr 04 2024)
 
 #### 💥 Breaking Change
