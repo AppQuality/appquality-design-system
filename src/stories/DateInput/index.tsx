@@ -5,6 +5,8 @@ import { StyledInput as FormInput } from "../form/input/Input";
 const StyledInput = styled(FormInput)`
   input[type="date"] {
     font-family: ${(props) => props.theme.typography.fontFamily.base};
+    appearance: none;
+    min-height: 40px;
   }
 `;
 function formatDate(date: Date): string {
