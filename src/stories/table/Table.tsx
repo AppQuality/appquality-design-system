@@ -6,7 +6,7 @@ import { Column, Order, SortFunction, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
 import { useEffect, useState } from "react";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
-import { Select } from "../select/Select";
+import { Select } from "../select/SelectNew";
 import { useWindowSize } from "../../shared/effects";
 import { Option } from "../select/_types";
 

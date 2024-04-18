@@ -55,6 +55,7 @@ export * from "./stories/pill/Pill";
 export * from "./stories/placesAutocomplete/PlacesAutocomplete";
 export * from "./stories/progress-bar/ProgressBar";
 export * from "./stories/select/Select";
+export * from "./stories/Dropdown";
 export * from "./stories/sidebar/Sidebar";
 export * from "./stories/skeleton/Skeleton";
 export * from "./stories/spinner/Spinner";
