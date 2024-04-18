@@ -6,7 +6,7 @@ import { Column, Order, SortFunction, TableProps } from "./_types";
 import { TableRow } from "./TableRow";
 import { useEffect, useState } from "react";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
-import { Select } from "../select/SelectNew";
+import { Select } from "../select/Select";
 import { useWindowSize } from "../../shared/effects";
 import { Option } from "../select/_types";
 
@@ -229,12 +229,12 @@ export const SortTableSelect = ({
   };
   useEffect(() => {
     const val = orderByOptions.find(
-      (opt) => opt.value === `${orderBy} ${order}`
+      (opt) => opt.value === `${orderBy} ${order}`,
     );
     setOrderByValue(val);
   }, [orderBy, order]);
   return window.matchMedia(
-    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
+    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`,
   ).matches ? null : (
     <div className="aq-mb-3">
       <Select

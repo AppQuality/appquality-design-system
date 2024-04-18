@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { Form, Formik, FormikProps } from "formik";
 import * as yup from "yup";
-import { Select } from "../select/SelectNew";
+import { Select } from "../select/Select";
 import { Text } from "../typography/Typography";
 import { ErrorMessageWrapper, Field } from "./Form";
 import { initialValues, validationSchema } from "./_data";
