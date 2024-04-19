@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from "@storybook/react";
-import Dropdown, { DropdownProps } from ".";
+import { Dropdown } from ".";
 import { colourOptions } from "./data";
 
 export default {
@@ -7,7 +7,7 @@ export default {
   component: Dropdown,
 } as Meta;
 
-const Template: StoryFn<DropdownProps> = (args) => {
+const Template: StoryFn = (args) => {
   return <Dropdown {...args} />;
 };
 

@@ -2,13 +2,11 @@ import ReactSelect, { Props, GroupBase, StylesConfig } from "react-select5";
 import { aqTheme, customComponents } from "./styles";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 
-export interface DropdownProps extends Props {}
-
-function Dropdown<
+export function Dropdown<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>,
->(props: Props<Option, IsMulti, Group>) {
+>(props: Props<Option, IsMulti, Group>): React.ReactNode {
   const customStyle: StylesConfig<Option, IsMulti, Group> = {
     control: (provided, state) => {
       let borderColor = aqBootstrapTheme.colors.elementGeneric;
@@ -215,5 +213,3 @@ function Dropdown<
     />
   );
 }
-
-export default Dropdown;
