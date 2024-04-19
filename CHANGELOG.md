@@ -1,3 +1,16 @@
+# v2.0.2 (Fri Apr 19 2024)
+
+#### 🐛 Bug Fix
+
+- New Dropdown component [#185](https://github.com/AppQuality/appquality-design-system/pull/185) ([@iacopolea](https://github.com/iacopolea))
+- Dropdown [#184](https://github.com/AppQuality/appquality-design-system/pull/184) ([@iacopolea](https://github.com/iacopolea))
+
+#### Authors: 1
+
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v2.0.1 (Tue Apr 09 2024)
 
 #### 🐛 Bug Fix
