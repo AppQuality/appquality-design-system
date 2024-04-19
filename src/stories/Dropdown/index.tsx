@@ -6,7 +6,7 @@ export function Dropdown<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>,
->(props: Props<Option, IsMulti, Group>): React.ReactNode {
+>(props: Props<Option, IsMulti, Group>) {
   const customStyle: StylesConfig<Option, IsMulti, Group> = {
     control: (provided, state) => {
       let borderColor = aqBootstrapTheme.colors.elementGeneric;
