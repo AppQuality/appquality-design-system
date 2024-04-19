@@ -9,6 +9,7 @@
     "react-google-places-autocomplete": "^3.3.2",
     "react-input-mask": "^2.0.4",
     "react-select": "^4.3.1",
+    "react-select5": "npm:react-select",
     "use-places-autocomplete": "^1.9.3",
     "web-vitals": "^1.0.1",
     "yup": "^0.32.9"

@@ -229,12 +229,12 @@ export const SortTableSelect = ({
   };
   useEffect(() => {
     const val = orderByOptions.find(
-      (opt) => opt.value === `${orderBy} ${order}`
+      (opt) => opt.value === `${orderBy} ${order}`,
     );
     setOrderByValue(val);
   }, [orderBy, order]);
   return window.matchMedia(
-    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
+    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`,
   ).matches ? null : (
     <div className="aq-mb-3">
       <Select
