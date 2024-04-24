@@ -1,3 +1,15 @@
+# v2.0.3 (Wed Apr 24 2024)
+
+#### 🐛 Bug Fix
+
+- feat: Allow setting disabled to date/timepicker [#186](https://github.com/AppQuality/appquality-design-system/pull/186) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.2 (Fri Apr 19 2024)
 
 #### 🐛 Bug Fix
