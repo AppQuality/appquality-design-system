@@ -25,10 +25,12 @@ const TimePicker = ({
   value,
   placeholder,
   onChange,
+  disabled,
 }: {
   placeholder: DatepickerProps["placeholder"];
   value: DatepickerProps["value"];
   onChange: DatepickerProps["onChange"];
+  disabled?: DatepickerProps["disabled"];
 }) => {
   const [time, setTime] = useState(
     value ? (typeof value === "string" ? value : formatTime(value)) : "",
@@ -59,6 +61,7 @@ const TimePicker = ({
         }}
         maskChar="0"
         value={time}
+        disabled={disabled}
         onChange={(event) => {
           if (onChange) {
             onChange({

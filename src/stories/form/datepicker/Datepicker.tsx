@@ -42,13 +42,19 @@ export const Datepicker = ({
   setText = "Set",
   cancelText = "Cancel",
   dateFormat = "DD/MM/YYYY",
+  disabled,
 }: DatepickerProps) => {
   const [currentDate, setCurrentDate] = useState(
     value ? (typeof value === "string" ? value : formatDate(value)) : "",
   );
   if (control === "time") {
     return (
-      <TimePicker placeholder={placeholder} value={value} onChange={onChange} />
+      <TimePicker
+        disabled={disabled}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
     );
   }
 
@@ -56,6 +62,7 @@ export const Datepicker = ({
     <DateInput
       placeholder={placeholder}
       value={currentDate}
+      disabled={disabled}
       max={maxDate ? formatDate(maxDate) : undefined}
       min={minDate ? formatDate(minDate) : undefined}
       onChange={(e) => {
