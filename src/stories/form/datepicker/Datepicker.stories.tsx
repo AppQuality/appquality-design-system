@@ -59,3 +59,13 @@ DatepickerTime.args = {
   value: new Date("04-01-2022 12:00"),
   control: "time",
 };
+
+export const DatepickerTimeDisabled = DatepickerTemplate.bind({});
+DatepickerTimeDisabled.args = {
+  onChange: ({ value }: { value: Date }) => {
+    console.log(value);
+  },
+  disabled: true,
+  value: new Date("04-01-2022 12:00"),
+  control: "time",
+};
