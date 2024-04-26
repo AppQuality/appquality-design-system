@@ -1,12 +1,17 @@
-import ReactSelect, { Props, GroupBase, StylesConfig } from "react-select5";
-import { aqTheme, customComponents } from "./styles";
+import ReactSelect, { GroupBase, Props, StylesConfig } from "react-select5";
+import Creatable from "react-select5/creatable";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
+import { aqTheme, customComponents } from "./styles";
 
 export function Dropdown<
   Option,
   IsMulti extends boolean = false,
   Group extends GroupBase<Option> = GroupBase<Option>,
->(props: Props<Option, IsMulti, Group>) {
+>(
+  props: Props<Option, IsMulti, Group> & {
+    onCreateOption?: (inputValue: string) => Promise<void>;
+  },
+) {
   const customStyle: StylesConfig<Option, IsMulti, Group> = {
     control: (provided, state) => {
       let borderColor = aqBootstrapTheme.colors.elementGeneric;
@@ -201,8 +206,9 @@ export function Dropdown<
     },
   };
 
+  const Component = props.onCreateOption ? Creatable : ReactSelect;
   return (
-    <ReactSelect
+    <Component
       theme={(theme) => ({
         ...theme,
         ...aqTheme,
