@@ -1,3 +1,15 @@
+# v2.0.4 (Fri Apr 26 2024)
+
+#### 🐛 Bug Fix
+
+- feat: Allow creating options on dropdown [#188](https://github.com/AppQuality/appquality-design-system/pull/188) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.3 (Wed Apr 24 2024)
 
 #### 🐛 Bug Fix
