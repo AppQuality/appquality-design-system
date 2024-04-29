@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputMask, { InputState } from "react-input-mask";
 import { StyledInput } from "../input/Input";
 import { DatepickerProps } from "./_types";
@@ -35,6 +35,12 @@ const TimePicker = ({
   const [time, setTime] = useState(
     value ? (typeof value === "string" ? value : formatTime(value)) : "",
   );
+
+  useEffect(() => {
+    setTime(
+      value ? (typeof value === "string" ? value : formatTime(value)) : "",
+    );
+  }, [value]);
   return (
     <StyledInput type="text">
       <InputMask
