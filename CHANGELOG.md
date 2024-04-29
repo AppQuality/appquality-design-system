@@ -1,3 +1,15 @@
+# v2.0.5 (Mon Apr 29 2024)
+
+#### 🐛 Bug Fix
+
+- feat: Reload timepicker internal value on prop change [#190](https://github.com/AppQuality/appquality-design-system/pull/190) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.4 (Fri Apr 26 2024)
 
 #### 🐛 Bug Fix
