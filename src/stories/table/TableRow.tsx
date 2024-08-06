@@ -29,7 +29,7 @@ interface CellProps {
 const Cell = ({ data, col }: CellProps) => {
   useWindowSize();
   const isDesktop = window.matchMedia(
-    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
+    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`,
   ).matches;
   const content =
     typeof data === "object" && "content" in data
@@ -43,7 +43,11 @@ const Cell = ({ data, col }: CellProps) => {
         <div>{content}</div>
       ) : (
         <>
-          <span className="data-index">{col.title}</span>:{" "}
+          {!!col.title && (
+            <>
+              <span className="data-index">{col.title}</span>:{" "}
+            </>
+          )}
           <strong>{content}</strong>
         </>
       )}
@@ -70,7 +74,7 @@ const Element = styled.div<ElementProps>`
         : `max-height: max-content;
           height: 100%;
     `}
-  } ;
+  }
 `;
 
 const CardStyle = styled.div`
@@ -206,7 +210,7 @@ export const TableRow = ({
               >
                 <Cell data={dataRow[col.dataIndex]} col={col} />
               </Element>
-            )
+            ),
         )}
         <Element role="more" className="more-info" isCompact={isCompact}>
           {columns.map(
@@ -217,7 +221,7 @@ export const TableRow = ({
                   data={dataRow[col.dataIndex]}
                   col={col}
                 />
-              )
+              ),
           )}
         </Element>
       </CardStyle>
@@ -243,7 +247,7 @@ export const TableRow = ({
               >
                 <Cell data={dataRow[col.dataIndex]} col={col} />
               </ElementAlternative>
-            )
+            ),
         )}
         <ElementsContainer>
           {columns.map(
@@ -252,7 +256,7 @@ export const TableRow = ({
                 <div key={`${dataRow.key}-${col.key}`}>
                   {dataRow[col.dataIndex] as React.ReactNode}
                 </div>
-              )
+              ),
           )}
         </ElementsContainer>
         {columns.map(
@@ -261,14 +265,14 @@ export const TableRow = ({
               <ElementAlternative key={`${dataRow.key}-${col.key}`}>
                 <Cell data={dataRow[col.dataIndex]} col={col} />
               </ElementAlternative>
-            )
+            ),
         )}
       </CardAlternativeStyle>
     );
   };
 
   return window.matchMedia(
-    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`
+    `only screen and (min-width: ${aqBootstrapTheme.grid.breakpoints.lg})`,
   ).matches ? (
     <BasicRow />
   ) : !mobileAlternative ? (
