@@ -1,3 +1,17 @@
+# v2.0.6 (Wed Sep 10 2025)
+
+#### 🐛 Bug Fix
+
+- Release [#194](https://github.com/AppQuality/appquality-design-system/pull/194) ([@iacopolea](https://github.com/iacopolea) [@d-beezee](https://github.com/d-beezee))
+- Add editor component [#193](https://github.com/AppQuality/appquality-design-system/pull/193) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Iacopo Leardini ([@iacopolea](https://github.com/iacopolea))
+
+---
+
 # v2.0.5 (Mon Apr 29 2024)
 
 #### 🐛 Bug Fix
