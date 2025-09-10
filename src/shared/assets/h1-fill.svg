@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+  <g transform="translate(-464 -332)">
+    <rect width="16" height="16" transform="translate(464 332)" fill="none" />
+    <path d="M3,1V12.273M11.052,1V12.273M3,6.636h8.052" transform="translate(462 333.5)" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" />
+    <path fill="currentColor" d="M1.755,15A.731.731,0,0,1,1,14.375a.7.7,0,0,1,.617-.739l.136-.011H2.51V6.346l-.22.2a.81.81,0,0,1-1.018.043.646.646,0,0,1-.137-.92l.086-.1L2.731,4.2l.063-.051.094-.058.091-.041.094-.028.082-.016L3.2,4l.082,0a.734.734,0,0,1,.094.007L3.265,4l.08,0,.113.019.1.028.115.055.083.055L3.8,4.2l.056.056.063.085.045.082.03.085.023.113,0,.063v8.937h.755a.731.731,0,0,1,.753.625.7.7,0,0,1-.617.739L4.775,15Z" transform="translate(474.469 331)" />
+  </g>
+</svg>
