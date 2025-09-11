@@ -1,3 +1,15 @@
+# v2.0.7 (Thu Sep 11 2025)
+
+#### 🐛 Bug Fix
+
+- feat: Allow passing custom extensions to the Editor component [#195](https://github.com/AppQuality/appquality-design-system/pull/195) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.6 (Wed Sep 10 2025)
 
 #### 🐛 Bug Fix
