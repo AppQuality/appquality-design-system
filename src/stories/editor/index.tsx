@@ -67,6 +67,7 @@ const Editor = ({
   headerTitle,
   footerSaveText,
   placeholderOptions,
+  extensions,
   ...props
 }: PropsWithChildren<EditorArgs>) => {
   const {
@@ -104,6 +105,7 @@ const Editor = ({
         ...placeholderOptions,
       }),
       CharacterCount,
+      ...(extensions || []),
     ],
     content: (children as Content) || "",
     editorProps: props.disableSaveShortcut
