@@ -79,7 +79,6 @@ export const editorStyle = css`
   }
 
   hr {
-    border: none;
     border-top: 2px solid rgba(#0d0d0d, 0.1);
     margin: 2rem 0;
   }
