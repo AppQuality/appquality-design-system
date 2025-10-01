@@ -1,3 +1,17 @@
+# v2.0.9 (Wed Oct 01 2025)
+
+#### 🐛 Bug Fix
+
+- tiptap editor: set visible hr [#199](https://github.com/AppQuality/appquality-design-system/pull/199) ([@sinatragianpaolo](https://github.com/sinatragianpaolo) [@Kariamos](https://github.com/Kariamos))
+- fix: Remove redundant border style from hr in editor styles [#198](https://github.com/AppQuality/appquality-design-system/pull/198) ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+#### Authors: 2
+
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+- Marco ([@Kariamos](https://github.com/Kariamos))
+
+---
+
 # v2.0.8 (Wed Oct 01 2025)
 
 #### 🐛 Bug Fix
