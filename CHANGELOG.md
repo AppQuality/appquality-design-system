@@ -1,3 +1,17 @@
+# v2.0.8 (Wed Oct 01 2025)
+
+#### 🐛 Bug Fix
+
+- Improve style Editor [#197](https://github.com/AppQuality/appquality-design-system/pull/197) ([@sinatragianpaolo](https://github.com/sinatragianpaolo) [@d-beezee](https://github.com/d-beezee))
+- feat: Add editor styles for improved text formatting in the Editor component [#196](https://github.com/AppQuality/appquality-design-system/pull/196) ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+---
+
 # v2.0.7 (Thu Sep 11 2025)
 
 #### 🐛 Bug Fix
