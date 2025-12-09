@@ -1,3 +1,15 @@
+# v2.0.10 (Tue Dec 09 2025)
+
+#### 🐛 Bug Fix
+
+- feat: Update SingleValue component and change label type to ReactNode… [#200](https://github.com/AppQuality/appquality-design-system/pull/200) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.9 (Wed Oct 01 2025)
 
 #### 🐛 Bug Fix
