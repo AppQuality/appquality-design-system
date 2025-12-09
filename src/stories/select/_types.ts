@@ -1,8 +1,8 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, ReactNode } from "react";
 import { MenuPlacement } from "react-select";
 
 export type Option = {
-  label: string;
+  label: ReactNode;
   value?: string;
   options?: Option[];
   isDisabled?: boolean;
@@ -17,7 +17,7 @@ export interface GetOptionsAsyncResponse {
 }
 export type GetOptionsAsync = (
   start: number,
-  search?: string
+  search?: string,
 ) => Promise<GetOptionsAsyncResponse>;
 
 export interface SelectProps /*extends GenericFieldInterface*/ {
