@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "dependencies": {
     "@tiptap/extension-bubble-menu": "2.4.0",
     "@tiptap/extension-character-count": "2.2.4",
