@@ -1,5 +1,5 @@
 import { ChevronDown, X } from "react-bootstrap-icons";
-import { StylesConfig as Styles, Theme, components } from "react-select";
+import { components, StylesConfig as Styles, Theme } from "react-select";
 import { Pill } from "../pill/Pill";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 
@@ -18,7 +18,7 @@ const MultiValueContainer = (
   props: JSX.LibraryManagedAttributes<
     typeof components.MultiValueContainer,
     any
-  >
+  >,
 ) => {
   return (
     <components.MultiValueContainer {...props}>
@@ -36,7 +36,7 @@ const MultiValueContainer = (
   );
 };
 const MultiValueLabel = (
-  props: JSX.LibraryManagedAttributes<typeof components.MultiValueLabel, any>
+  props: JSX.LibraryManagedAttributes<typeof components.MultiValueLabel, any>,
 ) => {
   return (
     <span
@@ -51,19 +51,31 @@ const MultiValueLabel = (
   );
 };
 const DropdownIndicator = (
-  props: JSX.LibraryManagedAttributes<typeof components.DropdownIndicator, any>
+  props: JSX.LibraryManagedAttributes<typeof components.DropdownIndicator, any>,
 ) => (
   <components.DropdownIndicator {...props}>
     <ChevronDown />
   </components.DropdownIndicator>
 );
 const ClearIndicator = (
-  props: JSX.LibraryManagedAttributes<typeof components.DropdownIndicator, any>
+  props: JSX.LibraryManagedAttributes<typeof components.DropdownIndicator, any>,
 ) => (
   <components.ClearIndicator {...props}>
     <X />
   </components.ClearIndicator>
 );
+
+const SingleValue = (
+  props: JSX.LibraryManagedAttributes<typeof components.SingleValue, any>,
+) => (
+  <components.SingleValue
+    {...props}
+    className={`${props.className || ""} aq-select-single`}
+  >
+    {props.children}
+  </components.SingleValue>
+);
+
 let customComponents = {
   components: {
     IndicatorSeparator,
@@ -71,6 +83,7 @@ let customComponents = {
     ClearIndicator,
     MultiValueContainer,
     MultiValueLabel,
+    SingleValue,
   },
 };
 
@@ -223,7 +236,7 @@ const customStyle: Styles<any, any> = {
       ? `${aqBootstrapTheme.colors.disabledFont}`
       : `${aqBootstrapTheme.colors.gray500}`;
     const fontWeight = parseInt(
-      `${aqBootstrapTheme.typography.fontWeight.light}`
+      `${aqBootstrapTheme.typography.fontWeight.light}`,
     );
 
     return {
