@@ -92,6 +92,7 @@
     "@storybook/preset-create-react-app": "^8.0.5",
     "@storybook/react": "^8.0.5",
     "@storybook/react-webpack5": "^8.0.5",
+    "@storybook/react-vite": "8.6.12",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/rollup": "^6.2.1",
