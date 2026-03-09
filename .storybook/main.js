@@ -7,9 +7,8 @@ module.exports = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-mdx-gfm",
   ],
-
   framework: {
-    name: "@storybook/react-webpack5",
+    name: "@storybook/react-vite",
     options: {},
   },
 

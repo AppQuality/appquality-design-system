@@ -1,15 +1,7 @@
-import { BaseProps } from "../../shared/_types";
-import styled from "styled-components";
 import React, { ReactNode } from "react";
-import { StepExternal, Step, StepProps } from "./Step";
-
-export interface StepsProps extends BaseProps {
-  current: number;
-  direction?: "vertical" | "horizontal";
-  clickHandler?: (index: number, current: number) => void;
-}
-
-export const defaultDirection: StepsProps["direction"] = "horizontal";
+import styled from "styled-components";
+import { Step } from "./Step";
+import { StepExternal, StepProps, StepsProps } from "./_types";
 
 const Steps = ({
   current,

@@ -1,14 +1,14 @@
-import { BaseProps } from "../../shared/_types";
-import { StyledStep } from "./StyledStep";
-import { defaultDirection, StepsProps } from "./Steps";
 import {
-  ArrowRightCircle,
   ArrowDownCircle,
+  ArrowRightCircle,
   CheckCircleFill,
   Circle,
 } from "react-bootstrap-icons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { BaseProps } from "../../shared/_types";
 import { Text } from "../typography/Typography";
+import { StyledStep } from "./StyledStep";
+import { defaultDirection, StepProps } from "./_types";
 
 export interface StepExternalProps extends BaseProps {
   title?: string;
@@ -17,19 +17,6 @@ export interface StepExternalProps extends BaseProps {
 }
 
 const animationTimeout = 250;
-// this is just the component we expose to the user,
-// we compose the final "Step" into the Steps main component adding props and current status,
-// we don't use the same component for example to leverage typescript type check
-// and to avoid to expose a number of internal props as optional in StepExternal
-export const StepExternal = (props: StepExternalProps) => null;
-
-export interface StepProps extends StepExternalProps {
-  direction?: StepsProps["direction"];
-  status: "inactive" | "current" | "completed";
-  index: number;
-  current: number;
-  clickHandler?: StepsProps["clickHandler"];
-}
 
 export const Step = ({
   title,
