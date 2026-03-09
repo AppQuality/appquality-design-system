@@ -1,7 +1,7 @@
 // rollup.config.js
 import image from "@rollup/plugin-image";
+import typescript from "@rollup/plugin-typescript";
 import svgr from "@svgr/rollup";
-import typescript from "rollup-plugin-typescript2";
 
 export default {
   input: "src/index.tsx",
