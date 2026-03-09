@@ -1,3 +1,15 @@
+# v2.0.12 (Mon Mar 09 2026)
+
+#### 🐛 Bug Fix
+
+- chore: update dependencies and migrate from Rollup to Vite [#204](https://github.com/AppQuality/appquality-design-system/pull/204) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.11 (Mon Mar 09 2026)
 
 #### 🐛 Bug Fix
