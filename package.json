@@ -74,7 +74,9 @@
   "peerDependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "styled-components": "^6"
+    "styled-components": "^6",
+    "formik": "^2.2.9",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
