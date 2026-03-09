@@ -1,3 +1,16 @@
+# v2.0.11 (Mon Mar 09 2026)
+
+#### 🐛 Bug Fix
+
+- feat: add @rollup/plugin-typescript and update rollup configuration [#203](https://github.com/AppQuality/appquality-design-system/pull/203) ([@d-beezee](https://github.com/d-beezee))
+- Upgrade React to 18 and update dependencies in workflows [#202](https://github.com/AppQuality/appquality-design-system/pull/202) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.10 (Tue Dec 09 2025)
 
 #### 🐛 Bug Fix
