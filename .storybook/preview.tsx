@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../src/shared/globalStyle";
 import { aqBootstrapTheme } from "../src/stories/theme/defaultTheme";
