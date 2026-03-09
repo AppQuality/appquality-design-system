@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
-import { StepProps } from "./Step";
+import { StepProps } from "./_types";
 
 const mobileSize = "24px";
 const desktopSize = "21px";

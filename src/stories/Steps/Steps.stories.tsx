@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { useState } from "react";
-import { Steps, StepsProps } from "./Steps";
+import { Steps } from "./Steps";
+import { StepsProps } from "./_types";
 
 export default {
   title: "Steps",
