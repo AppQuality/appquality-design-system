@@ -1,3 +1,15 @@
+# v2.0.13 (Mon Mar 09 2026)
+
+#### 🐛 Bug Fix
+
+- Add Storybook support and update peerDependencies [#205](https://github.com/AppQuality/appquality-design-system/pull/205) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.12 (Mon Mar 09 2026)
 
 #### 🐛 Bug Fix
