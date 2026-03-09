@@ -1,6 +1,6 @@
 {
   "name": "@appquality/appquality-design-system",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "dependencies": {
     "@rollup/plugin-typescript": "^12.3.0",
     "@tiptap/core": "3.20.1",
