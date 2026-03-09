@@ -21,8 +21,8 @@ import {
 import { EditorFooter } from "./editorFooter";
 import { EditorHeader } from "./editorHeader";
 import { FloatingMenu } from "./floatingMenu";
-import { EditorArgs } from "./_types";
 import { editorStyle } from "./style";
+import { EditorArgs } from "./_types";
 
 const EditorContainer = styled.div<EditorArgs>`
   ${({ editable }) =>
@@ -137,9 +137,7 @@ const Editor = ({
       {isEditable && (
         <>
           <EditorHeader title={headerTitle} validation={props.validation} />
-          {hasInlineMenu && (
-            <FloatingMenu editor={ed} tippyOptions={{ ...bubbleOptions }} />
-          )}
+          {hasInlineMenu && <FloatingMenu editor={ed} />}
         </>
       )}
       <EditorContent editor={ed} onKeyDown={onKeyDown} />

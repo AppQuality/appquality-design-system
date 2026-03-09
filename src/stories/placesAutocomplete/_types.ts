@@ -1,5 +1,5 @@
 import React from "react";
-import { Props } from "react-select";
+import { Props } from "react-select5";
 
 interface ApiOptions {
   language?: string;

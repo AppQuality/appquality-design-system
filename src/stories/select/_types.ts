@@ -1,5 +1,5 @@
 import React, { ChangeEvent, ReactNode } from "react";
-import { MenuPlacement } from "react-select";
+import { MenuPlacement } from "react-select5";
 
 export type Option = {
   label: ReactNode;

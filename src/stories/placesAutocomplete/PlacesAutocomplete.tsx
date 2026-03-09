@@ -1,9 +1,9 @@
-import React, { ChangeEvent } from "react";
-import { ActionMeta } from "react-select";
-import { aqTheme, customComponents, customStyle } from "../select/_styles";
+import { ChangeEvent } from "react";
 import GooglePlacesAutocomplete, {
   geocodeByPlaceId,
 } from "react-google-places-autocomplete";
+import { ActionMeta } from "react-select5";
+import { aqTheme, customComponents, customStyle } from "../select/_styles";
 import { PlacesAutocompleteProps } from "./_types";
 
 export const PlacesAutocomplete = ({

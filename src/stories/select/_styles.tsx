@@ -1,5 +1,5 @@
 import { ChevronDown, X } from "react-bootstrap-icons";
-import { components, StylesConfig as Styles, Theme } from "react-select";
+import { components, StylesConfig as Styles, Theme } from "react-select5";
 import { Pill } from "../pill/Pill";
 import { aqBootstrapTheme } from "../theme/defaultTheme";
 
