@@ -1,4 +1,5 @@
 import React from "react";
+import { Option } from "react-google-places-autocomplete/build/types";
 import { Props } from "react-select5";
 
 interface ApiOptions {
@@ -30,7 +31,7 @@ interface GooglePlacesAutocompleteProps {
   debounce?: number; // default: 300
   minLengthAutocomplete?: number; // default: 0
   onLoadFailed?: (error: Error) => void; // default: console.error
-  selectProps?: Props<PlacesOptionType, false>; // default: { }
+  selectProps?: Props<Option, false>; // default: { }
   withSessionToken?: boolean; // default: false
 }
 
