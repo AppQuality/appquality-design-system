@@ -1,6 +1,6 @@
 import { ChangeEvent, useEffect, useReducer, useState } from "react";
-import ReactSelect, { ActionMeta, InputActionMeta } from "react-select";
-import Creatable from "react-select/creatable";
+import ReactSelect, { ActionMeta, InputActionMeta } from "react-select5";
+import Creatable from "react-select5/creatable";
 import { aqTheme, customComponents, customStyle } from "./_styles";
 
 import FormLabel from "../form/formlabel/FormLabel";
@@ -231,6 +231,7 @@ export const Select = ({
     noOptionsMessage,
     ...customComponents,
   };
+  const { theme, ...selectArgs } = args;
   return (
     <>
       {label && (
@@ -250,7 +251,7 @@ export const Select = ({
             }}
           />
         ) : (
-          <ReactSelect {...args} />
+          <ReactSelect {...selectArgs} />
         )}
       </div>
     </>

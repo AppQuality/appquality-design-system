@@ -1,5 +1,6 @@
 import { PlaceholderOptions } from "@tiptap/extension-placeholder";
-import { BubbleMenuProps, Editor, EditorOptions } from "@tiptap/react";
+import { Editor, EditorOptions } from "@tiptap/react";
+import { FloatingMenuProps } from "@tiptap/react/menus";
 
 type validationStatus = "success" | "warning" | "error";
 
@@ -20,4 +21,4 @@ export interface EditorHeaderArgs {
   validation?: validationStatus;
 }
 
-export interface FloatingMenuArgs extends Partial<BubbleMenuProps> {}
+export interface FloatingMenuArgs extends Partial<FloatingMenuProps> {}

@@ -1,4 +1,4 @@
-import { BubbleMenu } from "@tiptap/react";
+import { BubbleMenu } from "@tiptap/react/menus";
 import styled from "styled-components";
 import { FloatingMenuArgs } from "./_types";
 
