@@ -11,7 +11,14 @@ module.exports = {
     name: "@storybook/react-vite",
     options: {},
   },
-
+  core: {
+    builder: {
+      name: "@storybook/builder-vite",
+      options: {
+        viteConfigPath: "./vite.config.storybook.mts",
+      },
+    },
+  },
   docs: {
     autodocs: true,
   },
