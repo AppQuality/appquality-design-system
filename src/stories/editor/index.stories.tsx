@@ -32,6 +32,9 @@ Markdown.args = {
   ...defaultArgs,
   children: "# Hello i'm a markdown title",
   contentType: "markdown",
+  disableHeader: true,
+  className: "markdown-editor",
+  disableSaveShortcut: true,
 };
 
 export const Placeholder = Template.bind({});

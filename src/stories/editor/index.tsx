@@ -72,6 +72,8 @@ const Editor = ({
   footerSaveText,
   placeholderOptions,
   extensions,
+  disableHeader,
+  className,
   ...props
 }: PropsWithChildren<EditorArgs>) => {
   const {
@@ -135,10 +137,16 @@ const Editor = ({
   ed.on("update", ({ editor }) => setActiveEditor(editor as TipTapEditor));
 
   return (
-    <EditorContainer editable={isEditable} validation={props.validation}>
+    <EditorContainer
+      className={className}
+      editable={isEditable}
+      validation={props.validation}
+    >
       {isEditable && (
         <>
-          <EditorHeader title={headerTitle} validation={props.validation} />
+          {!disableHeader && (
+            <EditorHeader title={headerTitle} validation={props.validation} />
+          )}
           {hasInlineMenu && <FloatingMenu editor={ed} />}
         </>
       )}

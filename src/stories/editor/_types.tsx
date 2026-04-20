@@ -9,11 +9,14 @@ export interface EditorArgs extends Partial<EditorOptions> {
   hasInlineMenu?: boolean;
   bubbleOptions?: any;
   headerTitle?: string;
+  className?: string;
   footerSaveText?: string;
   /** Applies validation state styling */
   validation?: validationStatus;
   onSave?: (editor: Editor) => void;
   disableSaveShortcut?: boolean;
+  disableHeader?: boolean;
+  contentType?: "markdown";
 }
 
 export interface EditorHeaderArgs {
