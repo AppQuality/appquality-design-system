@@ -10,6 +10,7 @@ import CharacterCount from "@tiptap/extension-character-count";
 import Link from "@tiptap/extension-link";
 import Placeholder from "@tiptap/extension-placeholder";
 import Typography from "@tiptap/extension-typography";
+import { Markdown } from "@tiptap/markdown";
 import StarterKit from "@tiptap/starter-kit";
 
 import Dropcursor from "@tiptap/extension-dropcursor";
@@ -109,6 +110,7 @@ const Editor = ({
       }),
       CharacterCount,
       ...(extensions || []),
+      Markdown,
     ],
     content: (children as Content) || "",
     editorProps: props.disableSaveShortcut
