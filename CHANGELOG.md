@@ -1,3 +1,15 @@
+# v2.0.15 (Mon Apr 20 2026)
+
+#### 🐛 Bug Fix
+
+- feat: enhance editor component with markdown support and additional p… [#209](https://github.com/AppQuality/appquality-design-system/pull/209) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.14 (Mon Apr 20 2026)
 
 #### 🐛 Bug Fix
