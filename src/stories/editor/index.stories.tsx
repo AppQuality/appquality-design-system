@@ -27,6 +27,13 @@ Default.parameters = {
   },
 };
 
+export const Markdown = Template.bind({});
+Markdown.args = {
+  ...defaultArgs,
+  children: "# Hello i'm a markdown title",
+  contentType: "markdown",
+};
+
 export const Placeholder = Template.bind({});
 Placeholder.args = {
   ...defaultArgs,
