@@ -1,3 +1,18 @@
+# v2.0.14 (Mon Apr 20 2026)
+
+#### 🐛 Bug Fix
+
+- Remove polyfill.io script and update Storybook builder with Markdown [#208](https://github.com/AppQuality/appquality-design-system/pull/208) ([@sinatragianpaolo](https://github.com/sinatragianpaolo) [@d-beezee](https://github.com/d-beezee))
+- chore: update tiptap dependencies to version 3.20.6 and add markdown … [#207](https://github.com/AppQuality/appquality-design-system/pull/207) ([@d-beezee](https://github.com/d-beezee))
+- security: remove polyfill.io script tag + FIX CI [#206](https://github.com/AppQuality/appquality-design-system/pull/206) ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+#### Authors: 2
+
+- [@d-beezee](https://github.com/d-beezee)
+- Gianpaolo Sinatra ([@sinatragianpaolo](https://github.com/sinatragianpaolo))
+
+---
+
 # v2.0.13 (Mon Mar 09 2026)
 
 #### 🐛 Bug Fix
