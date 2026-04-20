@@ -1,3 +1,15 @@
+# v2.0.16 (Mon Apr 20 2026)
+
+#### 🐛 Bug Fix
+
+- chore: update @tiptap dependencies to version 3.22.4 in package.json … [#210](https://github.com/AppQuality/appquality-design-system/pull/210) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.15 (Mon Apr 20 2026)
 
 #### 🐛 Bug Fix
