@@ -3,23 +3,26 @@ import styled from "styled-components";
 import { FloatingMenuArgs } from "./_types";
 
 import { ReactComponent as BoldIcon } from "../../shared/assets/bold-fill.svg";
+import { ReactComponent as CodeIcon } from "../../shared/assets/code-fill.svg";
 import { ReactComponent as H1Icon } from "../../shared/assets/h1-fill.svg";
 import { ReactComponent as H2Icon } from "../../shared/assets/h2-fill.svg";
 import { ReactComponent as H3Icon } from "../../shared/assets/h3-fill.svg"; // IGNORE
 import { ReactComponent as ItalicIcon } from "../../shared/assets/italic-fill.svg";
 import { ReactComponent as QuoteIcon } from "../../shared/assets/quote-fill.svg";
 
+import { Button } from "../button/Button";
 import { Card } from "../card/Card";
 
-const StyledIconButton = styled.button<{
-  isBasic?: boolean;
-  isPrimary?: boolean;
-  isPill?: boolean;
+const StyledIconButton = styled(Button)<{
   size?: "small" | "medium" | "large";
 }>``;
 
 const MenuContainer = styled(Card)`
-  padding: ${({ theme }) => theme.grid.sizes[1]};
+  border: none;
+  .aq-card-body {
+    display: flex;
+    gap: ${({ theme }) => theme.grid.sizes[1]};
+  }
 
   ${StyledIconButton} {
     :first-child {
@@ -54,9 +57,7 @@ export const FloatingMenu = (props: FloatingMenuArgs) => {
             onClick={() =>
               editor.chain().focus().toggleHeading({ level: 1 }).run()
             }
-            isBasic={!editor.isActive("heading", { level: 1 })}
-            isPrimary={editor.isActive("heading", { level: 1 })}
-            isPill={false}
+            flat
           >
             <H1Icon key="ug-h1-button-bubble-menu" />
           </StyledIconButton>
@@ -65,9 +66,7 @@ export const FloatingMenu = (props: FloatingMenuArgs) => {
             onClick={() =>
               editor.chain().focus().toggleHeading({ level: 2 }).run()
             }
-            isBasic={!editor.isActive("heading", { level: 2 })}
-            isPrimary={editor.isActive("heading", { level: 2 })}
-            isPill={false}
+            flat
           >
             <H2Icon key="ug-h2-button-bubble-menu" />
           </StyledIconButton>
@@ -76,9 +75,7 @@ export const FloatingMenu = (props: FloatingMenuArgs) => {
             onClick={() =>
               editor.chain().focus().toggleHeading({ level: 3 }).run()
             }
-            isBasic={!editor.isActive("heading", { level: 3 })}
-            isPrimary={editor.isActive("heading", { level: 3 })}
-            isPill={false}
+            flat
           >
             <H3Icon key="ug-h3-button-bubble-menu" />
           </StyledIconButton>
@@ -86,29 +83,30 @@ export const FloatingMenu = (props: FloatingMenuArgs) => {
           <StyledIconButton
             size={"small"}
             onClick={() => editor.chain().focus().toggleBold().run()}
-            isBasic={!editor.isActive("bold")}
-            isPrimary={editor.isActive("bold")}
-            isPill={false}
+            flat
           >
             <BoldIcon key="ug-bold-button-bubble-menu" />
           </StyledIconButton>
           <StyledIconButton
             size={"small"}
             onClick={() => editor.chain().focus().toggleItalic().run()}
-            isBasic={!editor.isActive("italic")}
-            isPrimary={editor.isActive("italic")}
-            isPill={false}
+            flat
           >
             <ItalicIcon key="ug-italic-button-bubble-menu" />
           </StyledIconButton>
           <StyledIconButton
             size={"small"}
             onClick={() => editor.chain().focus().toggleBlockquote().run()}
-            isBasic={!editor.isActive("blockquote")}
-            isPrimary={editor.isActive("blockquote")}
-            isPill={false}
+            flat
           >
             <QuoteIcon key="ug-quote-button-bubble-menu" />
+          </StyledIconButton>
+          <StyledIconButton
+            size={"small"}
+            onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+            flat
+          >
+            <CodeIcon width="16" height="16" key="ug-code-button-bubble-menu" />
           </StyledIconButton>
         </MenuContainer>
       </BubbleMenu>
