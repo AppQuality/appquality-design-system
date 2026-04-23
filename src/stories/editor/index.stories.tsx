@@ -34,6 +34,7 @@ Markdown.args = {
   contentType: "markdown",
   disableHeader: true,
   className: "markdown-editor",
+  hasInlineMenu: true,
   disableSaveShortcut: true,
 };
 
