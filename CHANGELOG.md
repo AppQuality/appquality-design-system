@@ -1,3 +1,15 @@
+# v2.0.17 (Thu Apr 23 2026)
+
+#### 🐛 Bug Fix
+
+- feat: add code icon to floating menu and enable inline menu in markdo… [#211](https://github.com/AppQuality/appquality-design-system/pull/211) ([@d-beezee](https://github.com/d-beezee))
+
+#### Authors: 1
+
+- [@d-beezee](https://github.com/d-beezee)
+
+---
+
 # v2.0.16 (Mon Apr 20 2026)
 
 #### 🐛 Bug Fix
